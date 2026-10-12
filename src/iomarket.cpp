@@ -335,12 +335,12 @@ MarketOfferEx IOMarket::getOfferByCounter(uint32_t timestamp, uint16_t counter)
 void IOMarket::createOffer(uint32_t playerId, MarketAction_t action, uint32_t itemId, uint16_t amount, uint64_t price, bool anonymous, MarketCurrency_t currency, const std::string& attributes)
 {
 	Database& db = Database::getInstance();
-	db.executeQuery(fmt::format("INSERT INTO `market_offers` (`player_id`, `sale`, `itemtype`, `amount`, `price`, `created`, `anonymous`, `currency`, `attributes`) VALUES ({}, {}, {}, {}, {}, {}, {}, {}, {})", playerId, std::string(action), itemId, amount, price, time(nullptr), anonymous, static_cast<uint16_t>(currency), attributes.empty() ? std::string("NULL") : db.escapeBlob(attributes.data(), attributes.size())));
+	db.executeQuery(fmt::format("INSERT INTO `market_offers` (`player_id`, `sale`, `itemtype`, `amount`, `price`, `created`, `anonymous`, `currency`, `attributes`) VALUES ({:d}, {:d}, {:d}, {:d}, {:d}, {:d}, {:d}, {:d}, {:s})", playerId, std::to_string(action), itemId, amount, price, time(nullptr), anonymous, static_cast<uint16_t>(currency), attributes.empty() ? std::string("NULL") : db.escapeBlob(attributes.data(), attributes.size())));
 }
 
 void IOMarket::acceptOffer(uint32_t offerId, uint16_t amount)
 {
-	Database::getInstance().executeQuery(fmt::format("UPDATE `market_offers` SET `amount` = `amount` - {} WHERE `id` = {}", std::string(amount), offerId));
+	Database::getInstance().executeQuery(fmt::format("UPDATE `market_offers` SET `amount` = `amount` - {:d} WHERE `id` = {:d}", std::to_string(amount), offerId));
 }
 
 void IOMarket::deleteOffer(uint32_t offerId)

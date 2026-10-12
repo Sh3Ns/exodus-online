@@ -312,7 +312,7 @@ bool IOMapSerialize::saveHouseInfo()
 
 		std::string listText;
 		if (house->getAccessList(GUEST_LIST, listText) && !listText.empty()) {
-			if (!stmt.addRow(fmt::format("{} {}, {}", house->getId(), std::string(GUEST_LIST), db.escapeString(listText)))) {
+			if (!stmt.addRow(fmt::format("{} {}, {}", house->getId(), listText, db.escapeString(listText)))) {
 				return false;
 			}
 
@@ -320,7 +320,7 @@ bool IOMapSerialize::saveHouseInfo()
 		}
 
 		if (house->getAccessList(SUBOWNER_LIST, listText) && !listText.empty()) {
-			if (!stmt.addRow(fmt::format("{} {}, {}", house->getId(), std::string(SUBOWNER_LIST), db.escapeString(listText)))) {
+			if (!stmt.addRow(fmt::format("{} {}, {}", house->getId(), listText, db.escapeString(listText)))) {
 				return false;
 			}
 
@@ -329,7 +329,7 @@ bool IOMapSerialize::saveHouseInfo()
 
 		for (Door* door : house->getDoors()) {
 			if (door->getAccessList(listText) && !listText.empty()) {
-				if (!stmt.addRow(fmt::format("{} {}, {}", house->getId(), std::string(std::to_string(door->getDoorId())), db.escapeString(listText)))) {
+				if (!stmt.addRow(fmt::format("{} {}, {}", house->getId(), std::to_string(door->getDoorId()), db.escapeString(listText)))) {
 					return false;
 				}
 
