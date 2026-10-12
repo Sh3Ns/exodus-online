@@ -32,7 +32,7 @@ class ConnectionManager
 			return instance;
 		}
 
-		Connection_ptr createConnection(boost::asio::io_service& io_service, ConstServicePort_ptr servicePort);
+		Connection_ptr createConnection(boost::asio::io_context& io_context, ConstServicePort_ptr servicePort);
 		void releaseConnection(const Connection_ptr& connection);
 		void closeAll();
 
@@ -52,13 +52,13 @@ class Connection : public std::enable_shared_from_this<Connection>
 
 		enum { FORCE_CLOSE = true };
 
-		Connection(boost::asio::io_service& io_service,
+	Connection(boost::asio::io_context& io_context,
 		ConstServicePort_ptr service_port) :
-			readTimer(io_service),
-			writeTimer(io_service),
-			service_port(std::move(service_port)),
-			socket(io_service),
-			timeConnected(time(nullptr)) {}
+		readTimer(io_context),
+		writeTimer(io_context),
+		service_port(std::move(service_port)),
+		socket(io_context),
+		timeConnected(time(nullptr)) {}
 		~Connection();
 
 		friend class ConnectionManager;
