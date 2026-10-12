@@ -1,0 +1,1918 @@
+DynastieManageTabButton < UIButton
+  size: 160 34
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  anchors.top: parent.top
+  padding: 6 10
+  text-offset: 26 0
+  text-align: center
+
+  $hover !checked:
+    image-color: #bfbfbf
+
+  $checked:
+    image-color: #dfdfdf
+
+  $focus:
+    image-color: #dfdfdf
+
+GuildRewardSlot < UIWidget
+  size: 48 48
+  background-color: #2f2c28
+  border: 1 #5a534b
+
+  UIItem
+    id: item
+    anchors.centerIn: parent
+    size: 32 32
+    virtual: true
+    phantom: true
+
+  UIWidget
+    id: icon
+    anchors.centerIn: parent
+    size: 32 32
+    visible: false
+
+  Label
+    id: count
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 3
+    margin-bottom: 1
+    text-align: right
+    color: #dfdfdf
+    font: verdana-11px-rounded
+    text-auto-resize: true
+
+DynastieBoardQuestCard < UIWidget
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  background-color: #433d37
+  border: 1 #59524a
+  padding: 8
+  size: 312 334
+
+  UIWidget
+    id: icon
+    anchors.left: parent.left
+    anchors.top: parent.top
+    size: 64 64
+    image-source: /images/guild_hall/dynasty_achievement
+
+  Label
+    id: title
+    anchors.left: icon.right
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-left: 10
+    text-auto-resize: true
+    font: verdana-11px-rounded
+
+  Label
+    id: progress
+    anchors.left: icon.right
+    anchors.right: parent.right
+    anchors.top: title.bottom
+    margin-left: 10
+    margin-top: 6
+    color: #FFDC96
+    text-wrap: true
+
+  Panel
+    id: rewardsContainer
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: icon.bottom
+    margin-top: 10
+    height: 90
+
+    Panel
+      id: rewardsItems
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: parent.top
+      height: 66
+
+    Label
+      id: rewardsText
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: false
+      text-align: center
+      color: #c7c1b6
+
+    Label
+      id: rewardsFallback
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: true
+      text-align: center
+      color: #c7c1b6
+      visible: false
+
+  Label
+    id: ownerRewardsLabel
+    anchors.top: rewardsContainer.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    height: 18
+    text-wrap: false
+    text-align: center
+    color: #b9b2a8
+    !text: tr("Reward for the Dynastie Core of that city:")
+
+  Label
+    id: ownerRewardsDivider
+    anchors.top: ownerRewardsLabel.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+    height: 14
+    text-align: center
+    color: #8d867d
+    !text: tr("-------------------")
+
+  Panel
+    id: ownerRewardsContainer
+    anchors.top: ownerRewardsDivider.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+    height: 90
+
+    Panel
+      id: rewardsItems
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: parent.top
+      height: 66
+
+    Label
+      id: rewardsText
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: false
+      text-align: center
+      color: #c7c1b6
+
+    Label
+      id: rewardsFallback
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: true
+      text-align: center
+      color: #c7c1b6
+      visible: false
+
+  Label
+    id: timer
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-bottom: 6
+    color: #b9b2a8
+    text-align: center
+
+DynastieBoardOfferCard < UIWidget
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  background-color: #433d37
+  border: 1 #59524a
+  padding: 8
+  size: 300 404
+
+  UIWidget
+    id: icon
+    anchors.left: parent.left
+    anchors.top: parent.top
+    size: 64 64
+    image-source: /images/guild_hall/dynasty_achievement
+
+  Label
+    id: title
+    anchors.left: icon.right
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-left: 10
+    text-auto-resize: true
+    font: verdana-11px-rounded
+
+  Label
+    id: objective
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: icon.bottom
+    margin-top: 10
+    height: 34
+    text-wrap: true
+    text-align: center
+    color: #dfdfdf
+
+  Panel
+    id: rewardsContainer
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: objective.bottom
+    margin-top: 8
+    height: 90
+
+    Panel
+      id: rewardsItems
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: parent.top
+      height: 66
+
+    Label
+      id: rewardsText
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: false
+      text-align: center
+      color: #c7c1b6
+
+    Label
+      id: rewardsFallback
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: true
+      text-align: center
+      color: #c7c1b6
+      visible: false
+
+  Label
+    id: repeatInfo
+    anchors.top: rewardsContainer.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    height: 18
+    text-wrap: true
+    text-align: center
+    color: #b9b2a8
+
+  Label
+    id: ownerRewardsLabel
+    anchors.top: repeatInfo.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    height: 18
+    text-wrap: false
+    text-align: center
+    color: #b9b2a8
+    !text: tr("Reward for the Dynastie Core of that city:")
+
+  Label
+    id: ownerRewardsDivider
+    anchors.top: ownerRewardsLabel.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+    height: 14
+    text-align: center
+    color: #8d867d
+    !text: tr("-------------------")
+
+  Panel
+    id: ownerRewardsContainer
+    anchors.top: ownerRewardsDivider.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+    height: 90
+
+    Panel
+      id: rewardsItems
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: parent.top
+      height: 66
+
+    Label
+      id: rewardsText
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: false
+      text-align: center
+      color: #c7c1b6
+
+    Label
+      id: rewardsFallback
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: true
+      text-align: center
+      color: #c7c1b6
+      visible: false
+
+  GuildActionButton
+    id: acceptButton
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 6
+    width: 96
+    !text: tr("Accept")
+
+DynastieGuildPerkItem < UIWidget
+  image-source: /images/ui/inner_content_panel
+  image-border: 10
+  padding: 5
+  border: 0 white
+  size: 322 156
+
+  $focus:
+    border: 1 white
+
+  UIWidget
+    id: icon
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 58 58
+    phantom: true
+
+  Label
+    id: name
+    anchors.left: parent.left
+    anchors.top: parent.top
+    text-wrap: true
+    text-auto-resize: true
+    width: 228
+    font: verdana-11px-rounded
+
+  Label
+    id: level
+    anchors.left: parent.left
+    anchors.top: name.bottom
+    text-auto-resize: true
+    font: verdana-11px-rounded
+
+  Label
+    id: requiredLevel
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    color: #8A8B7F
+    text-auto-resize: true
+    font: verdana-11px-rounded
+
+  Label
+    id: costLabel
+    anchors.left: parent.left
+    anchors.bottom: requiredLevel.top
+    text-auto-resize: true
+    color: #FFF600
+    font: verdana-11px-rounded
+
+  Label
+    id: costValue
+    anchors.left: costLabel.right
+    anchors.bottom: costLabel.bottom
+    text-auto-resize: true
+    color: #FFF600
+    font: verdana-11px-rounded
+
+  Label
+    id: premiumCostLabel
+    anchors.left: parent.left
+    anchors.bottom: costLabel.top
+    margin-bottom: 2
+    text-auto-resize: true
+    color: #7AD7FF
+    font: verdana-11px-rounded
+    visible: false
+
+  Label
+    id: premiumCostValue
+    anchors.left: premiumCostLabel.right
+    anchors.bottom: premiumCostLabel.bottom
+    text-auto-resize: true
+    color: #7AD7FF
+    font: verdana-11px-rounded
+    visible: false
+
+  UIWidget
+    id: costLayer
+    anchors.left: costLabel.left
+    anchors.right: costValue.right
+    height: 20
+    anchors.top: costLabel.top
+    font: verdana-11px-rounded
+
+  UIWidget
+    id: bonus
+    anchors.left: parent.left
+    anchors.top: level.bottom
+    anchors.right: icon.right
+    anchors.bottom: premiumCostLabel.top
+    margin-top: 5
+    text-wrap: true
+    text-align: topleft
+    color: #FF9D00
+    phantom: true
+    font: verdana-11px-rounded
+
+DynastieDefenderCard < Panel
+  size: 272 380
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  background-color: #433d37
+  border: 1 #59524a
+  padding: 3
+
+  Label
+    id: name
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    font: verdana-11px-rounded
+    text-auto-resize: true
+    color: #FFDC96
+
+  Label
+    id: role
+    anchors.top: name.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 4
+    text-auto-resize: true
+    color: #c7c1b6
+
+  Label
+    id: quantity
+    anchors.top: role.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 6
+    text-auto-resize: true
+    color: #FFDC96
+
+  Panel
+    id: outfitPanel
+    anchors.top: quantity.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 110
+    margin-top: 10
+    background-color: #3b3732
+    border: 1 #59524a
+
+    UICreature
+      id: creature
+      anchors.centerIn: parent
+      size: 84 84
+      outfit-center: true
+      animate: true
+      phantom: true
+
+  Label
+    id: level
+    anchors.top: outfitPanel.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 12
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: health
+    anchors.top: level.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: distance
+    anchors.top: health.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: speed
+    anchors.top: distance.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: mitigation
+    anchors.top: speed.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: damage
+    anchors.top: mitigation.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: attacks
+    anchors.top: damage.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: -10
+    height: 68
+    text-wrap: true
+    text-align: center
+    color: #c7c1b6
+
+  Label
+    id: costs
+    anchors.bottom: upgradeButton.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-bottom: 27
+    height: 44
+    text-wrap: true
+    text-align: center
+    color: #b9b2a8
+
+  GuildActionButton
+    id: upgradeButton
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 5
+    width: 136
+    !text: tr("Upgrade")
+
+DynastieAchievementCard < UIWidget
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  padding: 8
+  size: 334 434
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    id: title
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+    font: verdana-11px-rounded
+    text-align: center
+    text-auto-resize: true
+
+  UIWidget
+    id: icon
+    anchors.top: title.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 8
+    size: 104 104
+    image-source: /images/guild_hall/dynasty_achievement
+    image-size: 104 104
+
+  Label
+    id: objective
+    anchors.top: icon.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 10
+    height: 40
+    text-wrap: true
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: progress
+    anchors.top: objective.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+    height: 18
+    text-wrap: true
+    text-align: center
+    color: #FFDC96
+
+  Panel
+    id: rewardsContainer
+    anchors.top: progress.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+    height: 130
+
+    Panel
+      id: rewardsItems
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 100
+
+    Label
+      id: rewardsText
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: false
+      text-align: center
+      color: #c7c1b6
+
+    Label
+      id: rewardsFallback
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: true
+      text-align: center
+      color: #c7c1b6
+      visible: false
+
+  Label
+    id: state
+    anchors.bottom: claimButton.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-bottom: 10
+    height: 23
+    text-wrap: true
+    text-align: center
+    color: #b9b2a8
+
+  GuildActionButton
+    id: claimButton
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 5
+    width: 96
+    !text: tr("Claim")
+
+DynastieCalendarDayCard < UIWidget
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  padding: 6
+  size: 134 128
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    id: weekday
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 16
+    text-align: center
+    font: verdana-11px-rounded
+    color: #dfdfdf
+
+  Label
+    id: dayNumber
+    anchors.top: weekday.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    height: 16
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: city
+    anchors.top: dayNumber.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    height: 16
+    text-align: center
+    color: #FFDC96
+
+  Label
+    id: eventName
+    anchors.top: city.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    height: 26
+    text-wrap: true
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: time
+    anchors.top: eventName.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+    height: 14
+    text-align: center
+    color: #b9b2a8
+
+  Label
+    id: description
+    anchors.top: time.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 4
+    margin-bottom: 4
+    text-wrap: true
+    text-align: center
+    color: #c7c1b6
+    visible: false
+
+DynastiePerkCard < Panel
+  size: 262 330
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  background-color: #433d37
+  border: 1 #59524a
+  padding: 12
+
+  Label
+    id: name
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    font: verdana-11px-rounded
+    text-auto-resize: true
+    color: #FFDC96
+
+  Label
+    id: role
+    anchors.top: name.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 4
+    text-auto-resize: true
+    color: #c7c1b6
+
+  Panel
+    id: outfitPanel
+    anchors.top: role.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 100
+    margin-top: 10
+    background-color: #3b3732
+    border: 1 #59524a
+
+    UICreature
+      id: creature
+      anchors.centerIn: parent
+      size: 72 72
+
+  Label
+    id: level
+    anchors.top: outfitPanel.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 12
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: unlocked
+    anchors.top: level.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: description
+    anchors.top: unlocked.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 10
+    height: 56
+    text-wrap: true
+    text-align: center
+    color: #c7c1b6
+
+  Label
+    id: costs
+    anchors.top: description.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 10
+    height: 40
+    text-wrap: true
+    text-align: center
+    color: #b9b2a8
+
+  GuildActionButton
+    id: upgradeButton
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 10
+    width: 120
+    !text: tr("Upgrade")
+
+GuildDynastieManageWindow < MainWindow
+  size: 1120 760
+  !text: tr("Dynasty Panel")
+  font: sans-bold-16px
+  text-offset: 0 4
+  padding-bottom: 6
+  @onEscape: modules.game_guild_hall.closeDynastieManageWindow()
+
+  Panel
+    id: dynastieTabBackground
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    width: 1060
+    height: 110
+    margin-top: 14
+    background-color: #39342f
+    border: 1 #534b43
+
+  Panel
+    id: manageTabs
+    anchors.top: parent.top
+    anchors.left: parent.left
+    height: 86
+    margin-left: 28
+    width: 1040
+    margin-top: 21
+
+    DynastieManageTabButton
+      id: generalTabBtn
+      anchors.left: parent.left
+      anchors.top: parent.top
+      size: 180 34
+      !text: tr("General")
+
+    DynastieManageTabButton
+      id: questsTabBtn
+      anchors.left: generalTabBtn.right
+      anchors.top: parent.top
+      margin-left: 6
+      size: 180 34
+      !text: tr("Dynasty Quests")
+
+    DynastieManageTabButton
+      id: perksTabBtn
+      anchors.left: questsTabBtn.right
+      anchors.top: parent.top
+      margin-left: 6
+      size: 180 34
+      !text: tr("Dynasty Perks")
+
+    DynastieManageTabButton
+      id: defendersTabBtn
+      anchors.left: perksTabBtn.right
+      anchors.top: parent.top
+      margin-left: 6
+      size: 180 34
+      !text: tr("Defenders")
+
+    DynastieManageTabButton
+      id: passiveTreeTabBtn
+      anchors.left: defendersTabBtn.right
+      anchors.top: parent.top
+      margin-left: 6
+      size: 180 34
+      !text: tr("Passive Tree")
+
+    DynastieManageTabButton
+      id: achievementsTabBtn
+      anchors.left: parent.left
+      anchors.top: generalTabBtn.bottom
+      margin-top: 8
+      size: 180 34
+      !text: tr("Achievements")
+
+    DynastieManageTabButton
+      id: eventCalendarTabBtn
+      anchors.left: achievementsTabBtn.right
+      anchors.top: achievementsTabBtn.top
+      margin-left: 6
+      size: 180 34
+      !text: tr("Event Calendar")
+
+    DynastieManageTabButton
+      id: boardQuestsTabBtn
+      anchors.left: eventCalendarTabBtn.right
+      anchors.top: eventCalendarTabBtn.top
+      margin-left: 6
+      size: 180 34
+      !text: tr("Board Quests")
+
+  Panel
+    id: bodyPanel
+    anchors.top: dynastieTabBackground.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: closeButton.top
+    margin-top: 10
+    margin-left: 10
+    margin-right: 10
+    margin-bottom: 10
+    background-color: #3e3a35
+    border: 1 #59524a
+    padding: 14
+
+    Panel
+      id: generalView
+      anchors.fill: parent
+
+      Panel
+        id: mainCard
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        width: 300
+        image-source: /images/ui/prism_panel
+        image-border: 8
+        background-color: #4a443d
+        border: 1 #5a5248
+        padding: 14
+
+        Label
+          id: title
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          text-auto-resize: true
+          font: verdana-11px-rounded
+
+        UIItem
+          id: dynastieItem
+          anchors.top: title.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 16
+          size: 64 64
+          virtual: true
+
+        Label
+          id: owner
+          anchors.top: dynastieItem.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 18
+          text-wrap: true
+          text-align: center
+          color: #dfdfdf
+
+        Label
+          id: placer
+          anchors.top: owner.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 4
+          text-wrap: true
+          text-align: center
+          color: #b9b2a8
+
+        Label
+          id: emptyState
+          anchors.top: placer.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 14
+          height: 36
+          visible: false
+          text-wrap: true
+          text-align: center
+          color: #c7c1b6
+          !text: tr("You do not own a Dynastie Core yet.")
+
+        Label
+          id: timer
+          anchors.top: emptyState.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 14
+          height: 30
+          text-wrap: true
+          text-align: center
+          color: #FFDC96
+
+        Label
+          id: tax
+          anchors.top: timer.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 8
+          text-wrap: true
+          text-align: center
+          color: #c7c1b6
+
+        Label
+          id: stored
+          anchors.top: tax.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 8
+          text-wrap: true
+          text-align: center
+          color: #b9b2a8
+
+        Label
+          id: storedTokens
+          anchors.top: stored.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 8
+          text-wrap: true
+          text-align: center
+          color: #7AD7FF
+
+        Label
+          id: ownedCoreLabel
+          anchors.bottom: collectButton.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-bottom: 56
+          text-auto-resize: true
+          color: #dfdfdf
+          !text: tr("No Core Owned")
+
+        GuildActionButton
+          id: ownedPrevCoreButton
+          anchors.bottom: collectButton.top
+          anchors.left: parent.left
+          margin-left: 12
+          margin-bottom: 12
+          width: 58
+          height: 22
+          !text: tr("Prev")
+
+        GuildActionButton
+          id: ownedNextCoreButton
+          anchors.bottom: taxButton.top
+          anchors.right: parent.right
+          margin-right: 12
+          margin-bottom: 12
+          width: 58
+          height: 22
+          !text: tr("Next")
+
+        GuildActionButton
+          id: collectButton
+          anchors.bottom: parent.bottom
+          anchors.left: parent.left
+          margin-left: 12
+          margin-bottom: 12
+          width: 110
+          !text: tr("Collect")
+
+        GuildActionButton
+          id: taxButton
+          anchors.bottom: parent.bottom
+          anchors.right: parent.right
+          margin-right: 12
+          margin-bottom: 12
+          width: 110
+          !text: tr("Set Tax")
+
+      Panel
+        id: generalInfoPanel
+        anchors.top: parent.top
+        anchors.left: mainCard.right
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        margin-left: 14
+        background-color: #3b3732
+        border: 1 #59524a
+        padding: 16
+
+        Label
+          id: overviewTitle
+          anchors.top: parent.top
+          anchors.left: parent.left
+          font: verdana-11px-rounded
+          text-auto-resize: true
+          !text: tr("Dynasty Core")
+
+        Label
+          id: overviewText
+          anchors.top: overviewTitle.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 10
+          height: 60
+          text-wrap: true
+          color: #c7c1b6
+          !text: tr("This panel is the command center for your dynasty core.\nKeep the city active, collect its treasury when you choose, and grow the core through taxes and quests.")
+
+        Label
+          id: levelLabel
+          anchors.top: overviewText.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 18
+          color: #FFDC96
+          font: verdana-11px-rounded
+          !text: tr("Dynasty Level 1 / 10")
+
+        Label
+          id: expLabel
+          anchors.top: levelLabel.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 8
+          color: #dfdfdf
+          !text: tr("Core Experience: 0 / 0")
+
+        Panel
+          id: progressBarBase
+          anchors.top: expLabel.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 8
+          margin-right: 5
+          height: 19
+          background-color: #28221d
+          border: 1 black
+          phantom: false
+
+          UIWidget
+            id: progressBarFill
+            anchors.left: parent.left
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            margin: 1
+            width: 0
+            image-source: /images/ui/battlepass
+
+        Panel
+          id: generalHighlights
+          anchors.top: progressBarBase.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          margin-top: 18
+          background-color: #433d37
+          border: 1 #59524a
+          padding: 14
+
+          Label
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            height: 18
+            color: #FFDC96
+            font: verdana-11px-rounded
+            !text: tr("Dynasty Notes")
+
+          Label
+            anchors.top: prev.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            margin-top: 10
+            height: 108
+            text-wrap: true
+            color: #c7c1b6
+            !text: tr("Tax now ranges from 0%% up to your current dynasty level.\nYour dynasty core level is saved for the guild, even if no core is placed.\nFuture tabs can expand this panel with city effects, decrees, and bonus systems.")
+
+    Panel
+      id: questsView
+      anchors.fill: parent
+      visible: false
+
+      Panel
+        id: dynastieQuestsTopBar
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: 52
+        background-color: #3b3732
+        border: 1 #59524a
+
+        Label
+          id: dynastieDailyResetLabel
+          anchors.left: parent.left
+          anchors.top: parent.top
+          margin-left: 10
+          margin-top: 6
+          color: #dfdfdf
+          text-auto-resize: true
+          !text: tr("Daily reset: --")
+
+        Label
+          id: dynastieWeekendResetLabel
+          anchors.right: parent.right
+          anchors.top: parent.top
+          margin-right: 10
+          margin-top: 6
+          color: #dfdfdf
+          text-auto-resize: true
+          !text: tr("Weekend reset: --")
+
+        Label
+          id: dynastieMonthlyResetLabel
+          anchors.horizontalCenter: parent.horizontalCenter
+          anchors.bottom: parent.bottom
+          margin-bottom: 6
+          color: #dfdfdf
+          text-auto-resize: true
+          !text: tr("Monthly reset: --")
+
+      UIScrollArea
+        id: dynastieQuestsScroll
+        anchors.top: dynastieQuestsTopBar.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        margin-top: 12
+        margin-right: 10
+        background-color: #47413b
+        border: 1 #59524a
+        padding: 10
+        vertical-scrollbar: dynastieQuestsScrollbar
+
+        Panel
+          id: dynastieQuestsBody
+          anchors.top: parent.top
+          anchors.left: parent.left
+          width: 1010
+          height: 900
+          layout: verticalBox
+          spacing: 12
+
+          Label
+            id: dynastieDailyTitle
+            width: 1010
+            color: #FFDC96
+            text-auto-resize: true
+            !text: tr("Daily Dynastie Quests")
+
+          Panel
+            id: dynastieDailyList
+            width: 1010
+            height: 380
+            layout: horizontalBox
+            fit-children: false
+            spacing: 10
+
+          Label
+            id: dynastieWeekendTitle
+            width: 1010
+            color: #FFDC96
+            text-auto-resize: true
+            !text: tr("Weekend Dynastie Quests")
+
+          Panel
+            id: dynastieWeekendList
+            width: 1010
+            height: 380
+            layout: horizontalBox
+            fit-children: false
+            spacing: 10
+
+          Label
+            id: dynastieMonthlyTitle
+            width: 1010
+            color: #FFDC96
+            text-auto-resize: true
+            !text: tr("Monthly Dynastie Quests")
+
+          Panel
+            id: dynastieMonthlyList
+            width: 1010
+            height: 380
+            layout: horizontalBox
+            fit-children: false
+            spacing: 10
+
+          Label
+            id: dynastieQuestEmptyLabel
+            width: 1010
+            visible: false
+            height: 40
+            text-wrap: true
+            text-align: center
+            color: #c7c1b6
+            !text: tr("You do not own a Dynastie Core yet.")
+
+      VerticalScrollBar
+        id: dynastieQuestsScrollbar
+        anchors.top: dynastieQuestsScroll.top
+        anchors.bottom: dynastieQuestsScroll.bottom
+        anchors.left: dynastieQuestsScroll.right
+        background-color: #3b3732
+        border: 1 #5a5248
+        step: 50
+        pixels-scroll: true
+
+    Panel
+      id: perksView
+      anchors.fill: parent
+      visible: false
+
+      Panel
+        anchors.fill: parent
+        background-color: #3b3732
+        border: 1 #59524a
+        padding: 16
+
+        UIWidget
+          id: dynastiePerksTopBar
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.right: parent.right
+          height: 20
+
+          Label
+            id: dynastiePerksLevelLabel
+            anchors.left: parent.left
+            anchors.verticalCenter: parent.verticalCenter
+            !text: tr("Dynasty") .. ": "
+            text-auto-resize: true
+
+          Label
+            id: dynastiePerksLevelValue
+            anchors.left: dynastiePerksLevelLabel.right
+            anchors.verticalCenter: parent.verticalCenter
+            color: #00FF00
+            text: tr("Lv 1")
+            text-auto-resize: true
+
+        Label
+          anchors.top: dynastiePerksTopBar.bottom
+          anchors.left: parent.left
+          font: verdana-11px-rounded
+          text-auto-resize: true
+          color: #FFDC96
+          !text: tr("Dynasty Perks")
+
+        Label
+          id: perksDescription
+          anchors.top: prev.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 14
+          height: 40
+          text-wrap: true
+          color: #c7c1b6
+          !text: tr("Unlock and strengthen the three defender branches permanently for your guild.\nThese perks remain even if a dynastie core is destroyed or recollected.")
+
+        GuildActionButton
+          id: perksUpgradeButton
+          anchors.bottom: parent.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          width: 120
+          !text: tr("Upgrade")
+
+        UIScrollArea
+          id: perksList
+          anchors.top: perksDescription.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: perksUpgradeButton.top
+          margin-top: 12
+          margin-bottom: 14
+          margin-left: 0
+          margin-right: 14
+          auto-focus: first
+          vertical-scrollbar: dynastiePerksScrollBar
+          layout:
+            type: grid
+            cell-size: 295 166
+            cell-spacing: 10
+            flow: true
+
+        VerticalScrollBar
+          id: dynastiePerksScrollBar
+          anchors.top: perksList.top
+          anchors.bottom: perksList.bottom
+          anchors.right: parent.right
+          background-color: #3b3732
+          border: 1 #5a5248
+          step: 14
+          pixels-scroll: true
+
+    Panel
+      id: defendersView
+      anchors.fill: parent
+      visible: false
+
+      Panel
+        anchors.fill: parent
+        background-color: #3b3732
+        border: 1 #59524a
+        padding: 18
+
+        Label
+          anchors.top: parent.top
+          anchors.left: parent.left
+          font: verdana-11px-rounded
+          text-auto-resize: true
+          color: #FFDC96
+          !text: tr("Dynasty Defenders")
+
+        Label
+          anchors.top: prev.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 14
+          text-wrap: true
+          color: #c7c1b6
+          !text: tr("These creatures will defend your dynastie core during attacks. Their level starts at 0 and will later be upgraded from this panel.")
+
+        UIScrollArea
+          id: defendersScroll
+          anchors.top: prev.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          margin-top: 16
+          margin-right: 10
+          background-color: #47413b
+          border: 1 #59524a
+          padding: 10
+          vertical-scrollbar: defendersScrollbar
+
+          Panel
+            id: defendersList
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            layout:
+              type: grid
+              cell-size: 310 420
+              cell-spacing: 8
+              flow: true
+            height: 556
+
+        VerticalScrollBar
+          id: defendersScrollbar
+          anchors.top: defendersScroll.top
+          anchors.bottom: defendersScroll.bottom
+          anchors.left: defendersScroll.right
+          background-color: #3b3732
+          border: 1 #5a5248
+          step: 50
+          pixels-scroll: true
+
+    Panel
+      id: achievementsView
+      anchors.fill: parent
+      visible: false
+
+      Panel
+        anchors.fill: parent
+        background-color: #3b3732
+        border: 1 #59524a
+        padding: 16
+
+        Panel
+          id: dynastieAchievementsTopBar
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.right: parent.right
+          height: 92
+          background-color: #3b3732
+          border: 1 #59524a
+
+          Label
+            id: dynastieAchievementsSearchLabel
+            anchors.top: parent.top
+            anchors.right: parent.right
+            margin-top: 10
+            margin-right: 226
+            color: #dfdfdf
+            !text: tr("Search:")
+
+          TextEdit
+            id: dynastieAchievementsSearchInput
+            anchors.top: parent.top
+            anchors.right: parent.right
+            margin-top: 6
+            margin-right: 10
+            size: 210 22
+            text-offset: 4 3
+
+          Label
+            id: dynastieAchievementsSummary
+            anchors.left: parent.left
+            anchors.top: parent.top
+            margin-left: 10
+            margin-top: 8
+            width: 360
+            color: #dfdfdf
+            text-auto-resize: true
+            !text: tr("Achievements: 0 / 0")
+
+          GuildActionButton
+            id: dynastieAchievementsPrevButton
+            anchors.right: dynastieAchievementsPageLabel.left
+            anchors.bottom: parent.bottom
+            margin-right: 8
+            margin-bottom: 8
+            width: 64
+            height: 22
+            !text: tr("Prev")
+
+          Label
+            id: dynastieAchievementsPageLabel
+            anchors.right: dynastieAchievementsNextButton.left
+            anchors.bottom: parent.bottom
+            margin-right: 8
+            margin-bottom: 14
+            width: 52
+            color: #dfdfdf
+            text-align: center
+            !text: tr("1 / 1")
+
+          GuildActionButton
+            id: dynastieAchievementsNextButton
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            margin-right: 10
+            margin-bottom: 8
+            width: 64
+            height: 22
+            !text: tr("Next")
+
+          Panel
+            id: dynastieAchievementsProgressBarBase
+            anchors.left: parent.left
+            anchors.top: dynastieAchievementsSummary.bottom
+            margin-left: 10
+            margin-top: 6
+            size: 280 19
+            background-color: #28221d
+            border: 1 black
+
+            UIWidget
+              id: dynastieAchievementsProgressBarFill
+              anchors.top: parent.top
+              anchors.bottom: parent.bottom
+              anchors.left: parent.left
+              margin: 1
+              width: 0
+              image-source: /images/ui/battlepass
+
+        UIScrollArea
+          id: dynastieAchievementsScroll
+          anchors.top: dynastieAchievementsTopBar.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          margin-top: 12
+          margin-right: 10
+          background-color: #47413b
+          border: 1 #59524a
+          padding: 10
+          vertical-scrollbar: dynastieAchievementsScrollbar
+
+          Panel
+            id: dynastieAchievementsList
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            layout:
+              type: grid
+              cell-size: 312 432
+              cell-spacing: 8
+              flow: true
+            height: 860
+
+        VerticalScrollBar
+          id: dynastieAchievementsScrollbar
+          anchors.top: dynastieAchievementsScroll.top
+          anchors.bottom: dynastieAchievementsScroll.bottom
+          anchors.left: dynastieAchievementsScroll.right
+          background-color: #3b3732
+          border: 1 #5a5248
+          step: 50
+          pixels-scroll: true
+
+    Panel
+      id: passiveTreeView
+      anchors.fill: parent
+      visible: false
+
+      DynastiePassiveTreeRoot
+        id: passiveTreeRoot
+
+    Panel
+      id: eventsView
+      anchors.fill: parent
+      visible: false
+
+      Panel
+        anchors.fill: parent
+        background-color: #3b3732
+        border: 1 #59524a
+        padding: 16
+
+        Panel
+          id: dynastieEventsTopBar
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.right: parent.right
+          height: 72
+          background-color: #3b3732
+          border: 1 #59524a
+
+          GuildActionButton
+            id: dynastieEventsPrevMonthButton
+            anchors.left: parent.left
+            anchors.verticalCenter: parent.verticalCenter
+            margin-left: 10
+            width: 70
+            height: 24
+            !text: tr("Prev")
+
+          Label
+            id: dynastieEventsMonthLabel
+            anchors.top: parent.top
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 8
+            font: verdana-11px-rounded
+            color: #dfdfdf
+            text-auto-resize: true
+            !text: tr("Dynasty Schedule")
+
+          Label
+            id: dynastieEventsDateLabel
+            anchors.top: dynastieEventsMonthLabel.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 6
+            color: #b9b2a8
+            text-auto-resize: true
+            !text: tr("No event date loaded")
+
+          GuildActionButton
+            id: dynastieEventsNextMonthButton
+            anchors.right: parent.right
+            anchors.verticalCenter: parent.verticalCenter
+            margin-right: 10
+            width: 70
+            height: 24
+            !text: tr("Next")
+
+        UIScrollArea
+          id: dynastieEventsScroll
+          anchors.top: dynastieEventsTopBar.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          margin-top: 12
+          margin-right: 10
+          background-color: #47413b
+          border: 1 #59524a
+          padding: 10
+          vertical-scrollbar: dynastieEventsScrollbar
+
+          Panel
+            id: dynastieEventsBody
+            anchors.top: parent.top
+            anchors.left: parent.left
+            width: 1000
+            height: 640
+            layout: verticalBox
+            spacing: 10
+
+            Label
+              id: dynastieEventsSummary
+              width: 962
+              height: 42
+              text-wrap: true
+              color: #c7c1b6
+              !text: tr("This calendar tracks rotating dynastie city events for the full current month.")
+
+            Panel
+              id: dynastieEventsWeekdayHeader
+              width: 962
+              height: 22
+              layout:
+                type: grid
+                cell-size: 134 22
+                cell-spacing: 4
+                flow: true
+
+            Panel
+              id: dynastieEventsMonthList
+              width: 962
+              height: 760
+              layout:
+                type: grid
+                cell-size: 134 128
+                cell-spacing: 4
+                flow: true
+
+        VerticalScrollBar
+          id: dynastieEventsScrollbar
+          anchors.top: dynastieEventsScroll.top
+          anchors.bottom: dynastieEventsScroll.bottom
+          anchors.left: dynastieEventsScroll.right
+          background-color: #3b3732
+          border: 1 #5a5248
+          step: 50
+          pixels-scroll: true
+
+    Panel
+      id: boardQuestsView
+      anchors.fill: parent
+      visible: false
+
+      Panel
+        anchors.fill: parent
+        background-color: #3b3732
+        border: 1 #59524a
+        padding: 16
+
+        Label
+          id: dynastieBoardQuestsSummary
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.right: parent.right
+          height: 34
+          text-wrap: true
+          color: #c7c1b6
+          !text: tr("Accepted board quests appear here while the world board event is active.")
+
+        Label
+          id: dynastieBoardQuestsEmptyLabel
+          anchors.top: dynastieBoardQuestsSummary.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 28
+          height: 44
+          text-wrap: true
+          text-align: center
+          color: #dfdfdf
+          visible: false
+          !text: tr("You didn't pickup any board quest, check out the Event Board Quests to participate on the quests.")
+
+        UIScrollArea
+          id: dynastieBoardQuestsScroll
+          anchors.top: dynastieBoardQuestsSummary.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          margin-top: 10
+          margin-right: 10
+          background-color: #47413b
+          border: 1 #59524a
+          padding: 10
+          vertical-scrollbar: dynastieBoardQuestsScrollbar
+
+          Panel
+            id: dynastieBoardQuestsList
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            layout:
+              type: grid
+              cell-size: 318 342
+              cell-spacing: 8
+              flow: true
+            height: 320
+
+        VerticalScrollBar
+          id: dynastieBoardQuestsScrollbar
+          anchors.top: dynastieBoardQuestsScroll.top
+          anchors.bottom: dynastieBoardQuestsScroll.bottom
+          anchors.left: dynastieBoardQuestsScroll.right
+          background-color: #3b3732
+          border: 1 #5a5248
+          step: 50
+          pixels-scroll: true
+
+  GuildActionButton
+    id: closeButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    width: 96
+    height: 30
+    margin-bottom: 10
+    margin-right: 18
+    !text: tr("Close")
+    @onClick: modules.game_guild_hall.closeDynastieManageWindow()
+
+  Label
+    id: dynastieFooterTokenLabel
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 146
+    margin-bottom: 32
+    !text: tr("Dynasty Tokens")
+    text-auto-resize: true
+
+  UIWidget
+    id: dynastieFooterTokenBase
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    width: 150
+    margin-left: 118
+    margin-bottom: 10
+    background-color: #2c2c2c
+    border: 1 #5b5b5b
+    height: 18
+    text-align: center
+    color: #7AD7FF
+
+  UIWidget
+    id: dynastieFooterTokenIcon
+    anchors.verticalCenter: dynastieFooterTokenBase.verticalCenter
+    anchors.left: dynastieFooterTokenBase.left
+    margin-left: 8
+    !tooltip: tr('Dynasty Tokens')
+    size: 12 12
+    image-source: /images/guild_hall/dynasty_tokens
+
+GuildDynastieBoardWindow < MainWindow
+  size: 1010 650
+  !text: tr("Dynasty Event Board")
+  @onEscape: self:hide()
+
+  Label
+    id: boardEventTitle
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 12
+    font: verdana-11px-rounded
+    text-auto-resize: true
+
+  Label
+    id: boardAcceptedInfo
+    anchors.top: boardEventTitle.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 6
+    text-auto-resize: true
+    color: #c7c1b6
+
+  Label
+    id: boardRepeatInfo
+    anchors.top: boardAcceptedInfo.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 4
+    text-auto-resize: true
+    color: #b9b2a8
+
+  UIScrollArea
+    id: boardOffersScroll
+    anchors.top: boardRepeatInfo.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: closeButton.top
+    margin: 16
+    margin-top: 12
+    background-color: #47413b
+    border: 1 #59524a
+    padding: 10
+    vertical-scrollbar: boardOffersScrollbar
+
+    Panel
+      id: boardOffersList
+      anchors.top: parent.top
+      anchors.left: parent.left
+      width: 934
+      layout:
+        type: grid
+        cell-size: 306 417
+        cell-spacing: 8
+        flow: true
+      height: 380
+
+  VerticalScrollBar
+    id: boardOffersScrollbar
+    anchors.top: boardOffersScroll.top
+    anchors.bottom: boardOffersScroll.bottom
+    anchors.left: boardOffersScroll.right
+    background-color: #3b3732
+    border: 1 #5a5248
+    step: 50
+    pixels-scroll: true
+
+  GuildActionButton
+    id: closeButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    width: 96
+    margin-right: 14
+    margin-bottom: 10
+    !text: tr("Close")

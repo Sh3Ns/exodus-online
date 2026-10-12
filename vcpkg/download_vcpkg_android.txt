@@ -1,0 +1,35 @@
+VCPKG - Exodus Map Editor ( Diferent One ! Warning ):
+
+https://drive.google.com/file/d/1GaI2Gz8mzL9Lx3wyOWwVST-AsRfb4Ddl/view?usp=sharing
+
+
+VCPKG Full Client + Server: (place it in C:\)
+
+https://drive.google.com/file/d/1kYHZwIhwJ4aqJYcRZ0f48CU4s_aMUXpg/view?usp=sharing
+
+
+Download Vcpkg_installed: (place it Inside vc17 folder)
+
+https://drive.google.com/file/d/1qztqAE8NVWfnmxKgWTRYiNQvmee2nFAo/view?usp=drive_link
+
+
+Download Android libs: (place it in C:\)
+
+https://drive.google.com/file/d/17M9pcvzUrvx8JWvP011DweMlguJEeIhs/view?usp=sharing
+
+
+
+How install and compile Windows + Android:
+
+https://opengamescommunity.com/index.php?resources/vcpkg-completo-v3-6-5-client-server.961/
+
+
+
+
+
+
+For Exodus Map Editor and Server + Client Vcpkg:
+
+Place vcpkg on a Disk, once done, the Vcpkg for Exodus Map Editor rename it to vcpkg-remeres,
+Each time you want compile rename one to vcpkg, and open visual, compile, close visual and rename the other one.
+You can aswell target a project with a vcpkg folder on visual, but here it has switched, so this manual version works better.

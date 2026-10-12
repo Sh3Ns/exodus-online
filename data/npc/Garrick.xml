@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Garrick" script="garrick.lua" walkinterval="0" floorchange="0" speechbubble="6">
+	<health now="100" max="100" />
+	<look type="1513" head="64" body="55" legs="110" feet="17" addons="0"/>
+    <parameters>
+        <parameter key="message_greet" value="Hey, |PLAYERNAME|! I once led caravans across every road of this land... before bandits left mine in ruins. Perhaps you are here about a {relic caravan}?"/>
+        <parameter key="message_farewell" value="May the roads treat you kindly, |PLAYERNAME|."/>
+    </parameters>
+</npc>

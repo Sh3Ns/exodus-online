@@ -1,0 +1,31 @@
+MarketActionButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 24
+  padding: 4 12
+  text-offset: 0 1
+  text-align: center
+  color: white
+
+  $hover:
+    image-color: #9a958e
+    color: white
+
+  $focus:
+    image-color: #dfdfdf
+    color: white
+
+  $disabled:
+    color: #9a9a9a
+    image-color: #6d6963
+
+MarketButtonBox < MarketActionButton
+  size: 106 22
+  padding: 3 10
+  text-offset: 0 1
+
+  $checked:
+    image-color: #dfdfdf
+    color: white

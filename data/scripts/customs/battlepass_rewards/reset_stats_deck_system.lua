@@ -1,0 +1,110 @@
+
+--- Script has been disabled because now an activated card inside the deck cannot be retrived until deactivation.
+--- If you want to enable it again, just remove the "--" on each line use CTRL+/ to uncomment all lines at once.
+
+-- local deckSystemReset = Action()
+
+-- local decksystem = {
+--     CommonErasmo = 37000,
+--     RareErasmo = 37001,
+--     EpicErasmo = 37002,
+--     MythicErasmo = 37003,
+--     CommonDemetar = 37004,
+--     RareDemetar = 37005,
+--     EpicDemetar = 37006,
+--     MythicDemetar = 37007,
+--     CommonKaishuter = 37008,
+--     RareKaishuter = 37009,
+--     EpicKaishuter = 37010,
+--     MythicKaishuter = 37011,
+--     CommonEnragedChuo = 37012,
+--     RareEnragedChuo = 37013,
+--     EpicEnragedChuo = 37014,
+--     MythicEnragedChuo = 37015,
+--     CommonZaika = 37016,
+--     RareZaika = 37017,
+--     EpicZaika = 37018,
+--     MythicZaika = 37019,
+--     CommonRictus = 37020,
+--     RareRictus = 37021,
+--     EpicRictus = 37022,
+--     MythicRictus = 37023,
+--     CommonGlobus = 37024,
+--     RareGlobus = 37025,
+--     EpicGlobus = 37026,
+--     MythicGlobus = 37027,
+--     CommonHidaka = 37028,
+--     RareHidaka = 37029,
+--     EpicHidaka = 37030,
+--     MythicHidaka = 37031,
+--     CommonBrelshaza = 37032,
+--     RareBrelshaza = 37033,
+--     EpicBrelshaza = 37034,
+--     MythicBrelshaza = 37035,
+--     CommonVairgrys = 37036,
+--     RareVairgrys = 37037,
+--     EpicVairgrys = 37038,
+--     MythicVairgrys = 37039,
+--     CommonEnviska = 37040,
+--     RareEnviska = 37041,
+--     EpicEnviska = 37042,
+--     MythicEnviska = 37043,
+--     CommonHarzal = 37044,
+--     RareHarzal = 37045,
+--     EpicHarzal = 37046,
+--     MythicHarzal = 37047,
+--     CommonAgaton = 37048,
+--     RareAgaton = 37049,
+--     EpicAgaton = 37050,
+--     MythicAgaton = 37051,
+--     CommonLumerus = 37052,
+--     RareLumerus = 37053,
+--     EpicLumerus = 37054,
+--     MythicLumerus = 37055,
+--     CommonVelganos = 37056,
+--     RareVelganos = 37057,
+--     EpicVelganos = 37058,
+--     MythicVelganos = 37059,
+--     CommonPhokis = 37060,
+--     RarePhokis = 37061,
+--     EpicPhokis = 37062,
+--     MythicPhokis = 37063,
+--     CommonNunkatu = 37064,
+--     RareNunkatu = 37065,
+--     EpicNunkatu = 37066,
+--     MythicNunkatu = 37067,
+--     CommonReaper = 37068,
+--     RareReaper = 37069,
+--     EpicReaper = 37070,
+--     MythicReaper = 37071,
+--     LegendaryExoticAscalonLv6 = 37065,
+-- 	LegendaryChaosAscalonLv6 = 37066,
+-- 	LegendaryAbyssalAscalonLv6 = 37067,
+-- 	LegendaryAncestralAscalonLv6 = 37068,
+-- 	LegendaryExoticSaydonLv6 = 37069,
+-- 	LegendaryChaosSaydonLv6 = 37070,
+-- 	LegendaryAbyssalSaydonLv6 = 37071,
+-- 	LegendaryAncestralSaydonLv6 = 37072,
+-- 	LegendaryExoticVercruzeLv6 = 37073,
+-- 	LegendaryChaosVercruzeLv6 = 37074,
+-- 	LegendaryAbyssalVercruzeLv6 = 37075,
+-- 	LegendaryAncestralVercruzeLv6 = 37076,
+-- 	LegendaryExoticKaiserLv6 = 37077,
+-- 	LegendaryChaosKaiserLv6 = 37078,
+-- 	LegendaryAbyssalKaiserLv6 = 37079,
+-- 	LegendaryAncestralKaiserLv6 = 37080,
+
+-- }
+
+-- function deckSystemReset.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+--     for _, storageValue in pairs(decksystem) do
+--         player:setStorageValue(storageValue, 0)
+--     end
+--     player:sendTextMessage(MESSAGE_INFO_DESCR, "All deck cards have been reseted.")
+--     item:remove(1)
+--     playSound(player, "success.ogg")
+--     return true
+-- end
+
+-- deckSystemReset:id(28096)
+-- deckSystemReset:register()

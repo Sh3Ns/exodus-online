@@ -1,0 +1,10 @@
+Module
+  name: game_levelup
+  description: LevelUp Banner
+  author: alex
+  sandboxed: true
+  autoload: true
+  scripts: [ levelup ]
+  @onLoad: init()
+  @onUnload: terminate()
+  dependencies: [ game_interface ]

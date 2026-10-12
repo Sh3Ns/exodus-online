@@ -1,0 +1,180 @@
+BossTimerPanel < UIWidget
+  height: 92
+  margin-top: 2
+  margin-left: 6
+  margin-right: 6
+  layout: anchor
+
+  UICreature
+    id: outfitCreature
+    size: 48 48
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 12
+    margin-top: 12
+    animate: true
+
+  UIItem
+    id: outfitItem
+    size: 48 48
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 12
+    margin-top: 12
+    visible: false
+    virtual: true
+    phantom: true
+
+  Label
+    id: bossName
+    anchors.left: outfitCreature.right
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-left: 8
+    margin-top: 6
+    margin-right: 8
+    height: 16
+    color: #f0f0f0
+    font: verdana-11px-rounded
+    text-align: left
+
+  Label
+    id: category
+    anchors.left: outfitCreature.right
+    anchors.right: parent.right
+    anchors.top: bossName.bottom
+    margin-left: 8
+    margin-top: 3
+    margin-right: 8
+    height: 15
+    color: #cfcfcf
+    font: verdana-11px-rounded
+    text-align: left
+
+  Label
+    id: statusText
+    anchors.left: outfitCreature.right
+    anchors.right: parent.right
+    anchors.top: category.bottom
+    margin-left: 8
+    margin-top: 3
+    margin-right: 8
+    height: 15
+    color: #cccccc
+    font: verdana-11px-rounded
+    text-align: left
+
+  Label
+    id: timerValue
+    anchors.left: outfitCreature.right
+    anchors.right: parent.right
+    anchors.top: statusText.bottom
+    margin-left: 8
+    margin-top: 2
+    margin-right: 8
+    height: 16
+    color: #59e35f
+    font: verdana-11px-rounded
+    text-align: left
+
+  UIWidget
+    id: separator
+    height: 1
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-left: 2
+    margin-right: 2
+    background-color: #ffffff33
+
+BossTimersWindow < MiniWindow
+  !text: tr('Boss Timers')
+  height: 520
+  icon: /images/topbuttons/bosstimer
+  @onClose: onMiniWindowClose()
+  &save: true
+  layout: anchor
+
+  Label
+    id: title
+    !text: tr('Boss Cooldowns')
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 28
+    margin-left: 8
+    color: #f0f0f0
+    font: verdana-11px-rounded
+
+  Button
+    id: refreshButton
+    !text: tr('Refresh')
+    width: 70
+    height: 22
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 24
+    margin-right: 8
+    @onClick: requestBossTimers()
+
+  Button
+    id: prevPageButton
+    !text: tr('<')
+    width: 22
+    height: 22
+    anchors.top: title.bottom
+    anchors.left: parent.left
+    margin-top: 6
+    margin-left: 8
+    @onClick: changeBossTimerPage(-1)
+
+  Label
+    id: pageLabel
+    !text: tr('1/1')
+    anchors.verticalCenter: prevPageButton.verticalCenter
+    anchors.left: prevPageButton.right
+    margin-left: 6
+    margin-top: 1
+    width: 96
+    height: 14
+    color: #d8d8d8
+    font: verdana-11px-rounded
+    text-auto-resize: false
+    text-align: center
+
+  Button
+    id: nextPageButton
+    !text: tr('>')
+    width: 22
+    height: 22
+    anchors.top: title.bottom
+    anchors.left: pageLabel.right
+    margin-top: 6
+    margin-left: 6
+    @onClick: changeBossTimerPage(1)
+
+  ScrollablePanel
+    id: contentsPanel
+    anchors.top: prevPageButton.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 8
+    margin-left: 4
+    margin-right: 18
+    margin-bottom: 4
+    vertical-scrollbar: contentsScroll
+    layout:
+      type: verticalBox
+
+  VerticalScrollBar
+    id: contentsScroll
+    anchors.top: contentsPanel.top
+    anchors.bottom: contentsPanel.bottom
+    anchors.right: parent.right
+    margin-right: 4
+    step: 40
+    pixels-scroll: true
+
+
+BossTimersWindow
+  id: bossTimersWindow

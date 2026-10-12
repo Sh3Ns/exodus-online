@@ -1,0 +1,310 @@
+LookItemName < Label
+  phantom: true
+  height: 18
+  font: verdana-14px-rounded
+  text-horizontal-auto-resize: true
+  text-align: center
+  color: #ffffff
+  margin-top: 4
+
+LookItemSectionTitle < Label
+  phantom: true
+  height: 18
+  font: verdana-14px-rounded
+  text-horizontal-auto-resize: true
+  text-align: left
+  color: #ffffff
+  margin-top: 4
+
+TooltipSeparator < UIWidget
+  background-color: #b88a2f
+  height: 1
+  margin-top: 4
+  margin-left: 7
+  margin-right: 7
+
+LookItemIconAttribute < UIWidget
+  font: verdana-11px-rounded
+  phantom: true
+  height: 22
+  text-offset: 27 0
+  text-horizontal-auto-resize: true
+  text-align: left
+  margin-top: 4
+
+  UIWidget
+    id: icon
+    anchors.left: parent.left
+    anchors.verticalcenter: parent.verticalcenter
+    image-source: icons
+    phantom: true
+    margin-left: 7
+    size: 19 19
+
+LookItemContinuationAttribute < Label
+  font: verdana-11px-rounded
+  phantom: true
+  height: 14
+  text-horizontal-auto-resize: true
+  text-align: left
+  margin-left: 27
+
+RarityIcons < UIWidget
+  layout:
+    type: verticalBox
+  height: 24
+  margin-top: 1
+
+StarsContainer < UIWidget
+  layout:
+    type: horizontalBox
+  height: 22
+  margin-top: 1
+
+ForgeTierTooltipRow < UIWidget
+  height: 36
+  width: 190
+  phantom: true
+
+  Label
+    id: tierLabel
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 7
+    font: verdana-11px-rounded
+    color: #f0c96a
+
+  UIWidget
+    id: tierIcon
+    anchors.left: tierLabel.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: -20
+    margin-top: -12
+    size: 38 38
+    phantom: true
+
+UIMiniWindow
+  id: tooltipWindow
+  focusable: false
+  phantom: true
+  background-color: #120f0be6
+  border: 1 #b88a2f
+  
+  UIWidget
+    id: tooltipFrame
+    anchors.fill: parent
+    background-color: alpha
+    phantom: true
+
+  UIWidget
+    id: tooltipOrnamentTop
+    phantom: true
+    anchors.top: parent.top
+    anchors.horizontalcenter: parent.horizontalcenter
+    size: 180 220
+    margin-top: -36
+
+  UIWidget
+    id: tooltipFrameTopLeft
+    phantom: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    size: 180 180
+
+  UIWidget
+    id: tooltipFrameTop
+    phantom: true
+    anchors.top: parent.top
+    anchors.horizontalcenter: parent.horizontalcenter
+    size: 180 180
+
+  UIWidget
+    id: tooltipFrameTopRight
+    phantom: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    size: 180 180
+
+  UIWidget
+    id: tooltipFrameLeft
+    phantom: true
+    anchors.left: parent.left
+    anchors.verticalcenter: parent.verticalcenter
+    size: 180 180
+
+  UIWidget
+    id: tooltipFrameRight
+    phantom: true
+    anchors.right: parent.right
+    anchors.verticalcenter: parent.verticalcenter
+    size: 180 180
+
+  UIWidget
+    id: tooltipFrameBottomLeft
+    phantom: true
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    size: 180 180
+
+  UIWidget
+    id: tooltipFrameBottom
+    phantom: true
+    anchors.bottom: parent.bottom
+    anchors.horizontalcenter: parent.horizontalcenter
+    size: 180 180
+
+  UIWidget
+    id: tooltipFrameBottomRight
+    phantom: true
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    size: 180 180
+    
+  Item
+    id: item
+    anchors.top: parent.top
+    anchors.horizontalcenter: parent.horizontalcenter
+    margin-top: 7
+    image-source: /images/ui/item_phantom
+    
+
+  ScrollablePanel
+    id: list
+    anchors.fill: parent
+    anchors.top: prev.bottom
+    margin-left: 6
+    margin-right: 6
+    margin-bottom: 6
+    layout:
+      type: verticalBox
+
+VoidTagRow < Panel
+  layout:
+    type: horizontalBox
+    spacing: 3
+  fit-children: true
+  height: 20
+
+SocketItem < Item
+  size: 32 32
+  padding: 0
+  margin: 0
+  image-source: /images/sockets/empty_socket
+  background-color: alpha
+  border-width: 0
+
+GemTooltipStarsRow < Panel
+  width: 52
+  height: 16
+  layout:
+    type: horizontalBox
+    spacing: 2
+
+GemTooltipStarIcon < UIWidget
+  size: 16 16
+
+GemTooltipRow < Panel
+  width: 340
+  layout:
+    type: horizontalBox
+    spacing: 6
+  height: 38
+
+  Label
+    id: socketLabel
+    width: 0
+    color: #e0e0e0
+
+  SocketItem
+    id: gemItem
+    virtual: true
+
+  Panel
+    id: gemTextPanel
+    width: 302
+    height: 36
+    layout:
+      type: verticalBox
+      spacing: 1
+
+    Label
+      id: gemText
+      width: 302
+      height: 15
+      color: #cfcfcf
+      text-wrap: false
+
+    Panel
+      id: gemInfoLine
+      width: 302
+      height: 16
+      layout:
+        type: horizontalBox
+        spacing: 6
+
+      GemTooltipStarsRow
+        id: gemStars
+
+      Label
+        id: gemCompactText
+        width: 220
+        height: 16
+        color: #f0c96a
+        text-wrap: false
+
+GemTooltipEmptyRow < Panel
+  width: 286
+  height: 32
+
+  SocketItem
+    id: gemItem
+    virtual: true
+    anchors.left: parent.left
+    anchors.verticalcenter: parent.verticalcenter
+    margin-left: 6
+
+  Label
+    id: gemText
+    width: 248
+    height: 18
+    color: #cfcfcf
+    text-wrap: false
+    text-align: left
+    anchors.left: gemItem.right
+    anchors.verticalcenter: parent.verticalcenter
+    margin-left: 6
+
+ProficiencyTooltipRow < Panel
+  width: 300
+  height: 38
+
+  Label
+    id: proficiencyText
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-left: 7
+    margin-right: 7
+    height: 16
+    font: verdana-11px-rounded
+    color: #f0c96a
+    text-align: left
+
+  Panel
+    id: proficiencyBarBackground
+    anchors.top: proficiencyText.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 3
+    margin-left: 7
+    margin-right: 7
+    height: 12
+    background-color: #241d14
+    border: 1 #765a2b
+
+    ProgressBar
+      id: proficiencyBar
+      anchors.fill: parent
+      margin: 1
+      background-color: #c89b3c
+      percent: 0

@@ -1,0 +1,10 @@
+Module
+  name: game_caravan
+  description: Caravan system
+  author: Alex
+  website: None
+  sandboxed: true
+  autoload: true
+  scripts: [ caravan ]
+  @onLoad: init()
+  @onUnload: terminate()

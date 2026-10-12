@@ -1,0 +1,61 @@
+ItemFusionActionButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 20
+  padding: 2 8
+  text-offset: 0 1
+  text-align: center
+  color: white
+
+  $hover:
+    image-color: #9a958e
+    color: white
+
+  $focus:
+    image-color: #dfdfdf
+    color: white
+
+  $disabled:
+    color: #9a9a9a
+
+Window
+  size: 300 150
+  title: Yes/No Confirmation
+  image-source: /images/ui/panel_map3
+  image-border: 10
+  image-border-top: 40
+  image-border-bottom: 40
+  modal: true
+  movable: false
+  resizeable: false
+  padding: 10
+
+  Label
+    id: message
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    text: "Do you want to fuse this items?"
+    auto-resize: true
+
+  ItemFusionActionButton
+    id: yesButton
+    text: "Yes"
+    width: 72
+    height: 20
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 20
+    margin-bottom: 16
+
+  ItemFusionActionButton
+    id: noButton
+    text: "No"
+    width: 72
+    height: 20
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 20
+    margin-bottom: 16

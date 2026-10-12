@@ -1,0 +1,241 @@
+DynastiePassiveHeaderCell < Panel
+  size: 154 30
+  phantom: false
+  background-color: #403a34
+  border: 1 #665b4a
+
+  Label
+    id: text
+    anchors.centerIn: parent
+    color: #ffdc96
+    font: verdana-11px-rounded
+    text-auto-resize: true
+
+DynastiePassiveHeaderRow < Panel
+  layout: horizontalBox
+  fit-children: true
+  spacing: 0
+  height: 30
+
+DynastiePassiveDefenderLabel < Panel
+  size: 180 108
+  phantom: false
+  background-color: #403a34
+  border: 1 #665b4a
+
+  Label
+    id: name
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 12
+    margin-left: 8
+    margin-right: 8
+    text-align: center
+    color: #dfdfdf
+    font: verdana-11px-rounded
+    text-wrap: true
+
+  Label
+    id: points
+    anchors.top: name.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 10
+    text-align: center
+    color: #7ad7ff
+    text-auto-resize: true
+
+DynastiePassiveDefenderRow < Panel
+  layout: horizontalBox
+  fit-children: true
+  spacing: 0
+  height: 108
+
+DynastiePassiveNodeCell < Panel
+  size: 154 108
+  phantom: false
+  focusable: true
+  background-color: #2f2b27
+  border: 1 #746754
+
+  Panel
+    id: square
+    phantom: false
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 12
+    size: 40 40
+    background-color: #4f463d
+    border: 1 #8e7d68
+
+    Label
+      id: icon
+      anchors.fill: parent
+      image-size: 40 40
+      image-fixed-ratio: true
+      visible: false
+
+    Label
+      id: short
+      anchors.centerIn: parent
+      color: #f4ead6
+      font: verdana-11px-rounded
+      text-auto-resize: true
+
+  Label
+    id: name
+    anchors.top: square.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    margin-left: 6
+    margin-right: 6
+    height: 18
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: status
+    anchors.top: name.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+    margin-left: 6
+    margin-right: 6
+    height: 14
+    text-align: center
+    color: #7ccf7c
+
+DynastiePassiveTreeRoot < Panel
+  anchors.fill: parent
+  background-color: #3b3732
+  border: 1 #59524a
+  padding: 16
+
+  Panel
+    id: passiveTreeTopSummary
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 42
+    background-color: #403a34
+    border: 1 #59524a
+
+    Label
+      id: passiveTreePointsLabel
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 12
+      color: #7ad7ff
+      font: verdana-11px-rounded
+      text-auto-resize: true
+      !text: tr("Available Points: 0")
+
+    GuildActionButton
+      id: passiveTreeResetButton
+      anchors.right: parent.right
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 10
+      width: 150
+      height: 24
+      enabled: true
+      !text: tr("Reset Branch")
+
+    GuildActionButton
+      id: passiveTreeUnlockButton
+      anchors.right: passiveTreeResetButton.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 10
+      width: 150
+      height: 24
+      enabled: false
+      !text: tr("Unlock Selected")
+
+    Label
+      id: passiveTreeTotalPointsLabel
+      anchors.right: passiveTreeUnlockButton.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 12
+      color: #dfdfdf
+      font: verdana-11px-rounded
+      text-auto-resize: true
+      !text: tr("Total Points: 0 / 0")
+
+  UIScrollArea
+    id: passiveTreeScroll
+    anchors.top: passiveTreeTopSummary.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: passiveTreeHorizontalScrollbar.top
+    margin-top: 10
+    margin-bottom: 4
+    background-color: #443d36
+    border: 1 #655b51
+    padding: 12
+    vertical-scrollbar: passiveTreeVerticalScrollbar
+    horizontal-scrollbar: passiveTreeHorizontalScrollbar
+
+    Panel
+      id: passiveTreeTableContent
+      size: 1120 420
+      background-color: #312d29
+      border: 1 #514940
+      anchors.top: parent.top
+      anchors.left: parent.left
+
+      Panel
+        id: passiveTreeCornerCell
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 8
+        margin-left: 8
+        size: 180 30
+        background-color: #403a34
+        border: 1 #665b4a
+
+        Label
+          id: text
+          anchors.centerIn: parent
+          color: #ffdc96
+          font: verdana-11px-rounded
+          text-auto-resize: true
+          !text: tr("Defender")
+
+      DynastiePassiveHeaderRow
+        id: passiveTreeHeaderBand
+        anchors.top: parent.top
+        anchors.left: passiveTreeCornerCell.right
+        margin-top: 8
+        height: 30
+        width: 900
+
+      Panel
+        id: passiveTreeRowsBand
+        anchors.top: passiveTreeCornerCell.bottom
+        anchors.left: parent.left
+        margin-left: 8
+        margin-top: 0
+        width: 900
+        height: 300
+        layout: verticalBox
+        fit-children: true
+        spacing: 0
+
+  HorizontalScrollBar
+    id: passiveTreeHorizontalScrollbar
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 18
+    step: 32
+    pixels-scroll: true
+
+  VerticalScrollBar
+    id: passiveTreeVerticalScrollbar
+    anchors.top: passiveTreeScroll.top
+    anchors.right: parent.right
+    anchors.bottom: passiveTreeHorizontalScrollbar.top
+    margin-right: 2
+    margin-bottom: 4
+    step: 32

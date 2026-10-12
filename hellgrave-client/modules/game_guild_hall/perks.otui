@@ -1,0 +1,221 @@
+GuildPerkItem < UIWidget
+  image-source: /images/ui/inner_content_panel
+  image-border: 10
+  padding: 5
+  border: 0 white
+
+  $focus:
+    border: 1 white
+
+  UIWidget
+    id: icon
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 58 58
+    phantom: true
+
+  Label
+    id: name
+    anchors.left: parent.left
+    anchors.top: parent.top
+    !text: tr("Perk Name")
+    text-wrap: true
+    text-auto-resize:  true
+    width: 145
+    font: verdana-11px-rounded
+    
+  Label
+    id: level
+    anchors.left: parent.left
+    anchors.top: name.bottom
+    text: Lv. 1 - (0/3)
+    text-auto-resize:  true
+    font: verdana-11px-rounded
+
+  Label
+    id: requiredLevel
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    !text: tr("Require Guild Lv. 1")
+    color: #8A8B7F
+    text-auto-resize: true
+    font: verdana-11px-rounded
+            
+  Label
+    id: costLabel
+    anchors.left: parent.left
+    anchors.bottom: requiredLevel.top
+    !text: tr("Cost") .. ": "
+    text-auto-resize:  true
+    color: #FFF600
+    font: verdana-11px-rounded
+
+  Label
+    id: costValue
+    anchors.left: costLabel.right
+    anchors.bottom: costLabel.bottom
+    text-auto-resize: true
+    text: 2000000000
+    color: #FFF600
+    font: verdana-11px-rounded
+
+  Label
+    id: premiumCostLabel
+    anchors.left: parent.left
+    anchors.bottom: costLabel.top
+    margin-bottom: 2
+    !text: tr("Premium") .. ": "
+    text-auto-resize: true
+    color: #7AD7FF
+    font: verdana-11px-rounded
+    visible: false
+
+  Label
+    id: premiumCostValue
+    anchors.left: premiumCostLabel.right
+    anchors.bottom: premiumCostLabel.bottom
+    text-auto-resize: true
+    text: 0
+    color: #7AD7FF
+    font: verdana-11px-rounded
+    visible: false
+      
+  UIWidget
+    id: costLayer
+    anchors.left: costLabel.left
+    anchors.right: costValue.right
+    height: 20
+    anchors.top: costLabel.top
+    font: verdana-11px-rounded
+            
+  UIWidget
+    id: bonus
+    anchors.left: parent.left
+    anchors.top: level.bottom
+    anchors.right: icon.right
+    anchors.bottom: premiumCostLabel.top
+    margin-top: 5
+    !text: tr("Increase") .. " +5%"
+    text-wrap: true
+    text-align: topleft
+    color: #FF9D00
+    phantom: true
+    font: verdana-11px-rounded
+
+
+Panel
+  background-color: #3e3a35
+  padding: 16
+  
+  UIWidget
+    id: topBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 20
+    
+    Label
+      id: levelLabel
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      !text: tr("Guild") .. ": "
+      text-auto-resize: true
+
+    Label
+      id: guildLevel
+      anchors.left: levelLabel.right
+      anchors.verticalCenter: parent.verticalCenter
+      color: #00FF00
+      text: Lv 1
+      text-auto-resize: true
+
+    Label
+      id: perksLabel
+      anchors.centerIn: parent
+      !text: tr("Perks Available") .. ":"
+      visible: false
+
+    Label
+      id: perks
+      anchors.left: perksLabel.right
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 5
+      color: #00FF00
+      text: 0
+      visible: false
+      
+    Label
+      id: nextPerk
+      anchors.right: parent.right
+      anchors.verticalCenter: parent.verticalCenter
+      color: #00FF00
+      text: Lv 1
+      text-auto-resize: true
+      visible: false
+          
+    Label
+      id: nextPerkLabel
+      anchors.right: nextPerk.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 5
+      !text: tr("Next Perk") .. ": "
+      text-auto-resize: true
+      visible: false
+        
+  GuildActionButton
+    id: unlockButton
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    !text: tr("Upgrade")
+    width: 100
+    text-offset: 0 0
+    @onClick: modules.game_guild_hall.upgradePerk()
+            
+  GuildActionButton
+    id: resetAllButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    !text: tr("Reset All")
+    width: 100
+    text-offset: 0 0
+    visible: false
+    @onClick: modules.game_guild_hall.resetPerks(false)
+                
+  GuildActionButton
+    id: resetButton
+    anchors.bottom: resetAllButton.bottom
+    anchors.right: parent.right
+    //anchors.right: resetAllButton.left
+    //margin-right: 10
+    !text: tr("Reset")
+    width: 100
+    text-offset: 0 0
+    @onClick: modules.game_guild_hall.resetPerks(true)
+
+  UIScrollArea
+    id: perkList
+    anchors.top: topBar.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: unlockButton.top
+    margin-top: 10
+    margin-bottom: 14
+    margin-left: 10
+    margin-right: 30
+    auto-focus: first
+    vertical-scrollbar: perkListScrollBar
+    layout:
+      type: grid
+      cell-size: 260 130
+      cell-spacing: 5
+      flow: true
+      
+  VerticalScrollBar
+    id: perkListScrollBar
+    anchors.top: perkList.top
+    anchors.bottom: perkList.bottom
+    anchors.right: parent.right
+    background-color: #3b3732
+    border: 1 #5a5248
+    step: 14
+    pixels-scroll: true

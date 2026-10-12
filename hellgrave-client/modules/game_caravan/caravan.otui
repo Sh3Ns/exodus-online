@@ -1,0 +1,569 @@
+CaravanActionButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 24
+  padding: 4 12
+  text-offset: 0 0
+  text-align: center
+  color: white
+
+  $hover:
+    image-color: #9a958e
+    color: white
+
+  $focus:
+    image-color: #dfdfdf
+    color: white
+
+  $disabled:
+    color: #9a9a9a
+
+MiniPanel < Panel
+  text-offset: 0 2
+  text-align: top
+  image-source: /images/ui/panel_flat
+  image-border: 1
+  image-border-top: 20
+  image-border-bottom: 4
+  padding-left: 4
+  padding-bottom: 3
+  padding-top: 18
+  padding-right: 4
+
+CaravanVisualCard < Panel
+  size: 235 205
+  image-source: /images/ui/panel_flat
+  image-border: 1
+  padding: 6
+
+  UICreature
+    id: preview
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 50
+    margin-left: 30
+    size: 120 76
+
+  Label
+    id: unlockStatus
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    text-align: center
+    font: verdana-11px-rounded
+    color: #00ff00
+
+  Label
+    id: lockedOverlay
+    anchors.verticalCenter: preview.verticalCenter
+    anchors.left: parent.left
+    anchors.right: parent.right
+    text-align: center
+    font: verdana-11px-rounded
+    color: #ff8080
+    text: Locked
+    visible: false
+
+  Label
+    id: name
+    anchors.top: preview.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    text-align: center
+    color: #ffffff
+
+  Label
+    id: activeStatus
+    anchors.top: name.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 3
+    text-align: center
+
+  CaravanActionButton
+    id: selectButton
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-left: 12
+    margin-right: 12
+    margin-bottom: 4
+    height: 22
+    text: Activate Visual
+
+CaravanMaterialItem < Panel
+  height: 38
+  width: 170
+
+  UIItem
+    id: item
+    anchors.verticalCenter: parent.verticalCenter
+    anchors.left: parent.left
+    size: 34 34
+    padding: 1
+    virtual: true
+
+  Label
+    id: name
+    anchors.left: item.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 8
+    width: 90
+    text-align: left
+
+  Label
+    id: count
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    width: 48
+    text-align: right
+
+CaravanUpgradeMaterialItem < Panel
+  size: 132 84
+  image-source: /images/ui/miniwindow
+  image-border: 4
+  padding: 4
+
+  UIItem
+    id: item
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 4
+    size: 36 36
+    virtual: true
+
+  Label
+    id: name
+    anchors.top: item.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 3
+    text-align: center
+    font: verdana-11px-rounded
+    text-wrap: true
+    height: 18
+
+  Label
+    id: count
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-bottom: 5
+    text-align: center
+    font: verdana-11px-rounded
+
+MainWindow
+  id: caravanWindow
+  text: Caravan System
+  size: 780 620
+  image-source: /images/ui/panel_flat
+  image-border: 1
+  layout:
+    type: anchor
+
+  Label
+    id: lockMessage
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: parent.top
+    margin-top: 12
+    text: You haven't unlocked the caravan system yet.
+    color: #ff0000
+    visible: false
+
+  Panel
+    id: contentPanel
+    anchors.fill: parent
+
+    MiniPanel
+      id: statusPanel
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 90
+      text: Caravan Status
+
+      Label
+        id: modeLabel
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 5
+        margin-left: 10
+        text: Mode: Deactivated
+
+      Label
+        id: activeLabel
+        anchors.top: modeLabel.bottom
+        anchors.left: modeLabel.left
+        margin-top: 4
+        text: Caravan: Inactive
+
+      Label
+        id: mountLabel
+        anchors.top: activeLabel.bottom
+        anchors.left: modeLabel.left
+        margin-top: 4
+        text: Mount: Not mounted
+
+      CaravanActionButton
+        id: toggleButton
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        margin-right: 12
+        width: 100
+        height: 24
+        text: Activate
+        @onClick: modules.game_caravan.toggleMode()
+
+      CaravanActionButton
+        id: storageButton
+        anchors.right: toggleButton.left
+        anchors.top: toggleButton.top
+        margin-right: 8
+        width: 100
+        height: 24
+        text: Open Storage
+        @onClick: modules.game_caravan.openStorage()
+
+    MiniPanel
+      id: visualsBox
+      anchors.top: statusPanel.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 330
+      margin-top: 10
+      text: Caravan Visuals
+
+      ScrollablePanel
+        id: visualsPanel
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        margin-top: 6
+        margin-left: 6
+        margin-right: 18
+        margin-bottom: 6
+        vertical-scrollbar: visualsScroll
+        
+        CaravanVisualCard
+          id: visual1
+          anchors.top: parent.top
+          anchors.left: parent.left
+
+        CaravanVisualCard
+          id: visual2
+          anchors.top: parent.top
+          anchors.left: visual1.right
+          margin-left: 6
+
+        CaravanVisualCard
+          id: visual3
+          anchors.top: parent.top
+          anchors.left: visual2.right
+          margin-left: 6
+
+        CaravanVisualCard
+          id: visual4
+          anchors.top: visual1.bottom
+          anchors.left: parent.left
+          margin-top: 6
+
+        CaravanVisualCard
+          id: visual5
+          anchors.top: visual2.bottom
+          anchors.left: visual4.right
+          margin-left: 6
+          margin-top: 6
+
+        CaravanVisualCard
+          id: visual6
+          anchors.top: visual3.bottom
+          anchors.left: visual5.right
+          margin-left: 6
+          margin-top: 6
+
+        CaravanVisualCard
+          id: visual7
+          anchors.top: visual4.bottom
+          anchors.left: parent.left
+          margin-top: 6
+
+        CaravanVisualCard
+          id: visual8
+          anchors.top: visual5.bottom
+          anchors.left: visual7.right
+          margin-left: 6
+          margin-top: 6
+
+      VerticalScrollBar
+        id: visualsScroll
+        anchors.top: visualsPanel.top
+        anchors.bottom: visualsPanel.bottom
+        anchors.right: parent.right
+        margin-top: 1
+        margin-bottom: 1
+        margin-right: 2
+        step: 24
+        pixels-scroll: true
+
+    MiniPanel
+      id: storagePanel
+      anchors.top: visualsBox.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 140
+      margin-top: 10
+      text: Storage Upgrade
+
+      Label
+        id: storageLevelLabel
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 8
+        margin-left: 10
+        text: Storage Level: 1 / 10
+        width: 220
+
+      Label
+        id: storageCapacityLabel
+        anchors.top: storageLevelLabel.bottom
+        anchors.left: storageLevelLabel.left
+        margin-top: 4
+        text: Capacity: 5 / 50 slots
+        width: 220
+
+      Label
+        id: upgradeInfoLabel
+        anchors.top: storageCapacityLabel.bottom
+        anchors.left: storageLevelLabel.left
+        margin-top: 8
+        text: Next Upgrade:
+        width: 230
+
+      Label
+        id: materialsTitleLabel
+        anchors.top: parent.top
+        anchors.left: parent.horizontalCenter
+        margin-top: 8
+        margin-left: 10
+        text: Required Materials
+
+      Panel
+        id: materialsPanel
+        anchors.top: materialsTitleLabel.bottom
+        anchors.left: parent.horizontalCenter
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        margin-top: 4
+        margin-left: 10
+        margin-right: 10
+        margin-bottom: 10
+        
+        CaravanMaterialItem
+          id: material1
+          anchors.top: parent.top
+          anchors.left: parent.left
+
+        CaravanMaterialItem
+          id: material2
+          anchors.top: parent.top
+          anchors.left: material1.right
+          margin-left: 12
+
+        CaravanMaterialItem
+          id: material3
+          anchors.top: material1.bottom
+          anchors.left: parent.left
+          margin-top: 6
+
+        CaravanMaterialItem
+          id: material4
+          anchors.top: material2.bottom
+          anchors.left: material3.right
+          margin-left: 12
+          margin-top: 6
+
+      CaravanActionButton
+        id: upgradeButton
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        margin-left: 10
+        margin-bottom: 0
+        width: 120
+        height: 24
+        text: Open Upgrade
+        @onClick: modules.game_caravan.openUpgradeWindow()
+
+  HorizontalSeparator
+    id: separator
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-bottom: 30
+
+  CaravanActionButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 4
+    text: Close
+    width: 60
+    @onClick: modules.game_caravan.hide()
+
+CaravanUpgradeWindow < MainWindow
+  text: Caravan Upgrade
+  size: 470 450
+  image-source: /images/ui/panel_flat
+  image-border: 1
+  visible: false
+  layout:
+    type: anchor
+
+  MiniPanel
+    id: upgradeContentPanel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: separator.top
+    text: Upgrade Details
+
+    Label
+      id: upgradeWindowLevelLabel
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 8
+      margin-left: 10
+      margin-right: 10
+      text: Current Level: 1
+
+    Label
+      id: upgradeWindowCapacityLabel
+      anchors.top: upgradeWindowLevelLabel.bottom
+      anchors.left: upgradeWindowLevelLabel.left
+      anchors.right: upgradeWindowLevelLabel.right
+      margin-top: 4
+      text: Next Capacity: 10 slots
+
+    Label
+      id: upgradeWindowMaterialsLabel
+      anchors.top: upgradeWindowCapacityLabel.bottom
+      anchors.left: upgradeWindowLevelLabel.left
+      anchors.right: upgradeWindowLevelLabel.right
+      margin-top: 8
+      text: Required Materials
+
+    Panel
+      id: upgradeMaterialsPanel
+      anchors.top: upgradeWindowMaterialsLabel.bottom
+      anchors.left: upgradeWindowLevelLabel.left
+      anchors.right: upgradeWindowLevelLabel.right
+      height: 185
+      margin-top: 4
+      
+      CaravanUpgradeMaterialItem
+        id: upgradeMaterial1
+        anchors.top: parent.top
+        anchors.left: parent.left
+        image-source: /images/ui/panel_flat
+        image-border: 1
+
+      CaravanUpgradeMaterialItem
+        id: upgradeMaterial2
+        anchors.top: parent.top
+        anchors.left: upgradeMaterial1.right
+        margin-left: 6
+        image-source: /images/ui/panel_flat
+        image-border: 1
+
+      CaravanUpgradeMaterialItem
+        id: upgradeMaterial3
+        anchors.top: parent.top
+        anchors.left: upgradeMaterial2.right
+        margin-left: 6
+        image-source: /images/ui/panel_flat
+        image-border: 1
+
+      CaravanUpgradeMaterialItem
+        id: upgradeMaterial4
+        anchors.top: upgradeMaterial1.bottom
+        anchors.left: parent.left
+        margin-top: 10
+        image-source: /images/ui/panel_flat
+        image-border: 1
+
+      CaravanUpgradeMaterialItem
+        id: upgradeMaterial5
+        anchors.top: upgradeMaterial2.bottom
+        anchors.left: upgradeMaterial4.right
+        margin-left: 6
+        margin-top: 10
+        image-source: /images/ui/panel_flat
+        image-border: 1
+
+      CaravanUpgradeMaterialItem
+        id: upgradeMaterial6
+        anchors.top: upgradeMaterial3.bottom
+        anchors.left: upgradeMaterial5.right
+        margin-left: 6
+        margin-top: 10
+        image-source: /images/ui/panel_flat
+        image-border: 1
+      auto-focus: none
+
+    Label
+      id: upgradeResultTitleLabel
+      anchors.top: upgradeMaterialsPanel.bottom
+      anchors.left: upgradeWindowLevelLabel.left
+      anchors.right: upgradeWindowLevelLabel.right
+      margin-top: 8
+      text: Upgrade Result
+
+    Panel
+      id: upgradeResultBox
+      anchors.top: upgradeResultTitleLabel.bottom
+      anchors.left: upgradeWindowLevelLabel.left
+      anchors.right: upgradeWindowLevelLabel.right
+      margin-top: 4
+      height: 44
+      image-source: /images/ui/panel_map
+      image-border: 4
+
+      Label
+        id: upgradeWindowStatusLabel
+        anchors.fill: parent
+        margin-top: 6
+        margin-left: 8
+        margin-right: 8
+        text-align: center
+        text-wrap: true
+        color: #b0b0b0
+        text: Review the required materials before upgrading.
+
+  HorizontalSeparator
+    id: separator
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-bottom: 30
+
+  CaravanActionButton
+    id: upgradeConfirmButton
+    anchors.bottom: parent.bottom
+    anchors.right: upgradeCloseButton.left
+    margin-right: 8
+    width: 90
+    text: Upgrade
+    @onClick: modules.game_caravan.confirmUpgrade()
+
+  CaravanActionButton
+    id: upgradeCloseButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 4
+    width: 60
+    text: Close
+    @onClick: modules.game_caravan.closeUpgradeWindow()

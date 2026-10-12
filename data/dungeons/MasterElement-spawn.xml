@@ -1,0 +1,761 @@
+<?xml version="1.0"?>
+<spawns>
+	<spawn centerx="200" centery="29" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="152" centery="31" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="199" centery="32" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="1" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="202" centery="32" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="232" centery="32" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="139" centery="33" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="189" centery="33" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="235" centery="34" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="163" centery="35" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="167" centery="35" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="181" centery="35" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="170" centery="36" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="235" centery="36" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="1" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="184" centery="37" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="210" centery="37" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="178" centery="38" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="216" centery="38" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="219" centery="38" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="214" centery="39" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="211" centery="40" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="217" centery="40" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="238" centery="43" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="239" centery="47" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="236" centery="49" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="1" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="240" centery="49" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="132" centery="51" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="136" centery="51" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="138" centery="51" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="144" centery="51" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="187" centery="51" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="190" centery="52" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="176" centery="59" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="146" centery="60" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="230" centery="60" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="-1" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="157" centery="61" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="188" centery="61" centerz="7" radius="1">
+		<monster name="Wardragon" x="-1" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="193" centery="61" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="-1" y="-1" z="7" spawntime="260" />
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="142" centery="62" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="186" centery="62" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="227" centery="62" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="1" y="-1" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="233" centery="62" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="129" centery="63" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="132" centery="63" centerz="7" radius="1">
+		<monster name="Wardragon" x="-1" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="183" centery="63" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="195" centery="63" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="-1" y="1" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="135" centery="64" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="164" centery="64" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="174" centery="64" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="216" centery="64" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="219" centery="64" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="211" centery="65" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="214" centery="65" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="230" centery="65" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="141" centery="66" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="146" centery="66" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="233" centery="66" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="160" centery="67" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="212" centery="67" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="145" centery="68" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="165" centery="68" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="209" centery="68" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="145" centery="73" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="125" centery="75" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="117" centery="80" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="145" centery="80" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="115" centery="85" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="141" centery="86" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="115" centery="88" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="142" centery="88" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="145" centery="89" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="155" centery="89" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="142" centery="91" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="138" centery="92" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="120" centery="94" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="144" centery="94" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="122" centery="95" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="125" centery="97" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="139" centery="101" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="143" centery="101" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="120" centery="102" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="114" centery="103" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="125" centery="103" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="142" centery="103" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="140" centery="105" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="112" centery="106" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="143" centery="106" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="128" centery="109" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="113" centery="111" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="128" centery="111" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="112" centery="115" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="113" centery="119" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="221" centery="119" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="226" centery="119" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="232" centery="119" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="108" centery="120" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="116" centery="120" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="212" centery="120" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="111" centery="121" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="232" centery="121" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="116" centery="122" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="186" centery="127" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="203" centery="128" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="187" centery="129" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="245" centery="130" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="251" centery="130" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="254" centery="130" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="187" centery="131" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="216" centery="131" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="223" centery="131" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="247" centery="131" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="249" centery="131" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="199" centery="132" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="181" centery="133" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="191" centery="133" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="251" centery="133" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="188" centery="134" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="197" centery="134" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="245" centery="134" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="249" centery="134" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="252" centery="135" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="183" centery="136" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="248" centery="137" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="200" centery="139" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="199" centery="144" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="254" centery="144" centerz="7" radius="1">
+		<monster name="Wardragon" x="1" y="-1" z="7" spawntime="120" />
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="232" centery="145" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="249" centery="146" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="141" centery="147" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="202" centery="147" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="129" centery="148" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="133" centery="148" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="211" centery="148" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="226" centery="148" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="235" centery="148" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="246" centery="148" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="205" centery="149" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="218" centery="149" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="222" centery="149" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="241" centery="149" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="243" centery="149" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="140" centery="151" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="230" centery="151" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="234" centery="151" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="211" centery="152" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="117" centery="153" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="132" centery="154" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="219" centery="154" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="143" centery="155" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="115" centery="156" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="135" centery="157" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="142" centery="157" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="117" centery="159" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="208" centery="159" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="211" centery="159" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="220" centery="159" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="229" centery="159" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="90" centery="160" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="109" centery="160" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="234" centery="160" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="119" centery="161" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="108" centery="162" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="128" centery="163" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="85" centery="164" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="205" centery="164" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="104" centery="166" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="125" centery="166" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="210" centery="166" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="222" centery="166" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="85" centery="167" centerz="7" radius="1">
+		<monster name="Wardragon" x="1" y="-1" z="7" spawntime="120" />
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="107" centery="167" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="215" centery="167" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="219" centery="167" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="231" centery="167" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="88" centery="168" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="108" centery="170" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="128" centery="170" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="91" centery="171" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="131" centery="171" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="112" centery="172" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="94" centery="174" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="-1" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="133" centery="174" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="207" centery="174" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="220" centery="174" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="75" centery="175" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="260" />
+		<monster name="Bulltauren Alchemist" x="1" y="1" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="88" centery="175" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="114" centery="175" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="214" centery="175" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="224" centery="175" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="230" centery="175" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="233" centery="175" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="135" centery="177" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="77" centery="178" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="119" centery="179" centerz="7" radius="1">
+		<monster name="Mega dragon" x="-1" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="206" centery="179" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="220" centery="179" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="110" centery="180" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="138" centery="180" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="80" centery="181" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="123" centery="181" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="81" centery="183" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="102" centery="184" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="139" centery="184" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="84" centery="185" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="105" centery="185" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="123" centery="185" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="206" centery="185" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="87" centery="187" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="135" centery="187" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="205" centery="187" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="221" centery="188" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="234" centery="188" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="207" centery="189" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="110" centery="190" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="220" centery="190" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="130" centery="191" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="234" centery="191" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="207" centery="192" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+		<monster name="Mega dragon" x="1" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="236" centery="192" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="92" centery="193" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="111" centery="193" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="211" centery="193" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="220" centery="193" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="231" centery="193" centerz="7" radius="1">
+		<monster name="Tauren herk" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="224" centery="194" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="93" centery="195" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="95" centery="197" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="98" centery="198" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="106" centery="198" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="118" centery="198" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="123" centery="200" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="100" centery="201" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="103" centery="202" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="104" centery="204" centerz="7" radius="1">
+		<monster name="Bulltauren forgepriest" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="105" centery="206" centerz="7" radius="1">
+		<monster name="Mega dragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="116" centery="207" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="108" centery="209" centerz="7" radius="1">
+		<monster name="Bulltauren brute" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="112" centery="211" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="116" centery="216" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="116" centery="218" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="118" centery="219" centerz="7" radius="1">
+		<monster name="Mitmah vanguard" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="121" centery="222" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="127" centery="229" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="130" centery="230" centerz="7" radius="1">
+		<monster name="Wardragon" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="132" centery="234" centerz="7" radius="1">
+		<monster name="Bulltauren Alchemist" x="0" y="0" z="7" spawntime="260" />
+	</spawn>
+	<spawn centerx="131" centery="240" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="130" centery="244" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="137" centery="252" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="127" centery="253" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="133" centery="256" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="126" centery="262" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="137" centery="262" centerz="7" radius="1">
+		<monster name="Tornado" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+</spawns>

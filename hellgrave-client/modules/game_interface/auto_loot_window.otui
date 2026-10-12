@@ -1,0 +1,327 @@
+AutolootItem < UIWidget
+  height: 38
+  background-color: #2f2f2f
+  $alternate:
+    background-color: #393939
+
+  Item
+    id: item
+    anchors.left: parent.left
+    anchors.verticalcenter: parent.verticalcenter
+    margin-left: 8
+    virtual: true
+
+  Label
+    id: name
+    anchors.fill: parent
+    anchors.left: prev.right
+    anchors.right: next.left
+    margin-left: 8
+    text-align: left
+    text-wrap: true
+    color: #d7d7d7
+
+  UIWidget
+    id: button
+    anchors.right: parent.right
+    anchors.verticalcenter: parent.verticalcenter
+    margin-right: 8
+    image-source: /images/ui/button_top_blink2
+    image-clip: 40 0 20 20
+    size: 20 20
+    text: X
+    @onClick: modules.game_interface.removeFromAutolootList(self:getParent())
+    $hover:
+      image-clip: 20 0 20 20
+    $pressed:
+      image-clip: 0 0 20 20
+
+QuickLootCategoryRow < UIWidget
+  height: 28
+  background-color: #2f2f2f
+  $alternate:
+    background-color: #393939
+
+  UIWidget
+    id: icon
+    anchors.left: parent.left
+    anchors.verticalcenter: parent.verticalcenter
+    margin-left: 6
+    size: 19 19
+    image-source: /modules/game_tooltip/icons
+    virtual: true
+
+  Label
+    id: name
+    anchors.left: prev.right
+    anchors.verticalcenter: parent.verticalcenter
+    margin-left: 6
+    width: 110
+    text-align: left
+    color: #d7d7d7
+
+  ComboBox
+    id: combo
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.verticalcenter: parent.verticalcenter
+    margin-left: 8
+    margin-right: 6
+    height: 22
+    mouse-scroll: false
+
+QuickLootBackpackRow < UIWidget
+  height: 34
+  background-color: #2f2f2f
+  $alternate:
+    background-color: #393939
+
+  Item
+    id: item
+    anchors.left: parent.left
+    anchors.verticalcenter: parent.verticalcenter
+    margin-left: 8
+    virtual: true
+
+  Label
+    id: name
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.verticalcenter: parent.verticalcenter
+    margin-left: 8
+    margin-right: 8
+    text-align: left
+    color: #d7d7d7
+
+Window
+  id: quickLootWindow
+  anchors.centerIn: parent
+  size: 900 455
+  image-source: /images/ui/tooltip
+  text: Quick Loot System
+  @onEscape: modules.game_interface.closeAutolootWindow()
+  @onEnter: modules.game_interface.addToAutolootList()
+
+  UIWidget
+    anchors.fill: parent
+    image-clip: 365 119 153 176
+    image-border: 8
+    phantom: true
+    focusable: false
+
+  UIWidget
+    id: dividerLeft
+    anchors.top: parent.top
+    anchors.bottom: footerLine.top
+    anchors.left: parent.left
+    margin-left: 255
+    margin-top: 22
+    width: 1
+    background-color: #505050
+
+  UIWidget
+    id: dividerRight
+    anchors.top: parent.top
+    anchors.bottom: footerLine.top
+    anchors.left: parent.left
+    margin-left: 620
+    margin-top: 22
+    width: 1
+    background-color: #505050
+
+  Label
+    id: leftTitle
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 12
+    margin-left: 16
+    text: Your Backpacks
+    color: #d2aa52
+
+  Label
+    id: middleTitle
+    anchors.top: parent.top
+    anchors.left: dividerLeft.right
+    margin-top: 12
+    margin-left: 18
+    text: Category Sorting
+    color: #d2aa52
+
+  Label
+    id: rightTitle
+    anchors.top: parent.top
+    anchors.left: dividerRight.right
+    margin-top: 12
+    margin-left: 18
+    text: Loot Items
+    color: #d2aa52
+
+  ScrollableFlatPanel
+    id: backpacksList
+    image-source: /images/ui/tooltip
+    anchors.top: leftTitle.bottom
+    anchors.left: parent.left
+    anchors.right: dividerLeft.left
+    anchors.bottom: footerLine.top
+    vertical-scrollbar: backpacksScroll
+    margin-top: 8
+    margin-left: 12
+    margin-right: 18
+    margin-bottom: 12
+    padding: 2
+    focusable: false
+    layout:
+      type: verticalBox
+
+  VerticalScrollBar
+    id: backpacksScroll
+    anchors.top: backpacksList.top
+    anchors.bottom: backpacksList.bottom
+    anchors.left: backpacksList.right
+    focusable: false
+    step: 34
+    pixels-scroll: true
+
+  Label
+    id: categoriesHint
+    anchors.top: middleTitle.bottom
+    anchors.left: dividerLeft.right
+    anchors.right: dividerRight.left
+    margin-top: 10
+    margin-left: 18
+    margin-right: 14
+    text-wrap: true
+    color: #c8c8c8
+    text: Assign each loot category to one opened backpack.
+
+  ScrollableFlatPanel
+    id: categoriesList
+    image-source: /images/ui/tooltip
+    anchors.top: categoriesHint.bottom
+    anchors.left: dividerLeft.right
+    anchors.right: dividerRight.left
+    anchors.bottom: backpackStatus.top
+    vertical-scrollbar: categoriesScroll
+    margin-top: 8
+    margin-left: 18
+    margin-right: 20
+    margin-bottom: 8
+    padding: 2
+    focusable: false
+    layout:
+      type: verticalBox
+
+  VerticalScrollBar
+    id: categoriesScroll
+    anchors.top: categoriesList.top
+    anchors.bottom: categoriesList.bottom
+    anchors.left: categoriesList.right
+    focusable: false
+    step: 28
+    pixels-scroll: true
+
+  Label
+    id: backpackStatus
+    anchors.left: dividerLeft.right
+    anchors.right: dividerRight.left
+    anchors.bottom: footerLine.top
+    margin-left: 18
+    margin-right: 14
+    margin-bottom: 12
+    text-wrap: true
+    color: #b0b0b0
+    text: Open backpacks to configure category sorting.
+
+  TextEdit
+    id: textEdit
+    image-source: /images/ui/tooltip2
+    anchors.top: rightTitle.bottom
+    anchors.left: dividerRight.right
+    anchors.right: addButton.left
+    margin-top: 8
+    margin-left: 18
+    margin-right: 8
+    placeholder: Item name or client id
+    @onTextChange: modules.game_interface.updateTextEdit(self)
+
+  Button
+    id: addButton
+    width: 62
+    anchors.top: rightTitle.bottom
+    anchors.right: parent.right
+    margin-top: 8
+    margin-right: 12
+    enabled: false
+    !text: tr('Add')
+    color: #ffae00
+    focusable: false
+    @onClick: modules.game_interface.addToAutolootList()
+
+  TextEdit
+    id: textSearch
+    image-source: /images/ui/tooltip2
+    anchors.top: textEdit.bottom
+    anchors.left: dividerRight.right
+    anchors.right: parent.right
+    margin-top: 8
+    margin-left: 18
+    margin-right: 12
+    placeholder: Search item...
+    @onTextChange: modules.game_interface.updateSearchEdit(self)
+
+  ScrollableFlatPanel
+    id: itemsList
+    image-source: /images/ui/tooltip
+    anchors.top: textSearch.bottom
+    anchors.left: dividerRight.right
+    anchors.right: parent.right
+    anchors.bottom: footerLine.top
+    vertical-scrollbar: autolootItemListScroll
+    margin-top: 8
+    margin-left: 18
+    margin-right: 20
+    margin-bottom: 12
+    padding: 2
+    focusable: false
+    layout:
+      type: verticalBox
+
+  VerticalScrollBar
+    id: autolootItemListScroll
+    anchors.top: itemsList.top
+    anchors.bottom: itemsList.bottom
+    anchors.left: itemsList.right
+    focusable: false
+    step: 38
+    pixels-scroll: true
+
+  HorizontalSeparator
+    id: footerLine
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: refreshButton.top
+    margin-left: 12
+    margin-right: 12
+    margin-bottom: 10
+
+  Button
+    id: refreshButton
+    width: 90
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-left: 12
+    margin-bottom: 10
+    !text: tr('Refresh')
+    focusable: false
+    @onClick: modules.game_interface.refreshQuickLootWindow()
+
+  Button
+    id: closeButton
+    width: 90
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 12
+    margin-bottom: 10
+    !text: tr('Close')
+    focusable: false
+    @onClick: modules.game_interface.closeAutolootWindow()

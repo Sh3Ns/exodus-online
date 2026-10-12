@@ -1,0 +1,10 @@
+Module
+  name: game_creature_offsets
+  description: Directional draw offsets for oversized creature sprites.
+  autoload: true
+  reloadable: true
+  sandboxed: true
+  version: 1.0
+  scripts: [ creature_offsets ]
+  @onLoad: init()
+  @onUnload: terminate()

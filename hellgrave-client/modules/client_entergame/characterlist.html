@@ -1,0 +1,42 @@
+<link href="characterlist.css" />
+
+<html>
+  <div id="charactersWindow" class="character-screen">
+    <div id="warbandScene" class="warband-scene">
+      <div class="scene-shade"></div>
+      <div id="sceneBottomFade" class="scene-bottom-fade"></div>
+
+      <header id="topHud" class="top-hud">
+
+        <div id="accountBadge" class="account-badge">
+          <img class="premium-icon" src="/images/topbuttons/premium" />
+          <Label id="accountStatusLabel" class="account-value"></Label>
+        </div>
+      </header>
+      
+      <div id="characterSlots" class="character-slots"></div>
+
+      <footer id="bottomHud" class="bottom-hud">
+        <div id="selectionConsole" class="selection-console">
+          <Label id="previousCharacter" class="selector-control"></Label>
+          <div id="selectedCharacterInfo" class="selected-character-info">
+            <Label id="characterGuild" class="selected-guild"></Label>
+            <Label id="characterName" class="selected-name"></Label>
+            <Label id="characterLevel" class="selected-level"></Label>
+            <Label id="characterVocation" class="selected-vocation"></Label>
+            <Label id="characterCounter" class="selected-counter"></Label>
+          </div>
+          <Label id="nextCharacter" class="selector-control"></Label>
+        </div>
+
+        <div id="bottomActions" class="bottom-actions">
+          <Label id="buttonCancel" class="modern-control back-button">BACK</Label>
+          <div class="enter-world-wrap">
+            <Label id="buttonOk" class="modern-control enter-world-button">ENTER WORLD</Label>
+          </div>
+          <Label id="autoReconnect" class="modern-control reconnect-toggle"></Label>
+        </div>
+      </footer>
+    </div>
+  </div>
+</html>

@@ -1,0 +1,203 @@
+std = "lua54"
+
+max_line_length = 160
+
+globals = {
+	-- Entry points used by TFS script loader
+	"onLogin",
+	"onLogout",
+	"onThink",
+	"onTime",
+	"onUse",
+	"onStepIn",
+	"onStepOut",
+	"onAddItem",
+	"onRemoveItem",
+	"onSay",
+	"onCastSpell",
+	"onPrepareDeath",
+	"onDeath",
+	"onKill",
+	"onAdvance",
+	"onModalWindow",
+	"onTextEdit",
+	"onHealthChange",
+	"onManaChange",
+	"onExtendedOpcode",
+	"onRecord",
+	"onStartup",
+	"onShutdown",
+	"onSpawn",
+	"onTargetCombat",
+	"onChangeOutfit",
+	"onAreaCombat",
+	"onHear",
+	"onJoin",
+	"onLeave",
+	"onDisband",
+	"onLeaderPass",
+	"onShareExperience",
+	"onBrowseField",
+	"onLook",
+	"onLookInBattleList",
+	"onLookInTrade",
+	"onLookInShop",
+	"onMoveItem",
+	"onItemMoved",
+	"onMoveCreature",
+	"onReportRuleViolation",
+	"onReportBug",
+	"onTurn",
+	"onTradeRequest",
+	"onTradeAccept",
+	"onTradeCompleted",
+	"onGainExperience",
+	"onLoseExperience",
+	"onGainSkillTries",
+	"onWrapItem",
+	"onQueueLeave",
+	"onDropLoot",
+	"onPrepare",
+	"onStart",
+	"onSuccess",
+	"onFail",
+	"onPlayerLeft",
+	"onMonstersCount",
+	"onQueue",
+
+	-- Shared mutable script state
+	"nextUseStaminaTime",
+	"dirtyPetProgress",
+	"AntiMcState",
+	"saveDirtyPetProgress",
+	"saveDirtyPetProgressByGuid",
+	"flushAllDirtyPetProgress",
+}
+
+read_globals = {
+	-- TFS classes and constructors
+	"Action",
+	"Condition",
+	"Creature",
+	"CreatureEvent",
+	"Dungeon",
+	"Game",
+	"GlobalEvent",
+	"Item",
+	"ItemType",
+	"ModalWindow",
+	"Monster",
+	"MoveEvent",
+	"Npc",
+	"Party",
+	"Player",
+	"Position",
+	"Spell",
+	"TalkAction",
+	"Tile",
+	"Weapon",
+
+	-- TFS managers/helpers
+	"EventCallback",
+	"ExtendedOPCodes",
+	"addEvent",
+	"broadcastMessage",
+	"cleanMap",
+	"configKeys",
+	"configManager",
+	"db",
+	"dofile",
+	"getGlobalStorageValue",
+	"getRankTask",
+	"hasEventCallback",
+	"isInArray",
+	"json",
+	"registerEnumIn",
+	"saveServer",
+	"setGlobalStorageValue",
+	"table",
+	"updatePetName",
+
+	-- Common project globals
+	"APPLY_SKILL_MULTIPLIER",
+	"ChallengesIndex",
+	"GlobalStorage",
+	"PlayerStorageKeys",
+	"Storage",
+	"SUBOWNER_LIST",
+	"TradeRarity_begin",
+	"TradeRarity_clear",
+	"TradeRarity_setSideItems",
+	"calculateNextLevelExperience",
+
+	-- Event callback constants
+	"EVENT_CALLBACK_ONAREACOMBAT",
+	"EVENT_CALLBACK_ONBROWSEFIELD",
+	"EVENT_CALLBACK_ONCHANGEMOUNT",
+	"EVENT_CALLBACK_ONCHANGEOUTFIT",
+	"EVENT_CALLBACK_ONDROPLOOT",
+	"EVENT_CALLBACK_ONHEAR",
+	"EVENT_CALLBACK_ONITEMMOVED",
+	"EVENT_CALLBACK_ONJOIN",
+	"EVENT_CALLBACK_ONLEAVE",
+	"EVENT_CALLBACK_ONLOOK",
+	"EVENT_CALLBACK_ONLOOKINBATTLELIST",
+	"EVENT_CALLBACK_ONLOOKINSHOP",
+	"EVENT_CALLBACK_ONLOOKINTRADE",
+	"EVENT_CALLBACK_ONLOSEEXPERIENCE",
+	"EVENT_CALLBACK_ONMOVECREATURE",
+	"EVENT_CALLBACK_ONMOVEITEM",
+	"EVENT_CALLBACK_ONREPORTBUG",
+	"EVENT_CALLBACK_ONREPORTRULEVIOLATION",
+	"EVENT_CALLBACK_ONSHAREEXPERIENCE",
+	"EVENT_CALLBACK_ONSPAWN",
+	"EVENT_CALLBACK_ONTARGETCOMBAT",
+	"EVENT_CALLBACK_ONTRADEACCEPT",
+	"EVENT_CALLBACK_ONTRADECOMPLETED",
+	"EVENT_CALLBACK_ONTRADEREQUEST",
+	"EVENT_CALLBACK_ONTURN",
+	"EVENT_CALLBACK_ONWRAPITEM",
+	"EVENT_CALLBACK_ONGAINSKILLTRIES",
+
+	-- Frequently used engine enums/constants
+	"CONDITIONID_DEFAULT",
+	"CONDITION_PARAM_SOULGAIN",
+	"CONDITION_PARAM_SOULTICKS",
+	"CONDITION_SOUL",
+	"CONST_ME_POFF",
+	"CONST_SLOT_SHIP",
+	"CONTAINER_POSITION",
+	"GAME_STATE_CLOSED",
+	"GAME_STATE_NORMAL",
+	"GAME_STATE_SHUTDOWN",
+	"MESSAGE_EVENT_ADVANCE",
+	"MESSAGE_INFO_DESCR",
+	"MESSAGE_STATUS_WARNING",
+	"RETURNVALUE_NOERROR",
+	"RETURNVALUE_NOTENOUGHROOM",
+	"RETURNVALUE_NOTPOSSIBLE",
+	"RETURNVALUE_TURNSECUREMODETOATTACKUNMARKEDPLAYERS",
+	"RETURNVALUE_YOUMAYNOTATTACKTHISCREATURE",
+	"SKILL_MAGLEVEL",
+	"VOCATION_NONE",
+}
+
+files["data/events/scripts/*.lua"] = {
+	ignore = {
+		"611", -- blank lines with whitespace in legacy files
+		"621", -- mixed indentation in legacy files
+	}
+}
+
+files["data/creaturescripts/scripts/*.lua"] = {
+	ignore = {
+		"611",
+	}
+}
+
+files["data/globalevents/scripts/*.lua"] = {
+	ignore = {
+		"212", -- TFS callback signatures often require unused interval args
+		"611",
+	}
+}

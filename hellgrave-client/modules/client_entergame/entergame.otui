@@ -1,0 +1,393 @@
+FantasyLoginPanel < Panel
+
+FantasyBannerFrame < Panel
+
+FantasyDivider < Panel
+  height: 1
+  background-color: #D59A3322
+
+FantasyLabel < MenuLabel
+  text-auto-resize: true
+  text-align: center
+  font: verdana-11px-rounded
+  color: #D9B06A
+
+FantasySubLabel < Label
+  text-auto-resize: true
+  text-align: center
+  font: verdana-11px-rounded
+  color: #D7D0C7
+
+FantasyInput < TextEdit
+  height: 42
+  padding: 8
+  text-offset: 0 11
+  text-align: center
+  font: verdana-11px-rounded
+  color: #F5E8D2
+  image-source: /images/ui/textedit
+  image-border: 1
+  image-color: #080b128d
+  background-color: #080b128d
+  selection-color: #F5E8D2
+  selection-background-color: #8A6A3A
+
+FantasyPasswordInput < FantasyInput
+  text-hidden: true
+
+FantasyComboBox < UIComboBox
+  height: 24
+  font: verdana-11px-rounded
+  color: #F5E8D2
+  background-color: #2f3135
+  border-width: 1
+  border-color: #8A6A3A
+  text-offset: 0 1
+  text-align: center
+  padding-right: 20
+  padding-left: 6
+
+  $hover !disabled:
+    border-color: #D59A33
+
+  $on:
+    border-color: #D59A33
+
+  $disabled:
+    color: #F5E8D288
+    background-color: #24272b
+    border-color: #8A6A3A88
+
+  Panel
+    id: btn
+    width: 18
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+
+    UIWidget
+      anchors.centerIn: parent
+      size: 0 0
+      border-left-width: 4
+      border-right-width: 4
+      border-top-width: 5
+      border-left-color: #00000000
+      border-right-color: #00000000
+      border-top-color: #f5e8d2
+
+FantasyComboBoxPopupScrollMenuButton < UIButton
+  height: 23
+  font: verdana-11px-rounded
+  text-align: left
+  text-offset: 5 2
+  color: #F5E8D2
+  background-color: #2f3135
+
+  $hover !disabled:
+    color: #fff2b8
+    background-color: #8A6A3A
+
+  $focus:
+    color: #F5E8D2
+    background-color: #2f3135
+
+FantasyComboBoxPopupScrollMenu < UIPopupScrollMenu
+  image-source: /images/ui/panel_flat
+  image-border: 1
+  image-color: #2f3135
+  background-color: #2f3135
+  border-width: 1
+  border-color: #8A6A3A
+
+FantasyComboBoxPopupMenuButton < UIButton
+  height: 23
+  font: verdana-11px-rounded
+  text-align: left
+  text-offset: 5 2
+  color: #F5E8D2
+  background-color: #2f3135
+
+  $hover !disabled:
+    color: #fff2b8
+    background-color: #8A6A3A
+
+  $focus:
+    color: #F5E8D2
+    background-color: #2f3135
+
+FantasyComboBoxPopupMenu < UIPopupMenu
+  image-source: /images/ui/panel_flat
+  image-border: 1
+  image-color: #2f3135
+  background-color: #2f3135
+  border-width: 1
+  border-color: #8A6A3A
+
+FantasyLoginButton < UIButton
+  size: 300 34
+  phantom: false
+  focusable: true
+  font: verdana-11px-rounded
+  color: #fff2b8
+  image-source: /images/ui/button_white
+  image-border: 6
+  image-color: #ffbc48
+  padding: 6 18
+  text-offset: 0 0
+  text-align: center
+  text: ENTER GAME
+  change-cursor-image: true
+  cursor: pointer
+
+  $hover !disabled:
+    image-color: #fce93d
+    color: #FFFFFF
+
+  $pressed:
+    image-color: #ffb948
+    color: #FFE29A
+
+  $disabled:
+    color: #F8E7C588
+    image-color: #6B6B6B88
+
+FantasyCheckBox < CheckBox
+  text-offset: 18 1
+  color: #A9D892
+  image-color: #8A6A3A
+  font: verdana-11px-rounded
+
+  $hover !disabled:
+    color: #C1E8AE
+
+EnterGameWindow
+  id: enterGame
+  size: 460 590
+  $mobile:
+    size: 352 538
+  @onEnter: EnterGame.doLogin()
+
+  FantasyLoginPanel
+    id: loginShell
+    anchors.fill: parent
+    margin: 0
+
+    FantasyBannerFrame
+      id: headerFrame
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 132
+      margin-top: 0
+      margin-left: 22
+      margin-right: 22
+
+      Panel
+        id: adPanel
+        width: 120
+        height: 120
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+        image-source: /images/clienticon
+
+      Panel
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        height: 22
+        visible: false
+
+    Label
+      !text: tr('Enter Your Account')
+      anchors.top: headerFrame.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 18
+      text-align: center
+      color: #F4C46D
+      font: verdana-11px-rounded
+
+    FantasySubLabel
+      !text: tr('Sign in to continue to character selection')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 3
+
+    FantasyLabel
+      !text: tr('ACCOUNT NAME')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 20
+
+    FantasyInput
+      id: accountNameTextEdit
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      color: #ffffffe8
+      margin-top: 4
+      margin-left: 46
+      margin-right: 46
+
+    FantasyLabel
+      !text: tr('PASSWORD')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 20
+
+    FantasyPasswordInput
+      id: accountPasswordTextEdit
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      margin-top: 4
+      image: data/images/ui/button_white
+      color: #ffffffe8
+      margin-left: 46
+      margin-right: 46
+      margin-bottom: 10
+
+    FantasyLabel
+      !text: tr('Token')
+      anchors.left: accountPasswordTextEdit.left
+      anchors.right: accountPasswordTextEdit.right
+      anchors.top: accountPasswordTextEdit.bottom
+      margin-top: 10
+      visible: false
+      enable: false
+
+    FantasyInput
+      id: accountTokenTextEdit
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      margin-top: 6
+      margin-left: 46
+      margin-right: 46
+      visible: false
+      enable: false
+
+    Panel
+      id: serverSelectorPanel
+      width: 160
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: accountPasswordTextEdit.bottom
+      height: 56
+      margin-top: 15
+      on: true
+      focusable: false
+
+      $on:
+        visible: true
+        margin-top: 8
+
+      $!on:
+        visible: false
+        margin-top: -52
+
+      FantasyLabel
+        id: serverLabel
+        !text: tr('Server')
+        anchors.top: prev.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 6
+        color: #C8AA78
+
+      FantasyComboBox
+        id: serverSelector
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: serverLabel.bottom
+        margin-top: 5
+        margin-left: 0
+        margin-right: 0
+        image-color: #ffbc48
+        menu-scroll: true
+        menu-height: 125
+        menu-scroll-step: 25
+        @onOptionChange: EnterGame.onServerChange()
+
+    Panel
+      id: customServerSelectorPanel
+      width: 320
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      height: 66
+      on: true
+      focusable: true
+
+      $on:
+        visible: true
+        margin-top: 6
+
+      $!on:
+        visible: false
+        margin-top: -56
+
+      FantasyLabel
+        id: serverLabel
+        !text: tr('IP:PORT or URL')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 25
+        color: #C8AA78
+
+      FantasyInput
+        id: serverHostTextEdit
+        !tooltip: tr('Make sure that your client uses\nthe correct game client version')
+        anchors.left: parent.left
+        anchors.top: serverLabel.bottom
+        margin-top: 4
+        margin-left: 0
+        width: 224
+
+      FantasyLabel
+        id: clientLabel
+        !text: tr('Version')
+        anchors.left: serverHostTextEdit.right
+        anchors.top: serverLabel.top
+        margin-left: 10
+        width: 72
+        color: #C8AA78
+
+      FantasyComboBox
+        id: clientVersionSelector
+        anchors.left: clientLabel.left
+        anchors.right: parent.right
+        anchors.top: serverHostTextEdit.top
+        margin-right: 0
+
+    FantasyCheckBox
+      id: rememberPasswordBox
+      !text: tr('Remember password')
+      !tooltip: tr('Remember account and password when starts client')
+      anchors.top: prev.bottom
+      width: 180
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 17
+
+    FantasyLoginButton
+      width: 300
+      height: 34
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: rememberPasswordBox.bottom
+      margin-top: 18
+      @onClick: EnterGame.doLogin()
+
+    Label
+      id: serverInfoLabel
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      margin-left: 18
+      margin-right: 18
+      margin-top: 10
+      text-align: center
+      color: #7FCF7A
+      font: verdana-11px-rounded
+      text-auto-resize: true

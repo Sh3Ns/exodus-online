@@ -1,0 +1,236 @@
+TutorialLabel < Label
+  font: verdana-11px-antialised
+  text-offset: 8 0
+  text-wrap: false
+  focusable: true
+  background-color: #4b4b4b
+  color: #e0e0e0
+  height: 22
+  margin-top: 1
+  margin-left: 5
+  margin-right: 5
+  padding-left: 4
+  border-width: 1
+  border-color: #2f2f2f
+
+  $focus:
+    background-color: #5a5a5a
+    border-color: #7a7a7a
+
+  $on focus:
+    color: #ffffff
+  $!on focus:
+    color: #e0e0e0
+
+MainWindow
+  size: 760 445
+  padding: 0
+  @onEscape: modules.game_guide.onClickTutorial()
+
+  Panel
+    id: sidebarBackground
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    width: 214
+    margin-top: 22
+    margin-left: 8
+    margin-bottom: 10
+    background-color: #4a4a4a
+    border-width: 1
+    border-color: #2f2f2f
+
+  Label
+    id: guideTitle
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    margin-left: 14
+    margin-right: 85
+    font: verdana-11px-rounded
+    color: #ffffff
+    text: Game Guide
+
+  Label
+    id: topicsHeader
+    anchors.top: guideTitle.bottom
+    anchors.left: parent.left
+    margin-top: 10
+    margin-left: 18
+    font: verdana-11px-rounded
+    color: #ffffff
+    text: Topics
+
+  TextList
+    id: indexList
+    anchors.top: topicsHeader.bottom
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-left: 12
+    margin-top: 6
+    margin-bottom: 16
+    size: 188 180
+    vertical-scrollbar: indexScroll
+    focusable: true
+    phantom: false
+    background-color: alpha
+
+  VerticalScrollBar
+    id: indexScroll
+    anchors.top: indexList.top
+    anchors.left: indexList.right
+    anchors.bottom: indexList.bottom
+    margin-left: 2
+    step: 16
+    width: 12
+
+  Panel
+    id: contentBackground
+    anchors.top: parent.top
+    anchors.left: sidebarBackground.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 25
+    margin-left: 12
+    margin-right: 10
+    margin-bottom: 10
+    background-color: #4a4a4a
+    border-width: 1
+    border-color: #2f2f2f
+
+  Panel
+    id: tutorialImg
+    anchors.top: contentBackground.top
+    anchors.left: contentBackground.left
+    anchors.right: contentBackground.right
+    margin-top: 12
+    margin-left: 12
+    margin-right: 12
+    height: 230
+    border-width: 1
+    border-color: #2f2f2f
+    background-color: #3f3f3f
+
+  Panel
+    id: oak
+    anchors.top: tutorialImg.top
+    anchors.left: tutorialImg.left
+    anchors.right: tutorialImg.right
+    anchors.bottom: tutorialImg.bottom
+    margin-top: 1
+    margin-left: 1
+    margin-right: 1
+    margin-bottom: 1
+    __image-source: imgs/default1
+
+  Label
+    id: welcomeTitle
+    anchors.top: tutorialImg.bottom
+    anchors.left: contentBackground.left
+    margin-top: 12
+    margin-left: 16
+    font: verdana-11px-rounded
+    color: #ffffff
+    text: Choose a topic to begin
+
+  Label
+    id: welcomeSubtitle
+    anchors.top: welcomeTitle.bottom
+    anchors.left: contentBackground.left
+    margin-top: 5
+    margin-left: 16
+    margin-right: 18
+    font: verdana-11px-antialised
+    color: #d8d8d8
+    text-wrap: true
+    text: Browse the categories on the left to explore the content.
+
+  ScrollablePanel
+    id: scrollablePainel
+    anchors.top: tutorialImg.bottom
+    anchors.left: contentBackground.left
+    anchors.right: contentBackground.right
+    anchors.bottom: contentBackground.bottom
+    margin-top: 12
+    margin-left: 12
+    margin-right: 12
+    margin-bottom: 12
+    background-color: #454545
+    border-width: 1
+    border-color: #2f2f2f
+    vertical-scrollbar: textScroll
+    padding: 12
+
+    Label
+      id: tutorialText
+      text-wrap: true
+      text-auto-resize: true
+      anchors.right: parent.right
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 14
+      font: verdana-11px-antialised
+      color: #efefef
+      focusable: true
+      phantom: false
+
+  VerticalScrollBar
+    id: textScroll
+    anchors.top: scrollablePainel.top
+    anchors.right: scrollablePainel.right
+    anchors.bottom: scrollablePainel.bottom
+    step: 16
+    width: 12
+
+  UIButton
+    id: cancelButton
+    image-source: imgs/exit
+    size: 16 16
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-top: 3
+    margin-right: 5
+    @onClick: onClickTutorial()
+
+    $hover:
+      image-source: imgs/exit_onhover
+
+  UIButton
+    id: languageButton_en
+    image-source: imgs/flag_en
+    size: 16 16
+    anchors.top: parent.top
+    anchors.right: cancelButton.left
+    margin-top: 4
+    margin-right: 62
+    @onClick: setLanguage('en')
+
+    $hover:
+      image-source: imgs/flag_en_onhover
+
+  UIButton
+    id: languageButton_es
+    image-source: imgs/flag_es
+    size: 16 16
+    anchors.top: parent.top
+    anchors.right: cancelButton.left
+    margin-top: 4
+    margin-right: 41
+    @onClick: setLanguage('es')
+
+    $hover:
+      image-source: imgs/flag_es_onhover
+
+  UIButton
+    id: languageButton_pt
+    image-source: imgs/flag_pt
+    size: 16 16
+    anchors.top: parent.top
+    anchors.right: cancelButton.left
+    margin-top: 4
+    margin-right: 20
+    @onClick: setLanguage('pt')
+
+    $hover:
+      image-source: imgs/flag_pt_onhover

@@ -1,0 +1,8 @@
+Module
+  name: game_travel_map
+  description: travelMap
+  sandboxed: true
+  autoload: true
+  scripts: [ MapTravelConfig, MapTravel ]
+  @onLoad: MapTravel.init()
+  @onUnload: MapTravel.terminate()

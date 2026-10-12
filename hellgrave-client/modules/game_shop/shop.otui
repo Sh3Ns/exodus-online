@@ -1,0 +1,505 @@
+ShopFlatPanel < UIWidget
+  phantom: true
+  image-source: /images/ui/panel_flat
+  image-border: 1
+  background-color: #444444
+  border: 1 #707070
+
+ShopLightPanel < UIWidget
+  image-source: /images/ui/panel_flat
+  image-border: 1
+  background-color: #4b4b4b
+  border: 1 #737373
+
+ShopActionButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 24
+  padding: 4 12
+  text-offset: 0 0
+  text-align: center
+  color: white
+
+  $hover:
+    image-color: #9a958e
+    color: white
+
+  $focus:
+    image-color: #dfdfdf
+    color: white
+
+  $disabled:
+    color: #9a9a9a
+
+ShopBalancePanel < ShopFlatPanel
+  height: 21
+  text-align: center
+  text-offset: 0 0
+  color: #dfdfdf
+
+  UIWidget
+    id: coinIcon
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-right: 50
+    size: 12 12
+    image-source: images/coin
+    image-fixed-ratio: true
+    phantom: true
+
+ShopVariantOption < UIButton
+  height: 26
+  image-source: /images/ui/panel_flat
+  image-border: 1
+  background-color: #3f3f3f
+  border: 1 #686868
+  focusable: true
+
+  $hover:
+    background-color: #505050
+
+  $on:
+    background-color: #5b5b5b
+    border: 1 #c8c8c8
+
+  Label
+    id: quantity
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 9
+    width: 58
+    text-align: left
+    color: #dfdfdf
+    font: verdana-11px-rounded
+
+  Label
+    id: price
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-right: 24
+    width: 84
+    text-align: right
+    color: #dfdfdf
+    font: verdana-11px-rounded
+    text: 0
+
+  UIWidget
+    id: coinIcon
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-right: 8
+    size: 12 12
+    image-source: images/coin
+    image-fixed-ratio: true
+    phantom: true
+
+ShopCategory < UIWidget
+  height: 36
+  margin: 2
+  focusable: true
+  image-source: /images/ui/panel_flat
+  image-border: 1
+  background-color: #343434
+  border: 1 #656565
+
+  $focus:
+    background-color: #565656
+    border: 1 #c8c8c8
+
+  Label
+    id: name
+    anchors.fill: parent
+    margin-left: 42
+    margin-right: 4
+    text-align: left
+    color: #dfdfdf
+    font: verdana-11px-rounded
+
+ShopCategoryItem < ShopCategory
+  UIItem
+    id: item
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 4
+    virtual: true
+    size: 32 32
+
+ShopCategoryCreature < ShopCategory
+  UICreature
+    id: creature
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 4
+    size: 32 32
+
+ShopCategoryImage < ShopCategory
+  Label
+    id: image
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 4
+    size: 32 32
+    image-fixed-ratio: true
+
+ShopOffer < ShopLightPanel
+  height: 78
+  margin: 2
+  border: 0 white
+  focusable: true
+
+  $focus:
+    background-color: #565656
+    border: 1 #c8c8c8
+
+  Label
+    id: title
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 7
+    margin-left: 82
+    margin-right: 8
+    text-align: topleft
+    text-wrap: true
+    color: #dfdfdf
+    font: verdana-11px-rounded
+
+  Label
+    id: description
+    visible: false
+    text-wrap: true
+
+  Label
+    id: rowPrice
+    size: 88 16
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-bottom: 8
+    text-align: center
+    text-offset: 15 0
+    color: #dfdfdf
+    font: verdana-11px-rounded
+    text: 0
+
+    UIWidget
+      id: coinIcon
+      anchors.right: parent.right
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 8
+      size: 12 12
+      image-source: images/coin
+      image-fixed-ratio: true
+      phantom: true
+
+  ShopActionButton
+    id: buyButton
+    visible: false
+    height: 20
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 6
+    margin-bottom: 6
+    text: BUY
+
+ShopOfferItem < ShopOffer
+  UIItem
+    id: item
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 9
+    virtual: true
+    size: 48 48
+
+ShopOfferCreature < ShopOffer
+  UICreature
+    id: creature
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 9
+    size: 54 54
+
+ShopOfferImage < ShopOffer
+  Label
+    id: image
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 9
+    size: 54 54
+    image-fixed-ratio: true
+
+MainWindow
+  id: shopWindow
+  !text: tr('Store')
+  size: 850 560
+  color: #ffffff
+  padding-top: 36
+  padding-left: 16
+  padding-right: 16
+  padding-bottom: 16
+  @onEscape: modules.game_shop.hide()
+
+  Panel
+    id: infoPanel
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    size: 295 21
+    phantom: true
+
+    ShopBalancePanel
+      id: points
+      anchors.left: parent.left
+      anchors.top: parent.top
+      width: 220
+      text: -
+
+    ShopActionButton
+      id: buy
+      anchors.left: points.right
+      anchors.top: parent.top
+      margin-left: 6
+      size: 64 20
+      visible: false
+      !text: tr('Get')
+
+  ShopLightPanel
+    id: categoriesPanel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.bottom: transactionHistory.top
+    margin-bottom: 8
+    width: 205
+    padding: 5
+
+    TextList
+      id: categories
+      vertical-scrollbar: categoriesScrollBar
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-right: 20
+      margin-bottom: 34
+      padding: 0
+      focusable: false
+
+    VerticalScrollBar
+      id: categoriesScrollBar
+      anchors.top: parent.top
+      anchors.bottom: parent.bottom
+      anchors.right: parent.right
+      margin-bottom: 34
+      step: 36
+      pixels-scroll: true
+
+    TextEdit
+      id: searchBox
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      height: 22
+      margin-right: 22
+      placeholder: Type to search
+      placeholder-color: #6E706F
+      color: #dfdfdf
+
+    UIWidget
+      anchors.left: searchBox.right
+      anchors.top: searchBox.top
+      size: 22 22
+      image-source: images/search
+      image-fixed-ratio: true
+
+  Panel
+    id: adPanel
+    anchors.top: parent.top
+    anchors.left: categoriesPanel.right
+    anchors.right: parent.right
+    margin-left: 8
+    height: 0
+    visible: false
+
+    Label
+      id: ad
+      anchors.fill: parent
+      text-auto-resize: true
+      text-wrap: true
+      text-align: center
+      font: sans-bold-16px
+
+  ShopLightPanel
+    id: storePanel
+    anchors.top: parent.top
+    anchors.left: categoriesPanel.right
+    anchors.right: parent.right
+    anchors.bottom: transactionHistory.top
+    margin-left: 8
+    margin-bottom: 8
+    padding: 6
+
+    TextList
+      id: offers
+      vertical-scrollbar: offersScrollBar
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.bottom: parent.bottom
+      width: 300
+      padding: 4
+      focusable: false
+      image-source: /images/ui/panel_flat
+      image-border: 1
+      background-color: #444444
+      border: 1 #707070
+
+    VerticalScrollBar
+      id: offersScrollBar
+      anchors.top: offers.top
+      anchors.bottom: offers.bottom
+      anchors.left: offers.right
+      step: 78
+      pixels-scroll: true
+
+    Panel
+      id: offerDetails
+      anchors.top: offers.top
+      anchors.left: offersScrollBar.right
+      anchors.right: parent.right
+      anchors.bottom: offers.bottom
+      margin-left: 8
+      visible: false
+
+      Label
+        id: name
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: 18
+        text-align: center
+        color: #dfdfdf
+        font: verdana-11px-rounded
+
+      ShopFlatPanel
+        id: previewPanel
+        anchors.top: name.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: 118
+        margin-top: 4
+
+        UIItem
+          id: item
+          anchors.centerIn: parent
+          size: 48 48
+          virtual: true
+          visible: false
+
+        UICreature
+          id: creature
+          anchors.centerIn: parent
+          size: 64 64
+          visible: false
+          animate: true
+
+        Label
+          id: image
+          anchors.centerIn: parent
+          size: 48 48
+          image-fixed-ratio: true
+          visible: false
+
+      ShopActionButton
+        id: detailBuyButton
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        margin-right: 8
+        margin-bottom: 8
+        size: 138 22
+        !text: tr('Buy')
+        image-color: #587fa3
+
+      ShopBalancePanel
+        id: detailPrice
+        anchors.right: detailBuyButton.right
+        anchors.bottom: detailBuyButton.top
+        margin-bottom: 4
+        text-offset: -15 0
+        size: 138 21
+        text: 0
+
+      TextList
+        id: variantOptions
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: detailPrice.top
+        height: 58
+        margin-bottom: 6
+        visible: false
+        focusable: false
+
+      ShopFlatPanel
+        id: descriptionBox
+        anchors.top: previewPanel.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        margin-top: 7
+        margin-bottom: 64
+        padding: 5
+
+        Label
+          id: description
+          anchors.fill: parent
+          margin: 3
+          text-align: topleft
+          text-wrap: true
+          color: #dfdfdf
+          font: verdana-11px-rounded
+
+    Panel
+      id: pageControls
+      visible: false
+      size: 80 30
+      anchors.horizontalCenter: offers.horizontalCenter
+      anchors.bottom: offers.bottom
+      margin-bottom: 8
+
+      ShopActionButton
+        id: prevPage
+        text: "<"
+        width: 30
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+
+      ShopActionButton
+        id: nextPage
+        text: ">"
+        width: 30
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+
+  ShopActionButton
+    id: transactionHistory
+    !text: tr('History')
+    size: 64 24
+    anchors.right: buttonCancel.left
+    anchors.bottom: parent.bottom
+    margin-right: 5
+    @onClick: modules.game_shop.showHistory()
+
+  ShopActionButton
+    id: transferOpen
+    !text: tr('Transfer Coins')
+    size: 118 24
+    anchors.left: infoPanel.right
+    anchors.bottom: parent.bottom
+    margin-left: 8
+    @onClick: modules.game_shop.showTransfer()
+
+  ShopActionButton
+    id: buttonCancel
+    !text: tr('Close')
+    size: 64 24
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_shop.hide()

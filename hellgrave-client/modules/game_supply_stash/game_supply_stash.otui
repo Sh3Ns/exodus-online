@@ -1,0 +1,139 @@
+SupplyStashItem < Item
+  size: 36 36
+  draggable: true
+  virtual: false
+  border-width: 1
+  border-color: #292929
+  text-align: bottomRight
+  text-offset: -2 -1
+  color: white
+
+  $hover:
+    border-color: #b7b7b7
+
+SupplyStashActionButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 28
+  padding: 5 12
+  text-align: center
+  color: white
+
+  $hover !disabled:
+    image-color: #9a958e
+
+  $pressed !disabled:
+    image-color: #dfdfdf
+
+  $disabled:
+    color: #8d8d8d
+    opacity: 0.65
+
+MainWindow
+  id: supplyStashWindow
+  !text: tr('Supply Stash')
+  size: 680 510
+  @onEscape: modules.game_supply_stash.close()
+
+  Panel
+    id: filters
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 24
+
+    ComboBox
+      id: category
+      anchors.left: parent.left
+      anchors.top: parent.top
+      width: 165
+      @onOptionChange: modules.game_supply_stash.render()
+
+    ComboBox
+      id: seller
+      anchors.left: prev.right
+      anchors.top: parent.top
+      margin-left: 6
+      width: 205
+      menu-scroll: true
+      menu-height: 360
+      menu-scroll-step: 20
+      @onOptionChange: modules.game_supply_stash.render()
+
+    TextEdit
+      id: search
+      anchors.left: prev.right
+      anchors.right: parent.right
+      anchors.top: parent.top
+      margin-left: 6
+      height: 20
+      !placeholder: tr('Type to search')
+      @onTextChange: modules.game_supply_stash.render()
+
+  Panel
+    id: stashArea
+    anchors.top: filters.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: footer.top
+    margin-top: 8
+    margin-bottom: 8
+    border-width: 1
+    border-color: #5a5a5a
+    padding: 4
+
+    VerticalScrollBar
+      id: stashScroll
+      anchors.top: parent.top
+      anchors.bottom: parent.bottom
+      anchors.right: parent.right
+      step: 36
+      pixels-scroll: true
+
+    ScrollablePanel
+      id: items
+      anchors.top: parent.top
+      anchors.bottom: parent.bottom
+      anchors.left: parent.left
+      anchors.right: stashScroll.left
+      vertical-scrollbar: stashScroll
+      layout:
+        type: grid
+        cell-size: 36 36
+        flow: true
+        auto-spacing: true
+
+  Panel
+    id: footer
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    height: 48
+
+    Label
+      id: help
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 18
+      text-align: center
+      !text: tr('Right-click an item, or drag it into an open backpack, to select the amount to retrieve.')
+      color: #909090
+
+    Label
+      id: slots
+      anchors.left: parent.left
+      anchors.bottom: parent.bottom
+      height: 20
+      text-align: left
+      color: #c0c0c0
+
+    SupplyStashActionButton
+      id: close
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      width: 96
+      !text: tr('Close')
+      @onClick: modules.game_supply_stash.close()

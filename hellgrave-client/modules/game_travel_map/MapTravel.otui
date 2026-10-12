@@ -1,0 +1,46 @@
+
+
+MapTravelNode < UIWidget
+  image-auto-resize: true
+  phantom: false
+
+Mapimage < UIWidget
+  phantom: false
+  image-smooth: true
+
+UIWidget
+  anchors.fill: gameRootPanel
+  @onClick: self:hide()
+  phantom: false
+  background-color: #00000060
+
+  UIWidget
+    id: mapPanel
+    anchors.centerIn: parent
+    phantom: false
+    image-auto-resize: true
+    draggable: true
+
+    UIWidget
+      id: mapImageDev
+      anchors.fill: parent
+      visible: false
+      phantom: false
+
+    FlatPanel
+      id: devModePanel
+      size: 120 50
+      text: Dev Mode
+      anchors.top: parent.top
+      anchors.right: parent.right
+      margin-top: 10
+      margin-right: 10
+      visible: false
+
+    ComboBox
+      id: nodesComboBox
+      anchors.top: parent.top
+      anchors.left: parent.left
+      width: 200
+      margin: 20
+      visible: false

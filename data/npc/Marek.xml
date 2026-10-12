@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Marek" script="marek.lua" walkinterval="2000" floorchange="0" speechbubble="6">
+	<health now="100" max="100" />
+	<look type="1237" head="0" body="101" legs="120" feet="95" addons="0"/>
+    <parameters>
+        <parameter key="message_greet" value="Hey, |PLAYERNAME|! I once led caravans across every road of this land... before bandits left mine in ruins. Perhaps you are here about a {caravan} or {designs}?"/>
+        <parameter key="message_farewell" value="May the roads treat you kindly, |PLAYERNAME|."/>
+    </parameters>
+</npc>

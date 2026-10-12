@@ -1,0 +1,211 @@
+GuildDynastieCard < UIWidget
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  padding: 8
+  size: 390 270
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    id: location
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    text-auto-resize: true
+    font: verdana-11px-rounded
+
+  Label
+    id: owner
+    anchors.top: location.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    text-wrap: true
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: placer
+    anchors.top: owner.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+    text-wrap: true
+    text-align: center
+    color: #b9b2a8
+
+  UIItem
+    id: dynastieItem
+    anchors.top: placer.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 12
+    size: 48 48
+    virtual: true
+
+  Label
+    id: status
+    anchors.top: dynastieItem.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    height: 48
+    text-wrap: true
+    text-align: center
+    color: #FFDC96
+
+  Label
+    id: tax
+    anchors.top: status.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+    text-wrap: true
+    text-align: center
+    color: #c7c1b6
+
+  Label
+    id: stored
+    anchors.top: tax.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+    text-wrap: true
+    text-align: center
+    color: #b9b2a8
+
+  GuildActionButton
+    id: placeButton
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 10
+    margin-bottom: 6
+    width: 84
+    !text: tr("Place")
+
+  GuildActionButton
+    id: panelButton
+    anchors.bottom: parent.bottom
+    anchors.right: teleportButton.left
+    margin-right: 6
+    margin-bottom: 6
+    width: 84
+    !text: tr("Panel")
+
+  GuildActionButton
+    id: teleportButton
+    anchors.bottom: parent.bottom
+    anchors.right: attackButton.left
+    margin-right: 6
+    margin-bottom: 6
+    width: 84
+    !text: tr("Teleport")
+
+  GuildActionButton
+    id: attackButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 10
+    margin-bottom: 6
+    width: 84
+    !text: tr("Attack")
+
+Panel
+  background-color: #3e3a35
+  padding: 16
+
+  Panel
+    id: dynastieTopBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 28
+    background-color: #3b3732
+    border: 1 #59524a
+
+    Label
+      id: capacityLabel
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 10
+      text-auto-resize: true
+      color: #dfdfdf
+      !text: tr("Dynasty: 0 / 0")
+
+    UIWidget
+      id: infoIcon
+      anchors.left: capacityLabel.right
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 8
+      size: 12 12
+      image-source: /images/ui/info.png
+      tooltip: Dynasty are city-control prisms owned by guilds. They can later manage city taxes and other bonuses. A dynasty must stay active for 7 days before it can be collected.
+
+    Label
+      id: hintLabel
+      anchors.right: parent.right
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 10
+      text-auto-resize: true
+      color: #b9b2a8
+      !text: tr("One dynasty per city. Collect after 7 days.")
+
+    GuildActionButton
+      id: managePanelButton
+      anchors.right: prevPageButton.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 90
+      width: 136
+      height: 22
+      !text: tr("Dynasty Panel")
+
+    GuildActionButton
+      id: prevPageButton
+      anchors.right: nextPageButton.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 6
+      width: 58
+      height: 22
+      !text: tr("Prev")
+
+    Label
+      id: pageLabel
+      anchors.right: prevPageButton.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 8
+      color: #dfdfdf
+      text-auto-resize: true
+      !text: tr("1 / 1")
+
+    GuildActionButton
+      id: nextPageButton
+      anchors.right: hintLabel.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 10
+      width: 58
+      height: 22
+      !text: tr("Next")
+
+  UIScrollArea
+    id: dynastieList
+    anchors.top: dynastieTopBar.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 10
+    margin-right: 18
+    vertical-scrollbar: dynastieScroll
+    layout:
+      type: grid
+      cell-size: 400 280
+      cell-spacing: 10
+      flow: true
+
+  VerticalScrollBar
+    id: dynastieScroll
+    anchors.top: dynastieList.top
+    anchors.bottom: dynastieList.bottom
+    anchors.right: parent.right
+    background-color: #3b3732
+    border: 1 #5a5248
+    step: 20
+    pixels-scroll: true

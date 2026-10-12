@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Seraphina" script="seraphina.lua" walkinterval="2000" floorchange="0" speechbubble="6">
+	<health now="100" max="100" />
+	<look type="985" head="11" body="38" legs="91" feet="24" addons="3"/>
+    <parameters>
+		<parameter key="message_greet" value="Blessings upon you, |PLAYERNAME|. Have you come seeking the old rite of the {angelic caravan}?"/>
+		<parameter key="message_farewell" value="May the light guard your steps, |PLAYERNAME|."/>
+	</parameters>
+</npc>

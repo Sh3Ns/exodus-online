@@ -1,0 +1,8 @@
+Module
+  name: game_wheel
+  description: Wheel of destiny
+  scripts: [ config, wheel, categories/wheel_of_destiny, categories/gem_atelier, categories/fragment_workshop ]
+  autoload: true
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

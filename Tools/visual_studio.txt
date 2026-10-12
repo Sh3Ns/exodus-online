@@ -1,0 +1,1 @@
+The visual_studio_BuildTools-2022 is now required if you use visual studio 2026, in order to install toolset msv 143 , other Wise you will not be able to compile

@@ -1,0 +1,10 @@
+Module
+  name: game_supply_stash
+  description: Supply Stash
+  author: Alexv45
+  autoload: true
+  autoload-priority: 1006
+  sandboxed: true
+  scripts: [ game_supply_stash ]
+  @onLoad: init()
+  @onUnload: terminate()

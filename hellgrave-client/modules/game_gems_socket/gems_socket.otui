@@ -1,0 +1,1419 @@
+GemSocketActionButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 24
+  padding: 4 12
+  text-offset: 0 0
+  text-align: center
+  color: white
+
+  $hover:
+    image-color: #9a958e
+    color: white
+
+  $focus:
+    image-color: #dfdfdf
+    color: white
+
+  $disabled:
+    color: #9a9a9a
+
+GemSocketMiniButton < GemSocketActionButton
+  height: 22
+  padding: 2 10
+  text-offset: 0 -1
+
+GemSocketCard < Panel
+  background-color: #3e3a35
+  border: 1 #5d564d
+  padding: 6
+
+GemSocketScrollCard < ScrollablePanel
+  background-color: #3e3a35
+  border: 1 #5d564d
+  padding: 6
+
+GemBonusPreviewLabel < Label
+  width: 548
+  height: 54
+  text-wrap: true
+  color: #b8d6b0
+
+GemSocketTabBar < UITabBar
+  size: 520 28
+
+  Panel
+    id: buttonsPanel
+    anchors.fill: parent
+    padding: 2
+
+GemSocketTabBarPanel < Panel
+
+GemSocketTabBarButton < UIButton
+  size: 116 24
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  anchors.top: parent.top
+  padding: 4 14
+  text-offset: 0 1
+  text-align: center
+  color: white
+
+  $first:
+    anchors.left: parent.left
+
+  $!first:
+    anchors.left: prev.right
+    margin-left: 4
+
+  $hover !checked:
+    image-color: #bfbfbf
+    color: #ffffff
+
+  $checked:
+    image-color: #dfdfdf
+    color: #ffffff
+
+  $focus:
+    image-color: #dfdfdf
+    color: #ffffff
+
+ForgeStarsRow < Panel
+  width: 92
+  height: 20
+  layout:
+    type: horizontalBox
+    spacing: 2
+
+ForgeStarIcon < UIWidget
+  size: 20 20
+
+GemsSocketWindow < MainWindow
+  size: 960 770
+  focusable: true
+  font: sans-bold-16px
+  text-offset: 0 4
+  padding-bottom: 5
+
+GemsSocketWindow
+  id: gemsSocketWindow
+  text: Gem Sockets
+  @onEscape: GemsSocket.hide()
+
+  Panel
+    id: content
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 14
+    margin-left: 10
+    margin-right: 10
+    margin-bottom: 10
+    layout:
+      type: verticalBox
+      spacing: 8
+
+    GemSocketCard
+      id: targetPanel
+      width: 920
+      height: 108
+      layout:
+        type: horizontalBox
+        spacing: 16
+
+      Panel
+        id: targetVisualPanel
+        width: 140
+        height: 96
+
+        Label
+          text: Target Item
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          color: #f0c96a
+
+        Item
+          id: targetItem
+          virtual: true
+          anchors.horizontalCenter: parent.horizontalCenter
+          anchors.top: prev.bottom
+          border-width: 1
+          border-color: #5a5a5a
+          margin-top: 6
+          size: 64 64
+
+        Label
+          id: targetName
+          anchors.top: targetItem.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 4
+          width: 130
+          text-align: center
+          text: 
+          color: #ffffff
+
+      Panel
+        id: targetInfoPanel
+        width: 740
+        height: 96
+
+        Label
+          id: targetHeaderName
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 10
+          margin-left: 8
+          margin-right: 40
+          height: 18
+          text: No Item Selected
+          color: #f0c96a
+
+        Label
+          id: targetInfo
+          anchors.top: targetHeaderName.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 4
+          margin-left: 8
+          margin-right: 40
+          text-wrap: true
+          height: 32
+          text: Drag an item with sockets here (Not Equipped).
+          color: #b0b0b0
+
+        Label
+          id: statusLabel
+          anchors.top: targetInfo.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 6
+          margin-left: 8
+          margin-right: 40
+          height: 48
+          text-wrap: true
+          color: #9fd38f
+
+        Panel
+          id: closeButtonPanel
+          anchors.top: parent.top
+          anchors.right: parent.right
+          margin-top: 4
+          margin-right: 4
+          width: 32
+          height: 22
+
+          GemSocketActionButton
+            id: closeButton
+            anchors.fill: parent
+            padding: 0
+            text-offset: 0 1
+            text: X
+            @onClick: GemsSocket.hide()
+
+    GemSocketTabBar
+      id: mainTabBar
+      width: 620
+      height: 24
+
+    Panel
+      id: mainTabContent
+      width: 920
+      height: 560
+      padding: 4
+      border-width: 1
+      border-color: #5d564d
+      layout:
+        type: anchor
+
+    Panel
+      id: socketTabPanel
+      visible: false
+      layout:
+        type: horizontalBox
+        spacing: 8
+
+      GemSocketCard
+        id: gemsColumn
+        width: 275
+        height: 480
+        layout:
+          type: verticalBox
+          spacing: 7
+
+        Label
+          text: Available Gems
+          color: #f0c96a
+
+        Label
+          id: gemsHelpLabel
+          text-wrap: true
+          width: 190
+          height: 32
+          color: #cfcfcf
+
+        GemSocketActionButton
+          id: gemsFilterButton
+          width: 120
+          text: Show All Gems
+
+        GemSocketCard
+          id: gemsListContainer
+          width: 245
+          height: 360
+          padding: 0
+
+          ScrollablePanel
+            id: gemsList
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: gemsListScrollBar.left
+            margin-right: 4
+            margin-left: 8
+            margin-top: 12
+            vertical-scrollbar: gemsListScrollBar
+            layout:
+              type: verticalBox
+              spacing: 4
+
+          VerticalScrollBar
+            id: gemsListScrollBar
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
+
+        Panel
+          id: gemsPaginationPanel
+          width: 245
+          height: 24
+          layout:
+            type: horizontalBox
+            spacing: 4
+
+          GemSocketActionButton
+            id: gemsPrevButton
+            width: 56
+            text: Prev
+
+          Label
+            id: gemsPageLabel
+            width: 84
+            margin-left: 25
+            text-align: center
+            color: #cfcfcf
+
+          GemSocketActionButton
+            id: gemsNextButton
+            margin-left: 20
+            width: 56
+            text: Next
+
+      GemSocketCard
+        id: socketsColumn
+        width: 620
+        height: 480
+        layout:
+          type: verticalBox
+          spacing: 6
+
+        Label
+          text: Sockets
+          color: #f0c96a
+
+        GemSocketScrollCard
+          id: socketsPanel
+          width: 600
+          height: 320
+          layout:
+            type: verticalBox
+            spacing: 3
+
+        Label
+          text: Bonus Preview
+          color: #f0c96a
+
+        GemSocketCard
+          id: bonusPreviewPanel
+          width: 600
+          height: 110
+          padding: 0
+
+          ScrollablePanel
+            id: activeBonusesList
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: activeBonusesScrollBar.left
+            margin: 8 4 8 8
+            vertical-scrollbar: activeBonusesScrollBar
+            layout:
+              type: verticalBox
+              spacing: 4
+
+          VerticalScrollBar
+            id: activeBonusesScrollBar
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
+
+    Panel
+      id: forgeTabPanel
+      visible: false
+      layout:
+        type: horizontalBox
+        spacing: 8
+
+      GemSocketCard
+        id: forgeSocketsColumn
+        width: 320
+        height: 540
+        layout:
+          type: verticalBox
+          spacing: 6
+
+        Label
+          text: Socketed Gems
+          color: #f0c96a
+
+        Label
+          id: forgeHelpLabel
+          width: 260
+          height: 32
+          text-wrap: true
+          color: #cfcfcf
+          text: Select a socketed gem to see the next forge tier.
+
+        GemSocketScrollCard
+          id: forgeSocketsList
+          width: 290
+          height: 462
+          layout:
+            type: verticalBox
+            spacing: 6
+
+      GemSocketCard
+        id: forgeDetailsColumn
+        width: 575
+        height: 540
+        layout:
+          type: verticalBox
+          spacing: 6
+
+        Label
+          text: Forge Details
+          color: #f0c96a
+
+        GemSocketCard
+          id: forgeDetailsPanel
+          width: 555
+          height: 506
+
+          Panel
+            id: forgeComparePanel
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            margin-top: 12
+            margin-left: 18
+            margin-right: 18
+            height: 214
+
+            Panel
+              id: forgeCurrentPanel
+              anchors.top: parent.top
+              anchors.right: forgeCompareArrow.left
+              margin-right: 12
+              width: 205
+              height: 212
+
+              Label
+                text: Current
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                color: #f0c96a
+
+              Item
+                id: forgeCurrentItem
+                virtual: true
+                anchors.top: prev.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                margin-top: 8
+                size: 48 48
+                border-width: 1
+                border-color: #5a5a5a
+
+              ForgeStarsRow
+                id: forgeCurrentStars
+                anchors.top: forgeCurrentItem.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                margin-top: 4
+
+              Label
+                id: forgeCurrentName
+                anchors.top: forgeCurrentStars.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                margin-top: 4
+                width: 205
+                height: 30
+                text-wrap: true
+                text-align: center
+                color: #ffffff
+
+              Label
+                id: forgeCurrentTooltip
+                anchors.top: forgeCurrentName.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                margin-top: 4
+                width: 205
+                height: 66
+                text-wrap: true
+                text-align: center
+                color: #b8d6b0
+
+            Label
+              id: forgeCompareArrow
+              anchors.horizontalCenter: parent.horizontalCenter
+              anchors.top: parent.top
+              margin-top: 44
+              width: 75
+              image-source: arrow_right
+              size: 75 50
+              color: #f0c96a
+
+            Panel
+              id: forgeNextPanel
+              anchors.top: parent.top
+              anchors.left: forgeCompareArrow.right
+              margin-left: 12
+              width: 205
+              height: 212
+
+              Label
+                text: Next
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                color: #f0c96a
+
+              Item
+                id: forgeNextItem
+                virtual: true
+                anchors.top: prev.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                margin-top: 8
+                size: 48 48
+                border-width: 1
+                border-color: #5a5a5a
+
+              ForgeStarsRow
+                id: forgeNextStars
+                anchors.top: forgeNextItem.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                margin-top: 4
+
+              Label
+                id: forgeNextName
+                anchors.top: forgeNextStars.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                margin-top: 4
+                width: 205
+                height: 30
+                text-wrap: true
+                text-align: center
+                color: #ffffff
+
+              Label
+                id: forgeNextTooltip
+                anchors.top: forgeNextName.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                margin-top: 4
+                width: 205
+                height: 66
+                text-wrap: true
+                text-align: center
+                color: #b8d6b0
+
+          Label
+            id: forgeGemStyle
+            anchors.top: forgeComparePanel.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            margin-top: 8
+            height: 18
+            text-align: center
+            color: #f0c96a
+
+          Label
+            id: forgeGemBestFor
+            anchors.top: forgeGemStyle.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            margin-top: 4
+            height: 30
+            text-wrap: true
+            text-align: center
+            color: #cfcfcf
+
+          Label
+            id: forgeImprovementPreview
+            anchors.top: forgeGemBestFor.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            margin-top: 10
+            margin-left: 18
+            margin-right: 18
+            height: 52
+            text-wrap: true
+            text-align: center
+            vertical-align: top
+            color: #b8d6b0
+
+          Label
+            id: forgeRequirementsLabel
+            anchors.top: forgeImprovementPreview.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            margin-top: 14
+            text-align: center
+            color: #f0c96a
+            text: Requirements
+
+          GemSocketScrollCard
+            id: forgeRequirementsList
+            anchors.top: forgeRequirementsLabel.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: forgeUpgradeButton.top
+            margin-left: 15
+            margin-right: 15
+            margin-top: 12
+            margin-bottom: 10
+            layout:
+              type: grid
+              cell-size: 94 36
+              cell-spacing: 7
+              flow: true
+
+          GemSocketActionButton
+            id: forgeUpgradeButton
+            anchors.bottom: parent.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-bottom: 14
+            width: 120
+            text: Forge
+
+    Panel
+      id: fusionTabPanel
+      visible: false
+      layout:
+        type: horizontalBox
+        spacing: 8
+
+      GemSocketCard
+        id: fusionGemsColumn
+        width: 320
+        height: 480
+        layout:
+          type: verticalBox
+          spacing: 6
+
+        Label
+          text: Inventory Gems
+          color: #f0c96a
+
+        Label
+          id: fusionHelpLabel
+          width: 260
+          height: 38
+          text-wrap: true
+          color: #cfcfcf
+          text: Select 3 gems of the same level to fuse them into 1 random gem of that level.
+
+        GemSocketScrollCard
+          id: fusionGemsList
+          width: 290
+          height: 402
+          layout:
+            type: verticalBox
+            spacing: 6
+
+      GemSocketCard
+        id: fusionDetailsColumn
+        width: 575
+        height: 480
+        layout:
+          type: verticalBox
+          spacing: 6
+
+        Label
+          text: Gem Fusion
+          color: #f0c96a
+
+        GemSocketCard
+          id: fusionDetailsPanel
+          width: 555
+          height: 430
+
+          Label
+            text: Source Gems
+            anchors.top: parent.top
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 18
+            color: #f0c96a
+
+          Panel
+            id: fusionSourcesPanel
+            anchors.top: prev.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 10
+            width: 280
+            height: 112
+            layout:
+              type: horizontalBox
+              spacing: 18
+
+            Panel
+              width: 80
+              height: 110
+
+              Item
+                id: fusionSourceItem1
+                virtual: true
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                size: 48 48
+                border-width: 1
+                border-color: #5a5a5a
+
+              Label
+                id: fusionSourceLabel1
+                anchors.top: fusionSourceItem1.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                margin-top: 6
+                width: 76
+                height: 28
+                text-align: center
+                text-wrap: true
+                color: #cfcfcf
+
+              GemSocketMiniButton
+                id: fusionSourceClear1
+                anchors.top: fusionSourceLabel1.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                text-offset: 0 1
+                width: 46
+                text: X
+
+            Panel
+              width: 80
+              height: 110
+
+              Item
+                id: fusionSourceItem2
+                virtual: true
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                size: 48 48
+                border-width: 1
+                border-color: #5a5a5a
+
+              Label
+                id: fusionSourceLabel2
+                anchors.top: fusionSourceItem2.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                margin-top: 6
+                width: 76
+                height: 28
+                text-align: center
+                text-wrap: true
+                color: #cfcfcf
+
+              GemSocketMiniButton
+                id: fusionSourceClear2
+                anchors.top: fusionSourceLabel2.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                text-offset: 0 1
+                width: 46
+                text: X
+
+            Panel
+              width: 80
+              height: 110
+
+              Item
+                id: fusionSourceItem3
+                virtual: true
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                size: 48 48
+                border-width: 1
+                border-color: #5a5a5a
+
+              Label
+                id: fusionSourceLabel3
+                anchors.top: fusionSourceItem3.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                margin-top: 6
+                width: 76
+                height: 28
+                text-align: center
+                text-wrap: true
+                color: #cfcfcf
+
+              GemSocketMiniButton
+                id: fusionSourceClear3
+                anchors.top: fusionSourceLabel3.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                text-offset: 0 1
+                width: 46
+                text: X
+
+          Label
+            id: fusionArrow
+            anchors.top: fusionSourcesPanel.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 8
+            image-source: arrow_right
+            size: 75 50
+            color: #f0c96a
+
+          Item
+            id: fusionResultItem
+            virtual: true
+            anchors.top: fusionArrow.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 8
+            size: 48 48
+            border-width: 1
+            border-color: #5a5a5a
+
+          Label
+            id: fusionResultName
+            anchors.top: fusionResultItem.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 8
+            width: 320
+            height: 18
+            text-align: center
+            text-wrap: true
+            color: #ffffff
+
+          Label
+            id: fusionInfo
+            anchors.top: fusionResultName.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 6
+            width: 360
+            height: 42
+            text-align: center
+            text-wrap: true
+            color: #b8d6b0
+
+          GemSocketActionButton
+            id: fusionClearButton
+            anchors.bottom: fusionConvertButton.top
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-bottom: 8
+            width: 120
+            text: Clear
+
+          GemSocketActionButton
+            id: fusionConvertButton
+            anchors.bottom: parent.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-bottom: 14
+            width: 140
+            text: Fuse Gems
+
+    Panel
+      id: extractEssenceTabPanel
+      visible: false
+      layout:
+        type: horizontalBox
+        spacing: 8
+
+      GemSocketCard
+        id: extractEssenceGemsColumn
+        width: 320
+        height: 480
+        layout:
+          type: verticalBox
+          spacing: 6
+
+        Label
+          text: Inventory Gems
+          color: #f0c96a
+
+        Label
+          id: extractEssenceHelpLabel
+          width: 260
+          height: 32
+          text-wrap: true
+          color: #cfcfcf
+          text: Select an owned gem and choose how many to convert.
+
+        GemSocketScrollCard
+          id: extractEssenceGemsList
+          width: 290
+          height: 402
+          layout:
+            type: verticalBox
+            spacing: 6
+
+      GemSocketCard
+        id: extractEssenceDetailsColumn
+        width: 575
+        height: 480
+        layout:
+          type: verticalBox
+          spacing: 6
+
+        Label
+          text: Extract Essence
+          color: #f0c96a
+
+        GemSocketCard
+          id: extractEssenceDetailsPanel
+          width: 555
+          height: 430
+
+          Label
+            text: Source Gem
+            anchors.top: parent.top
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 20
+            color: #f0c96a
+
+          Item
+            id: extractEssenceSourceItem
+            virtual: true
+            anchors.top: prev.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 8
+            size: 48 48
+            border-width: 1
+            border-color: #5a5a5a
+
+          Label
+            id: extractEssenceSourceName
+            anchors.top: extractEssenceSourceItem.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 8
+            width: 280
+            text-align: center
+            color: #ffffff
+
+          Panel
+            id: extractEssenceQuantityPanel
+            anchors.top: extractEssenceSourceName.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 10
+            width: 150
+            height: 24
+            layout:
+              type: horizontalBox
+              spacing: 6
+
+            GemSocketMiniButton
+              id: extractEssenceMinusButton
+              width: 34
+              text: -
+
+            Label
+              id: extractEssenceQuantityLabel
+              width: 66
+              height: 22
+              text-align: center
+              color: #cfcfcf
+
+            GemSocketMiniButton
+              id: extractEssencePlusButton
+              width: 34
+              text: +
+
+          Label
+            id: extractEssenceSourceInfo
+            anchors.top: extractEssenceQuantityPanel.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 8
+            width: 320
+            height: 30
+            text-align: center
+            text-wrap: true
+            color: #b8d6b0
+
+          Label
+            id: extractEssenceArrow
+            anchors.top: extractEssenceSourceInfo.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 6
+            image-source: arrow_right
+            size: 75 50
+            color: #f0c96a
+
+          Item
+            id: extractEssenceOutputItem
+            virtual: true
+            anchors.top: extractEssenceArrow.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 8
+            size: 48 48
+            border-width: 1
+            border-color: #5a5a5a
+
+          Label
+            id: extractEssenceOutputInfo
+            anchors.top: extractEssenceOutputItem.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 8
+            width: 320
+            height: 36
+            text-align: center
+            text-wrap: true
+            color: #f0c96a
+
+          GemSocketActionButton
+            id: extractEssenceConvertButton
+            anchors.bottom: parent.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-bottom: 14
+            width: 140
+            text: Extract Essence
+
+    Panel
+      id: gemInfoTabPanel
+      visible: false
+      layout:
+        type: verticalBox
+        spacing: 8
+
+      GemSocketCard
+        id: gemInfoHeader
+        width: 900
+        height: 42
+
+        Label
+          text: Gem Information
+          anchors.left: parent.left
+          anchors.verticalCenter: parent.verticalCenter
+          margin-left: 12
+          color: #f0c96a
+
+        Panel
+          id: gemInfoPaginationPanel
+          anchors.right: parent.right
+          anchors.verticalCenter: parent.verticalCenter
+          margin-right: 12
+          width: 390
+          height: 24
+          layout:
+            type: horizontalBox
+            spacing: 6
+
+          TextEdit
+            id: gemInfoSearchInput
+            width: 140
+            height: 22
+            padding-left: 6
+            placeholder: Search gem
+
+          GemSocketActionButton
+            id: gemInfoPrevButton
+            width: 58
+            text: Prev
+
+          Label
+            id: gemInfoPageLabel
+            width: 76
+            height: 22
+            text-align: center
+            color: #cfcfcf
+
+          GemSocketActionButton
+            id: gemInfoNextButton
+            width: 58
+            text: Next
+
+      Panel
+        id: gemInfoScrollWrapper
+        width: 900
+        height: 430
+
+        UIScrollArea
+          id: gemInfoScroll
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.right: gemInfoScrollbar.left
+          anchors.bottom: parent.bottom
+          margin-right: 4
+          background-color: #47413b
+          border: 1 #59524a
+          padding: 10
+          vertical-scrollbar: gemInfoScrollbar
+
+          Panel
+            id: gemInfoList
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            height: 1290
+            layout:
+              type: grid
+              cell-size: 278 640
+              cell-spacing: 10
+              flow: true
+
+        VerticalScrollBar
+          id: gemInfoScrollbar
+          anchors.top: parent.top
+          anchors.bottom: parent.bottom
+          anchors.right: parent.right
+          background-color: #3b3732
+          border: 1 #5a5248
+          step: 50
+          pixels-scroll: true
+
+GemInfoCard < GemSocketCard
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  padding: 8
+  width: 278
+  height: 640
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Item
+    id: gemInfoItem
+    virtual: true
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 8
+    size: 40 40
+    border-width: 1
+    border-color: #5a5a5a
+
+  Label
+    id: gemInfoName
+    anchors.top: gemInfoItem.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+    margin-left: 8
+    margin-right: 8
+    height: 18
+    text-align: center
+    text-auto-resize: false
+    color: #ffffff
+
+  Label
+    id: gemInfoMeta
+    anchors.top: gemInfoName.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+    margin-left: 8
+    margin-right: 8
+    height: 16
+    text-align: center
+    text-auto-resize: false
+    color: #f0c96a
+
+  Label
+    id: gemInfoTooltip
+    visible: false
+    anchors.top: gemInfoMeta.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 0
+    margin-left: 8
+    margin-right: 8
+    height: 0
+    text-wrap: true
+    text-auto-resize: false
+    color: #b8d6b0
+
+  Panel
+    id: gemInfoTierList
+    anchors.top: gemInfoMeta.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 10
+    margin-left: 8
+    margin-right: 8
+    margin-bottom: 8
+    layout:
+      type: verticalBox
+      spacing: 5
+
+GemInfoTierRow < Panel
+  width: 250
+  height: 58
+
+  Label
+    id: gemInfoTierName
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 16
+    text-auto-resize: false
+    color: #f0c96a
+
+  Label
+    id: gemInfoTierTooltip
+    anchors.top: gemInfoTierName.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+    height: 40
+    text-wrap: true
+    text-auto-resize: false
+    color: #cfcfcf
+
+GemInventoryRow < Panel
+  width: 214
+  height: 48
+
+  Item
+    id: gemItem
+    virtual: true
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    size: 32 32
+
+  Panel
+    id: gemTextPanel
+    anchors.left: gemItem.right
+    anchors.right: gemCount.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 8
+    margin-right: 6
+    height: 42
+    layout:
+      type: verticalBox
+      spacing: 0
+
+    Label
+      id: gemName
+      width: 145
+      height: 14
+      text-auto-resize: false
+      color: #e0e0e0
+
+    Label
+      id: gemTooltip
+      width: 145
+      height: 28
+      text-auto-resize: false
+      text-wrap: false
+      color: #b8d6b0
+
+  Label
+    id: gemCount
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-right: 6
+    width: 28
+    text-align: right
+    color: #9fd38f
+
+GemExtractInventoryRow < Panel
+  width: 278
+  height: 48
+
+  Item
+    id: gemItem
+    virtual: true
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    size: 32 32
+
+  Panel
+    id: gemTextPanel
+    anchors.left: gemItem.right
+    anchors.right: selectButton.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 8
+    margin-right: 6
+    height: 42
+    layout:
+      type: verticalBox
+      spacing: 0
+
+    Label
+      id: gemName
+      width: 160
+      height: 16
+      text-auto-resize: false
+      color: #e0e0e0
+
+    Label
+      id: gemPower
+      width: 160
+      height: 28
+      text-auto-resize: false
+      text-wrap: false
+      color: #b8d6b0
+
+  GemSocketMiniButton
+    id: selectButton
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    width: 66
+    text: Select
+
+GemSocketRow < Panel
+  width: 588
+  height: 58
+
+  Label
+    id: socketLabel
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    width: 60
+    text-auto-resize: false
+    color: #e0e0e0
+
+  UIWidget
+    id: socketIcon
+    anchors.left: socketLabel.right
+    anchors.verticalCenter: parent.verticalCenter
+    size: 43 43
+    image-source: /images/sockets/empty_socket
+    image-size: 45 45
+
+    Item
+      id: gemItem
+      virtual: true
+      phantom: true
+      anchors.centerIn: parent
+      size: 28 28
+      padding: 0
+      margin: 0
+      background-color: alpha
+      border-width: 0
+
+  Panel
+    id: gemTextPanel
+    anchors.left: socketIcon.right
+    anchors.right: removeButton.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 8
+    margin-right: 6
+    height: 42
+    layout:
+      type: verticalBox
+      spacing: 4
+
+    Label
+      id: gemText
+      width: 340
+      height: 16
+      color: #cfcfcf
+      text-wrap: false
+
+    Panel
+      id: gemMetaRow
+      width: 340
+      height: 20
+
+      Panel
+        id: gemStars
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        width: 90
+        height: 20
+        layout:
+          type: horizontalBox
+          spacing: 2
+
+  GemSocketMiniButton
+    id: removeButton
+    anchors.right: extractButton.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-right: 4
+    width: 64
+    text: Remove
+
+  GemSocketMiniButton
+    id: extractButton
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    width: 64
+    text: Extract
+
+GemForgeSocketRow < Panel
+  width: 278
+  height: 38
+
+  Item
+    id: gemItem
+    virtual: true
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    size: 32 32
+    border-width: 1
+    border-color: #5a5a5a
+
+  Panel
+    id: forgeTextPanel
+    anchors.left: gemItem.right
+    anchors.right: selectButton.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 8
+    margin-right: 6
+    height: 32
+    layout:
+      type: verticalBox
+      spacing: 0
+
+    Label
+      id: socketName
+      width: 175
+      color: #e0e0e0
+
+    Label
+      id: socketLevel
+      width: 175
+      color: #b8d6b0
+
+  GemSocketMiniButton
+    id: selectButton
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    width: 66
+    text: Select
+
+GemForgeRequirementRow < Panel
+  width: 94
+  height: 36
+
+  Item
+    id: item
+    virtual: true
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    size: 32 32
+    border-width: 1
+    border-color: #5a5a5a
+
+  Label
+    id: name
+    visible: false
+    width: 0
+    text-auto-resize: false
+    color: #e0e0e0
+
+  Label
+    id: count
+    anchors.left: item.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 2
+    width: 58
+    text-align: left
+    color: #9fd38f

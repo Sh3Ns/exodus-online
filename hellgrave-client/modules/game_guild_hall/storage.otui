@@ -1,0 +1,264 @@
+GuildStorageSlot < UIWidget
+  size: 44 44
+  background-color: #2f2c28
+  border: 1 #5a534b
+  phantom: false
+  focusable: true
+  checkable: true
+
+  $hover:
+    border: 1 #8f826f
+    background-color: #38342f
+
+  $checked:
+    border: 1 #d8c38a
+    background-color: #403a34
+
+  $focus:
+    border: 1 #d8c38a
+
+  Label
+    id: slotNumber
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 1
+    margin-left: 2
+    font: verdana-11px-rounded
+    color: #8d877f
+    text-auto-resize: true
+    phantom: true
+
+  UIItem
+    id: item
+    anchors.centerIn: parent
+    size: 32 32
+    virtual: true
+    phantom: true
+
+  Label
+    id: count
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 2
+    margin-bottom: 0
+    font: verdana-11px-rounded
+    color: #dfdfdf
+    text-auto-resize: true
+    phantom: true
+
+Panel
+  background-color: #4d4a45
+
+  Panel
+    id: storageToolbar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 34
+    margin-top: 8
+    margin-left: 10
+    margin-right: 10
+    background-color: #3b3732
+    border: 1 #59524a
+    layout: horizontalBox
+    spacing: 8
+    padding: 4
+
+    GuildActionButton
+      id: depositItemsButton
+      width: 120
+      height: 24
+      margin-top: 1
+      !text: tr("Deposit")
+      @onClick: modules.game_guild_hall.openStorageDeposit()
+
+    GuildActionButton
+      id: withdrawItemsButton
+      width: 120
+      height: 24
+      margin-top: 1
+      !text: tr("Withdraw")
+      @onClick: modules.game_guild_hall.withdrawSelectedStorageItem()
+
+    Label
+      width: 50
+      margin-top: 6
+      margin-left: 5
+      color: #dfdfdf
+      !text: tr("Search:")
+
+    TextEdit
+      id: searchEdit
+      width: 220
+      height: 22
+      margin-top: 2
+      padding-left: 6
+      text:
+      tooltip: Search by item name or id
+      @onTextChange: modules.game_guild_hall.onStorageSearchChange(self:getText())
+
+    Label
+      id: capacityLabel
+      margin-left: 12
+      margin-top: 6
+      color: #dfdfdf
+      text-auto-resize: true
+      !text: tr("Slots: 0 / 10")
+
+
+  Panel
+    id: storageGridBase
+    anchors.top: storageToolbar.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: storageFooter.top
+    margin-top: 8
+    margin-left: 10
+    margin-right: 10
+    margin-bottom: 8
+    background-color: #2f2c28
+    border: 1 #59524a
+
+    UIScrollArea
+      id: storageGrid
+      anchors.fill: parent
+      margin-top: 6
+      margin-left: 6
+      margin-right: 18
+      margin-bottom: 6
+      vertical-scrollbar: storageScrollBar
+      layout:
+        type: grid
+        cell-size: 46 46
+        cell-spacing: 4
+        flow: true
+
+    VerticalScrollBar
+      id: storageScrollBar
+      anchors.top: parent.top
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      background-color: #3b3732
+      border: 1 #5a5248
+      margin-top: 2
+      margin-right: 2
+      margin-bottom: 2
+      step: 36
+      pixels-scroll: true
+
+
+  Panel
+    id: storageFooter
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    height: 44
+    margin-left: 10
+    margin-right: 10
+    margin-bottom: 10
+    background-color: #3b3732
+    border: 1 #59524a
+
+    Label
+      id: selectedItemLabel
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 10
+      width: 700
+      color: #dfdfdf
+      !text: tr("Select a storage slot to withdraw an item.")
+
+    UIItem
+      id: depositProxyItem
+      visible: false
+      virtual: true
+
+GuildDepositSlot < UIItem
+  size: 44 44
+  background-color: #2f2c28
+  border: 1 #5a534b
+  virtual: true
+  phantom: false
+  focusable: true
+  checkable: true
+
+  $hover:
+    border: 1 #8f826f
+    background-color: #38342f
+
+  $checked:
+    border: 1 #d8c38a
+    background-color: #403a34
+
+
+GuildStorageDepositWindow < MainWindow
+  size: 360 210
+  !text: tr("Deposit Guild Items")
+  @onEscape: self:destroy()
+
+  Label
+    id: infoLabel
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 34
+    text-auto-resize: true
+    color: #dfdfdf
+    !text: tr("Drag items from your backpack into the slots.")
+
+  Panel
+    id: depositSlots
+    anchors.top: infoLabel.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 18
+    height: 46
+    width: 240
+    layout: horizontalBox
+    spacing: 4
+
+    GuildDepositSlot
+      id: depositSlot1
+
+    GuildDepositSlot
+      id: depositSlot2
+
+    GuildDepositSlot
+      id: depositSlot3
+
+    GuildDepositSlot
+      id: depositSlot4
+
+    GuildDepositSlot
+      id: depositSlot5
+
+  GuildActionButton
+    id: clearButton
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 22
+    margin-bottom: 14
+    width: 82
+    height: 26
+    !text: tr("Clear")
+    @onClick: modules.game_guild_hall.clearGuildStorageDepositWindow()
+
+  GuildActionButton
+    id: cancelButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 22
+    margin-bottom: 14
+    width: 82
+    height: 26
+    !text: tr("Cancel")
+    @onClick: self:getParent():destroy()
+
+  GuildActionButton
+    id: okButton
+    anchors.bottom: parent.bottom
+    anchors.right: cancelButton.left
+    margin-right: 10
+    margin-bottom: 14
+    width: 82
+    height: 26
+    !text: tr("Ok")
+    @onClick: modules.game_guild_hall.confirmGuildStorageDeposit()

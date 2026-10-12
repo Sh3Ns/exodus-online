@@ -1,0 +1,176 @@
+RanksTableRow < TableRow
+  height: 21
+
+  $focus:
+    background-color: #294f6d
+    color: #dfdfdf
+
+RankTitleColumn < TableColumn
+  width: 180
+  text-align: left
+  text-offset: 0 0
+
+RanksTableColumn < CheckBox
+  image-offset: 20 3
+
+RanksTableHeaderColumn < UIWidget
+  font: verdana-11px-rounded
+  color: #dfdfdf88
+  background-color: #3b3b3b
+  border: 1 #595959
+  text-wrap: true
+
+Panel
+  background-color: #3e3a35
+  padding: 16
+  Table
+    id: ranksTable
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-bottom: 40
+    table-data: ranksTableData
+    row-style: RanksTableRow
+    column-style: RanksTableColumn
+    header-column-style: false
+    header-row-style: false
+
+    TableHeaderRow
+      id: header
+      height: 30
+      
+      RanksTableHeaderColumn
+        !text: tr("Title")
+        width: 106
+
+      RanksTableHeaderColumn
+        !text: tr("Invite Members")
+        width: 72
+
+      RanksTableHeaderColumn
+        !text: tr("Edit Members")
+        width: 66
+
+      RanksTableHeaderColumn
+        !text: tr("Edit Ranks")
+        width: 54
+
+      RanksTableHeaderColumn
+        !text: tr("Edit Settings")
+        width: 64
+
+      RanksTableHeaderColumn
+        !text: tr("Manage Gold")
+        width: 70
+        visible: true
+
+      RanksTableHeaderColumn
+        !text: tr("Manage Perks")
+        width: 70
+        visible: true
+
+      RanksTableHeaderColumn
+        !text: tr("Deposit Storage")
+        width: 78
+
+      RanksTableHeaderColumn
+        !text: tr("Withdraw Storage")
+        width: 88
+
+      RanksTableHeaderColumn
+        !text: tr("Manage Prism")
+        width: 72
+
+      RanksTableHeaderColumn
+        !text: tr("Edit Dynastie")
+        width: 80
+
+  TableData
+    id: ranksTableData
+    anchors.fill: ranksTable
+    padding: 1
+    margin-top: 30
+    vertical-scrollbar: ranksTableScroll
+
+  VerticalScrollBar
+    id: ranksTableScroll
+    anchors.top: ranksTableData.top
+    anchors.bottom: ranksTableData.bottom
+    anchors.right: ranksTableData.right
+    background-color: #3b3732
+    border: 1 #5a5248
+    step: 20
+    pixels-scroll: true
+  
+  TextEdit
+    id: newRank
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    width: 160
+    max-length: 14
+    !placeholder: tr("New rank title")
+  
+  GuildActionButton
+    anchors.left: prev.right
+    anchors.bottom: parent.bottom
+    margin-left: 5
+    width: 100
+    text-offset: 0 0
+    !text: tr("Create New")
+    @onClick: modules.game_guild_hall.createRank()
+  
+  GuildActionButton
+    id: default
+    anchors.left: prev.right
+    anchors.bottom: parent.bottom
+    width: 80
+    margin-left: 4
+    image-color: orange
+    text-offset: 0 0
+    !text: tr("Default")
+    @onClick: modules.game_guild_hall.makeDefault()
+    enabled: false
+
+    $hover:
+      image-color: #c07a00
+  
+  GuildActionButton
+    id: delete
+    anchors.left: prev.right
+    anchors.bottom: parent.bottom
+    width: 60
+    margin-left: 5
+    image-color: red
+    text-offset: 0 0
+    !text: tr("Delete")
+    @onClick: modules.game_guild_hall.deleteRank()
+    enabled: false
+
+    $hover:
+      image-color: #c61e1e
+  
+  GuildActionButton
+    id: reset
+    anchors.left: prev.right
+    anchors.bottom: parent.bottom
+    width: 60
+    margin-left: 5
+    text-offset: 0 0
+    !text: tr("Reset")
+    @onClick: modules.game_guild_hall.resetRanks()
+    enabled: false
+  
+  GuildActionButton
+    id: save
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    width: 60
+    text-offset: 0 0
+    !text: tr("Save")
+    image-color: green
+    @onClick: modules.game_guild_hall.saveRanks()
+    enabled: false
+
+    $hover:
+      image-color: #169c16

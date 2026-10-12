@@ -1,0 +1,256 @@
+GuildEntry < Panel
+  height: 172
+  padding-right: 5
+  padding-bottom: 5
+  background-color: #47413b
+  border: 1 #59524a
+  $alternate:
+    background: #aaaaaa22
+  
+  $!alternate:
+    background: #aaaaaa11
+
+  Panel
+    id: logo
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 22
+    size: 64 64
+    image-source: /images/guild_hall/emblems
+
+  Label
+    id: position
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    height: 20
+    padding: 1
+    width: 64
+    font: sans-bold-16px
+    text-align: center
+
+  Label
+    id: guildName
+    anchors.top: parent.top
+    anchors.left: parent.left
+    width: 180
+    margin-top: 4
+    margin-left: 8
+    text-align: left
+    text-auto-resize: true
+    color: #dfdfdf
+    font: verdana-11px-rounded
+  
+  Panel
+    id: info
+    anchors.top: guildName.bottom
+    anchors.left: logo.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-left: 5
+    margin-top: 8
+    padding: 3
+
+    Panel
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.bottom: parent.bottom
+      width: 230
+      layout: verticalBox
+
+      Panel
+        height: 14
+        layout: horizontalBox
+
+        Label
+          width: 105
+          color: #FFAA00
+          !text: tr("Guild Leader")
+
+        Label
+          id: leader
+          text-auto-resize: true
+          color: #FFDC96
+          margin-left: 5
+
+      Panel
+        height: 14
+        margin-top: 5
+        layout: horizontalBox
+
+        Label
+          width: 105
+          color: #FFAA00
+          !text: tr("Guild Level")
+
+        Label
+          id: level
+          text-auto-resize: true
+          color: #FFDC96
+          margin-left: 5
+
+      Panel
+        height: 14
+        margin-top: 5
+        layout: horizontalBox
+
+        Label
+          width: 105
+          color: #FFAA00
+          !text: tr("Guild Members")
+
+        Label
+          id: members
+          text-auto-resize: true
+          color: #FFDC96
+          margin-left: 5
+
+      Panel
+        height: 14
+        margin-top: 5
+        layout: horizontalBox
+
+        Label
+          width: 105
+          color: #FFAA00
+          !text: tr("Total Levels")
+
+        Label
+          id: levels
+          text-auto-resize: true
+          color: #FFDC96
+          margin-left: 5
+
+      Panel
+        height: 14
+        margin-top: 5
+        layout: horizontalBox
+
+        Label
+          width: 105
+          color: #FFAA00
+          !text: tr("Average Level")
+
+        Label
+          id: avgLevel
+          text-auto-resize: true
+          color: #FFDC96
+          margin-left: 5
+
+    Panel
+      anchors.top: parent.top
+      anchors.left: prev.right
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-left: 16
+      layout: verticalBox
+
+      Panel
+        height: 14
+        layout: horizontalBox
+
+        Label
+          width: 110
+          color: #FFAA00
+          !text: tr("Language")
+
+        Label
+          id: language
+          text-auto-resize: true
+          color: #FFDC96
+          margin-left: 10
+
+      Panel
+        height: 14
+        margin-top: 5
+        layout: horizontalBox
+
+        Label
+          width: 110
+          color: #FFAA00
+          !text: tr("Join Status")
+
+        Label
+          id: status
+          text-auto-resize: true
+          color: #FFDC96
+          margin-left: 10
+
+      Panel
+        height: 14
+        margin-top: 5
+        layout: horizontalBox
+
+        Label
+          width: 110
+          color: #FFAA00
+          !text: tr("Req. Level")
+
+        Label
+          id: reqLevel
+          text-auto-resize: true
+          color: #FFDC96
+          margin-left: 10
+
+      Panel
+        height: 14
+        margin-top: 5
+        layout: horizontalBox
+
+        Label
+          width: 110
+          color: #FFAA00
+          !text: tr("Prisms Owned")
+
+        Label
+          id: prisms
+          text-auto-resize: true
+          color: #FFDC96
+          margin-left: 10
+
+      Panel
+        height: 14
+        margin-top: 5
+        layout: horizontalBox
+
+        Label
+          width: 110
+          color: #FFAA00
+          !text: tr("Achievements")
+
+        Label
+          id: achievements
+          text-auto-resize: true
+          color: #FFDC96
+          margin-left: 10
+
+      Panel
+        height: 16
+        margin-top: 3
+
+      GuildActionButton
+        id: request
+        width: 130
+        margin-bottom: 8
+        !text: tr("Send Join Request")
+
+Panel
+  background-color: #3e3a35
+  padding: 16
+  UIScrollArea
+    id: list
+    anchors.fill: parent
+    vertical-scrollbar: scrollbar
+    background-color: #47413b
+    border: 1 #59524a
+    margin-right: 10
+    layout: verticalBox
+
+  VerticalScrollBar
+    id: scrollbar
+    anchors.top: prev.top
+    anchors.bottom: prev.bottom
+    anchors.left: prev.right
+    background-color: #3b3732
+    border: 1 #5a5248
+    step: 50
+    pixels-scroll: true

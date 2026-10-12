@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Dwelva" script="dwelva.lua" walkinterval="2000" floorchange="0" speechbubble="6">
+	<health now="100" max="100" />
+	<look type="1512" head="33" body="64" legs="71" feet="42" addons="0"/>
+	<parameters>
+		<parameter key="message_greet" value="Hail, |PLAYERNAME|. Few wander this far into the sands without a reason. Are you here about the old {war caravan}?"/>
+		<parameter key="message_farewell" value="Keep your waterskin full and your blade close, |PLAYERNAME|."/>
+	</parameters>
+</npc>

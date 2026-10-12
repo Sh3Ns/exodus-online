@@ -1,0 +1,337 @@
+GuildTabBar < UITabBar
+  size: 80 28
+  Panel
+    id: buttonsPanel
+    anchors.fill: parent
+    padding: 2
+
+GuildTabBarPanel < Panel
+
+GuildTabBarButton < UIButton
+  size: 22 34
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  anchors.top: parent.top
+  padding: 6 18
+  text-offset: 12 0
+  text-align: center
+
+  $first:
+    anchors.left: parent.left
+
+  $!first:
+    anchors.left: prev.right
+    margin-left: 4
+
+  $hover !checked:
+    image-color: #bfbfbf
+
+  $checked:
+    image-color: #dfdfdf
+
+  $focus:
+    image-color: #dfdfdf
+
+GuildActionButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 30
+  padding: 6 14
+  text-offset: 0 0
+  text-align: center
+  color: white
+
+  $hover:
+    image-color: #9a958e
+    color: white
+
+  $focus:
+    image-color: #dfdfdf
+    color: white
+
+  $disabled:
+    color: #9a9a9a
+
+GuildMiniPanel < MiniPanel
+  text-offset: 0 1
+  image-source: /images/ui/miniwindow
+
+GuildMiniPanelFlat < MiniPanel
+  text-offset: 0 1
+  image-source: /images/ui/miniwindow
+
+GuildTabIcon < UIWidget
+  size: 16 16
+  phantom: true
+  focusable: false
+  anchors.verticalCenter: parent.verticalCenter
+
+GuildComboBoxPopupMenuButton < UIButton
+  height: 23
+  font: verdana-11px-antialised
+  text-align: left
+  text-offset: 4 0
+  color: #dfdfdf
+  background-color: #433d36
+  border: 1 #5d564d
+  margin: 1
+
+  $hover !disabled:
+    color: #ffffff
+    background-color: #5a5248
+
+  $disabled:
+    color: #dfdfdf88
+
+GuildComboBoxPopupMenu < UIPopupMenu
+  background-color: #3e3a35
+  border: 1 #5d564d
+  padding: 1
+
+GuildComboBox < UIComboBox
+  font: verdana-11px-antialised
+  color: #dfdfdf
+  size: 91 23
+  text-offset: 3 0
+  text-align: left
+  background-color: #433d36
+  border: 1 #5d564d
+
+  $hover !disabled:
+    background-color: #4c453d
+
+  $on:
+    background-color: #534b43
+
+  $disabled:
+    color: #dfdfdf88
+    opacity: 0.8
+
+MainWindow
+  size: 930 730
+  !text: tr("Guild Hall")
+  font: sans-bold-16px
+  text-offset: 0 4
+  padding-bottom: 5
+  @onEscape: modules.game_guild_hall.toggle()
+
+  Panel
+    id: tabBackground
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    width: 880
+    height: 106
+    background-color: #39342f
+    border: 1 #534b43
+
+  GuildTabBar
+    id: tabBar
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    width: 860
+    margin-top: 18
+
+  Panel
+    id: secondaryTabs
+    anchors.top: tabBar.bottom
+    anchors.left: tabBar.left
+    width: 860
+    height: 34
+    margin-top: 12
+    margin-left: 2
+
+    GuildTabBarButton
+      id: storageSecondaryBtn
+      anchors.left: parent.left
+      anchors.top: parent.top
+      width: 132
+      !text: tr("Storage")
+
+    GuildTabBarButton
+      id: prismSecondaryBtn
+      anchors.left: storageSecondaryBtn.right
+      anchors.top: parent.top
+      margin-left: 4
+      width: 132
+      !text: tr("Prism")
+
+    GuildTabBarButton
+      id: questsSecondaryBtn
+      anchors.left: prismSecondaryBtn.right
+      anchors.top: parent.top
+      margin-left: 4
+      width: 132
+      !text: tr("Quests")
+
+    GuildTabBarButton
+      id: achievementsSecondaryBtn
+      anchors.left: questsSecondaryBtn.right
+      anchors.top: parent.top
+      margin-left: 4
+      width: 132
+      !text: tr("Achievements")
+
+    GuildTabBarButton
+      id: blackMarketSecondaryBtn
+      anchors.left: achievementsSecondaryBtn.right
+      anchors.top: parent.top
+      margin-left: 4
+      width: 132
+      !text: tr("Black Market")
+
+    GuildTabBarButton
+      id: dynastieSecondaryBtn
+      anchors.left: blackMarketSecondaryBtn.right
+      anchors.top: parent.top
+      margin-left: 4
+      width: 144
+      !text: tr("Dynasty")
+
+  Panel
+    id: content
+    anchors.top: secondaryTabs.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    width: 880
+    anchors.bottom: parent.bottom
+    margin-top: 10
+    margin-bottom: 76
+    background-color: #3e3a35
+    border: 1 #59524a
+
+  GuildActionButton
+    id: leaveBtn
+    anchors.bottom: parent.bottom
+    anchors.left: content.left
+    margin-bottom: 10
+    width: 116
+    height: 30
+    !text: tr("Leave")
+    @onClick: modules.game_guild_hall.leave()
+
+  GuildActionButton
+    id: settingsBtn
+    anchors.bottom: parent.bottom
+    anchors.left: prev.right
+    margin-left: 10
+    margin-bottom: 10
+    width: 122
+    height: 30
+    !text: tr("Settings")
+    @onClick: modules.game_guild_hall.showSettings()
+
+  GuildActionButton
+    id: inboxFilterBtn
+    anchors.bottom: parent.bottom
+    anchors.left: prev.right
+    margin-left: 10
+    margin-bottom: 10
+    height: 30
+    !text: tr("Request Filter: Off")
+    text-auto-resize: true
+    @onClick: modules.game_guild_hall.inboxRequestFilter(not self:isChecked())
+    visible: false
+
+    $checked:
+      !text: tr("Request Filter: On")
+
+  GuildActionButton
+    anchors.bottom: parent.bottom
+    anchors.right: content.right
+    width: 96
+    height: 30
+    margin-bottom: 10
+    !text: tr("Close")
+    @onClick: modules.game_guild_hall.toggle()
+
+  UIWidget
+    id: balanceBase
+    anchors.bottom: parent.bottom
+    anchors.left: settingsBtn.right
+    width: 150
+    margin-left: 20
+    background-color: #2c2c2c
+    border: 1 #5b5b5b
+    margin-bottom: 9
+    height: 18
+    text-align: center
+    color: #FDEE00
+
+    UIItem
+      id: balanceIcon
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: parent.left
+      margin-left: 8
+      size: 32 32
+      item-id: 3031
+      !tooltip: tr('Gold Coins')
+      virtual: true
+
+  Label
+    id: balanceLabel
+    anchors.bottom: balanceBase.top
+    anchors.horizontalCenter: balanceBase.horizontalCenter
+    !text: tr("Guild Gold Bank")
+    text-auto-resize: true
+
+  UIWidget
+    id: premiumBalanceBase
+    anchors.bottom: parent.bottom
+    anchors.left: balanceBase.right
+    margin-left: 18
+    width: 150
+    background-color: #2c2c2c
+    border: 1 #5b5b5b
+    margin-bottom: 9
+    height: 18
+    text-align: center
+    color: #FFAA00
+
+    UIWidget
+      id: premiumBalanceIcon
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: parent.left
+      margin-left: 8
+      !tooltip: tr('Premium Points')
+      size: 12 12
+      image-source: /images/guild_hall/tibia_coin
+
+  Label
+    id: premiumBalanceLabel
+    anchors.bottom: premiumBalanceBase.top
+    anchors.horizontalCenter: premiumBalanceBase.horizontalCenter
+    !text: tr("Guild Premium Bank")
+    text-auto-resize: true
+
+  UIWidget
+    id: dynastieTokenBase
+    anchors.bottom: parent.bottom
+    anchors.left: premiumBalanceBase.right
+    anchors.right: parent.right
+    margin-left: 18
+    margin-right: 108
+    background-color: #2c2c2c
+    border: 1 #5b5b5b
+    margin-bottom: 9
+    height: 18
+    text-align: center
+    color: #7AD7FF
+
+    UIWidget
+      id: dynastieTokenIcon
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: parent.left
+      margin-left: 8
+      size: 12 12
+      !tooltip: tr('Dynasty Tokens')
+      image-source: /images/guild_hall/dynasty_tokens
+
+  Label
+    id: dynastieTokenLabel
+    anchors.bottom: dynastieTokenBase.top
+    anchors.horizontalCenter: dynastieTokenBase.horizontalCenter
+    !text: tr("Dynasty Tokens")
+    text-auto-resize: true

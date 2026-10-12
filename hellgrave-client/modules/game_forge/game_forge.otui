@@ -1,0 +1,1074 @@
+ForgeActionButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 28
+  padding: 5 12
+  text-align: center
+  color: white
+
+  $hover !disabled:
+    image-color: #9a958e
+
+  $pressed !disabled:
+    image-color: #dfdfdf
+
+  $disabled:
+    color: #8d8d8d
+    opacity: 0.65
+
+ForgePrimaryButton < ForgeActionButton
+  height: 34
+  font: verdana-11px-rounded
+  image-color: #1de620
+  opacity: 1.0
+
+  $hover !disabled:
+    image-color: #00ff04
+
+  $disabled:
+    image-color: #777777
+    color: #8d8d8d
+    opacity: 0.55
+
+ForgeTabBar < UITabBar
+  size: 740 34
+
+  Panel
+    id: buttonsPanel
+    anchors.fill: parent
+    padding: 2
+
+ForgeTabBarPanel < Panel
+
+ForgeTabBarButton < UIButton
+  size: 180 32
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  anchors.top: parent.top
+  padding: 4 8
+  icon-align: left
+  icon-size: 24 24
+  icon-offset: 5 3
+  text-offset: 34 1
+  text-align: left
+  color: white
+
+  $first:
+    anchors.left: parent.left
+
+  $!first:
+    anchors.left: prev.right
+    margin-left: 4
+
+  $hover !checked:
+    image-color: #bfbfbf
+
+  $checked:
+    image-color: #dfdfdf
+
+ForgeCard < Panel
+  background-color: #3e3a35
+  border: 1 #5d564d
+  padding: 8
+
+ForgeSubCard < Panel
+  background-color: #39342f
+  border: 1 #534b43
+  padding: 6
+
+ForgeScrollCard < ScrollablePanel
+  background-color: #39342f
+  border: 1 #534b43
+  padding: 6
+
+ForgeSectionTitle < Label
+  color: #f0c96a
+  font: verdana-11px-rounded
+  height: 18
+
+ForgeMutedLabel < Label
+  color: #b8b2aa
+
+ForgeValueLabel < Label
+  color: #e0e0e0
+
+ForgeCostLabel < Label
+  color: #d8c27a
+
+ForgeItemRow < Panel
+  width: 238
+  height: 44
+  phantom: false
+  focusable: true
+  background-color: #35312d
+  border: 1 #514b45
+  padding: 4
+
+  $hover:
+    background-color: #4b443d
+    border-color: #766b60
+
+  Item
+    id: item
+    virtual: true
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    size: 34 34
+    border: 1 #5a5a5a
+
+  Label
+    id: name
+    anchors.left: item.right
+    anchors.top: parent.top
+    margin-left: 8
+    margin-top: 3
+    width: 135
+    color: #e0e0e0
+
+  Label
+    id: details
+    anchors.left: item.right
+    anchors.bottom: parent.bottom
+    margin-left: 8
+    margin-bottom: 3
+    width: 145
+    color: #b8d6b0
+
+  Label
+    id: count
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    width: 44
+    text-align: right
+    color: #d8c27a
+
+ForgeHistoryRow < Panel
+  width: 680
+  height: 50
+  background-color: #39342f
+  border-bottom: 1 #4d4741
+
+  Label
+    id: date
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 8
+    width: 145
+    color: #cfcfcf
+
+  Label
+    id: action
+    anchors.left: date.right
+    anchors.verticalCenter: parent.verticalCenter
+    width: 100
+    color: #f0c96a
+
+  Label
+    id: details
+    anchors.left: action.right
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    margin-top: 6
+    margin-bottom: 6
+    margin-right: 6
+    text-wrap: true
+    text-align: left
+    color: #cfcfcf
+
+ForgeResourceBox < Panel
+  width: 158
+  height: 54
+  background-color: #2c2c2c
+  border: 1 #5b5b5b
+
+  Item
+    id: icon
+    virtual: true
+    phantom: true
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 8
+    size: 32 32
+
+  Label
+    id: title
+    anchors.left: icon.right
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-left: 8
+    margin-right: 4
+    margin-top: 11
+    color: #f0c96a
+
+  Label
+    id: value
+    anchors.left: icon.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-left: 8
+    margin-right: 4
+    margin-bottom: 11
+    color: #f0c96a
+
+ForgePreviewItem < Item
+  virtual: true
+  size: 66 66
+  image-source: /images/ui/item
+
+ForgeResultWindow < MainWindow
+  size: 460 300
+  !text: tr('Forge Result')
+  font: sans-bold-16px
+  text-offset: 0 4
+  focusable: true
+
+  ForgeCard
+    anchors.fill: parent
+    margin: 12 10 10 10
+
+    Label
+      id: resultTitle
+      anchors.top: parent.top
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 10
+      width: 390
+      text-align: center
+      color: #f0c96a
+      font: verdana-11px-rounded
+
+    ForgePreviewItem
+      id: resultLeftItem
+      anchors.left: parent.left
+      anchors.top: resultTitle.bottom
+      margin-left: 65
+      margin-top: 28
+
+    UIWidget
+      id: resultArrow1
+      anchors.left: resultLeftItem.right
+      anchors.verticalCenter: resultLeftItem.verticalCenter
+      margin-left: 28
+      size: 14 25
+      image-source: /modules/game_forge/images/arrows/icon-arrow-rightlarge.png
+
+    UIWidget
+      id: resultArrow2
+      anchors.left: resultArrow1.right
+      anchors.verticalCenter: resultArrow1.verticalCenter
+      margin-left: 5
+      size: 14 25
+      image-source: /modules/game_forge/images/arrows/icon-arrow-rightlarge.png
+
+    UIWidget
+      id: resultArrow3
+      anchors.left: resultArrow2.right
+      anchors.verticalCenter: resultArrow2.verticalCenter
+      margin-left: 5
+      size: 14 25
+      image-source: /modules/game_forge/images/arrows/icon-arrow-rightlarge.png
+
+    ForgePreviewItem
+      id: resultRightItem
+      anchors.left: resultArrow3.right
+      anchors.verticalCenter: resultLeftItem.verticalCenter
+      margin-left: 28
+
+    Label
+      id: resultText
+      anchors.top: resultLeftItem.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 18
+      width: 390
+      height: 38
+      text-align: center
+      text-wrap: true
+      color: #cfcfcf
+
+    HorizontalSeparator
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: resultButton.top
+      margin-left: 8
+      margin-right: 8
+      margin-bottom: 12
+
+    ForgeActionButton
+      id: resultButton
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      width: 92
+      text: Close
+
+MainWindow
+  id: forgeWindow
+  size: 760 640
+  !text: tr('Exaltation Forge')
+  font: sans-bold-16px
+  text-offset: 0 4
+  focusable: true
+  padding-bottom: 5
+
+  Panel
+    id: content
+    anchors.fill: parent
+    margin: 14 10 10 10
+
+    Panel
+      id: balancePanel
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 54
+      layout:
+        type: horizontalBox
+        spacing: 12
+
+      ForgeResourceBox
+        id: goldBox
+        width: 192
+
+      ForgeResourceBox
+        id: dustBox
+
+      ForgeResourceBox
+        id: sliverBox
+
+      ForgeResourceBox
+        id: coreBox
+
+    ForgeTabBar
+      id: forgeTabBar
+      anchors.top: balancePanel.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 8
+
+    Panel
+      id: tabContent
+      anchors.top: forgeTabBar.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: footerSeparator.top
+      margin-top: 8
+      margin-bottom: 8
+      layout:
+        type: anchor
+
+    Panel
+      id: fusionPanel
+      visible: false
+
+      ForgeCard
+        id: fusionCandidatesCard
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        width: 278
+
+        ForgeSectionTitle
+          text: Forgeable Items
+          anchors.top: parent.top
+          anchors.left: parent.left
+
+        ComboBox
+          id: fusionClassificationFilter
+          anchors.top: parent.top
+          anchors.right: parent.right
+          width: 132
+          height: 24
+          margin-top: -2
+
+        ForgeSubCard
+          anchors.top: fusionClassificationFilter.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          margin-top: 8
+
+          ScrollablePanel
+            id: fusionItemsList
+            anchors.top: parent.top
+            anchors.bottom: fusionItemsPagination.top
+            anchors.left: parent.left
+            anchors.right: fusionItemsScroll.left
+            margin-right: 4
+            margin-bottom: 6
+            vertical-scrollbar: fusionItemsScroll
+            layout:
+              type: verticalBox
+              spacing: 5
+
+          VerticalScrollBar
+            id: fusionItemsScroll
+            anchors.top: parent.top
+            anchors.bottom: fusionItemsPagination.top
+            anchors.right: parent.right
+            margin-bottom: 6
+
+          Panel
+            id: fusionItemsPagination
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            height: 26
+
+            ForgeActionButton
+              id: fusionItemsPreviousPage
+              anchors.left: parent.left
+              anchors.verticalCenter: parent.verticalCenter
+              width: 58
+              height: 24
+              text: <
+
+            Label
+              id: fusionItemsPageLabel
+              anchors.left: fusionItemsPreviousPage.right
+              anchors.right: fusionItemsNextPage.left
+              anchors.verticalCenter: parent.verticalCenter
+              margin-left: 4
+              margin-right: 4
+              text-align: center
+              text: Page 1 / 1
+              color: #b8b2aa
+
+            ForgeActionButton
+              id: fusionItemsNextPage
+              anchors.right: parent.right
+              anchors.verticalCenter: parent.verticalCenter
+              width: 58
+              height: 24
+              text: >
+
+      ForgeCard
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.left: fusionCandidatesCard.right
+        anchors.right: parent.right
+        margin-left: 10
+
+        ForgeSectionTitle
+          id: fusionRequirementsTitle
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          width: 390
+          text-align: center
+
+        ForgePreviewItem
+          id: fusionSourceItem
+          anchors.left: parent.left
+          anchors.top: fusionRequirementsTitle.bottom
+          margin-left: 45
+          margin-top: 18
+
+        Label
+          id: fusionSourceTier
+          anchors.top: fusionSourceItem.bottom
+          anchors.horizontalCenter: fusionSourceItem.horizontalCenter
+          margin-top: 5
+          color: #b8d6b0
+
+        UIWidget
+          anchors.left: fusionSourceItem.right
+          anchors.verticalCenter: fusionSourceItem.verticalCenter
+          margin-left: 28
+          size: 32 25
+          image-source: /modules/game_forge/images/arrows/icon-arrow-rightlarge-filled.png
+          image-size: 14 25
+
+        ForgePreviewItem
+          id: fusionTargetItem
+          anchors.right: parent.right
+          anchors.top: fusionSourceItem.top
+          margin-right: 45
+
+        Label
+          id: fusionTargetTier
+          anchors.top: fusionTargetItem.bottom
+          anchors.horizontalCenter: fusionTargetItem.horizontalCenter
+          margin-top: 5
+          color: #b8d6b0
+
+        ForgeMutedLabel
+          id: fusionTargetHelp
+          anchors.top: fusionSourceTier.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 8
+          height: 20
+          text-align: center
+
+        ForgeSubCard
+          id: fusionTargetListCard
+          anchors.top: fusionTargetHelp.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 4
+          height: 112
+
+          ScrollablePanel
+            id: fusionTargetList
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: fusionTargetListScroll.left
+            margin-right: 4
+            vertical-scrollbar: fusionTargetListScroll
+            layout:
+              type: grid
+              cell-size: 88 46
+              cell-spacing: 5
+              flow: true
+
+          VerticalScrollBar
+            id: fusionTargetListScroll
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
+            step: 46
+            pixels-scroll: true
+
+        ForgeSubCard
+          id: fusionCostsCard
+          anchors.top: fusionTargetHelp.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 8
+          height: 150
+
+          ForgeValueLabel
+            id: fusionGoldCost
+            anchors.top: fusionGoldIcon.bottom
+            anchors.left: parent.left
+            margin-left: 2
+            margin-top: 4
+            width: 96
+            text-align: center
+
+          UIItem
+            id: fusionGoldIcon
+            anchors.top: parent.top
+            anchors.left: parent.left
+            margin-left: 34
+            margin-top: 4
+            size: 32 32
+
+          ForgeValueLabel
+            id: fusionDustCost
+            anchors.top: fusionDustIcon.bottom
+            anchors.left: parent.left
+            margin-left: 102
+            margin-top: 4
+            width: 110
+            text-align: center
+
+          UIItem
+            id: fusionDustIcon
+            anchors.top: parent.top
+            anchors.left: parent.left
+            margin-left: 140
+            margin-top: 4
+            size: 32 32
+
+          ForgeValueLabel
+            id: fusionCoreCost
+            anchors.top: fusionCoreIcon.bottom
+            anchors.left: parent.left
+            margin-left: 214
+            margin-top: 4
+            width: 90
+            text-align: center
+
+          UIItem
+            id: fusionCoreIcon
+            anchors.top: parent.top
+            anchors.left: parent.left
+            margin-left: 242
+            margin-top: 4
+            size: 32 32
+
+          ForgeValueLabel
+            id: fusionItemCost
+            anchors.top: fusionItemIcon.bottom
+            anchors.left: parent.left
+            margin-left: 304
+            margin-top: 4
+            width: 125
+            text-align: center
+
+          UIItem
+            id: fusionItemIcon
+            anchors.top: parent.top
+            anchors.left: parent.left
+            margin-left: 350
+            margin-top: 4
+            size: 32 32
+
+          ForgeActionButton
+            id: fusionChanceButton
+            anchors.left: parent.left
+            anchors.bottom: parent.bottom
+            width: 190
+            margin-bottom: 6
+            margin-top: 4
+            text: Improve Chance
+
+          ForgeActionButton
+            id: fusionLossButton
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            width: 190
+            margin-bottom: 6
+            text: Reduce Tier Loss
+
+        Label
+          id: fusionStatusLabel
+          anchors.top: fusionCostsCard.bottom
+          anchors.bottom: fusionActionButton.top
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 8
+          height: 28
+          text-wrap: true
+          color: #b8b2aa
+
+        ForgePrimaryButton
+          id: fusionActionButton
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          width: 170
+          text: Start Fusion
+
+    Panel
+      id: transferPanel
+      visible: false
+
+      ForgeCard
+        id: transferDonorsCard
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        width: 278
+
+        ForgeSectionTitle
+          text: Donor Items
+          anchors.top: parent.top
+          anchors.left: parent.left
+
+        ForgeSubCard
+          anchors.top: prev.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          margin-top: 8
+
+          ScrollablePanel
+            id: transferDonorList
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: transferDonorScroll.left
+            margin-right: 4
+            vertical-scrollbar: transferDonorScroll
+            layout:
+              type: verticalBox
+              spacing: 5
+
+          VerticalScrollBar
+            id: transferDonorScroll
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
+
+      ForgeCard
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.left: transferDonorsCard.right
+        anchors.right: parent.right
+        margin-left: 10
+
+        ForgeSectionTitle
+          id: transferRequirementsTitle
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          width: 390
+          text-align: center
+
+        ForgePreviewItem
+          id: transferSourceItem
+          anchors.left: parent.left
+          anchors.top: transferRequirementsTitle.bottom
+          margin-left: 45
+          margin-top: 18
+
+        Label
+          id: transferSourceTier
+          anchors.top: transferSourceItem.bottom
+          anchors.horizontalCenter: transferSourceItem.horizontalCenter
+          margin-top: 5
+          color: #b8d6b0
+
+        UIWidget
+          anchors.left: transferSourceItem.right
+          anchors.verticalCenter: transferSourceItem.verticalCenter
+          margin-left: 28
+          size: 32 25
+          image-source: /modules/game_forge/images/arrows/icon-arrow-rightlarge-filled.png
+          image-size: 14 25
+
+        ForgePreviewItem
+          id: transferTargetItem
+          anchors.right: parent.right
+          anchors.top: transferSourceItem.top
+          margin-right: 45
+
+        Label
+          id: transferTargetTier
+          anchors.top: transferTargetItem.bottom
+          anchors.horizontalCenter: transferTargetItem.horizontalCenter
+          margin-top: 5
+          color: #b8d6b0
+
+        ForgeMutedLabel
+          anchors.top: transferSourceTier.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 8
+          height: 18
+          text-align: center
+          text: Select the item that will receive the tier
+
+        ForgeSubCard
+          id: transferReceiverCard
+          anchors.top: prev.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 4
+          height: 112
+
+          ScrollablePanel
+            id: transferReceiverList
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: transferReceiverScroll.left
+            margin-right: 4
+            vertical-scrollbar: transferReceiverScroll
+            layout:
+              type: grid
+              cell-size: 88 46
+              cell-spacing: 5
+              flow: true
+
+          VerticalScrollBar
+            id: transferReceiverScroll
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
+            step: 46
+            pixels-scroll: true
+
+        ForgeSubCard
+          id: transferCostsCard
+          anchors.top: transferReceiverCard.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 8
+          height: 70
+
+          UIItem
+            id: transferGoldIcon
+            anchors.top: parent.top
+            anchors.left: parent.left
+            margin-left: 55
+            margin-top: 7
+            size: 32 32
+
+          ForgeValueLabel
+            id: transferGoldCost
+            anchors.top: transferGoldIcon.bottom
+            anchors.left: parent.left
+            margin-left: 12
+            margin-top: 4
+            width: 118
+            text-align: center
+
+          UIItem
+            id: transferDustIcon
+            anchors.top: parent.top
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 7
+            size: 32 32
+
+          ForgeValueLabel
+            id: transferDustCost
+            anchors.top: transferDustIcon.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            margin-top: 4
+            width: 130
+            text-align: center
+
+          UIItem
+            id: transferCoreIcon
+            anchors.top: parent.top
+            anchors.right: parent.right
+            margin-right: 55
+            margin-top: 7
+            size: 32 32
+
+          ForgeValueLabel
+            id: transferCoreCost
+            anchors.top: transferCoreIcon.bottom
+            anchors.right: parent.right
+            margin-right: 12
+            margin-top: 4
+            width: 118
+            text-align: center
+
+        Label
+          id: transferStatusLabel
+          anchors.top: transferCostsCard.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 6
+          height: 28
+          text-wrap: true
+          color: #b8b2aa
+
+        ForgePrimaryButton
+          id: transferActionButton
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          width: 170
+          text: Start Transfer
+
+    Panel
+      id: conversionPanel
+      visible: false
+      layout:
+        type: horizontalBox
+        spacing: 10
+
+      ForgeCard
+        id: dustConversionCard
+        width: 354
+        height: 410
+
+        ForgeSectionTitle
+          text: Convert Dust
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+
+        ForgePreviewItem
+          id: dustInputItem
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 28
+
+        Label
+          id: dustConversionCost
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 14
+          width: 190
+          text-align: center
+          color: #d8c27a
+
+        UIWidget
+          id: dustConversionArrow
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 16
+          size: 25 14
+          image-source: /modules/game_forge/images/arrows/icon-arrow-downlarge.png
+
+        ForgePreviewItem
+          id: dustOutputItem
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 16
+
+        Label
+          id: dustConversionResult
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 14
+          width: 190
+          text-align: center
+          color: #b8d6b0
+
+        ForgePrimaryButton
+          id: dustConversionButton
+          anchors.bottom: parent.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          width: 180
+          text: Convert
+
+      ForgeCard
+        id: sliverConversionCard
+        width: 354
+        height: 410
+
+        ForgeSectionTitle
+          text: Convert Slivers
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+
+        ForgePreviewItem
+          id: sliverInputItem
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 28
+
+        Label
+          id: sliverConversionCost
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 14
+          width: 190
+          text-align: center
+          color: #d8c27a
+
+        UIWidget
+          id: sliverConversionArrow
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 16
+          size: 25 14
+          image-source: /modules/game_forge/images/arrows/icon-arrow-downlarge.png
+
+        ForgePreviewItem
+          id: sliverOutputItem
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 16
+
+        Label
+          id: sliverConversionResult
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 14
+          width: 190
+          text-align: center
+          color: #b8d6b0
+
+        ForgePrimaryButton
+          id: sliverConversionButton
+          anchors.bottom: parent.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          width: 180
+          text: Convert
+
+    Panel
+      id: historyPanel
+      visible: false
+
+      ForgeCard
+        anchors.fill: parent
+
+        ForgeSubCard
+          id: historyHeader
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.right: parent.right
+          height: 30
+
+          ForgeSectionTitle
+            text: Date
+            anchors.left: parent.left
+            anchors.verticalCenter: parent.verticalCenter
+            margin-left: 8
+            width: 145
+
+          ForgeSectionTitle
+            text: Action
+            anchors.left: prev.right
+            anchors.verticalCenter: parent.verticalCenter
+            width: 100
+
+          ForgeSectionTitle
+            text: Details
+            anchors.left: prev.right
+            anchors.verticalCenter: parent.verticalCenter
+
+        ForgeSubCard
+          anchors.top: historyHeader.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: historyFooter.top
+          margin-top: 4
+          margin-bottom: 8
+
+          ScrollablePanel
+            id: historyList
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: historyScroll.left
+            margin-right: 4
+            vertical-scrollbar: historyScroll
+            layout:
+              type: verticalBox
+              spacing: 1
+
+          VerticalScrollBar
+            id: historyScroll
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
+
+        Panel
+          id: historyFooter
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          height: 30
+
+          ForgeActionButton
+            id: historyPreviousButton
+            anchors.left: parent.left
+            anchors.bottom: parent.bottom
+            width: 120
+            text: Previous Page
+
+          Label
+            id: historyPageLabel
+            anchors.centerIn: parent
+            width: 180
+            text-align: center
+            color: #cfcfcf
+
+          ForgeActionButton
+            id: historyNextButton
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            width: 120
+            text: Next Page
+
+    HorizontalSeparator
+      id: footerSeparator
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: closeButton.top
+      margin-bottom: 10
+
+    ForgeActionButton
+      id: closeButton
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      width: 96
+      text: Close
+
+    Label
+      id: footerStatus
+      anchors.left: parent.left
+      anchors.right: closeButton.left
+      anchors.verticalCenter: closeButton.verticalCenter
+      margin-right: 12
+      height: 28
+      text-wrap: true
+      color: #b8b2aa

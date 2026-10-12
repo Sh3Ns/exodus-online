@@ -1,0 +1,24 @@
+UIWidget
+  id: levelUpRoot
+  anchors.fill: parent
+  phantom: true
+
+  Panel
+    id: banner
+    size: 340 130
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 120
+    image-source: /images/ui/levelup
+    phantom: true
+    visible: false
+
+    Label
+      id: label
+      anchors.bottom: parent.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-bottom: 22
+      font: verdana-11px-rounded
+      color: #ffffff
+      text-auto-resize: true
+      phantom: true

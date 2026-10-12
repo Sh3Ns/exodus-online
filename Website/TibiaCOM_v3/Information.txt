@@ -1,0 +1,10 @@
+Importante para hacer funcionar la busqueda de monstruos:
+La carpeta outfits, de la web, teneis que buscar dentro del config.php esta linea:
+Procurar que esté en false.
+
+$resizeAllOutfitsTo64px = false;
+
+En el config.php de la web, tendreis que indicar el path del servidor:
+$config['server_path'] = 'F:/Exodus/';
+
+Y luego cargar el cache de los outfits, en caso los links estan script en v3 para poder actualizar sin tener que actualizar siempre el cache.

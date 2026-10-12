@@ -1,0 +1,1562 @@
+TaskBoardButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 24
+  padding: 4 12
+  text-align: center
+  color: white
+
+  $hover:
+    image-color: #9a958e
+
+  $checked:
+    image-color: #dfdfdf
+
+  $disabled:
+    color: #9a9a9a
+
+TaskBoardTabButton < TaskBoardButton
+  height: 40
+  image-source: /images/ui/button_white_big
+  image-border: 11
+  image-color: #817d77
+  padding: 4 14
+  text-offset: 12 1
+
+  $hover:
+    image-color: #9a958e
+
+  $checked:
+    image-color: #dfdfdf
+
+  $disabled:
+    color: #9a9a9a
+
+TaskBoardDeliveryWindow < MainWindow
+  size: 300 220
+  !text: tr("Deliver Items")
+  anchors.centerIn: parent
+
+  Label
+    id: message
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 24
+    margin-left: 12
+    margin-right: 12
+    height: 58
+    text-align: center
+    text-wrap: true
+    color: #dfdfdf
+
+  TextEdit
+    id: amount
+    anchors.top: message.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 10
+    width: 110
+    height: 22
+
+  TaskBoardButton
+    id: ok
+    anchors.bottom: parent.bottom
+    anchors.right: parent.horizontalCenter
+    margin-bottom: 5
+    margin-right: 6
+    width: 82
+    height: 22
+    !text: tr("Deliver")
+
+  TaskBoardButton
+    id: cancel
+    anchors.top: ok.top
+    anchors.left: parent.horizontalCenter
+    margin-left: 6
+    width: 82
+    height: 22
+    !text: tr("Cancel")
+
+TaskBoardPanel < Panel
+  background-color: #3e3a35
+  border: 1 #5d564d
+
+TaskBoardList < ScrollablePanel
+  layout:
+    type: verticalBox
+    spacing: 4
+  padding: 4
+  background-color: #37332e
+  border: 1 #5d564d
+
+TaskBoardEntry < Panel
+  height: 48
+  background-color: #443f39
+  border: 1 #5d564d
+
+  Label
+    id: title
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: action.left
+    margin-top: 5
+    margin-left: 6
+    margin-right: 6
+    height: 14
+    font: verdana-11px-rounded
+    color: #f0d575
+
+  Label
+    id: detail
+    anchors.top: title.bottom
+    anchors.left: title.left
+    anchors.right: title.right
+    margin-top: 3
+    height: 24
+    text-wrap: true
+    font: verdana-11px-antialised
+    color: #dfdfdf
+
+  TaskBoardButton
+    id: action
+    anchors.verticalCenter: parent.verticalCenter
+    anchors.right: parent.right
+    margin-right: 6
+    width: 76
+
+TaskBoardCurrencyBox < Panel
+  size: 122 20
+  background-color: #37332e
+  border: 1 #5d564d
+
+  Label
+    id: value
+    anchors.left: parent.left
+    anchors.right: icon.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 5
+    margin-right: 3
+    text-align: right
+    font: verdana-11px-rounded
+    color: white
+
+  UIWidget
+    id: icon
+    size: 12 12
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-right: 4
+    image-smooth: false
+
+TaskBoardBountyCard < Panel
+  size: 230 232
+  background-color: #443f39
+  border: 1 #5d564d
+
+  UIWidget
+    id: backdrop
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 5
+    size: 196 30
+    image-smooth: false
+    phantom: true
+
+  Label
+    id: title
+    anchors.top: backdrop.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 7
+    margin-left: 14
+    margin-right: 14
+    height: 16
+    text-align: center
+    font: verdana-11px-rounded
+    color: #dfdfdf
+
+  Panel
+    id: creatureBox
+    anchors.top: backdrop.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 8
+    size: 70 60
+    background-color: #37332e
+    border: 1 #5d564d
+
+    UICreature
+      id: creature
+      anchors.centerIn: parent
+      size: 58 58
+      idle-animate: true
+      force-center: true
+      outfit-center: true
+      old-scaling: true
+
+  Label
+    id: progress
+    anchors.top: creatureBox.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 7
+    height: 14
+    text-align: center
+    font: verdana-11px-rounded
+    color: #dfdfdf
+
+  Label
+    id: timer
+    anchors.top: progress.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 3
+    height: 14
+    text-align: center
+    font: verdana-11px-rounded
+    color: #f0d575
+
+  Label
+    id: reward
+    anchors.top: timer.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+    margin-left: 12
+    margin-right: 12
+    height: 58
+    text-wrap: true
+    font: verdana-11px-antialised
+    color: #dfdfdf
+
+  TaskBoardButton
+    id: action
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-left: 12
+    margin-right: 12
+    margin-bottom: 8
+    height: 20
+
+  Panel
+    id: lockedOverlay
+    anchors.fill: parent
+    background-color: #00000088
+    visible: false
+
+    UIWidget
+      id: lockIcon
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: parent.top
+      margin-top: 48
+      size: 42 42
+      image-source: /game_taskboard/assets/images/difficulty_lock
+      image-smooth: false
+
+    TaskBoardCurrencyBox
+      id: unlockCost
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: lockIcon.bottom
+      margin-top: 18
+      width: 92
+
+    TaskBoardButton
+      id: unlockAction
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: unlockCost.bottom
+      margin-left: 38
+      margin-right: 38
+      margin-top: 8
+      height: 20
+      !text: tr("Unlock")
+
+TaskBoardBountyGrid < Panel
+  size: 672 232
+  layout:
+    type: grid
+    cell-size: 230 232
+    cell-spacing: 8
+    num-columns: 3
+
+TaskBoardTalismanPanel < TaskBoardPanel
+  size: 672 140
+
+  Label
+    !text: tr("Bounty Talisman")
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 3
+    height: 16
+    text-align: center
+    color: #ffffff
+
+  Panel
+    id: talismanList
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin: 4 8 8 8
+    layout:
+      type: grid
+      cell-size: 170 94
+      cell-spacing: 8
+      num-columns: 4
+
+TaskBoardTalismanCard < Panel
+  size: 154 94
+  background-color: #3b3732
+  border: 1 #5d564d
+
+  UIWidget
+    id: icon
+    size: 32 32
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-left: 10
+    margin-top: 34
+    image-smooth: false
+
+  Label
+    id: title
+    anchors.left: icon.right
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-left: 8
+    margin-right: 8
+    margin-top: 7
+    height: 25
+    text-wrap: true
+    font: verdana-11px-rounded
+    color: #dfdfdf
+
+  Label
+    id: current
+    anchors.left: title.left
+    anchors.top: title.bottom
+    anchors.right: title.right
+    margin-top: 2
+    height: 14
+    font: verdana-11px-antialised
+    color: #dfdfdf
+
+  Label
+    id: cost
+    anchors.left: title.left
+    anchors.top: current.bottom
+    anchors.right: costIcon.left
+    margin-top: 2
+    margin-right: 3
+    height: 14
+    font: verdana-11px-antialised
+    color: #f0d575
+    text-align: right
+
+  UIWidget
+    id: costIcon
+    size: 12 12
+    anchors.right: title.right
+    anchors.top: current.bottom
+    margin-top: 3
+    image-source: /game_taskboard/assets/images/icon-currency-bountypoints
+    image-smooth: false
+    tooltip: Bounty Points
+
+  TaskBoardButton
+    id: action
+    anchors.horizontalCenter: title.horizontalCenter
+    anchors.bottom: parent.bottom
+    margin-bottom: 6
+    width: 106
+    height: 18
+    padding: 0
+
+WeeklyTaskCard < Panel
+  height: 112
+  background-color: #443f39
+  border: 1 #5d564d
+
+  Label
+    id: title
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 3
+    height: 13
+    text-align: center
+    font: verdana-11px-rounded
+    color: #c0c0c0
+
+  UICreature
+    id: creature
+    anchors.top: title.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 5
+    size: 36 36
+    idle-animate: true
+    force-center: true
+    outfit-center: true
+    old-scaling: true
+
+  UIItem
+    id: item
+    anchors.top: title.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 7
+    size: 32 32
+    visible: false
+
+  Label
+    id: check
+    anchors.right: parent.right
+    anchors.verticalCenter: creature.verticalCenter
+    margin-right: 13
+    text: ✓
+    font: verdana-11px-rounded
+    color: #55d35e
+
+  Label
+    id: progress
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: action.top
+    margin-bottom: 4
+    height: 14
+    text-align: center
+    font: verdana-11px-rounded
+    color: #dfdfdf
+
+  TaskBoardButton
+    id: action
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-left: 10
+    margin-right: 10
+    margin-bottom: 6
+    height: 18
+    !text: tr("Deliver")
+    visible: false
+
+  Panel
+    id: lockedOverlay
+    anchors.fill: parent
+    background-color: #00000088
+    visible: false
+
+    UIWidget
+      id: lockIcon
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: parent.top
+      margin-top: 19
+      size: 28 28
+      image-source: /game_taskboard/assets/images/difficulty_lock
+      image-smooth: false
+
+    TaskBoardCurrencyBox
+      id: unlockCost
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: lockIcon.bottom
+      margin-top: 5
+      width: 82
+
+    TaskBoardButton
+      id: unlockAction
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-left: 16
+      margin-right: 16
+      margin-bottom: 6
+      height: 18
+      !text: tr("Unlock")
+
+TaskBoardShopCard < Panel
+  size: 230 205
+  background-color: #443f39
+  border: 1 #5d564d
+
+  UIWidget
+    id: backdrop
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-right: 6
+    margin-top: 5
+    size: 44 29
+    image-smooth: false
+    phantom: true
+
+  Label
+    id: title
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: backdrop.left
+    margin-top: 32
+    margin-left: 8
+    margin-right: 4
+    height: 22
+    text-align: left
+    text-wrap: true
+    font: verdana-11px-rounded
+    color: #ffffff
+
+  Panel
+    id: previewBox
+    anchors.top: title.bottom
+    anchors.left: parent.left
+    margin-top: 8
+    margin-left: 12
+    size: 64 64
+    background-color: #37332e
+    border: 1 #5d564d
+
+    UICreature
+      id: creature
+      shader: default
+      anchors.centerIn: parent
+      size: 60 60
+      idle-animate: true
+      force-center: true
+      outfit-center: true
+      old-scaling: true
+      visible: false
+
+    UIItem
+      id: item
+      anchors.centerIn: parent
+      size: 32 32
+      visible: false
+
+    UIWidget
+      id: icon
+      anchors.centerIn: parent
+      size: 32 32
+      visible: false
+
+  Label
+    id: description
+    anchors.top: previewBox.top
+    anchors.left: previewBox.right
+    anchors.right: backdrop.left
+    margin-left: 10
+    margin-right: 6
+    height: 90
+    text-wrap: true
+    font: verdana-11px-antialised
+    color: #dfdfdf
+
+  Label
+    id: timer
+    anchors.left: previewBox.left
+    anchors.right: parent.right
+    anchors.top: description.bottom
+    margin-top: 2
+    margin-right: 8
+    height: 14
+    text-align: center
+    font: verdana-11px-rounded
+    color: #f0d575
+
+  TaskBoardButton
+    id: action
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-left: 12
+    margin-bottom: 8
+    width: 58
+    height: 18
+
+  TaskBoardCurrencyBox
+    id: price
+    anchors.left: action.right
+    anchors.bottom: parent.bottom
+    margin-left: 6
+    margin-bottom: 8
+    width: 120
+
+  Panel
+    id: boughtOverlay
+    anchors.fill: parent
+    background-color: #00000088
+    visible: false
+
+    UIWidget
+      id: boughtIcon
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: parent.top
+      margin-top: 42
+      size: 24 24
+      image-source: /game_taskboard/assets/images/difficulty_lock
+      image-smooth: false
+
+    Label
+      id: boughtText
+      !text: tr("Already owned")
+      anchors.top: boughtIcon.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 8
+      height: 16
+      text-align: center
+      font: verdana-11px-rounded
+      color: #dfdfdf
+
+TaskBoardPreferredMonsterRow < Panel
+  height: 42
+  background-color: #443f39
+  border: 1 #5d564d
+  focusable: true
+  phantom: false
+
+  UICreature
+    id: creature
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 4
+    size: 34 34
+    idle-animate: true
+    force-center: true
+    outfit-center: true
+    old-scaling: true
+
+  Label
+    id: name
+    anchors.left: creature.right
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-left: 6
+    margin-right: 4
+    margin-top: 6
+    height: 14
+    color: #dfdfdf
+    font: verdana-11px-rounded
+
+  Label
+    id: difficulty
+    anchors.left: name.left
+    anchors.right: name.right
+    anchors.top: name.bottom
+    margin-top: 2
+    height: 12
+    color: #f0d575
+    font: verdana-11px-antialised
+
+TaskBoardPreferredSlotRow < Panel
+  height: 108
+  background-color: #443f39
+  border: 1 #5d564d
+
+  Label
+    id: title
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 4
+    margin-left: 6
+    height: 14
+    color: #f0d575
+
+  TaskBoardButton
+    id: unlock
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: unlockCost.bottom
+    margin-top: 4
+    width: 86
+    height: 20
+    !text: tr("Unlock")
+
+  TaskBoardCurrencyBox
+    id: unlockCost
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: title.bottom
+    margin-top: 24
+    width: 86
+
+  Panel
+    id: content
+    anchors.top: title.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin: 3 6 5 6
+
+    Panel
+      id: preferredBox
+      anchors.left: parent.left
+      anchors.top: parent.top
+      margin-left: 4
+      margin-top: 2
+      size: 52 52
+      background-color: #37332e
+      border: 1 #5d564d
+
+      UICreature
+        id: preferredCreature
+        anchors.centerIn: parent
+        size: 46 46
+        idle-animate: true
+        force-center: true
+        outfit-center: true
+        old-scaling: true
+        visible: false
+
+    Panel
+      id: unwantedBox
+      anchors.left: parent.horizontalCenter
+      anchors.top: parent.top
+      margin-left: 8
+      margin-top: 2
+      size: 52 52
+      background-color: #37332e
+      border: 1 #5d564d
+
+      UICreature
+        id: unwantedCreature
+        anchors.centerIn: parent
+        size: 46 46
+        idle-animate: true
+        force-center: true
+        outfit-center: true
+        old-scaling: true
+        visible: false
+
+    Label
+      id: preferredName
+      visible: false
+      anchors.left: preferredBox.right
+      anchors.top: preferredBox.top
+      anchors.right: parent.horizontalCenter
+      margin-left: 6
+      margin-right: 6
+      height: 14
+      color: #dfdfdf
+      text-align: center
+
+    TaskBoardButton
+      id: preferredAction
+      anchors.left: preferredBox.right
+      anchors.top: preferredBox.top
+      margin-left: 6
+      margin-top: 14
+      width: 58
+      height: 18
+
+    TaskBoardCurrencyBox
+      id: preferredClearCost
+      anchors.horizontalCenter: preferredAction.horizontalCenter
+      anchors.top: preferredAction.bottom
+      margin-top: 3
+      width: 58
+      visible: false
+
+    Label
+      id: unwantedName
+      visible: false
+      anchors.left: unwantedBox.right
+      anchors.top: unwantedBox.top
+      anchors.right: parent.right
+      margin-left: 6
+      margin-right: 4
+      height: 14
+      color: #dfdfdf
+      text-align: center
+
+    TaskBoardButton
+      id: unwantedAction
+      anchors.left: unwantedBox.right
+      anchors.top: unwantedBox.top
+      margin-left: 6
+      margin-top: 14
+      width: 58
+      height: 18
+
+    TaskBoardCurrencyBox
+      id: unwantedClearCost
+      anchors.horizontalCenter: unwantedAction.horizontalCenter
+      anchors.top: unwantedAction.bottom
+      margin-top: 3
+      width: 58
+      visible: false
+
+TaskBoardPreferredWindow < MainWindow
+  id: preferredWindow
+  size: 650 650
+  !text: tr("Preferred List")
+  anchors.centerIn: parent
+
+  TextEdit
+    id: preferredSearch
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 24
+    margin-left: 10
+    width: 252
+    height: 20
+    placeholder: Type to search
+
+  Panel
+    id: preferredPager
+    anchors.top: preferredSearch.bottom
+    anchors.left: preferredSearch.left
+    width: 252
+    height: 22
+    margin-top: 5
+
+    TaskBoardButton
+      id: prevPage
+      !text: tr("<")
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      width: 42
+      height: 18
+
+    Label
+      id: pageText
+      anchors.left: prevPage.right
+      anchors.right: nextPage.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 5
+      margin-right: 5
+      height: 14
+      text-align: center
+      color: #dfdfdf
+
+    TaskBoardButton
+      id: nextPage
+      !text: tr(">")
+      anchors.right: parent.right
+      anchors.verticalCenter: parent.verticalCenter
+      width: 42
+      height: 18
+
+  TaskBoardList
+    id: preferredMonsterList
+    anchors.top: preferredPager.bottom
+    anchors.left: preferredSearch.left
+    anchors.bottom: closeButton.top
+    margin-top: 6
+    margin-bottom: 10
+    width: 252
+    vertical-scrollbar: preferredMonsterScroll
+    layout:
+      type: verticalBox
+      spacing: 3
+
+  VerticalScrollBar
+    id: preferredMonsterScroll
+    anchors.top: preferredMonsterList.top
+    anchors.bottom: preferredMonsterList.bottom
+    anchors.left: preferredMonsterList.right
+    margin-left: 2
+    step: 24
+    pixels-scroll: true
+
+  TaskBoardPanel
+    id: preferredSlotPanel
+    anchors.top: preferredSearch.top
+    anchors.left: preferredMonsterScroll.right
+    anchors.right: parent.right
+    anchors.bottom: preferredMonsterList.bottom
+    margin-left: 14
+    margin-right: 10
+
+    Label
+      !text: tr("Preferred")
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 5
+      margin-left: 42
+      height: 14
+      color: #f0d575
+
+    Label
+      !text: tr("Avoid")
+      anchors.top: parent.top
+      anchors.left: parent.horizontalCenter
+      margin-top: 5
+      margin-left: 18
+      height: 14
+      color: #f0d575
+
+    ScrollablePanel
+      id: preferredSlotList
+      vertical-scrollbar: preferredSlotScroll
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: preferredSlotScroll.left
+      anchors.bottom: parent.bottom
+      margin: 24 6 6 6
+      margin-right: 2
+      layout:
+        type: verticalBox
+        spacing: 5
+
+    VerticalScrollBar
+      id: preferredSlotScroll
+      anchors.top: parent.top
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-top: 24
+      margin-right: 4
+      margin-bottom: 6
+      step: 48
+      pixels-scroll: true
+
+  TaskBoardButton
+    id: closeButton
+    !text: tr("Close")
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 10
+    margin-bottom: 8
+    width: 70
+    height: 22
+
+MainWindow
+  id: taskHuntWindow
+  size: 800 620
+  !text: tr("Task Board")
+  font: sans-bold-16px
+  text-offset: 0 4
+  padding-bottom: 5
+  anchors.horizontalCenter: parent.horizontalCenter
+  anchors.verticalCenter: parent.verticalCenter
+
+  Panel
+    id: tabBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 10
+    margin-left: 8
+    margin-right: 8
+    height: 40
+    layout:
+      type: horizontalBox
+      spacing: 4
+
+    TaskBoardTabButton
+      id: tabDaily
+      !text: tr("Bounty Tasks")
+      width: 240
+    
+      UIWidget
+        id: icon
+        size: 32 32
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 16
+        image-source: /game_taskboard/assets/images/icon-bountytasks
+        image-smooth: false
+
+    TaskBoardTabButton
+      id: tabWeekly
+      !text: tr("Weekly Tasks")
+      width: 240
+
+      UIWidget
+        id: icon
+        size: 32 32
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 16
+        image-source: /game_taskboard/assets/images/icon-weeklytasks
+        image-smooth: false
+
+    TaskBoardTabButton
+      id: tabShop
+      !text: tr("Task Shop")
+      width: 240
+
+      UIWidget
+        id: icon
+        size: 32 32
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 16
+        image-source: /game_taskboard/assets/images/icon-huntingtaskshop
+        image-smooth: false
+
+  TaskBoardPanel
+    id: bountyPanel
+    anchors.top: tabBar.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: bottomBar.top
+    margin-top: 8
+    margin-left: 8
+    margin-right: 8
+    margin-bottom: 8
+
+    Label
+      !text: tr("Set Up & Reroll Tasks")
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 8
+      margin-left: 8
+      height: 16
+      color: #f0d575
+
+    TaskBoardPanel
+      id: bountySetupPanel
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      anchors.right: taskBoardScrollBar.left
+      margin-top: 4
+      margin-left: 8
+      margin-right: 2
+      height: 44
+
+      Label
+        !text: tr("Task Difficulty:")
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 12
+        width: 95
+        color: #dfdfdf
+
+      ComboBox
+        id: dailyDifficultySelect
+        anchors.left: prev.right
+        anchors.verticalCenter: parent.verticalCenter
+        width: 112
+        height: 20
+
+      TaskBoardButton
+        id: preferredButton
+        !text: tr("Preferred List")
+        anchors.left: dailyDifficultySelect.right
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 20
+        width: 120
+        height: 22
+
+      TaskBoardButton
+        id: rerollButton
+        !text: tr("Reroll Tasks")
+        anchors.left: preferredButton.right
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 20
+        width: 105
+        height: 22
+
+      TaskBoardCurrencyBox
+        id: rerollCost
+        anchors.left: rerollButton.right
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 8
+        width: 76
+
+      TaskBoardCurrencyBox
+        id: rerollRemaining
+        anchors.left: rerollCost.right
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 12
+        width: 88
+
+    TaskBoardList
+      id: bountyList
+      vertical-scrollbar: taskBoardScrollBar
+      anchors.top: bountySetupPanel.bottom
+      anchors.left: parent.left
+      anchors.right: taskBoardScrollBar.left
+      anchors.bottom: parent.bottom
+      margin-top: 8
+      margin-left: 8
+      margin-right: 2
+      margin-bottom: 8
+      layout:
+        type: verticalBox
+        spacing: 8
+
+    VerticalScrollBar
+      id: taskBoardScrollBar
+      anchors.top: parent.top
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-top: 28
+      margin-right: 8
+      margin-bottom: 8
+      step: 48
+      pixels-scroll: true
+
+  TaskBoardPanel
+    id: weeklyPanel
+    anchors.fill: bountyPanel
+    visible: false
+
+    Label
+      !text: tr("Kill Tasks")
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 8
+      margin-left: 8
+      height: 16
+      color: #f0d575
+
+    Label
+      !text: tr("Delivery Tasks")
+      anchors.top: parent.top
+      anchors.left: parent.horizontalCenter
+      margin-top: 8
+      margin-left: 8
+      height: 16
+      color: #f0d575
+
+    TaskBoardList
+      id: weeklyKillList
+      vertical-scrollbar: weeklyKillScrollBar
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: weeklyKillScrollBar.left
+      anchors.bottom: weeklySummary.top
+      margin-top: 28
+      margin-left: 8
+      margin-right: 2
+      margin-bottom: 8
+      layout:
+        type: grid
+        cell-size: 116 112
+        cell-spacing: 4
+        num-columns: 3
+
+    VerticalScrollBar
+      id: weeklyKillScrollBar
+      anchors.top: parent.top
+      anchors.right: parent.horizontalCenter
+      anchors.bottom: weeklySummary.top
+      margin-top: 28
+      margin-right: 4
+      margin-bottom: 8
+      step: 48
+      pixels-scroll: true
+
+    TaskBoardList
+      id: weeklyDeliveryList
+      vertical-scrollbar: weeklyDeliveryScrollBar
+      anchors.top: parent.top
+      anchors.left: parent.horizontalCenter
+      anchors.right: weeklyDeliveryScrollBar.left
+      anchors.bottom: weeklySummary.top
+      margin-top: 28
+      margin-left: 4
+      margin-right: 2
+      margin-bottom: 8
+      layout:
+        type: grid
+        cell-size: 116 112
+        cell-spacing: 4
+        num-columns: 3
+
+    VerticalScrollBar
+      id: weeklyDeliveryScrollBar
+      anchors.top: parent.top
+      anchors.right: parent.right
+      anchors.bottom: weeklySummary.top
+      margin-top: 28
+      margin-right: 8
+      margin-bottom: 8
+      step: 48
+      pixels-scroll: true
+
+    TaskBoardPanel
+      id: weeklySummary
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-left: 8
+      margin-right: 8
+      margin-bottom: 8
+      height: 102
+
+      Label
+        id: weeklyXp
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 5
+        height: 14
+        text-align: center
+        color: #dfdfdf
+
+      Label
+        !text: tr("Weekly Progress")
+        anchors.top: prev.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 3
+        height: 14
+        text-align: center
+        color: #c0c0c0
+
+      ProgressBar
+        id: weeklyProgress
+        anchors.top: prev.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 8
+        margin-left: 88
+        margin-right: 150
+        height: 15
+        background-color: #22b51e
+        color: #22b51e
+
+      Label
+        id: weeklyProgressText
+        anchors.top: weeklyProgress.bottom
+        anchors.left: weeklyProgress.left
+        anchors.right: weeklyProgress.right
+        margin-top: 5
+        height: 14
+        text-align: center
+        color: #dfdfdf
+
+      TaskBoardPanel
+        id: rewardPanel
+        anchors.top: parent.top
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        margin-top: 24
+        margin-right: 8
+        margin-bottom: 8
+        width: 130
+
+        Label
+          !text: tr("Weekly Rewards")
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 3
+          height: 14
+          text-align: center
+          color: #c0c0c0
+
+        TaskBoardCurrencyBox
+          id: weeklyTaskReward
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 5
+
+        TaskBoardCurrencyBox
+          id: weeklySoulsealReward
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 5
+
+        Label
+          id: weeklyRemaining
+          anchors.top: prev.bottom
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 5
+          height: 14
+          text-align: center
+          color: #dfdfdf
+
+    TaskBoardPanel
+      id: weeklyDifficultyPanel
+      anchors.centerIn: parent
+      size: 384 370
+      image-source: /images/ui/window
+      image-border: 10
+      background-color: #443f39
+      visible: false
+
+      Label
+        !text: tr("Weekly Progress")
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 12
+        height: 16
+        text-align: center
+        color: #c0c0c0
+
+      UIWidget
+        id: emblem
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 8
+        size: 42 42
+        image-source: /game_taskboard/assets/images/icon-weeklytasks
+        image-smooth: false
+
+      Label
+        id: difficultySummary
+        anchors.top: prev.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 10
+        margin-left: 10
+        margin-right: 10
+        height: 44
+        text-align: center
+        text-wrap: true
+        color: #dfdfdf
+
+      Panel
+        id: difficultyRewards
+        anchors.top: difficultySummary.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 6
+        size: 250 58
+
+        Label
+          !text: tr("Earned:")
+          anchors.left: parent.left
+          anchors.top: parent.top
+          width: 54
+          height: 14
+          text-align: right
+          color: #dfdfdf
+
+        Label
+          id: difficultyRewardTokens
+          anchors.left: prev.right
+          anchors.top: parent.top
+          margin-left: 6
+          width: 56
+          height: 14
+          text-align: right
+          color: #ffffff
+
+        UIWidget
+          id: difficultyRewardTokensIcon
+          anchors.left: prev.right
+          anchors.verticalCenter: prev.verticalCenter
+          margin-left: 3
+          size: 12 12
+          image-source: /game_taskboard/assets/images/task-tokens
+          image-smooth: false
+          tooltip: Hunting Task Points
+
+        Label
+          !text: tr("Hunting Task Points")
+          anchors.left: prev.right
+          anchors.verticalCenter: prev.verticalCenter
+          margin-left: 4
+          width: 116
+          height: 14
+          color: #dfdfdf
+
+        Label
+          id: difficultyRewardSoulseals
+          anchors.left: difficultyRewardTokens.left
+          anchors.top: difficultyRewardTokens.bottom
+          margin-top: 4
+          width: 56
+          height: 14
+          text-align: right
+          color: #ffffff
+
+        UIWidget
+          id: difficultyRewardSoulsealsIcon
+          anchors.left: prev.right
+          anchors.verticalCenter: prev.verticalCenter
+          margin-left: 3
+          size: 12 12
+          image-source: /game_taskboard/assets/images/icon-currency-soulseals
+          image-smooth: false
+          tooltip: Soulseals
+
+        Label
+          !text: tr("Soulseals")
+          anchors.left: prev.right
+          anchors.verticalCenter: prev.verticalCenter
+          margin-left: 4
+          width: 116
+          height: 14
+          color: #dfdfdf
+
+        Label
+          id: difficultyRewardExperience
+          anchors.left: difficultyRewardTokens.left
+          anchors.top: difficultyRewardSoulseals.bottom
+          margin-top: 4
+          width: 56
+          height: 14
+          text-align: right
+          color: #ffffff
+
+        UIWidget
+          id: difficultyRewardExperienceIcon
+          anchors.left: prev.right
+          anchors.verticalCenter: prev.verticalCenter
+          margin-left: 3
+          size: 12 12
+          image-source: /game_bestiary/images/exp
+          image-smooth: false
+          tooltip: Experience
+
+        Label
+          !text: tr("Experience")
+          anchors.left: prev.right
+          anchors.verticalCenter: prev.verticalCenter
+          margin-left: 4
+          width: 116
+          height: 14
+          color: #dfdfdf
+
+      Label
+        !text: tr("Select the difficulty for your next tasks.")
+        anchors.top: difficultyRewards.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 8
+        height: 14
+        text-align: center
+        color: #dfdfdf
+
+      TaskBoardButton
+        id: difficultyBeginner
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 6
+        width: 108
+        !text: tr("Beginner")
+
+      TaskBoardButton
+        id: difficultyAdept
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 4
+        width: 108
+        !text: tr("Adept")
+
+      TaskBoardButton
+        id: difficultyExpert
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 4
+        width: 108
+        !text: tr("Expert")
+
+      TaskBoardButton
+        id: difficultyMaster
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 4
+        width: 108
+        !text: tr("Master")
+
+      TaskBoardButton
+        id: difficultyExtreme
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 4
+        width: 108
+        !text: tr("Extreme")
+
+  TaskBoardPanel
+    id: shopPanel
+    anchors.fill: bountyPanel
+    visible: false
+
+    Label
+      !text: tr("Task Shop")
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 8
+      margin-left: 8
+      height: 16
+      color: #f0d575
+
+    Panel
+      id: shopPager
+      anchors.top: parent.top
+      anchors.right: parent.right
+      margin-top: 5
+      margin-right: 8
+      size: 170 22
+
+      TaskBoardButton
+        id: prevPage
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        width: 46
+        height: 18
+        !text: tr("Prev")
+
+      Label
+        id: pageText
+        anchors.left: prevPage.right
+        anchors.right: nextPage.left
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 4
+        margin-right: 4
+        height: 14
+        text-align: center
+        color: #dfdfdf
+
+      TaskBoardButton
+        id: nextPage
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        width: 46
+        height: 18
+        !text: tr("Next")
+
+    TaskBoardList
+      id: shopList
+      vertical-scrollbar: shopScrollBar
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: shopScrollBar.left
+      anchors.bottom: parent.bottom
+      margin-top: 34
+      margin-left: 8
+      margin-right: 2
+      margin-bottom: 8
+      layout:
+        type: grid
+        cell-size: 230 205
+        cell-spacing: 8
+        num-columns: 3
+
+    VerticalScrollBar
+      id: shopScrollBar
+      anchors.top: parent.top
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-top: 34
+      margin-right: 8
+      margin-bottom: 8
+      step: 48
+      pixels-scroll: true
+
+  Panel
+    id: bottomBar
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-left: 8
+    margin-right: 8
+    margin-bottom: 8
+    height: 28
+
+    TaskBoardCurrencyBox
+      id: bountyBalance
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+
+    TaskBoardCurrencyBox
+      id: soulsealBalance
+      anchors.left: prev.right
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 8
+
+    TaskBoardCurrencyBox
+      id: taskBalance
+      anchors.left: prev.right
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 8
+
+    TaskBoardButton
+      id: closeButton
+      !text: tr("Close")
+      anchors.right: parent.right
+      anchors.verticalCenter: parent.verticalCenter
+      width: 80

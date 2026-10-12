@@ -1,0 +1,143 @@
+ItemFusionActionButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 20
+  padding: 2 8
+  text-offset: 0 1
+  text-align: center
+  color: white
+
+  $hover:
+    image-color: #9a958e
+    color: white
+
+  $focus:
+    image-color: #dfdfdf
+    color: white
+
+  $disabled:
+    color: #9a9a9a
+
+ItemFusionCard < Panel
+  background-color: #3e3a35
+  border: 1 #5d564d
+
+MainWindow
+  size: 400 300
+  font: sans-bold-16px
+  text-offset: 0 4
+  padding-bottom: 5
+  text: Item Fusion
+  anchors.horizontalCenter: parent.horizontalCenter
+  anchors.verticalCenter: parent.verticalCenter
+  @onEscape: close()
+  @onExit: close()
+
+  ItemFusionCard
+    id: content
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 14
+    margin-left: 10
+    margin-right: 10
+    margin-bottom: 10
+
+    ItemFusionActionButton
+      id: closeButton
+      text: "X"
+      size: 22 22
+      anchors.top: parent.top
+      anchors.right: parent.right
+      margin-top: 8
+      margin-right: 8
+      @onClick: close()
+
+    Label
+      id: instruction
+      text: "Insert 3 identical items to fuse"
+      anchors.top: parent.top
+      margin-top: 32
+      anchors.horizontalCenter: parent.horizontalCenter
+      auto-resize: true
+
+    Panel
+      id: inputPanel
+      anchors.top: instruction.bottom
+      margin-top: 10
+      anchors.horizontalCenter: parent.horizontalCenter
+      size: 170 50
+      layout: horizontalBox
+      spacing: 10
+
+      Item
+        id: item1
+        image-source: /images/ui/item
+        size: 50 50
+        virtual: true
+
+      Item
+        id: item2
+        image-source: /images/ui/item
+        size: 50 50
+        virtual: true
+
+      Item
+        id: item3
+        image-source: /images/ui/item
+        size: 50 50
+        virtual: true
+
+    Panel
+      id: separator
+      anchors.top: inputPanel.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 14
+      margin-left: 8
+      margin-right: 8
+      height: 1
+      background-color: #d8d8d8
+
+    Label
+      id: fusionText
+      text: "Fusion:"
+      anchors.top: separator.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 10
+      auto-resize: true
+
+    Item
+      id: resultItem
+      image-source: /images/ui/item
+      anchors.top: fusionText.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 10
+      size: 50 50
+      virtual: true
+
+    Panel
+      id: buttonsPanel
+      anchors.top: resultItem.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 14
+      size: 168 22
+      layout: horizontalBox
+      spacing: 8
+
+      ItemFusionActionButton
+        id: fusion
+        !text: tr("Fuse")
+        width: 80
+        height: 20
+        @onClick: modules.game_itemfusion.fuseItems()
+
+      ItemFusionActionButton
+        id: clear
+        !text: tr("Clear")
+        width: 80
+        height: 20
+        @onClick: modules.game_itemfusion.clearItems()

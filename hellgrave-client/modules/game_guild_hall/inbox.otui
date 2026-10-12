@@ -1,0 +1,655 @@
+InboxDate < Label
+  id: date
+  anchors.top: parent.top
+  anchors.left: parent.left
+  text-auto-resize: true
+  margin-top: 2
+  margin-left: 2
+
+InboxAcceptButton < GuildActionButton
+  width: 104
+  height: 24
+  image-color: #3e7d32
+
+  $hover:
+    image-color: #4c9840
+    color: white
+
+  $focus:
+    image-color: #57aa49
+    color: white
+
+InboxRejectButton < GuildActionButton
+  width: 104
+  height: 24
+  image-color: #8b2e24
+
+  $hover:
+    image-color: #a83b2f
+    color: white
+
+  $focus:
+    image-color: #b84a3d
+    color: white
+
+DepositInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Gold Deposit")
+    text-auto-resize: true
+
+  InboxDate
+  
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    image-source: /images/guild_hall/deposit
+  
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    phantom: false
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+StorageDepositInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Storage Deposit")
+    text-auto-resize: true
+
+  InboxDate
+  
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    image-source: /images/guild_hall/deposite
+  
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    phantom: false
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+StorageWithdrawInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Storage Withdraw")
+    text-auto-resize: true
+
+  InboxDate
+  
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    image-source: /images/guild_hall/withdraw
+  
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    phantom: false
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+PrismAttackInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Prism Attack")
+    text-auto-resize: true
+
+  InboxDate
+  
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    size: 64 64
+    image-source: /images/guild_hall/attack
+  
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+PrismCollectInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Prism Collect")
+    text-auto-resize: true
+
+  InboxDate
+  
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    image-source: /images/guild_hall/withdraw
+  
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+PrismStolenInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Prism Spoils")
+    text-auto-resize: true
+
+  InboxDate
+  
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    image-source: /images/guild_hall/withdraw
+
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+QuestRewardInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Quest Reward")
+    text-auto-resize: true
+
+  InboxDate
+
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    image-source: /images/guild_hall/deposite
+
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+BlackMarketInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Black Market")
+    text-auto-resize: true
+
+  InboxDate
+
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    image-source: /images/guild_hall/deposite
+
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+DynastieCollectInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Dynasty")
+    text-auto-resize: true
+
+  InboxDate
+
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    image-source: /images/guild_hall/withdraw
+
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+DynastieAttackInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Dynasty Attack")
+    text-auto-resize: true
+
+  InboxDate
+
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    size: 64 64
+    image-source: /images/guild_hall/attack
+
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+JoinedInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Member Joined")
+    text-auto-resize: true
+
+  InboxDate
+  
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    image-source: /images/guild_hall/joined
+  
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+LeftInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Member Left")
+    text-auto-resize: true
+
+  InboxDate
+  
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    image-source: /images/guild_hall/left
+  
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+RequestInbox < Panel
+  height: 95
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Join Request")
+    text-auto-resize: true
+
+  InboxDate
+  
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    size: 64 64
+    image-source: /images/guild_hall/invite
+  
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    margin-top: 18
+    margin-bottom: 2
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+  
+  InboxAcceptButton
+    id: acceptBtn
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 2
+    margin-left: 55
+    !text: tr("Accept")
+
+    $disabled:
+      height: 0
+  
+  InboxRejectButton
+    id: rejectBtn
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 2
+    margin-right: 55
+    !text: tr("Reject")
+
+    $disabled:
+      height: 0
+
+InviteInbox < Panel
+  height: 95
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Join Invitation")
+    text-auto-resize: true
+
+  InboxDate
+  
+  UIWidget
+    id: icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    size: 64 64
+    image-source: /images/guild_hall/invite
+  
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    margin-top: 18
+    margin-bottom: 2
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+  
+  InboxAcceptButton
+    id: acceptBtn
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 2
+    margin-left: 55
+    !text: tr("Accept")
+
+    $disabled:
+      height: 0
+  
+  InboxRejectButton
+    id: rejectBtn
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 2
+    margin-right: 55
+    !text: tr("Reject")
+
+    $disabled:
+      height: 0
+
+KickedInbox < Panel
+  height: 89
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    !text: tr("Kicked Out")
+    text-auto-resize: true
+
+  InboxDate
+  
+  Panel
+    id: icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 18
+    size: 64 64
+    image-source: /images/guild_hall/kicked
+  
+  Panel
+    id: panel
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 18
+    margin-left: 2
+    padding: 2
+    background-color: #4a443d
+
+    Label
+      id: text
+      anchors.fill: parent
+      text-wrap: true
+
+Panel
+  background-color: #3e3a35
+  padding: 16
+  UIScrollArea
+    id: list
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 10
+    background-color: #47413b
+    border: 1 #59524a
+    padding: 1
+    vertical-scrollbar: scrollbar
+    layout: verticalBox
+
+  VerticalScrollBar
+    id: scrollbar
+    anchors.top: prev.top
+    anchors.bottom: prev.bottom
+    anchors.left: prev.right
+    background-color: #3b3732
+    border: 1 #5a5248
+    step: 50
+    pixels-scroll: true

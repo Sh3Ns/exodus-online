@@ -1,0 +1,289 @@
+GuildRewardSlot < UIWidget
+  size: 48 48
+  background-color: #2f2c28
+  border: 1 #5a534b
+
+  UIItem
+    id: item
+    anchors.centerIn: parent
+    size: 32 32
+    virtual: true
+    phantom: true
+
+  UIWidget
+    id: icon
+    anchors.centerIn: parent
+    size: 32 32
+    visible: false
+
+  Label
+    id: count
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 3
+    margin-bottom: 1
+    text-align: right
+    color: #dfdfdf
+    font: verdana-11px-rounded
+    text-auto-resize: true
+
+GuildQuestCard < UIWidget
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  padding: 8
+  size: 272 382
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    id: title
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    font: verdana-11px-rounded
+    text-auto-resize: true
+
+  Label
+    id: objective
+    anchors.top: icon.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    height: 42
+    text-wrap: true
+    text-align: center
+    color: #dfdfdf
+
+  UIWidget
+    id: icon
+    anchors.top: title.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 8
+    size: 64 64
+    image-source: /images/guild_hall/guild_achievement
+
+  Label
+    id: progress
+    anchors.top: objective.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 10
+    height: 18
+    text-wrap: true
+    text-align: center
+    color: #FFDC96
+
+  Panel
+    id: rewardsContainer
+    anchors.top: progress.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    height: 130
+
+    Panel
+      id: rewardsItems
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 100
+
+    Label
+      id: rewardsText
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: false
+      text-align: center
+      color: #c7c1b6
+
+    Label
+      id: rewardsFallback
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: true
+      text-align: center
+      color: #c7c1b6
+      visible: false
+
+  Label
+    id: state
+    anchors.top: rewardsContainer.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    height: 18
+    text-wrap: true
+    text-align: center
+    color: #b9b2a8
+
+  GuildActionButton
+    id: claimButton
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 6
+    width: 96
+    !text: tr("Claim")
+
+DynastieQuestCard < GuildQuestCard
+  size: 328 426
+
+  Label
+    id: objective
+    height: 52
+
+  Panel
+    id: rewardsContainer
+    height: 130
+
+    Panel
+      id: rewardsItems
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 100
+
+    Label
+      id: rewardsText
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: false
+      text-align: center
+      color: #c7c1b6
+
+    Label
+      id: rewardsFallback
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: true
+      text-align: center
+      color: #c7c1b6
+      visible: false
+
+Panel
+  anchors.fill: parent
+  background-color: #3e3a35
+  padding: 16
+
+  Panel
+    id: questsTopBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 48
+    background-color: #3b3732
+    border: 1 #59524a
+
+    Label
+      id: dailyResetLabel
+      anchors.left: parent.left
+      anchors.top: parent.top
+      margin-left: 10
+      margin-top: 6
+      color: #dfdfdf
+      text-auto-resize: true
+      !text: tr("Daily reset: --")
+
+    Label
+      id: weekendResetLabel
+      anchors.right: parent.right
+      anchors.top: parent.top
+      margin-right: 10
+      margin-top: 6
+      color: #dfdfdf
+      text-auto-resize: true
+      !text: tr("Weekend reset: --")
+
+    Label
+      id: monthlyResetLabel
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.bottom: parent.bottom
+      margin-bottom: 6
+      color: #dfdfdf
+      text-auto-resize: true
+      !text: tr("Monthly reset: --")
+
+  UIScrollArea
+    id: questsScroll
+    anchors.top: questsTopBar.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 12
+    margin-right: 10
+    background-color: #47413b
+    border: 1 #59524a
+    padding: 10
+    vertical-scrollbar: questsScrollbar
+
+    Panel
+      id: questsBody
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 820
+      layout: verticalBox
+      spacing: 12
+
+      Label
+        id: dailyTitle
+        width: 820
+        color: #FFDC96
+        text-auto-resize: true
+        !text: tr("Daily Quests")
+
+      Panel
+        id: dailyList
+        width: 820
+        height: 392
+        layout: horizontalBox
+        spacing: 10
+
+      Label
+        id: weekendTitle
+        width: 820
+        color: #FFDC96
+        text-auto-resize: true
+        !text: tr("Weekend Quests")
+
+      Panel
+        id: weekendList
+        width: 820
+        height: 392
+        layout: horizontalBox
+        spacing: 10
+
+      Label
+        id: monthlyTitle
+        width: 820
+        color: #FFDC96
+        text-auto-resize: true
+        !text: tr("Monthly Quests")
+
+      Panel
+        id: monthlyList
+        width: 820
+        height: 392
+        layout: horizontalBox
+        spacing: 10
+
+  VerticalScrollBar
+    id: questsScrollbar
+    anchors.top: questsScroll.top
+    anchors.bottom: questsScroll.bottom
+    anchors.left: questsScroll.right
+    background-color: #3b3732
+    border: 1 #5a5248
+    step: 50
+    pixels-scroll: true

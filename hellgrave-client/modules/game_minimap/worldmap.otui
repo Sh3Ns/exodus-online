@@ -1,0 +1,12 @@
+MiniWindow
+  id: worldMapWindow
+  text: World Mini Map
+  size: 900 650
+  closeable: true
+  resizeable: true
+  draggable: true
+
+  Minimap
+    id: worldMapMinimap
+    margin-top: 20
+    anchors.fill: parent

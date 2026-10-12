@@ -1,0 +1,11 @@
+Module
+  name: game_taskboard
+  description: game_taskboard
+  author: game_taskboard
+  sandboxed: true
+  autoload: true
+  minClientVersion: 1098
+  dependencies: [ client_topmenu ]
+  scripts: [tasks, const/const_tab_bounty, const/const_tab_weekly, const/const_tab_shop, controller/tab_bounty, controller/tab_weekly, controller/tab_shop, trackers/miniwindows_tracker]
+  @onLoad: TaskBoardController:init()
+  @onUnload: TaskBoardController:terminate()

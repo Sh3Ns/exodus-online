@@ -1,0 +1,259 @@
+GuildRewardSlot < UIWidget
+  size: 48 48
+  background-color: #2f2c28
+  border: 1 #5a534b
+
+  UIItem
+    id: item
+    anchors.centerIn: parent
+    size: 32 32
+    virtual: true
+    phantom: true
+
+  UIWidget
+    id: icon
+    anchors.centerIn: parent
+    size: 32 32
+    visible: false
+
+  Label
+    id: count
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 3
+    margin-bottom: 1
+    text-align: right
+    color: #dfdfdf
+    font: verdana-11px-rounded
+    text-auto-resize: true
+
+GuildAchievementCard < UIWidget
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  padding: 8
+  size: 280 492
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    id: title
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+    font: verdana-11px-rounded
+    text-align: center
+    text-auto-resize: true
+
+  UIWidget
+    id: icon
+    anchors.top: title.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 8
+    size: 104 104
+    image-source: /images/guild_hall/guild_achievement
+    image-size: 104 104
+
+  Label
+    id: objective
+    anchors.top: icon.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 10
+    height: 38
+    text-wrap: true
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: progress
+    anchors.top: objective.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 10
+    height: 18
+    text-wrap: true
+    text-align: center
+    color: #FFDC96
+
+  Panel
+    id: rewardsContainer
+    anchors.top: progress.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    height: 188
+
+    Panel
+      id: rewardsItems
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 152
+
+    Label
+      id: rewardsText
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: false
+      text-align: center
+      color: #c7c1b6
+
+    Label
+      id: rewardsFallback
+      anchors.top: rewardsItems.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 4
+      height: 18
+      text-wrap: true
+      text-align: center
+      color: #c7c1b6
+      visible: false
+
+  Label
+    id: state
+    anchors.bottom: claimButton.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-bottom: 11
+    height: 18
+    text-wrap: true
+    text-align: center
+    color: #b9b2a8
+
+  GuildActionButton
+    id: claimButton
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 5
+    width: 96
+    !text: tr("Claim")
+
+Panel
+  anchors.fill: parent
+  background-color: #3e3a35
+  padding: 16
+
+  Panel
+    id: achievementsTopBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 76
+    background-color: #3b3732
+    border: 1 #59524a
+
+    Label
+      id: progressSummary
+      anchors.left: parent.left
+      anchors.top: parent.top
+      margin-left: 10
+      margin-top: 8
+      width: 360
+      color: #dfdfdf
+      text-auto-resize: true
+      !text: tr("Achievements: 0 / 0")
+
+    Panel
+      id: progressBarBase
+      anchors.left: parent.left
+      anchors.top: progressSummary.bottom
+      margin-left: 10
+      margin-top: 6
+      size: 280 19
+      background-color: #28221d
+      border: 1 black
+
+      UIWidget
+        id: progressBarFill
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        margin: 1
+        width: 0
+        image-source: /images/ui/battlepass
+
+    Label
+      id: searchLabel
+      anchors.top: parent.top
+      anchors.right: parent.right
+      margin-top: 12
+      margin-right: 226
+      color: #dfdfdf
+      !text: tr("Search:")
+
+    TextEdit
+      id: searchInput
+      anchors.top: parent.top
+      anchors.right: parent.right
+      margin-top: 8
+      margin-right: 10
+      size: 210 22
+      text-offset: 4 3
+
+    GuildActionButton
+      id: prevPageButton
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-right: 156
+      margin-bottom: 8
+      width: 70
+      !text: tr("Prev")
+
+    Label
+      id: pageLabel
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-right: 88
+      margin-bottom: 14
+      color: #dfdfdf
+      text-auto-resize: true
+      !text: tr("1 / 1")
+
+    GuildActionButton
+      id: nextPageButton
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-right: 10
+      margin-bottom: 8
+      width: 70
+      !text: tr("Next")
+
+  UIScrollArea
+    id: achievementsScroll
+    anchors.top: achievementsTopBar.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 12
+    margin-right: 10
+    background-color: #47413b
+    border: 1 #59524a
+    padding: 10
+    vertical-scrollbar: achievementsScrollbar
+
+    Panel
+      id: achievementsList
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      layout:
+        type: grid
+        cell-size: 266 466
+        cell-spacing: 10
+        flow: true
+      height: 930
+
+  VerticalScrollBar
+    id: achievementsScrollbar
+    anchors.top: achievementsScroll.top
+    anchors.bottom: achievementsScroll.bottom
+    anchors.left: achievementsScroll.right
+    background-color: #3b3732
+    border: 1 #5a5248
+    step: 50
+    pixels-scroll: true

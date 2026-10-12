@@ -1,0 +1,4 @@
+EnterGameWindow < UIWidget
+  anchors.centerIn: parent
+  focusable: true
+  size: 460 520

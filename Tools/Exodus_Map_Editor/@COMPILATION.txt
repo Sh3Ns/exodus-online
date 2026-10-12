@@ -1,0 +1,12 @@
+To compile Exodus Map Editor:
+
+Download latest VCPKG updated on 27.07.26 and install it.
+
+Open > Build > Rme.sln on visual studio 2026.
+
+At left Select Exodus-Map-Editor > Right Click > Define This Project at startup (Definir este proyecto al arrancar) ~ approx traduction. (It's mandatory, but to compile faster is better)
+
+Select on Top Release x64 , then compile solution, Inside Release you will find the .exe place it on Map Editor root folder along with .dll.
+
+Editor Map will be updated with a release.
+

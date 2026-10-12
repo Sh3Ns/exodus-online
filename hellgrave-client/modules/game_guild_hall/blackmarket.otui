@@ -1,0 +1,125 @@
+GuildBlackMarketCard < UIWidget
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  padding: 8
+  size: 138 200
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  UIItem
+    id: item
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 4
+    virtual: true
+    size: 32 32
+
+  Label
+    id: title
+    anchors.top: item.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    height: 26
+    text-wrap: true
+    text-align: center
+    color: #dfdfdf
+    font: verdana-11px-rounded
+
+  Label
+    id: quantity
+    anchors.top: title.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+    text-align: center
+    color: #FFDC96
+
+  Label
+    id: price
+    anchors.top: quantity.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+    height: 30
+    text-wrap: true
+    text-align: center
+    color: #c7c1b6
+
+  Label
+    id: timer
+    anchors.top: price.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+    height: 28
+    text-wrap: true
+    text-align: center
+    color: #b9b2a8
+
+  GuildActionButton
+    id: buyButton
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 4
+    width: 90
+    height: 24
+    !text: tr("Purchase")
+
+Panel
+  anchors.fill: parent
+  background-color: #3e3a35
+  padding: 16
+
+  Panel
+    id: marketTopBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 34
+    background-color: #3b3732
+    border: 1 #59524a
+
+    Label
+      id: refreshLabel
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 10
+      color: #dfdfdf
+      text-auto-resize: true
+      !text: tr("Daily refresh: --")
+
+  UIScrollArea
+    id: marketScroll
+    anchors.top: marketTopBar.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 12
+    margin-right: 10
+    background-color: #47413b
+    border: 1 #59524a
+    padding: 10
+    vertical-scrollbar: marketScrollbar
+
+    Panel
+      id: marketList
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      layout:
+        type: grid
+        cell-size: 146 200
+        cell-spacing: 10
+        flow: true
+      height: 520
+
+  VerticalScrollBar
+    id: marketScrollbar
+    anchors.top: marketScroll.top
+    anchors.bottom: marketScroll.bottom
+    anchors.left: marketScroll.right
+    background-color: #3b3732
+    border: 1 #5a5248
+    step: 50
+    pixels-scroll: true

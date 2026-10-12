@@ -1,0 +1,62 @@
+MarketTabBar < TabBar
+MarketTabBarPanel < TabBarPanel
+MarketTabBarButton < TabBarButton
+  size: 20 25
+  font: verdana-11px-rounded
+  background-color: #3b3834
+  border-width: 1
+  border-color: #1f1d1a
+  padding: 4 10
+  text-offset: 0 1
+  text-align: center
+  color: #dfdfdf
+
+  $!first:
+    anchors.left: prev.right
+    margin-left: 1
+
+  $hover !checked:
+    background-color: #4a4640
+    color: #ffffff
+
+  $checked:
+    background-color: #5a554d
+    border-color: #736b60
+    color: #ffffff
+
+  $on !checked:
+    color: #f0d38f
+
+MarketRightTabBar < TabBar
+MarketRightTabBarPanel < TabBarPanel
+MarketRightTabBarButton < TabBarButton
+  size: 20 25
+  font: verdana-11px-rounded
+  background-color: #3b3834
+  border-width: 1
+  border-color: #1f1d1a
+  padding: 4 10
+  text-offset: 0 1
+  text-align: center
+  color: #dfdfdf
+
+  $first:
+    anchors.right: parent.right
+    anchors.left: none
+
+  $!first:
+    anchors.right: prev.left
+    anchors.left: none
+    margin-right: 1
+
+  $hover !checked:
+    background-color: #4a4640
+    color: #ffffff
+
+  $checked:
+    background-color: #5a554d
+    border-color: #736b60
+    color: #ffffff
+
+  $on !checked:
+    color: #f0d38f

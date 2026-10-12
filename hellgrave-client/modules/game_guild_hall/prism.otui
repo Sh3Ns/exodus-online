@@ -1,0 +1,282 @@
+GuildPrismCard < UIWidget
+  image-source: /images/ui/prism_panel
+  image-border: 8
+  padding: 6
+  size: 255 255
+  background-color: #4a443d
+  border: 1 #5a5248
+
+  Label
+    id: location
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    text-auto-resize: true
+    font: verdana-11px-rounded
+
+  Label
+    id: owner
+    anchors.top: location.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    text-wrap: true
+    text-align: center
+    color: #dfdfdf
+
+  Label
+    id: placer
+    anchors.top: owner.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+    text-wrap: true
+    text-align: center
+    color: #b9b2a8
+
+  UIItem
+    id: prismItem
+    anchors.top: placer.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 14
+    size: 48 48
+    virtual: true
+
+  Label
+    id: status
+    anchors.top: prismItem.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 10
+    height: 48
+    text-wrap: true
+    text-align: center
+    color: #FFDC96
+
+  Label
+    id: loot
+    anchors.top: status.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 6
+    text-wrap: true
+    text-align: center
+    color: #c7c1b6
+
+  Label
+    id: stored
+    anchors.top: loot.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+    text-wrap: true
+    text-align: center
+    color: #b9b2a8
+
+  GuildActionButton
+    id: placeButton
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 10
+    margin-bottom: 5
+    width: 84
+    !text: tr("Place")
+
+  GuildActionButton
+    id: collectButton
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 2
+    margin-bottom: 5
+    width: 80
+    !text: tr("Collect")
+
+  GuildActionButton
+    id: viewButton
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 5
+    width: 60
+    !text: tr("View")
+
+  GuildActionButton
+    id: teleportButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 2
+    margin-bottom: 5
+    width: 80
+    !text: tr("Teleport")
+
+  GuildActionButton
+    id: attackButton
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 5
+    width: 74
+    !text: tr("Attack")
+
+Panel
+  background-color: #3e3a35
+  padding: 16
+
+  Panel
+    id: prismTopBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 28
+    background-color: #3b3732
+    border: 1 #59524a
+
+    Label
+      id: capacityLabel
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 10
+      text-auto-resize: true
+      color: #dfdfdf
+      !text: tr("Prisms: 0 / 0")
+
+    Label
+      id: hintLabel
+      anchors.right: parent.right
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 10
+      text-auto-resize: true
+      color: #b9b2a8
+      !text: tr("Select an empty configured site to place a prism.")
+
+    GuildActionButton
+      id: prevPageButton
+      anchors.right: nextPageButton.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 6
+      width: 58
+      height: 22
+      !text: tr("Prev")
+
+    Label
+      id: pageLabel
+      anchors.right: prevPageButton.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 8
+      color: #dfdfdf
+      text-auto-resize: true
+      !text: tr("1 / 1")
+
+    GuildActionButton
+      id: nextPageButton
+      anchors.right: hintLabel.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 10
+      width: 58
+      height: 22
+      !text: tr("Next")
+
+  UIScrollArea
+    id: prismList
+    anchors.top: prismTopBar.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 10
+    margin-right: 18
+    vertical-scrollbar: prismScroll
+    layout:
+      type: grid
+      cell-size: 256 256
+      cell-spacing: 10
+      flow: true
+
+  VerticalScrollBar
+    id: prismScroll
+    anchors.top: prismList.top
+    anchors.bottom: prismList.bottom
+    anchors.right: parent.right
+    background-color: #3b3732
+    border: 1 #5a5248
+    step: 20
+    pixels-scroll: true
+
+GuildPrismLootWindow < MainWindow
+  size: 520 430
+  !text: tr("Prism Loot")
+  @onEscape: self:hide()
+
+  Panel
+    anchors.fill: parent
+    margin-top: 28
+    margin-left: 10
+    margin-right: 10
+    margin-bottom: 48
+    background-color: #4d4a45
+    border: 1 #59524a
+
+    Label
+      id: prismName
+      anchors.top: parent.top
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 8
+      color: #dfdfdf
+      text-auto-resize: true
+      !text: tr("Prism")
+
+    Label
+      id: totals
+      anchors.top: prismName.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 6
+      color: #FFDC96
+      text-auto-resize: true
+      !text: tr("Gold: 0 | Exp: 0")
+
+    Panel
+      id: lootGridBase
+      anchors.top: totals.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-top: 10
+      margin-left: 10
+      margin-right: 10
+      margin-bottom: 10
+      background-color: #2f2c28
+      border: 1 #59524a
+
+      UIScrollArea
+        id: lootGrid
+        anchors.fill: parent
+        margin-top: 6
+        margin-left: 6
+        margin-right: 18
+        margin-bottom: 6
+        vertical-scrollbar: prismLootScroll
+        layout:
+          type: grid
+          cell-size: 46 46
+          cell-spacing: 4
+          flow: true
+
+      VerticalScrollBar
+        id: prismLootScroll
+        anchors.top: parent.top
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        background-color: #3b3732
+        border: 1 #5a5248
+        margin-top: 2
+        margin-right: 2
+        margin-bottom: 2
+        step: 36
+        pixels-scroll: true
+
+  GuildActionButton
+    id: closeButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 16
+    margin-bottom: 12
+    width: 90
+    !text: tr("Close")
+    @onClick: self:getParent():hide()

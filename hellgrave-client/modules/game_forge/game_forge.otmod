@@ -1,0 +1,12 @@
+Module
+  name: game_forge
+  description: game_forge
+  autoload: true
+  autoload-priority: 1000
+  reloadable: true
+  dependencies: [ client_topmenu, game_interface ]
+  otuis: [ game_forge ]
+  scripts: [ game_forge_helpers.lua, game_forge.lua ]
+  sandboxed: true
+  @onLoad: ForgeController:init()
+  @onUnload: ForgeController:terminate()

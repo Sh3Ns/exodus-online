@@ -1,0 +1,74 @@
+InfoLabel < Label
+
+ItemNameLabel < Label
+
+LootLabel < Label
+  font: verdana-11px-antialised
+  color: #afafaf
+  text: None
+  width: 150
+
+ItemSprite < UIItem
+  size: 32 32
+  padding: 1
+  anchors.top: parent.top
+  anchors.left:parent.left
+  margin-top: 10
+  phantom: true
+
+AnalyzerActionButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 24
+  padding: 4 12
+  text-offset: 0 0
+  text-align: center
+  color: white
+
+  $hover:
+    image-color: #9a958e
+    color: white
+
+  $focus:
+    image-color: #dfdfdf
+    color: white
+
+  $disabled:
+    color: #9a9a9a
+
+
+MiniWindow
+  id:dropTrackerWindow
+  !text: tr('Drop Tracker')
+  color: #8F8F8F
+  height: 200
+  &save: true
+  &autoOpen: false
+  
+  MiniWindowContents
+    padding-left: 5
+    padding-right: 5
+    margin-top: 18
+    vertical-scrollbar: miniwindowScrollBar
+    layout: verticalBox
+
+    AnalyzerActionButton
+      id: resetSession
+      width: 84
+      margin-top: 5
+      !text: tr("Reset Loot")
+      &onClick: resetDropTracker
+    AnalyzerActionButton
+      id: clipBoard
+      width: 32
+      !text: tr("Copy Loot Session")
+      &onClick: copyLootToClipboard
+
+    InfoLabel
+      id: lootedItemsLabel
+      !text: tr('Loot Drops:')
+      font: verdana-11px-antialised
+      color: #afafaf
+      margin-top: 10

@@ -1,0 +1,9 @@
+Module
+  name: client_bosstimers
+  description: Boss Timers Window
+  author: Alex
+  website: https://opengamescommunity.com
+  autoload: true
+  scripts: [ bosstimers ]
+  @onLoad: init()
+  @onUnload: terminate()

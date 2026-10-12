@@ -1,0 +1,976 @@
+===============================================================================
+WEAPON PROFICIENCY - SERVER/CLIENT GUIDE By Alex
+===============================================================================
+
+This is a documentation file only.
+
+AUTHORITATIVE DATA
+------------------
+
+Server profiles:
+  data/scripts/customs/proficiency/proficiencies.json
+
+Client profile copy/cache:
+  hellgrave-client/modules/game_proficiency/proficiencies.json
+
+Server behavior:
+  data/scripts/customs/proficiency/proficiency.lua
+
+Client names, descriptions, icon tables and sprite clips:
+  hellgrave-client/modules/game_proficiency/const.lua
+
+Client JSON formatting and icon selection:
+  hellgrave-client/modules/game_proficiency/proficiency_data.lua
+
+Client icon images:
+  hellgrave-client/modules/game_proficiency/proficiency/
+
+IMPORTANT:
+  - The server is authoritative for experience, selected perks and combat, on server side is here for show information about values.
+  - Keep both proficiencies.json files synchronized when profile definitions change or you add a new one, can be custom.
+  - Every ProficiencyId must be unique and must never be reused for another profile.
+
+
+===============================================================================
+1. BASIC PROFILE STRUCTURE
+===============================================================================
+
+{
+  "Name": "Bow 2H Mercurial Bleeder",
+  "ProficiencyId": 469,
+  "Version": 1,
+  "Levels": [
+    {
+      "Perks": [
+        {
+          "Type": 22,
+          "Value": 30,
+          "Range": 3
+        }
+      ]
+    }
+  ]
+}
+
+FIELD              REQUIRED    MEANING
+Name               Yes         Readable profile name shown by the client, in order "WeaponName 1H/2H (1 hand 2hands), ItemName".
+ProficiencyId      Yes         Unique persistent ID for this weapon profile, never use the same.
+Version            Yes         Profile revision number. Normally starts at 1.
+Levels             Yes         Ordered mastery stages for this weapon.
+Perks              Yes         Choices offered in one mastery stage.
+Type               Yes         Perk behavior ID. See the Type table below.
+Value              Yes         Perk strength. Its unit depends on Type.
+SkillId            Sometimes   Required by Types 3, 25, 26 and 27.
+ElementId          Sometimes   Required by Types 9, 13, 31 and 32.
+DamageType         Sometimes   Required by Type 4.
+SpellId            Sometimes   Required by Type 5.
+AugmentType        Sometimes   Required by Type 5.
+BestiaryName       Sometimes   Required by Type 6.
+Range              Sometimes   Required by Type 22.
+Chance             Sometimes   Required by Type 32.
+
+ONE IMPORTANT LEVEL RULE
+------------------------
+
+Perks inside the SAME "Perks" array are alternative choices. The player selects
+only one choice from that level.
+
+Default Weapon Prof has 7 perks enabled, as you know me i made the module capable to support until 20 perks,
+scrollbar added and you can see all of them, EXP aswell goes until the perk 20.
+Tooltip will show the max level depending on how many levels ( perks ) has the weapon, if is 5 or if is 20.
+If you add a lot of perks i will recommend do not abuse with values otherwise you can kill your server.
+
+This gives three choices, but only ONE becomes active:
+
+{
+  "Perks": [
+    {"Type": 0, "Value": 25},
+    {"Type": 31, "Value": 0.05, "ElementId": 8},
+    {"Type": 3, "Value": 2, "SkillId": 7}
+  ]
+}
+
+If you want all three bonuses to be selectable and active together, put them in
+three different Levels:
+
+"Levels": [
+  {
+    "Perks": [
+      {"Type": 0, "Value": 25}
+    ]
+  },
+  {
+    "Perks": [
+      {"Type": 31, "Value": 0.05, "ElementId": 8}
+    ]
+  },
+  {
+    "Perks": [
+      {"Type": 3, "Value": 2, "SkillId": 7}
+    ]
+  }
+]
+
+
+===============================================================================
+2. VALUE
+===============================================================================
+
+UNIT               JSON EXAMPLE    RESULT
+Flat points        30              Adds/removes exactly 30 points.
+Decimal percent    0.05            Means 5%.
+Decimal percent    0.25            Means 25%.
+Skill multiplier   0.10            Adds 10% of the selected skill as flat value.
+Tiles              1               One map tile.
+Seconds            1.5             1.5 seconds, converted to 1500 ms
+
+Suggested starting values:
+Normal means on low levels, and endgame means, really on high tiers
+
+EFFECT                          NORMAL START       STRONG/ENDGAME
+Flat damage                     5 to 30            30 to 100
+Flat incoming reduction         2 to 15            15 to 50
+Damage multiplier               0.02 to 0.05       0.05 to 0.15
+Critical chance                 0.01 to 0.03       0.03 to 0.05
+Critical extra damage           0.03 to 0.08       0.08 to 0.15
+Life/mana leech                 0.01 to 0.03       0.03 to 0.05
+Flat life/mana on hit           5 to 25            25 to 50
+Flat life/mana on kill          20 to 100          100 to 200
+Flat skill levels               1 to 2             3 to 5
+Skill used as damage/healing    0.05 to 0.15       0.15 to 0.30
+Attack range                    1                  2 is exceptional
+Cooldown reduction              0.25 to 1.00       1.00 to 2.00 seconds
+
+These are balance suggestions
+
+
+===============================================================================
+2A. QUICK PERK TYPE TABLE
+===============================================================================
+
+This is the direct Type number reference used inside every perk object.
+Every entry always needs "Type" and "Value". The last column shows any additional
+field required by that Type.
+
+Type  Meaning                              Extra field(s)
+0     Flat auto-attack damage              None
+1     Flat shield defence                  None
+2     Flat weapon defence                  None
+3     Add levels to a skill                SkillId
+4     Flat spell damage for one element    DamageType
+5     Modify one specific spell            SpellId, AugmentType
+6     Damage against Bestiary category     BestiaryName
+7     Damage against boss/fiendish foe     None
+8     Generic critical chance              None
+9     Elemental critical chance            ElementId
+10    Offensive rune critical chance       None
+11    Auto-attack critical chance          None
+12    Generic critical extra damage        None
+13    Elemental critical extra damage      ElementId
+14    Offensive rune critical damage       None
+15    Auto-attack critical damage          None
+16    Mana leech                           None
+17    Life leech                           None
+18    Flat mana gained on hit              None
+19    Flat health gained on hit            None
+20    Flat mana gained on kill             None
+21    Flat health gained on kill           None
+22    Flat damage at distance or farther   Range
+23    Ranged hit chance                    None
+24    Attack range                         None
+25    Skill-scaled auto-attack damage      SkillId
+26    Skill-scaled spell damage            SkillId
+27    Skill-scaled spell healing           SkillId
+28    Damage above 95% target health       None
+29    Damage below 30% target health       None
+30    Physical damage multiplier           None
+31    Elemental damage multiplier          ElementId
+32    Elemental homing missile             ElementId, Chance
+
+Example Type 3, adding three Weaponsmithing levels:
+
+{
+  "Type": 3,
+  "Value": 3,
+  "SkillId": 19
+}
+
+Example Type 25, adding 10% of Distance Fighting as auto-attack damage:
+
+{
+  "Type": 25,
+  "Value": 0.10,
+  "SkillId": 7
+}
+
+The complete behavior and current limitations of every Type are explained again
+in section 6.
+
+
+===============================================================================
+3. PROFICIENCY SKILL IDs
+===============================================================================
+
+WARNING: JSON SkillId is a PROFICIENCY ID. It is not the numeric C++ enum value.
+Use the first column in proficiencies.json.
+
+SkillId  Name                 Server constant       C++ enum value  Supported
+1        Magic Level          SKILL_MAGLEVEL        14              Yes
+6        Shielding            SKILL_SHIELD          5               Yes
+7        Distance Fighting    SKILL_DISTANCE        4               Yes
+8        Sword Fighting       SKILL_SWORD           2               Yes
+9        Club Fighting        SKILL_CLUB            1               Yes
+10       Axe Fighting         SKILL_AXE             3               Yes
+11       Fist Fighting        SKILL_FIST            0               Yes
+13       Fishing              SKILL_FISHING         6               Yes
+14       Crafting             SKILL_CRAFTING        7               Yes
+15       Woodcutting          SKILL_WOODCUTTING     8               Yes
+16       Mining               SKILL_MINING          9               Yes
+17       Herbalism            SKILL_HERBALIST       10              Yes
+18       Armorsmithing        SKILL_ARMORSMITH      11              Yes
+19       Weaponsmithing       SKILL_WEAPONSMITH     12              Yes
+20       Jewelsmithing        SKILL_JEWELSMITH      13              Yes
+
+SkillId is used by:
+
+Type 3   Adds flat levels to any skill in this table.
+Type 25  Uses a combat skill to calculate extra auto-attack damage.
+Type 26  Uses a combat skill to calculate extra spell damage.
+Type 27  Uses a combat skill to calculate extra spell healing.
+
+Profession SkillIds 14 through 20 are intentionally supported only by Type 3.
+They are not valid for Types 25, 26 or 27 because Crafting, Woodcutting, Mining,
+Herbalism, Armorsmithing, Weaponsmithing and Jewelsmithing are not combat
+damage/healing skills.
+
+Examples:
+
+Add +3 Weaponsmithing:
+
+{
+  "Type": 3,
+  "Value": 3,
+  "SkillId": 19
+}
+
+Add 10% of Distance Fighting as flat auto-attack damage:
+
+{
+  "Type": 25,
+  "Value": 0.10,
+  "SkillId": 7
+}
+
+If Distance Fighting is 120, this adds:
+  120 * 0.10 = 12 flat damage
+
+Add 20% of Magic Level as flat spell healing:
+
+{
+  "Type": 27,
+  "Value": 0.20,
+  "SkillId": 1
+}
+
+
+===============================================================================
+4. ELEMENT IDs
+===============================================================================
+
+ElementId   Name        Server combat type           Supported
+1           Physical    COMBAT_PHYSICALDAMAGE        Yes
+4           Physical    COMBAT_PHYSICALDAMAGE        Yes
+8           Fire        COMBAT_FIREDAMAGE            Yes
+16          Earth       COMBAT_EARTHDAMAGE           Yes
+32          Energy      COMBAT_ENERGYDAMAGE          Yes
+64          Ice         COMBAT_ICEDAMAGE             Yes
+128         Holy        COMBAT_HOLYDAMAGE            Yes
+256         Death       COMBAT_DEATHDAMAGE           Yes
+4096        Water       COMBAT_WATERDAMAGE            Yes
+8192        Arcane      COMBAT_ARCANEDAMAGE           Yes
+
+ElementId is used by Types 9, 13, 31 and 32.
+DamageType is used by Type 4 and uses the same supported element values.
+
+Only real damage elements supported by this proficiency server are listed here.
+Healing uses healing perks or a healing Spell Augment, not an ElementId damage
+perk.
+
+Example: +8% fire damage:
+
+{
+  "Type": 31,
+  "Value": 0.08,
+  "ElementId": 8
+}
+
+Example: +4% critical chance for energy damage:
+
+{
+  "Type": 9,
+  "Value": 0.04,
+  "ElementId": 32
+}
+
+Example: +10% critical extra damage for ice damage:
+
+{
+  "Type": 13,
+  "Value": 0.10,
+  "ElementId": 64
+}
+
+Example: +8% water damage:
+
+{
+  "Type": 31,
+  "Value": 0.08,
+  "ElementId": 4096
+}
+
+Example: +4% critical chance for arcane damage:
+
+{
+  "Type": 9,
+  "Value": 0.04,
+  "ElementId": 8192
+}
+
+
+===============================================================================
+5. SPELL AUGMENT TYPES
+===============================================================================
+
+AugmentType  Name                    Value unit       Server status
+0            None                    None             No effect
+2            Base Spell Damage       Decimal percent  Implemented
+3            Spell Healing           Decimal percent  Implemented
+6            Cooldown Reduction      Seconds          Implemented
+14           Spell Life Leech        Decimal percent  Implemented
+15           Spell Mana Leech        Decimal percent  Implemented
+16           Critical Extra Damage   Decimal percent  Implemented
+17           Critical Chance         Decimal percent  Implemented
+
+All spell augments use Type 5 and require SpellId.
+
+Example: +8% base damage for spell 240:
+
+{
+  "Type": 5,
+  "Value": 0.08,
+  "SpellId": 240,
+  "AugmentType": 2
+}
+
+Example: reduce spell 240 cooldown by 1 second:
+
+{
+  "Type": 5,
+  "Value": 1,
+  "SpellId": 240,
+  "AugmentType": 6
+}
+
+Example: +3% life leech for spell 240:
+
+{
+  "Type": 5,
+  "Value": 0.03,
+  "SpellId": 240,
+  "AugmentType": 14
+}
+
+Example: +5% critical chance for spell 240:
+
+{
+  "Type": 5,
+  "Value": 0.05,
+  "SpellId": 240,
+  "AugmentType": 17
+}
+
+Spell IDs must exist in the client SpellAugmentIcons table for a proper icon/name.
+The server also has aliases for some profile IDs in PROFILE_SPELL_NAMES.
+
+
+===============================================================================
+6. EVERY PERK TYPE
+===============================================================================
+
+Type  Constant                          Required extra fields
+0     PERK_WEAPON_ATTACK                None
+      Flat damage for melee, ranged or wand auto-attacks.
+      Value: flat damage, normally 5 to 100.
+
+1     PERK_SHIELD_DEFENSE               None
+      Flat reduction from incoming damage.
+      Value: flat reduction, normally 2 to 30.
+      Current limitation: the server does not verify a shield is equipped.
+
+2     PERK_WEAPON_DEFENSE               None
+      Flat reduction from incoming damage.
+      Value: flat reduction, normally 2 to 30.
+      Current limitation: server behavior is currently the same as Type 1.
+
+3     PERK_SKILL_BONUS                  SkillId
+      Adds flat levels to the selected skill while the perk is active.
+      Value: whole skill levels, normally 1 to 3.
+
+4     PERK_MAGIC_BONUS                  DamageType
+      Adds flat spell damage when the spell element matches DamageType.
+      Value: flat damage.
+      Current limitation: despite the old client name, it does NOT add Magic Level.
+
+5     PERK_SPELL_AUGMENT                SpellId, AugmentType
+      Modifies one spell. Value unit depends on AugmentType.
+
+6     PERK_BESTIARY_DAMAGE              BestiaryName
+      Increases damage against a matching Bestiary category.
+      Value: decimal percent.
+
+7     PERK_POWERFUL_FOE_DAMAGE          None
+      Increases damage against Bosstiary or fiendish monsters.
+      Value: decimal percent.
+
+8     PERK_CRITICAL_CHANCE              None
+      Adds critical chance to supported outgoing attacks.
+      Value: decimal percent.
+
+9     PERK_ELEMENTAL_CRITICAL_CHANCE    ElementId
+      Adds critical chance only to matching elemental damage.
+      Value: decimal percent.
+
+10    PERK_RUNE_CRITICAL_CHANCE         None
+      Adds critical chance to offensive rune damage.
+      Value: decimal percent.
+
+11    PERK_MELEE_CRITICAL_CHANCE        None
+      Adds critical chance to melee, ranged and wand auto-attacks.
+      Value: decimal percent.
+
+12    PERK_CRITICAL_DAMAGE              None
+      Adds critical extra damage to all supported attacks.
+      Value: decimal percent.
+      A proficiency critical already adds 50%; Value is added above that.
+
+13    PERK_ELEMENTAL_CRITICAL_DAMAGE    ElementId
+      Adds critical extra damage to matching elemental damage.
+      Value: decimal percent.
+
+14    PERK_RUNE_CRITICAL_DAMAGE         None
+      Adds critical extra damage to offensive rune damage.
+      Value: decimal percent.
+
+15    PERK_MELEE_CRITICAL_DAMAGE        None
+      Adds critical extra damage to melee, ranged and wand auto-attacks.
+      Value: decimal percent.
+
+16    PERK_MANA_LEECH                   None
+      Restores mana equal to Value of damage dealt.
+      Value: decimal percent.
+
+17    PERK_LIFE_LEECH                   None
+      Restores health equal to Value of damage dealt.
+      Value: decimal percent.
+
+18    PERK_MANA_ON_HIT                  None
+      Restores a flat amount of mana after a damaging hit.
+      Value: flat mana.
+
+19    PERK_LIFE_ON_HIT                  None
+      Restores a flat amount of health after a damaging hit.
+      Value: flat health.
+
+20    PERK_MANA_ON_KILL                 None
+      Restores flat mana after a qualifying Bestiary monster kill.
+      Value: flat mana.
+
+21    PERK_LIFE_ON_KILL                 None
+      Restores flat health after a qualifying Bestiary monster kill.
+      Value: flat health.
+
+22    PERK_PERFECT_SHOT                 Range
+      Adds flat auto-attack damage at Range tiles OR FARTHER.
+      Distance uses max(abs(dx), abs(dy)).
+      Value: flat damage.
+
+23    PERK_HIT_CHANCE                   None
+      Adds ranged hit chance through the native proficiency combat bonus.
+      Value: decimal percent. 0.05 becomes +5 percentage points.
+
+24    PERK_ATTACK_RANGE                 None
+      Adds attack range through the native proficiency combat bonus.
+      Value: whole tiles.
+
+25    PERK_MELEE_SKILL_FLAT_DAMAGE      SkillId
+      Adds SkillLevel * Value as flat auto-attack damage.
+      Value: skill multiplier.
+
+26    PERK_SPELL_SKILL_FLAT_DAMAGE      SkillId
+      Adds SkillLevel * Value as flat spell damage.
+      Value: skill multiplier.
+
+27    PERK_HEALING_SKILL_FLAT_DAMAGE    SkillId
+      Adds SkillLevel * Value as flat spell healing.
+      Value: skill multiplier.
+
+28    PERK_ALPHA_STRIKE_DAMAGE          None
+      Increases damage while the monster is above 95% health.
+      Value: decimal percent.
+
+29    PERK_OMEGA_STRIKE_DAMAGE          None
+      Increases damage while the monster is below 30% health.
+      Value: decimal percent.
+
+30    PERK_ARMOR_PENETRATION            None
+      Currently multiplies physical damage by 1 + Value.
+      Value: decimal percent.
+      Current limitation: this is not true post-defense armor bypass.
+
+31    PERK_ELEMENTAL_PIERCE             ElementId
+      Currently multiplies matching elemental damage by 1 + Value.
+      Value: decimal percent.
+      Current limitation: this is not true resistance bypass.
+
+32    PERK_HOMING_MISSILE               ElementId, Chance
+      Each offensive spell cast rolls Chance once. On success, it fires an
+      elemental missile at the first monster hit by that cast.
+      Value: character-level multiplier. 2.0 deals 200% of character level.
+      Chance: decimal probability. 0.01 means 1%.
+
+
+===============================================================================
+7. COPY-READY PERK EXAMPLES
+===============================================================================
+
+Flat auto-attack damage:
+
+{
+  "Type": 0,
+  "Value": 30
+}
+
+Flat incoming damage reduction:
+
+{
+  "Type": 1,
+  "Value": 10
+}
+
+Add +2 Sword Fighting:
+
+{
+  "Type": 3,
+  "Value": 2,
+  "SkillId": 8
+}
+
+Add +3 Crafting:
+
+{
+  "Type": 3,
+  "Value": 3,
+  "SkillId": 14
+}
+
+Add +3 Mining:
+
+{
+  "Type": 3,
+  "Value": 3,
+  "SkillId": 16
+}
+
+Add +3 Weaponsmithing:
+
+{
+  "Type": 3,
+  "Value": 3,
+  "SkillId": 19
+}
+
+Add 40 flat fire spell damage:
+
+{
+  "Type": 4,
+  "Value": 40,
+  "DamageType": 8
+}
+
+Add 10% damage against the Undead Bestiary category:
+
+{
+  "Type": 6,
+  "Value": 0.10,
+  "BestiaryName": "Undead"
+}
+
+Example, add 10% damage against Apex bosses:
+
+{
+  "Type": 6,
+  "Value": 0.10,
+  "BestiaryName": "Apex"
+}
+
+Add 10% damage against bosses/fiendish monsters:
+
+{
+  "Type": 7,
+  "Value": 0.10
+}
+
+Add 5% generic critical chance:
+
+{
+  "Type": 8,
+  "Value": 0.05
+}
+
+Add 5% fire critical chance:
+
+{
+  "Type": 9,
+  "Value": 0.05,
+  "ElementId": 8
+}
+
+Add 10% generic critical extra damage:
+
+{
+  "Type": 12,
+  "Value": 0.10
+}
+
+Add 4% mana leech:
+
+{
+  "Type": 16,
+  "Value": 0.04
+}
+
+Add 4% life leech:
+
+{
+  "Type": 17,
+  "Value": 0.04
+}
+
+Restore 25 mana per hit:
+
+{
+  "Type": 18,
+  "Value": 25
+}
+
+Restore 100 health per qualifying kill:
+
+{
+  "Type": 21,
+  "Value": 100
+}
+
+Add 300 flat damage from range 3 or farther:
+
+{
+  "Type": 22,
+  "Value": 300,
+  "Range": 3
+}
+
+Add 5% ranged hit chance:
+
+{
+  "Type": 23,
+  "Value": 0.05
+}
+
+Add one attack-range tile:
+
+{
+  "Type": 24,
+  "Value": 1
+}
+
+Add 15% of Distance Fighting as auto-attack damage:
+
+{
+  "Type": 25,
+  "Value": 0.15,
+  "SkillId": 7
+}
+
+Add 20% of Magic Level as spell damage:
+
+{
+  "Type": 26,
+  "Value": 0.20,
+  "SkillId": 1
+}
+
+Add 20% of Magic Level as spell healing:
+
+{
+  "Type": 27,
+  "Value": 0.20,
+  "SkillId": 1
+}
+
+Add 10% damage against monsters above 95% health:
+
+{
+  "Type": 28,
+  "Value": 0.10
+}
+
+Add 10% damage against monsters below 30% health:
+
+{
+  "Type": 29,
+  "Value": 0.10
+}
+
+Add 8% physical damage:
+
+{
+  "Type": 30,
+  "Value": 0.08
+}
+
+Add 8% death damage:
+
+{
+  "Type": 31,
+  "Value": 0.08,
+  "ElementId": 256
+}
+
+Give offensive spells a 1% chance to fire an Earth missile for 200% of level:
+
+{
+  "Type": 32,
+  "Value": 2.0,
+  "Chance": 0.01,
+  "ElementId": 16
+}
+
+
+===============================================================================
+8. COMPLETE MULTI-LEVEL EXAMPLE
+===============================================================================
+
+This weapon has three mastery levels. Each level offers three choices.
+The player may eventually have one selected perk from each unlocked level.
+
+{
+  "Name": "Example Fire Bow", -- Should be: Bow 2H Fire Bleeder , do not use "Bow 2H Fire Bow" , same name.
+  "ProficiencyId": 9001,
+  "Version": 1,
+  "Levels": [
+    {
+      "Perks": [
+        {
+          "Type": 0,
+          "Value": 25
+        },
+        {
+          "Type": 23,
+          "Value": 0.03
+        },
+        {
+          "Type": 3,
+          "Value": 2,
+          "SkillId": 7
+        }
+      ]
+    },
+    {
+      "Perks": [
+        {
+          "Type": 31,
+          "Value": 0.05,
+          "ElementId": 8
+        },
+        {
+          "Type": 17,
+          "Value": 0.03
+        },
+        {
+          "Type": 25,
+          "Value": 0.10,
+          "SkillId": 7
+        }
+      ]
+    },
+    {
+      "Perks": [
+        {
+          "Type": 22,
+          "Value": 100,
+          "Range": 3
+        },
+        {
+          "Type": 11,
+          "Value": 0.05
+        },
+        {
+          "Type": 15,
+          "Value": 0.10
+        }
+      ]
+    }
+  ]
+}
+
+
+===============================================================================
+9. HOW PROFICIENCY ICONS WORK
+===============================================================================
+
+The JSON does not normally contain an "Icon" field.
+The client chooses the icon from Type and the extra fields.
+
+MAIN TABLE:
+
+  hellgrave-client/modules/game_proficiency/const.lua
+
+  PerkVisualData = {
+    [PERK_WEAPON_ATTACK] = {source = "icons-0", offset = "0 0"},
+    ...
+  }
+
+"source" selects this image:
+
+  hellgrave-client/modules/game_proficiency/proficiency/<source>.png
+
+"offset" selects one 64 x 64 cell inside that image.
+
+Example:
+
+  source = "icons-0"
+  offset = "128 0"
+
+means:
+
+  hellgrave-client/modules/game_proficiency/proficiency/icons-0.png
+  crop starts at x=128, y=0 and uses the configured 64 x 64 icon area. X = left/right Y = up/down
+
+
+ICON SELECTION BY PERK
+----------------------
+
+Perk kind                   Client table used             Sprite source
+Normal fixed Type           PerkVisualData                source in that entry
+Types 3, 25, 26, 27         SkillTypes[SkillId]           icons-7/4/5/6
+Type 4 magic boost          MagicBoostMask[DamageType]    icons-8
+Type 5 spell augment        SpellAugmentIcons[SpellId]    icons-9
+Type 5 small augment mark   AugmentPerkIcons              augment-icons
+Type 6 Bestiary damage      BestiaryCategories            icons-3
+Types 9 and 13              ElementalMask[ElementId]       icons-2/icons-1
+Type 31 elemental pierce    ElementalMask[ElementId]       icons-2
+Type 32 homing missile      ElementalMask[ElementId]       icons-2
+
+
+CUSTOM SKILL ICONS
+
+The profession skill icons are stored in icons-7.png and are used only by Type 3.
+
+Current 64 x 64 icon order:
+
+1. Profession icons:
+     Crafting
+     Woodcutting
+     Mining
+     Herbalism
+     Armorsmithing
+     Weaponsmithing
+     Jewelsmithing
+
+2. Sheet used:
+     icons-7.png  (Type 3)
+
+   icons-4.png, icons-5.png and icons-6.png remain combat-skill sheets. Profession
+   icons must not be added to them because profession skills cannot scale combat
+   damage or healing.
+
+3. Add active icons to the first row and their grey/inactive versions to the
+   corresponding second row, following the current sheet structure.
+
+4. Change SkillTypes in client const.lua:
+
+   [14] = {name = "Crafting",       imageOffset = "512 0"},
+   [15] = {name = "Woodcutting",    imageOffset = "576 0"},
+   [16] = {name = "Mining",         imageOffset = "640 0"},
+   [17] = {name = "Herbalism",      imageOffset = "704 0"},
+   [18] = {name = "Armorsmithing",  imageOffset = "768 0"},
+   [19] = {name = "Weaponsmithing", imageOffset = "832 0"},
+   [20] = {name = "Jewelsmithing",  imageOffset = "896 0"}
+
+5. Make every affected PNG wide enough for the largest offset plus 64 pixels.
+   For offset 896, the image must be at least 960 pixels wide.
+
+6. Keep the inactive row aligned with the same x offsets.
+
+
+ADDING A NEW FIXED PERK TYPE ICON
+--------------------------------
+
+If a new Type is implemented in both server and client:
+
+1. Add its numeric constant to client const.lua.
+2. Add the combat behavior to server proficiency.lua.
+3. Add its name/description to PerkTextData.
+4. Put the 64 x 64 image into an existing/new sprite sheet.
+5. Add an entry to PerkVisualData:
+
+   [PERK_MY_NEW_TYPE] = {source = "icons-10", offset = "0 0"}
+
+6. Add formatting logic to proficiency_data.lua if it has custom fields.
+
+
+ADDING A NEW SPELL AUGMENT ICON
+-------------------------------
+
+Add the spell to SpellAugmentIcons in client const.lua:
+
+  [500] = {
+    name = "My Custom Spell",
+    imageOffset = "192 192"
+  }
+
+Then ensure icons-9.png contains that spell icon at the same offset.
+
+
+===============================================================================
+10. CURRENT RUNTIME RULES AND LIMITATIONS
+===============================================================================
+
+1. Only selected perks from the currently equipped proficiency weapon are active.
+
+2. The player must meet the item's level and vocation requirements.
+   A GOD character may equip another vocation's weapon, but proficiency perks
+   remain inactive unless the vocation requirement is met.
+
+3. Outgoing proficiency damage currently applies only against monsters.
+
+4. Flat damage from active perks is combined and applied once to the first
+   non-zero primary/secondary damage component.
+
+5. Percentage damage perks stack additively before final damage is calculated.
+
+6. Type 22 Range means that distance OR FARTHER, not only the exact distance.
+
+7. Type 1 and Type 2 currently have the same server reduction behavior.
+
+8. Type 4 currently gives flat elemental spell damage, not Magic Level.
+
+9. Type 30 and Type 31 currently act as matching damage multipliers. They do not
+    bypass armor/resistance.
+
+10. The number of Levels controls how many mastery stages the profile can unlock.
+
+11. Restart/reload the server after changing server profile definitions. Keep the
+    client JSON synchronized and reload the client module when client data changes.
+
+12. Type 32 rolls once per offensive spell cast, not once per target in an area
+    spell. Its extra damage does not recursively trigger proficiency bonuses.

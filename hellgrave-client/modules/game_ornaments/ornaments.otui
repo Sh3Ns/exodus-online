@@ -1,0 +1,212 @@
+OrnamentActionButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #8F8575
+  image-border: 6
+  height: 32
+  padding: 6 18
+  text-align: center
+  color: #ffffff
+  change-cursor-image: true
+  cursor: pointer
+
+  $hover:
+    image-color: #DCA244
+    color: #ffffff
+
+  $disabled:
+    opacity: 0.92
+    image-color: #7D7568
+    color: #D0C5AE
+
+OrnamentPageButton < OrnamentActionButton
+  width: 120
+
+  $disabled:
+    opacity: 0.95
+    image-color: #8A7F68
+    color: #E6D7B8
+
+OrnamentSetButton < OrnamentActionButton
+  image-color: #4C6F49
+  color: #ffffff
+
+  $hover:
+    image-color: #69A160
+    color: #ffffff
+
+  $disabled:
+    opacity: 0.95
+    image-color: #4E644C
+    color: #D7E5D3
+
+OrnamentRemoveButton < OrnamentActionButton
+  image-color: #6f3d3d
+
+  $hover:
+    image-color: #B64A4A
+    color: #ffffff
+
+  $disabled:
+    opacity: 0.95
+    image-color: #6A4444
+    color: #E3D2D2
+
+OrnamentCard < UIButton
+  size: 194 140
+  margin: 4
+  padding: 8
+  border-width: 1
+  border-color: #313640
+  background-color: #24272DDD
+  focusable: true
+  change-cursor-image: true
+  cursor: pointer
+
+  $hover:
+    border-color: #8B7548
+    background-color: #30353DDD
+
+  $focus:
+    border-width: 2
+    border-color: #D59A33
+    background-color: #3F454CEE
+
+  UIWidget
+    id: preview
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 8
+    size: 98 48
+    image-source: /images/ui/ornament_gold
+    image-size: 98 48
+    image-auto-resize: false
+    image-smooth: false
+    phantom: true
+
+  Label
+    id: name
+    anchors.top: preview.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    text-align: center
+    color: #F4D37A
+    font: verdana-11px-rounded
+    phantom: true
+
+  Label
+    id: status
+    anchors.top: name.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+    text-align: center
+    color: #7EDB8A
+    font: verdana-11px-rounded
+    phantom: true
+
+MainWindow
+  id: ornamentWindow
+  size: 680 650
+  !text: tr('Player Ornaments')
+  font: verdana-11px-rounded
+  @onEscape: modules.game_ornaments.hide()
+
+  Label
+    id: subtitle
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin: 12 14 0 14
+    text-align: center
+    !text: tr('Select an unlocked ornament.')
+    color: #C8D0DB
+
+  Panel
+    id: ornamentList
+    anchors.top: subtitle.bottom
+    anchors.bottom: pagination.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin: 12
+    layout:
+      type: grid
+      cell-size: 194 140
+      cell-spacing: 8
+      num-columns: 3
+      flow: true
+
+  Panel
+    id: pagination
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: footer.top
+    height: 28
+    margin-left: 12
+    margin-right: 12
+    margin-bottom: 10
+
+    OrnamentPageButton
+      id: prevPageButton
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: parent.left
+      !text: tr('PREV')
+      @onClick: modules.game_ornaments.previousPage()
+
+    Panel
+      id: pagePanel
+      anchors.centerIn: parent
+      size: 140 28
+      border-width: 1
+      border-color: #313640
+      background-color: #24272DDD
+
+      Label
+        id: pageLabel
+        anchors.centerIn: parent
+        width: 120
+        text-align: center
+        color: #D7DEE8
+        font: verdana-11px-rounded
+        !text: tr('1 / 1')
+
+    OrnamentPageButton
+      id: nextPageButton
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.right: parent.right
+      !text: tr('NEXT')
+      @onClick: modules.game_ornaments.nextPage()
+
+  Panel
+    id: footer
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    height: 48
+
+    OrnamentSetButton
+      id: setButton
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.horizontalCenter: parent.horizontalCenter
+      width: 150
+      !text: tr('SET')
+      @onClick: modules.game_ornaments.setSelected()
+
+    OrnamentRemoveButton
+      id: removeButton
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.right: setButton.left
+      margin-right: 12
+      width: 150
+      !text: tr('REMOVE')
+      @onClick: modules.game_ornaments.removeOrnament()
+
+    OrnamentActionButton
+      id: closeButton
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: setButton.right
+      margin-left: 12
+      width: 150
+      !text: tr('CLOSE')
+      @onClick: modules.game_ornaments.hide()

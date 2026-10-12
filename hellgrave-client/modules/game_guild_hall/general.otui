@@ -1,0 +1,1354 @@
+GuildAtlasIcon < UIWidget
+  image-source: /images/guild_hall/icons
+  size: 18 18
+  phantom: true
+
+GuildContributePlayerItem < UIWidget
+  background-color: #3b3732
+  border: 1 #5a5248
+  height: 20
+  text-align: left
+  text-offset: 3 0
+
+  $checked:
+    background-color: #0A0B0C
+
+  $focus:
+    background-color: #020203
+    color: #F1981F
+
+GuildContributeItem < UIWidget
+  background-color: #3b3732
+  border: 1 #5a5248
+  height: 20
+  text-align: left
+  text-offset: 3 0
+
+  $checked:
+    background-color: #46413b
+
+  UIWidget
+    id: date
+    anchors.left: parent.left
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    color: #FFAA00
+    width: 85
+    phantom: true
+
+  UIWidget
+    id: line
+    anchors.top: parent.top
+    anchors.left: date.right
+    anchors.bottom: parent.bottom
+    width: 1
+    background-color: black
+    phantom: true
+
+  Label
+    id: value
+    anchors.left: line.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 5
+    text-auto-resize: true
+    color: #FFAA00
+
+    $checked:
+      color: #FFAA00
+
+Panel
+  background-color: #4d4a45
+
+  Panel
+    id: noGuild
+    anchors.fill: parent
+    padding: 16
+
+    Panel
+      id: createSidebar
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.bottom: parent.bottom
+      width: 250
+      background-color: #3e3a35
+      border: 1 #59524a
+
+      Label
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 10
+        text-align: center
+        !text: tr("Guild Setup")
+        text-auto-resize: true
+
+      Panel
+        id: general
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: 118
+        margin-top: 34
+        margin-left: 10
+        margin-right: 10
+        background-color: #47423c
+        border: 1 #5d564d
+        layout: verticalBox
+        padding-left: 8
+        padding-right: 8
+
+        Panel
+          height: 26
+          margin-top: 8
+          layout: horizontalBox
+
+          Label
+            margin-top: 8
+            width: 118
+            color: #FFAA00
+            !text: tr("Join Status")
+
+          GuildComboBox
+            id: status
+
+        Panel
+          height: 26
+          margin-top: 4
+          layout: horizontalBox
+
+          Label
+            margin-top: 8
+            width: 118
+            color: #FFAA00
+            !text: tr("Required Level")
+
+          TextEdit
+            id: reqLevel
+            width: 104
+            text: 50
+            @onSetup: self:setValidCharacters('0123456789')
+
+        Panel
+          height: 26
+          margin-top: 4
+          layout: horizontalBox
+
+          Label
+            margin-top: 8
+            width: 118
+            color: #FFAA00
+            !text: tr("Language")
+
+          GuildComboBox
+            id: language
+
+      Panel
+        id: emblemCard
+        anchors.top: general.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        margin-top: 10
+        margin-left: 10
+        margin-right: 10
+        margin-bottom: 10
+        background-color: #47423c
+        border: 1 #5d564d
+
+        Label
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 8
+          color: #FFDC96
+          !text: tr("Emblem Preview")
+          text-align: center
+          text-auto-resize: true
+
+        Panel
+          id: emblemPreview
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 42
+          size: 96 96
+          image-source: /images/guild_hall/emblems
+          image-clip: 0 0 128 128
+
+        Button
+          anchors.verticalCenter: emblemPreview.verticalCenter
+          anchors.right: emblemPreview.left
+          margin-right: 10
+          width: 28
+          text: <
+          @onClick: modules.game_guild_hall.createPrevEmblem()
+
+        Button
+          anchors.verticalCenter: emblemPreview.verticalCenter
+          anchors.left: emblemPreview.right
+          margin-left: 10
+          width: 28
+          text: >
+          @onClick: modules.game_guild_hall.createNextEmblem()
+
+        GuildActionButton
+          id: emblemListButton
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          margin-left: 8
+          margin-right: 8
+          margin-bottom: 8
+          !text: tr("Browse Emblems")
+          @onClick: modules.game_guild_hall.toggleEmblemList(true, true)
+
+    Panel
+      id: info
+      anchors.top: parent.top
+      anchors.left: createSidebar.right
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-left: 12
+      background-color: #3e3a35
+      border: 1 #59524a
+
+      Label
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 18
+        height: 20
+        color: #FFDC96
+        font: verdana-11px-rounded
+        text-align: center
+        !text: tr("Create Your Guild")
+
+      Label
+        anchors.top: prev.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 10
+        margin-left: 30
+        margin-right: 30
+        height: 32
+        color: #d8d3cb
+        text-wrap: true
+        text-align: center
+        !text: tr("Pick your emblem, choose your join settings, and create a guild ready to grow through perks, storage, prisms, dynasty, and more.")
+
+      Panel
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 28
+        width: 520
+        height: 116
+        background-color: #47423c
+        border: 1 #5d564d
+
+        Label
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 14
+          color: #FFAA00
+          !text: tr("Guild Name")
+          text-align: center
+
+        TextEdit
+          id: name
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.right: parent.right
+          margin-top: 40
+          margin-left: 24
+          margin-right: 24
+          @onSetup: self:setValidCharacters('AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789 -\'')
+
+        GuildActionButton
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          margin-left: 24
+          margin-right: 24
+          margin-bottom: 18
+          !text: tr("Create Guild")
+          @onClick: modules.game_guild_hall.createGuild()
+
+  Panel
+    id: general
+    anchors.fill: parent
+    visible: false
+    padding: 16
+
+    Label
+      id: guildName
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 0
+      height: 16
+      text-align: center
+      color: #e6e6e6
+      font: sans-bold-16px
+      phantom: true
+
+    Panel
+      id: sidePanel
+      anchors.top: guildName.bottom
+      anchors.left: parent.left
+      anchors.bottom: parent.bottom
+      width: 250
+      margin-top: 8
+
+      Panel
+        id: emblem
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        size: 128 128
+        image-source: /images/guild_hall/emblems
+        image-clip: 0 0 128 128
+
+      Panel
+        id: infoPanel
+        anchors.top: emblem.bottom
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 28
+        background-color: #3e3a35
+        border: 1 #59524a
+        layout: verticalBox
+        padding-left: 12
+        padding-right: 10
+
+        Label
+          text-align: center
+          width: 100%
+          margin-top: 6
+          visible: false
+          text-auto-resize: true
+
+        Panel
+          height: 8
+
+        Panel
+          height: 20
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: leaderIcon
+            margin-top: 0
+            margin-left: 1
+
+          Label
+            width: 98
+            color: #FFAA00
+            !text: tr("Guild Leader")
+
+          Label
+            id: leader
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 20
+          margin-top: 3
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: membersIcon
+            margin-top: 0
+            margin-left: 1
+
+          Label
+            width: 98
+            color: #FFAA00
+            !text: tr("Guild Members")
+
+          Label
+            id: members
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 20
+          margin-top: 3
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: storageIcon
+            margin-top: 0
+            margin-left: 1
+
+          Label
+            width: 98
+            color: #FFAA00
+            !text: tr("Storage")
+
+          Label
+            id: storage
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 20
+          margin-top: 3
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: prismsIcon
+            margin-top: 4
+            margin-left: 1
+
+          Label
+            width: 98
+            color: #FFAA00
+            !text: tr("Prisms")
+
+          Label
+            id: prisms
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 20
+          margin-top: 3
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: dynastiesIcon
+            margin-top: 4
+            margin-left: 3
+
+          Label
+            width: 98
+            color: #FFAA00
+            margin-left: -2
+            !text: tr("Dynasty Core")
+
+          Label
+            id: dynasties
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 20
+          margin-top: 3
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: achievementsIcon
+            margin-top: 2
+            margin-left: 0
+
+          Label
+            width: 98
+            color: #FFAA00
+            !text: tr("Achievements")
+
+          Label
+            id: achievements
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 20
+          margin-top: 3
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: killsIcon
+            margin-top: 2
+            margin-left: 0
+
+          Label
+            width: 98
+            color: #FFAA00
+            !text: tr("Guild Kills")
+
+          Label
+            id: kills
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 20
+          margin-top: 3
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: joinStatusIcon
+            margin-top: 0
+            margin-left: 1
+
+          Label
+            width: 98
+            color: #FFAA00
+            !text: tr("Join Status")
+
+          Label
+            id: joinStatus
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 20
+          margin-top: 3
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: languageIcon
+            margin-top: 0
+            margin-left: 1
+
+          Label
+            width: 98
+            color: #FFAA00
+            !text: tr("Language")
+
+          Label
+            id: language
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 20
+          margin-top: 3
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: reqLevelIcon
+            margin-top: 0
+            margin-left: 1
+
+          Label
+            width: 98
+            color: #FFAA00
+            !text: tr("Required Level")
+
+          Label
+            id: reqLevel
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 20
+          margin-top: 3
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: createdIcon
+            margin-top: 0
+            margin-left: 1
+
+          Label
+            width: 98
+            color: #FFAA00
+            !text: tr("Created")
+
+          Label
+            id: created
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 14
+          margin-top: 3
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: rankIcon
+            margin-top: 3
+            margin-left: 1
+
+          Label
+            width: 98
+            color: #FFAA00
+            !text: tr("Rank")
+
+          Label
+            id: rank
+            margin-top: 3
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 14
+          margin-top: 3
+          visible: false
+          layout: horizontalBox
+
+          Label
+            width: 120
+            margin-top: 3
+            color: #FFAA00
+            !text: tr("Lost Wars")
+
+          Label
+            id: lost
+            text-auto-resize: true
+            color: #FFDC96
+
+        Panel
+          height: 14
+          margin-top: 6
+          layout: horizontalBox
+
+          GuildAtlasIcon
+            id: totalIcon
+            margin-top: 3
+            margin-left: 1
+
+          Label
+            width: 98
+            margin-top: 3
+            color: #FFAA00
+            !text: tr("Total Level")
+
+          Label
+            id: total
+            margin-top: 3
+            text-auto-resize: true
+            color: #FFDC96
+            text: 3456
+
+    Panel
+      id: stats
+      anchors.top: guildName.bottom
+      anchors.left: prev.right
+      anchors.right: parent.right
+      height: 160
+      margin-left: 16
+      margin-top: 8
+      background-color: #3e3a35
+      border: 1 #59524a
+      padding-left: 14
+      padding-right: 14
+
+      Label
+        id: upgradesTitle
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 6
+        height: 16
+        !text: tr("Upgrades")
+        text-align: center
+        color: #dfdfdf
+        font: verdana-11px-rounded
+        phantom: true
+
+      Panel
+        height: 22
+
+      Panel
+        id: levelBase
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 22
+        height: 18
+        layout: horizontalBox
+
+        GuildAtlasIcon
+          id: levelIcon
+          size: 18 18
+          margin-top: 1
+
+        Label
+          width: 124
+          color: #FFAA00
+          margin-top: 2
+          !text: tr("Guild Level")
+
+        Label
+          id: level
+          text-align: left
+          margin-left: 3
+          text-auto-resize: true
+          color: #FFDC96
+          text: 0
+
+      UIWidget
+        id: guildExp
+        anchors.top: prev.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 8
+        margin-right: 5
+        height: 19
+        background-color: #28221d
+        phantom: false
+        font: verdana-11px-rounded
+        border: 1 black
+
+        UIWidget
+          id: bar
+          anchors.top: parent.top
+          anchors.bottom: parent.bottom
+          anchors.left: parent.left
+          margin: 1
+          image-source: /images/ui/battlepass
+
+        Label
+          id: text
+          anchors.fill: parent
+          margin-top: 1
+          text-align: center
+          font: verdana-11px-rounded
+
+      Panel
+        anchors.top: prev.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 5
+        height: 14
+        visible: false
+        layout: horizontalBox
+
+        Label
+          width: 150
+          color: #FFAA00
+          !text: tr("Next Level Gold")
+
+        Label
+          id: nextLevel
+          text-align: left
+          text-auto-resize: true
+          color: #FFDC96
+          text: 0
+
+      Panel
+        id: goldBase
+        anchors.top: prev.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 5
+        height: 14
+        layout: horizontalBox
+        visible: false
+
+        Label
+          width: 150
+          color: #FFAA00
+          !text: tr("Current Gold")
+
+        Label
+          id: gold
+          text-align: left
+          text-auto-resize: true
+          color: #FFDC96
+          text: 0
+
+      Panel
+        id: contributionBase
+        anchors.top: guildExp.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 10
+        height: 18
+        layout: horizontalBox
+        phantom: false
+
+        GuildAtlasIcon
+          id: contributionIcon
+          size: 18 18
+          margin-top: 1
+          margin-left: 1
+
+        Label
+          width: 124
+          color: #FFAA00
+          margin-top: 2
+          !text: tr("Gold Contribution")
+          phantom: true
+
+        Label
+          id: contribution
+          text-align: left
+          margin-left: 3
+          text-auto-resize: true
+          color: #FFDC96
+          text: 0
+
+      Panel
+        id: premiumContributionBase
+        anchors.top: contributionBase.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 6
+        height: 18
+        layout: horizontalBox
+        phantom: false
+
+        GuildAtlasIcon
+          id: premiumContributionIcon
+          size: 18 18
+          margin-top: 1
+          margin-left: 1
+
+        Label
+          width: 130
+          color: #FFAA00
+          margin-top: 2
+          !text: tr("Premium Contribution")
+          phantom: true
+
+        Label
+          id: premiumContribution
+          text-align: left
+          margin-left: 3
+          text-auto-resize: true
+          color: #FFDC96
+          text: 0
+
+      GuildActionButton
+        id: donateButton
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        margin-bottom: 6
+        margin-left: 3
+        width: 118
+        height: 30
+        text-offset: 12 0
+        !text: tr("Donate")
+        @onClick: modules.game_guild_hall.showDeposit()
+
+        GuildAtlasIcon
+          id: donateIcon
+          anchors.left: parent.left
+          anchors.verticalCenter: parent.verticalCenter
+          margin-left: 2
+          margin-top: 0
+
+      GuildActionButton
+        id: premiumDonateButton
+        anchors.bottom: parent.bottom
+        anchors.left: donateButton.right
+        margin-bottom: 6
+        margin-left: 6
+        width: 158
+        height: 30
+        text-offset: 12 0
+        !text: tr("Premium Donate")
+        @onClick: modules.game_guild_hall.showPremiumDeposit()
+
+        GuildAtlasIcon
+          id: premiumDonateIcon
+          anchors.left: parent.left
+          anchors.verticalCenter: parent.verticalCenter
+          margin-left: 8
+          margin-top: 0
+
+      GuildActionButton
+        id: withdrawButton
+        anchors.bottom: parent.bottom
+        anchors.left: premiumDonateButton.right
+        margin-bottom: 6
+        margin-left: 6
+        width: 118
+        height: 30
+        text-offset: 12 0
+        !text: tr("Withdraw")
+        visible: false
+        @onClick: modules.game_guild_hall.showWithdraw()
+
+        GuildAtlasIcon
+          id: withdrawIcon
+          anchors.left: parent.left
+          anchors.verticalCenter: parent.verticalCenter
+          margin-left: 8
+          margin-top: 0
+
+      GuildActionButton
+        id: levelUp
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        width: 128
+        height: 30
+        !text: tr("Level Up")
+        margin-bottom: 6
+        margin-right: 5
+        enabled: false
+        @onClick: modules.game_guild_hall.levelUp()
+        visible: false
+
+      GuildActionButton
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        width: 138
+        height: 30
+        text-offset: 12 0
+        margin-bottom: 6
+        margin-right: 5
+        !text: tr("Contribution")
+        @onClick: modules.game_guild_hall.showContributions()
+
+        GuildAtlasIcon
+          id: contributionButtonIcon
+          anchors.left: parent.left
+          anchors.verticalCenter: parent.verticalCenter
+          margin-left: 8
+          margin-top: 0
+
+    Panel
+      id: motdPanel
+      anchors.top: prev.bottom
+      anchors.bottom: parent.bottom
+      anchors.left: prev.left
+      anchors.right: parent.right
+      margin-top: 12
+      background-color: #3e3a35
+      border: 1 #59524a
+      padding-left: 12
+      padding-right: 12
+
+      Label
+        id: messageOfDayTitle
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 6
+        height: 16
+        !text: tr("Message of The Day")
+        text-align: center
+        color: #dfdfdf
+        font: verdana-11px-rounded
+        phantom: true
+
+      Label
+        id: motd
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        margin-top: 18
+        text-wrap: true
+
+    Panel
+      id: deposit
+      anchors.centerIn: parent
+      size: 266 146
+      phantom: false
+      visible: false
+      background-color: #3e3a35
+      border: 1 #59524a
+
+      Panel
+        anchors.fill: parent
+        margin: 6
+        background-color: #47413b
+
+      Label
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 10
+        !text: tr("Deposit Gold")
+        text-auto-resize: true
+
+      UIItem
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 34
+        margin-left: 12
+        size: 32 32
+        item-id: 3031
+        virtual: true
+
+      SpinBox
+        id: gold
+        anchors.top: parent.top
+        anchors.left: prev.right
+        anchors.right: parent.right
+        margin-top: 34
+        margin-right: 14
+        minimum: 0
+        maximum: 999
+        value: 0
+        mouse-scroll: false
+        focusable: true
+
+      Label
+        id: playerBalanceLabel
+        anchors.top: prev.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 10
+        text-align: center
+        color: #FFAA00
+        !text: tr("Your Balance: 0")
+
+      GuildActionButton
+        id: closeDeposit
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        width: 72
+        margin-left: 10
+        margin-bottom: 10
+        !text: tr("Close")
+        @onClick: self:getParent():hide()
+
+      GuildActionButton
+        id: depositButton
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        width: 72
+        margin-right: 10
+        margin-bottom: 10
+        !text: tr("Deposit")
+        @onClick: modules.game_guild_hall.deposit()
+
+      GuildActionButton
+        anchors.right: depositButton.left
+        anchors.left: closeDeposit.right
+        anchors.bottom: depositButton.bottom
+        margin-right: 12
+        margin-left: 12
+        !text: tr("Reset")
+        @onClick: modules.game_guild_hall.resetDeposit()
+
+    Panel
+      id: premiumDeposit
+      anchors.centerIn: parent
+      size: 276 146
+      phantom: false
+      visible: false
+      background-color: #3e3a35
+      border: 1 #59524a
+
+      Panel
+        anchors.fill: parent
+        margin: 6
+        background-color: #47413b
+
+      Label
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 10
+        !text: tr("Deposit Premium Points")
+        text-auto-resize: true
+
+      Label
+        id: premiumCoinIcon
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 36
+        margin-left: 12
+        size: 15 15
+        image-source: /images/guild_hall/tibia_coin
+
+      SpinBox
+        id: points
+        anchors.top: parent.top
+        anchors.left: premiumCoinIcon.right
+        anchors.right: parent.right
+        margin-top: 34
+        margin-left: 8
+        margin-right: 14
+        minimum: 0
+        maximum: 999999999
+        value: 0
+        mouse-scroll: false
+        focusable: true
+
+      Label
+        id: playerPremiumBalanceLabel
+        anchors.top: points.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 10
+        text-align: center
+        color: #FFAA00
+        !text: tr("Your Premium Points: 0")
+
+      GuildActionButton
+        id: closePremiumDeposit
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        width: 72
+        margin-left: 10
+        margin-bottom: 10
+        !text: tr("Close")
+        @onClick: self:getParent():hide()
+
+      GuildActionButton
+        id: premiumDepositButton
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        width: 72
+        margin-right: 10
+        margin-bottom: 10
+        !text: tr("Deposit")
+        @onClick: modules.game_guild_hall.premiumDeposit()
+
+      GuildActionButton
+        anchors.right: premiumDepositButton.left
+        anchors.left: closePremiumDeposit.right
+        anchors.bottom: premiumDepositButton.bottom
+        margin-right: 12
+        margin-left: 12
+        !text: tr("Reset")
+        @onClick: modules.game_guild_hall.resetPremiumDeposit()
+
+    Panel
+      id: withdraw
+      anchors.centerIn: parent
+      size: 266 146
+      phantom: false
+      visible: false
+      background-color: #3e3a35
+      border: 1 #59524a
+
+      Panel
+        anchors.fill: parent
+        margin: 6
+        background-color: #47413b
+        border: 1 #655d54
+
+      Label
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 10
+        !text: tr("Withdraw Gold")
+        text-auto-resize: true
+
+      UIItem
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 34
+        margin-left: 12
+        size: 32 32
+        item-id: 3031
+        virtual: true
+
+      SpinBox
+        id: gold
+        anchors.top: parent.top
+        anchors.left: prev.right
+        anchors.right: parent.right
+        margin-top: 34
+        margin-right: 14
+        minimum: 0
+        maximum: 999999999
+        value: 0
+        mouse-scroll: false
+        focusable: true
+
+      Label
+        id: guildBalanceLabel
+        anchors.top: prev.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: 10
+        text-align: center
+        color: #FFAA00
+        !text: tr("Guild Balance: 0")
+
+      GuildActionButton
+        id: closeWithdraw
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        width: 72
+        margin-left: 10
+        margin-bottom: 10
+        !text: tr("Close")
+        @onClick: self:getParent():hide()
+
+      GuildActionButton
+        id: withdrawButton
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        width: 72
+        margin-right: 10
+        margin-bottom: 10
+        !text: tr("Withdraw")
+        @onClick: modules.game_guild_hall.withdraw()
+
+      GuildActionButton
+        anchors.right: withdrawButton.left
+        anchors.left: closeWithdraw.right
+        anchors.bottom: withdrawButton.bottom
+        margin-right: 12
+        margin-left: 12
+        !text: tr("Reset")
+        @onClick: modules.game_guild_hall.resetWithdraw()
+
+    Panel
+      id: contributionPage
+      anchors.fill: parent
+      phantom: false
+      visible: false
+      background-color: #3e3a35
+      border: 1 #59524a
+
+      CheckBox
+        id: showGold
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 8
+        margin-left: -70
+        width: 110
+        checked: true
+        !text: tr("Show Gold")
+        color: #dfdfdf
+        @onCheckChange: modules.game_guild_hall.selectContributionCurrency('gold')
+
+      CheckBox
+        id: showPremium
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 8
+        margin-left: 70
+        width: 150
+        !text: tr("Show Premium")
+        color: #dfdfdf
+        @onCheckChange: modules.game_guild_hall.selectContributionCurrency('premium')
+
+      Panel
+        id: contributionPlayersBase
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        margin-top: 35
+        margin-left: 5
+        margin-bottom: 10
+        width: 170
+        padding: 0
+        background-color: #47413b
+        border: 1 #59524a
+
+        Label
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 2
+          !text: tr("Players")
+          text-auto-resize: true
+
+        UIScrollArea
+          id: contributionPlayerList
+          anchors.fill: parent
+          margin-top: 17
+          margin-left: 2
+          margin-bottom: 5
+          margin-right: 20
+          layout: verticalBox
+          vertical-scrollbar: contributionPlayerListScrollBar
+
+        VerticalScrollBar
+          id: contributionPlayerListScrollBar
+          anchors.top: contributionPlayerList.top
+          anchors.bottom: contributionPlayerList.bottom
+          anchors.right: parent.right
+          background-color: #3b3732
+          border: 1 #5a5248
+          margin-right: 4
+          step: 14
+          pixels-scroll: true
+
+      UIWidget
+        id: contributionTotalBase
+        anchors.left: contributionPlayersBase.right
+        anchors.right: parent.right
+        anchors.bottom: contributionPlayersBase.bottom
+        margin-left: 10
+        margin-right: 10
+        height: 40
+        background-color: #47413b
+        border: 1 #59524a
+
+        Label
+          id: averageLabel
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 5
+          margin-left: 5
+          !text: tr("Average")
+
+        Label
+          id: average
+          anchors.top: averageLabel.top
+          anchors.left: parent.left
+          margin-left: 60
+          text: 0
+          color: #FDEE00
+          text-auto-resize: true
+
+        UIWidget
+          id: averageLayer
+          anchors.left: averageLabel.left
+          anchors.right: average.right
+          height: 20
+          anchors.top: averageLabel.top
+
+        Label
+          id: totalLabel
+          anchors.top: averageLabel.bottom
+          anchors.left: parent.left
+          margin-top: 1
+          margin-left: 5
+          !text: tr("Total")
+
+        Label
+          id: total
+          anchors.top: totalLabel.top
+          anchors.left: parent.left
+          margin-left: 60
+          text: 0
+          color: #FDEE00
+          text-auto-resize: true
+
+        UIWidget
+          id: totalLayer
+          anchors.left: totalLabel.left
+          anchors.right: total.right
+          height: 20
+          anchors.top: totalLabel.top
+
+      Panel
+        id: contributionHistoryBase
+        anchors.top: contributionPlayersBase.top
+        anchors.left: contributionPlayersBase.right
+        anchors.right: parent.right
+        anchors.bottom: contributionTotalBase.top
+        margin-bottom: 10
+        margin-left: 10
+        margin-right: 10
+        padding: 0
+        background-color: #47413b
+        border: 1 #59524a
+
+        Label
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 2
+          !text: tr("Contribution (last 30 days)")
+          text-auto-resize: true
+
+        UIScrollArea
+          id: contributionHistoryList
+          anchors.fill: parent
+          margin-top: 17
+          margin-left: 2
+          margin-bottom: 5
+          margin-right: 20
+          layout: verticalBox
+          vertical-scrollbar: contributionHistoryListScrollBar
+
+        VerticalScrollBar
+          id: contributionHistoryListScrollBar
+          anchors.top: contributionHistoryList.top
+          anchors.bottom: contributionHistoryList.bottom
+          anchors.right: parent.right
+          background-color: #3b3732
+          border: 1 #5a5248
+          margin-right: 4
+          step: 14
+          pixels-scroll: true
+
+      GuildActionButton
+        id: backButton
+        anchors.bottom: contributionHistoryBase.top
+        anchors.right: contributionHistoryBase.right
+        margin-bottom: 5
+        text-auto-resize: true
+        !text: tr("Back")
+        @onClick: modules.game_guild_hall.hideContributions()

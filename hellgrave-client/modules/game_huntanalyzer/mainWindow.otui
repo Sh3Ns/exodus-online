@@ -1,0 +1,61 @@
+AnalyzerButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  id: analyzerButton
+  height: 24
+  margin-bottom: 2
+  padding: 4 12
+  text-offset: 0 0
+  text-align: center
+  color: white
+  &onClick: onexphButtonClick
+
+  $hover:
+    image-color: #9a958e
+    color: white
+
+  $focus:
+    image-color: #dfdfdf
+    color: white
+
+  $disabled:
+    color: #9a9a9a
+
+MiniWindow
+  !text: tr('Analyzer')
+  color: #8F8F8F
+  icon: /images/topbuttons/analyzers
+  height: 150
+  &save: true
+
+  MiniWindowContents
+    padding-left: 5
+    padding-right: 5
+    background-color: #4f4f4f
+    image-source: /images/ui/panel_flat
+    image-border: 1
+    image-color: #6a6a6a
+    layout: verticalBox
+  
+    AnalyzerButton
+      margin-top: 5
+      text: Exp Tracker
+      &onClick: showExpWindow
+
+    AnalyzerButton
+      margin-top: 5
+      text: Loot Tracker
+      &onClick: showDropWindow
+
+    AnalyzerButton
+      margin-top: 5
+      text: Kill Tracker
+      &onClick: showKillWindow
+
+    AnalyzerButton
+      margin-top: 5
+      color: #b22222
+      text: Start new hunt
+      &onClick: resetSessionAll  

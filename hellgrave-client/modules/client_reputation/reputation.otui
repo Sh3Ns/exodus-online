@@ -1,0 +1,97 @@
+MiniWindow
+  id: reputationWindow
+  !text: tr('Reputation')
+  icon: /images/topbuttons/reputation
+  @onClose: modules.client_reputation.onMiniWindowClose()
+  visible: false
+  &save: true
+
+  MiniWindowContents
+    layout: verticalBox
+    spacing: 5
+    padding-left: 4
+    padding-right: 4
+    padding-top: 4
+    padding-bottom: 4
+
+    Panel
+      id: contentsPanel
+      layout:
+        type: verticalBox
+        spacing: 4
+        fit-children: true
+
+ReputationPanel < Panel
+  height: 96
+  width: 190
+  background-color: alpha
+  padding: 3
+
+  Label
+    id: factionImage
+    anchors.top: parent.top
+    anchors.left: parent.left
+    size: 24 24
+    image-size: 24 24
+    image-fixed-ratio: true
+
+  Label
+    id: name
+    anchors.top: parent.top
+    anchors.left: factionImage.right
+    anchors.right: parent.right
+    margin-left: 6
+    height: 18
+    font: verdana-11px-antialised
+    color: #ffffff
+    text-align: left
+
+  Label
+    id: rank
+    anchors.top: name.bottom
+    anchors.left: name.left
+    anchors.right: parent.right
+    margin-top: 1
+    height: 16
+    font: verdana-11px-antialised
+    text-align: left
+
+  ProgressBar
+    id: reputationBar
+    anchors.top: rank.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+    height: 16
+    minimum: 0
+    maximum: 100
+    value: 0
+    image-source: /images/ui/progressbar
+    font: verdana-11px-antialised
+
+  Label
+    id: coinImage
+    image-source: /images/game/reputation/coins
+    anchors.top: reputationBar.bottom
+    anchors.left: parent.left
+    margin-top: 7
+    size: 12 12
+    image-size: 12 12
+    image-fixed-ratio: true
+
+  Label
+    id: coinLabel
+    anchors.left: coinImage.right
+    anchors.right: parent.right
+    anchors.verticalCenter: coinImage.verticalCenter
+    margin-left: 2
+    height: 16
+    font: verdana-11px-antialised
+    color: #ff9900
+    text-align: left
+
+  HorizontalSeparator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-bottom: 1

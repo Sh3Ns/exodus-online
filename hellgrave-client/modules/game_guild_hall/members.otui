@@ -1,0 +1,183 @@
+EntryPanel < Panel
+  height: 68
+  padding: 1 2
+  layout: horizontalBox
+
+  $alternate:
+    background: #aaaaaa22
+  
+  $!alternate:
+    background: #aaaaaa11
+
+  $on:
+    background: #00ff0022
+
+  Label
+    id: position
+    text-align: center
+    width: 36
+    !text: tr("1.")
+    color: #FFDC96
+  
+  UIWidget
+    id: vocation
+    image-source: /images/guild_hall/sorcerer
+    size: 64 64
+    image-size: 64 64
+    margin-left: 4
+    margin-right: 8
+    margin-top: 1
+  
+  Label
+    id: name
+    text-align: center
+    width: 180
+    !text: tr("Player Name")
+    color: #FFAA00
+  
+  Panel
+    id: options
+    width: 96
+    
+    UIButton
+      id: chat
+      fixed-size: true
+      size: 18 18
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 10
+      image-source: /images/game/npcicons/icon_chat
+      !tooltip: tr("Open private chat")
+    
+    GuildActionButton
+      id: menu
+      fixed-size: true
+      width: 34
+      height: 26
+      anchors.right: parent.right
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 8
+      text-offset: 0 0
+      !text: tr("=")
+  
+  Label
+    id: rank
+    text-align: center
+    !text: tr("Leader")
+    width: 150
+    color: #FFDC96
+  
+  Label
+    id: level
+    text-align: center
+    !text: tr("123")
+    width: 90
+    color: #FFAA00
+
+  UIWidget
+    id: online
+    margin-top: 26
+    margin-left: 12
+    width: 108
+    text-auto-resize: true
+    !text: tr("Online")
+  
+  Panel
+    id: status
+    height: 11
+    fixed-size: true
+    phantom: false
+    margin-left: 10
+
+HeaderLabel < UIWidget
+  font: verdana-11px-rounded
+  background-color: #3b3b3b
+  color: #dfdfdfff
+  height: 30
+  focusable: false
+  text-offset: 0 0
+  border: 1 #595959
+  padding: 5 10 5 10
+  enabled: true
+  focusable: false
+
+Panel
+  background-color: #3e3a35
+  padding: 16
+
+  Panel
+    id: topLabels
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 30
+    layout: horizontalBox
+
+    HeaderLabel
+      !text: tr("#")
+      width: 36
+
+    HeaderLabel
+      !text: tr("Voc.")
+      width: 80
+
+    HeaderLabel
+      !text: tr("Name")
+      width: 180
+
+    HeaderLabel
+      !text: tr("Options")
+      width: 96
+
+    HeaderLabel
+      !text: tr("Rank")
+      width: 150
+
+    HeaderLabel
+      !text: tr("Level")
+      width: 90
+      !tooltip: tr("The yellow color indicates proficiency level")
+
+    HeaderLabel
+      !text: tr("Status")
+      width: 120
+
+  GuildActionButton
+    id: inviteButton
+    anchors.left: inviteEdit.right
+    anchors.verticalCenter: inviteEdit.verticalCenter
+    width: 96
+    margin-left: 10
+    text-offset: 0 0
+    !text: tr("Invite")
+
+  TextEdit
+    id: inviteEdit
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    width: 420
+    margin-left: 10
+    placeholder: tr("Type a player name to invite")
+
+  UIScrollArea
+    id: list
+    anchors.top: topLabels.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: inviteEdit.top
+    vertical-scrollbar: scrollbar
+    background-color: #47413b
+    border: 1 #59524a
+    margin-right: 12
+    margin-bottom: 8
+    layout: verticalBox
+
+  VerticalScrollBar
+    id: scrollbar
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    background-color: #3b3732
+    border: 1 #5a5248
+    step: 50
+    pixels-scroll: true

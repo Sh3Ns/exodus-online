@@ -1,0 +1,90 @@
+ChannelListLabel < Label
+  font: verdana-11px-monochrome
+  background-color: alpha
+  text-offset: 2 0
+  focusable: true
+
+  $focus:
+    background-color: #ffffff22
+    color: #ffffff
+
+ConsoleDialogButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 24
+  padding: 4 12
+  text-offset: 0 1
+  text-align: center
+  color: white
+  change-cursor-image: true
+  cursor: pointer
+
+  $hover:
+    image-color: #9a958e
+    color: white
+
+  $focus:
+    image-color: #dfdfdf
+    color: white
+
+  $disabled:
+    color: #9a9a9a
+    image-color: #6d6963
+
+MainWindow
+  id: channelsWindow
+  !text: tr('Channels')
+  size: 250 238
+  @onEscape: self:destroy()
+
+  TextList
+    id: channelList
+    vertical-scrollbar: channelsScrollBar
+    anchors.fill: parent
+    anchors.bottom: next.top
+    margin-bottom: 10
+    padding: 1
+    focusable: false
+
+  Label
+    id: openPrivateChannelWithLabel
+    !text: tr('Open a private message channel:')
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    text-align: center
+    margin-bottom: 2
+
+  TextEdit
+    id: openPrivateChannelWith
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    margin-bottom: 10
+
+  ConsoleDialogButton
+    id: buttonOpen
+    !text: tr('Open')
+    width: 64
+    anchors.right: next.left
+    anchors.bottom: parent.bottom
+    margin-right: 10
+    @onClick: self:getParent():onEnter()
+
+  ConsoleDialogButton
+    id: buttonCancel
+    !text: tr('Cancel')
+    width: 64
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: self:getParent():destroy()
+
+  VerticalScrollBar
+    id: channelsScrollBar
+    anchors.top: channelList.top
+    anchors.bottom: channelList.bottom
+    anchors.right: channelList.right
+    step: 14
+    pixels-scroll: true

@@ -1,0 +1,64 @@
+VipDialogButton < UIButton
+  font: verdana-11px-rounded
+  image-source: /images/ui/button_white
+  image-color: #817d77
+  image-border: 6
+  height: 24
+  padding: 4 12
+  text-offset: 0 1
+  text-align: center
+  color: white
+  change-cursor-image: true
+  cursor: pointer
+
+  $hover:
+    image-color: #9a958e
+    color: white
+
+  $focus:
+    image-color: #dfdfdf
+    color: white
+
+  $disabled:
+    color: #9a9a9a
+    image-color: #6d6963
+
+MainWindow
+  size: 256 128
+  !text: tr('Add to VIP list')
+  @onEnter: modules.game_viplist.addVip()
+  @onEscape: modules.game_viplist.destroyAddWindow()
+
+  Label
+    !text: tr('Please enter a character name:')
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+
+  TextEdit
+    id: name
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 4
+
+  HorizontalSeparator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    margin-bottom: 10
+
+  VipDialogButton
+    !text: tr('Ok')
+    width: 64
+    anchors.right: next.left
+    anchors.bottom: parent.bottom
+    margin-right: 10
+    @onClick: modules.game_viplist.addVip()
+
+  VipDialogButton
+    !text: tr('Cancel')
+    width: 64
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_viplist.destroyAddWindow()

@@ -1,0 +1,170 @@
+MainWindow
+  size: 340 560
+  !text: tr("Guild Settings")
+  background-color: #4d4a45
+  border: 1 #5f5b55
+  
+  Panel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 105
+    background-color: #3e3a35
+    border: 1 #59524a
+    layout: verticalBox
+    padding-left: 6
+    padding-right: 6
+
+    Label
+      width: 100%
+      margin-top: 6
+      text-align: center
+      !text: tr("General")
+      text-auto-resize: true
+
+    Panel
+      height: 23
+      margin-top: 4
+      layout: horizontalBox
+
+      Label
+        margin-top: 9
+        width: 122
+        color: #FFAA00
+        !text: tr("Join Status")
+
+      GuildComboBox
+        id: status
+
+    Panel
+      height: 23
+      margin-top: 5
+      layout: horizontalBox
+
+      Label
+        margin-top: 9
+        width: 122
+        color: #FFAA00
+        !text: tr("Required Level")
+
+      TextEdit
+        id: reqLevel
+        width: 91
+
+    Panel
+      height: 23
+      margin-top: 5
+      layout: horizontalBox
+
+      Label
+        margin-top: 9
+        width: 122
+        color: #FFAA00
+        !text: tr("Language")
+
+      GuildComboBox
+        id: language
+
+  Panel
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+    height: 152
+    background-color: #3e3a35
+    border: 1 #59524a
+
+    Label
+      anchors.top: parent.top
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 6
+      !text: tr("Emblem")
+      text-auto-resize: true
+
+    Panel
+      id: emblem
+      anchors.top: parent.top
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 24
+      image-source: /images/guild_hall/emblems
+      image-rect: 0 0 85 85
+      size: 85 85
+
+    GuildActionButton
+      anchors.verticalCenter: emblem.verticalCenter
+      anchors.right: emblem.left
+      width: 24
+      !text: tr("<")
+      visible: false
+      @onClick: modules.game_guild_hall.settingsPrevEmblem()
+
+    GuildActionButton
+      anchors.verticalCenter: emblem.verticalCenter
+      anchors.left: emblem.right
+      width: 24
+      !text: tr(">")
+      visible: false
+      @onClick: modules.game_guild_hall.settingsNextEmblem()
+
+    GuildActionButton
+      anchors.bottom: parent.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-bottom: 10
+      !text: tr("Emblem List")
+      width: 130
+      @onClick: modules.game_guild_hall.toggleEmblemList(true, false)
+  
+  Panel
+    id: motdPanel
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 210
+    margin-top: 5
+    margin-bottom: 46
+    background-color: #3e3a35
+    border: 1 #59524a
+
+    Label
+      id: motdTitle
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 6
+      height: 16
+      !text: tr("Message of the Day")
+      text-align: center
+      color: #dfdfdf
+      font: verdana-11px-rounded
+      phantom: true
+
+    MultilineTextEdit
+      id: motd
+      anchors.top: motdTitle.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-top: 4
+      margin-left: 4
+      margin-right: 4
+      margin-bottom: 4
+      text-wrap: true
+      max-length: 420
+
+  GuildActionButton
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 10
+    margin-bottom: 1
+    width: 104
+    !text: tr("Close")
+    @onClick: modules.game_guild_hall.closeSettings()
+
+  GuildActionButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 10
+    margin-bottom: 1
+    width: 104
+    !text: tr("Save")
+    @onClick: modules.game_guild_hall.saveSettings()

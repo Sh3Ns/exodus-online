@@ -1,0 +1,298 @@
+/*
+*  Copyright (c) 2014-2023 Object Builder <https://github.com/ottools/ObjectBuilder>
+*
+*  Permission is hereby granted, free of charge, to any person obtaining a copy
+*  of this software and associated documentation files (the "Software"), to deal
+*  in the Software without restriction, including without limitation the rights
+*  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+*  copies of the Software, and to permit persons to whom the Software is
+*  furnished to do so, subject to the following conditions:
+*
+*  The above copyright notice and this permission notice shall be included in
+*  all copies or substantial portions of the Software.
+*
+*  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+*  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+*  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+*  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+*  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+*  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+*  THE SOFTWARE.
+*/
+
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace mg "library://ns.mignari.com/mg";
+@namespace nail "library://ns.nail.com/naillib";
+@namespace otlib "otlib.components.*";
+@namespace ob "ob.components.*";
+
+global
+{
+    chromeColor: #34383E;
+    rollOverColor: #5F6B7A;
+    selectionColor: #4D5B6D;
+    color: #D9DEE5;
+    contentBackgroundColor: #34383E;
+    focusedTextSelectionColor: #171A1F;
+    symbolColor: #D9DEE5;
+    fontFamily: verdana;
+    modal-transparency-blur: 0;
+    modal-transparency: 0.3;
+    modalTransparencyColor: #565C66;
+}
+
+/*
+//--------------------------------------
+// mx components
+//--------------------------------------
+*/
+
+mx|HDividedBox
+{
+    backgroundColor: #3E4248;
+    dividerSkin: ClassReference("ob.components.skins.DividerSkin");
+    dividerColor: #171A1F;
+    horizontalGap: 6;
+}
+
+mx|ProgressBar
+{
+    barSkin: ClassReference("com.mignari.skins.ProgressBarSkin");
+}
+
+mx|ScrollBar
+{
+    paddingBottom: 0;
+    paddingLeft: 0;
+    paddingRight: 0;
+    paddingTop: 0;
+    thumbOffset: 0;
+    thumbSkin: ClassReference("com.mignari.skins.ScrollBarThumbSkin");
+    trackSkin: ClassReference("com.mignari.skins.ScrollBarTrackSkin");
+    downArrowSkin: ClassReference(null);
+    upArrowSkin: ClassReference(null);
+}
+
+mx|ToolTip
+{
+    backgroundAlpha: 1.0;
+    backgroundColor: #202328;
+    borderColor: #7E8DA0;
+    color: #D9DEE5;
+    cornerRadius: 0;
+    fontSize: 11;
+}
+
+/*
+//--------------------------------------
+// spark components
+//--------------------------------------
+*/
+
+s|Application
+{
+    backgroundColor: #3E4248;
+    skinClass: ClassReference("spark.skins.spark.ApplicationSkin");
+}
+
+s|BorderContainer
+{
+    backgroundColor: #3E4248;
+    borderStyle : "solid";
+    cornerRadius: 0;
+    skinClass: ClassReference("spark.skins.spark.BorderContainerSkin");
+}
+
+s|Button
+{
+    chromeColor: #4B5058;
+    color: #D9DEE5;
+    symbolColor: #D9DEE5;
+    focusColor: #7E8DA0;
+    skinClass: ClassReference("spark.skins.spark.ButtonSkin");
+}
+
+s|CheckBox
+{
+    skinClass: ClassReference("com.mignari.skins.SwitchSkin");
+}
+
+s|ComboBox
+{
+    chromeColor: #4B5058;
+    color: #D9DEE5;
+    contentBackgroundColor: #34383E;
+    paddingBottom: 3;
+    paddingLeft: 3;
+    paddingRight: 3;
+    paddingTop: 5;
+    skinClass: ClassReference("spark.skins.spark.ComboBoxSkin");
+}
+
+s|DropDownList
+{
+    chromeColor: #4B5058;
+    color: #D9DEE5;
+    contentBackgroundColor: #34383E;
+    skinClass: ClassReference("spark.skins.spark.DropDownListSkin");
+}
+
+s|HScrollBar
+{
+    skinClass: ClassReference("com.mignari.skins.HScrollBarSkin");
+}
+
+s|HSlider
+{
+    skinClass: ClassReference("nail.components.skins.HSliderSkin");
+}
+
+s|NumericStepper
+{
+    chromeColor: #4B5058;
+    color: #171A1F;
+    contentBackgroundColor: #AEB5BF;
+    skinClass: ClassReference("com.mignari.skins.NumericStepperSkin");
+}
+
+s|RadioButton
+{
+    skinClass: ClassReference("com.mignari.skins.RadioButtonSkin");
+}
+
+s|SkinnableComponent
+{
+    errorSkin: ClassReference("com.mignari.skins.ErrorSkin");
+    focusSkin: ClassReference("com.mignari.skins.FocusSkin");
+}
+
+s|TextInput
+{
+    paddingBottom: 3;
+    paddingLeft: 3;
+    paddingRight: 3;
+    paddingTop: 5;
+    color: #171A1F;
+    borderColor: #171A1F;
+    contentBackgroundColor: #AEB5BF;
+    focusedTextSelectionColor: #CCCCCC;
+    skinClass: ClassReference("com.mignari.skins.TextInputSkin");
+}
+
+nail|GroupBox
+{
+    backgroundColor: #3E4248;
+    borderColor: #171A1F;
+    shadowColor: #4B5058;
+    skinClass: ClassReference("com.mignari.skins.GroupBoxSkin");
+}
+
+s|ToggleButton
+{
+    chromeColor: #4B5058;
+    color: #D9DEE5;
+    symbolColor: #D9DEE5;
+    focusColor: #7E8DA0;
+    skinClass: ClassReference("nail.components.skins.ToggleButtonSkin");
+}
+
+s|VScrollBar
+{
+    skinClass: ClassReference("com.mignari.skins.VScrollBarSkin");
+}
+
+s|VSlider
+{
+    skinClass: ClassReference("nail.components.skins.VSliderSkin");
+}
+
+/*
+//--------------------------------------
+// mg components
+//--------------------------------------
+*/
+
+mg|GroupBox
+{
+    backgroundColor: #3E4248;
+    borderColor: #171A1F;
+    shadowColor: #4B5058;
+    skinClass: ClassReference("com.mignari.skins.GroupBoxSkin");
+}
+
+mg|GroupCheckBox
+{
+    backgroundColor: #3E4248;
+    borderColor: #171A1F;
+    shadowColor: #4B5058;
+    skinClass: ClassReference("com.mignari.skins.GroupSwitchSkin");
+}
+
+mg|TitleWindow
+{
+    backgroundColor: #3E4248;
+    chromeColor: #4B5058;
+    contentBackgroundColor: #3E4248;
+    borderColor: #171A1F;
+    color: #D9DEE5;
+}
+
+mg|ProgressBar
+{
+    barSkin: ClassReference("com.mignari.skins.ProgressBarSkin");
+}
+
+mg|ProgressWidget
+{
+    skinClass: ClassReference("com.mignari.skins.ProgressWidgetSkin");
+}
+
+nail|TabNavigator
+{
+    chromeColor: #4B5058;
+    color: #D9DEE5;
+    contentBackgroundColor: #3E4248;
+}
+
+/*
+//--------------------------------------
+// otlib components
+//--------------------------------------
+*/
+
+otlib|AmountNumericStepper
+{
+    skinClass: ClassReference("otlib.components.skins.AmountNumericStepperSkin");
+}
+
+otlib|DirectionButton
+{
+    skinClass: ClassReference("otlib.components.skins.DirectionButtonSkin");
+}
+
+otlib|HSIColorPicker
+{
+    skinClass: ClassReference("otlib.components.skins.HSIColorPickerSkin");
+}
+
+otlib|EightBitColorPicker
+{
+    skinClass: ClassReference("otlib.components.skins.EightBitColorPickerSkin");
+}
+
+otlib|PatternSlider
+{
+    skinClass: ClassReference("otlib.components.skins.PatternSliderSkin");
+}
+
+/*
+//--------------------------------------
+// ob components
+//--------------------------------------
+*/
+
+ob|Toolbar
+{
+    skinClass: ClassReference("ob.components.skins.ToolbarSkin");
+}

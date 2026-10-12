@@ -1,0 +1,9 @@
+Module
+  name: game_guild_hall
+  description: Guild Hall
+  author: Alex
+  scripts: [ guild_hall ]
+  autoload: true
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

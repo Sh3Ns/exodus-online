@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SparkButtonSkin xmlns:fx="http://ns.adobe.com/mxml/2009"
+                   xmlns:s="library://ns.adobe.com/flex/spark"
+                   minWidth="19"
+                   minHeight="19"
+                   alpha.disabledStates="0.5">
+
+    <fx:Metadata>
+        <![CDATA[[HostComponent("spark.components.Button")]]]>
+    </fx:Metadata>
+
+    <s:states>
+        <s:State name="up" />
+        <s:State name="over" stateGroups="overStates" />
+        <s:State name="down" stateGroups="downStates" />
+        <s:State name="disabled" stateGroups="disabledStates" />
+    </s:states>
+
+    <s:Rect left="1" right="1" top="1" bottom="1">
+        <s:fill>
+            <s:LinearGradient rotation="90">
+                <s:GradientEntry color="0x5A606A"
+                                 color.over="0x69717C"
+                                 color.down="0x2B2F35"/>
+                <s:GradientEntry color="0x4B5058"
+                                 color.over="0x565D67"
+                                 color.down="0x2B2F35"/>
+            </s:LinearGradient>
+        </s:fill>
+    </s:Rect>
+
+    <s:Rect left="0" right="0" top="0" bottom="0">
+        <s:stroke>
+            <s:SolidColorStroke color="0x171A1F"/>
+        </s:stroke>
+    </s:Rect>
+
+    <s:Rect left="1" right="1" top="1" bottom="1">
+        <s:stroke>
+            <s:LinearGradientStroke rotation="90" weight="1">
+                <s:GradientEntry color="0x737A85" ratio="0"/>
+                <s:GradientEntry color="0x565D67" ratio="1"/>
+            </s:LinearGradientStroke>
+        </s:stroke>
+    </s:Rect>
+</s:SparkButtonSkin>

@@ -1,0 +1,309 @@
+ExperienceBar < ProgressBar
+  id: experienceBar
+  background-color: #B6E866
+  anchors.top: prev.bottom
+  anchors.left: parent.left
+  anchors.right: parent.right
+  margin: 1
+  margin-top: 3
+
+SoulLabel < GameLabel
+  id: soulLabel
+  text-align: right
+  color: white
+  font: verdana-11px-rounded
+  anchors.bottom: parent.bottom
+  anchors.right: parent.right
+  anchors.left: parent.horizontalCenter
+  margin-top: 5
+  margin-right: 3
+  on: true
+
+  $!on:
+    visible: false
+    margin-top: 0
+    height: 0
+
+CapLabel < GameLabel
+  id: capLabel
+  color: white
+  font: verdana-11px-rounded
+  anchors.bottom: parent.bottom
+  anchors.left: parent.left
+  anchors.right: parent.horizontalCenter
+  margin-top: 5
+  margin-left: 3
+  on: true
+
+  $!on:
+    visible: false
+    margin-top: 0
+    height: 0
+
+ConditionWidget < UIWidget
+  size: 18 18
+
+  $!first:
+    margin-left: 2
+
+ArcConditionWidget < UIWidget
+  size: 18 18
+  phantom: true
+
+HarmonySegment < UIWidget
+  size: 18 7
+  margin-left: 2
+  background-color: #3a382d
+  border: 1 #171713
+  phantom: true
+
+  $first:
+    margin-left: 0
+
+  $on:
+    background-color: #e1bd2d
+    border: 1 #8f7110
+      
+HealthOverlay < UIWidget
+  id: healthOverlay
+  anchors.fill: parent
+  phantom: true
+  
+  HealthBar
+    id: topHealthBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.horizontalCenter
+    phantom: true
+
+  ManaBar
+    id: topManaBar
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.left: parent.horizontalCenter
+    phantom: true
+
+  UIWidget
+    id: harmonyHud
+    size: 98 9
+    anchors.top: topManaBar.bottom
+    anchors.horizontalCenter: topManaBar.horizontalCenter
+    margin-top: 3
+    layout:
+      type: horizontalBox
+    visible: false
+    phantom: true
+
+    HarmonySegment
+      id: harmonySegment1
+
+    HarmonySegment
+      id: harmonySegment2
+
+    HarmonySegment
+      id: harmonySegment3
+
+    HarmonySegment
+      id: harmonySegment4
+
+    HarmonySegment
+      id: harmonySegment5
+    
+  UIProgressBar
+    id: healthCircle
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.verticalCenter: parent.verticalCenter
+    image-source: /images/game/circle/left_empty
+    margin-right: 169
+    margin-bottom: 16
+    opacity: 0.5
+    phantom: true
+
+  UIProgressBar
+    id: healthCircleFront
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.verticalCenter: parent.verticalCenter
+    image-source: /images/game/circle/left_full
+    margin-right: 169
+    margin-bottom: 16
+    opacity: 0.5
+    phantom: true
+
+  UIWidget
+    id: arcConditionPanel
+    size: 26 8
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.verticalCenter: parent.verticalCenter
+    margin-right: 230
+    margin-bottom: 16
+    padding: 4
+    image-source: /images/ui/button_rounded
+    image-clip: 0 0 22 23
+    image-border: 6
+    image-color: #4a4a4a66
+    layout:
+      type: verticalBox
+    visible: false
+    phantom: true
+
+  UIProgressBar
+    id: manaCircle
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.verticalCenter: parent.verticalCenter
+    image-source: /images/game/circle/right_empty    
+    margin-left: 130
+    margin-bottom: 16
+    opacity: 0.5
+    phantom: true
+
+  UIProgressBar
+    id: manaCircleFront
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.verticalCenter: parent.verticalCenter
+    image-source: /images/game/circle/right_full
+    margin-left: 130
+    margin-bottom: 16    
+    opacity: 0.4
+    image-color: #0000FFFF
+    phantom: true
+
+  UIWidget
+    id: bottomHealthManaHud
+    size: 910 100
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    margin-bottom: 6
+    phantom: true
+    visible: false
+
+    UIWidget
+      id: bottomHealthHud
+      size: 345 100
+      anchors.left: parent.left
+      phantom: true
+
+      UIWidget
+        id: bottomHealthBarBackground
+        image-source: /images/bars/background-hp
+        size: 269 34
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 50
+        opacity: 0.92
+        phantom: true
+
+      UIWidget
+        id: bottomHealthBarFill
+        image-source: /images/bars/background-fill-hp
+        size: 261 22
+        anchors.left: bottomHealthBarBackground.left
+        anchors.top: bottomHealthBarBackground.top
+        margin-left: 4
+        margin-top: 6
+        phantom: true
+
+      GameLabel
+        id: bottomHealthValueLabel
+        anchors.fill: bottomHealthBarBackground
+        text-align: center
+        vertical-align: center
+        color: #f3e5d0
+        font: verdana-11px-rounded
+        phantom: true
+
+      UIWidget
+        id: bottomHealthOrbIcon
+        image-source: /images/bars/icon-hp
+        size: 100 100
+        anchors.left: parent.left
+        anchors.verticalCenter: bottomHealthBarBackground.verticalCenter
+        phantom: true
+
+    UIWidget
+      id: bottomManaHud
+      size: 345 100
+      anchors.right: parent.right
+      phantom: true
+
+      UIWidget
+        id: bottomManaBarBackground
+        image-source: /images/bars/background-mana
+        size: 269 34
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        margin-right: 45
+        opacity: 0.92
+        phantom: true
+
+      UIWidget
+        id: bottomManaBarFill
+        image-source: /images/bars/background-fill-mana
+        size: 261 22
+        anchors.left: bottomManaBarBackground.left
+        anchors.top: bottomManaBarBackground.top
+        margin-left: 4
+        margin-top: 6
+        phantom: true
+
+      GameLabel
+        id: bottomManaValueLabel
+        anchors.fill: bottomManaBarBackground
+        text-align: center
+        vertical-align: center
+        color: #f3e5d0
+        font: verdana-11px-rounded
+        phantom: true
+
+      UIWidget
+        id: bottomManaOrbIcon
+        image-source: /images/bars/icon-mana
+        size: 100 100
+        anchors.right: parent.right
+        anchors.verticalCenter: bottomManaBarBackground.verticalCenter
+        phantom: true
+  
+HealthInfoWindow < HeadlessMiniWindow
+  icon:
+  text:
+  height: 100
+  &forceOpen: true
+  icon: /images/topbuttons/healthinfo
+  !text: tr('Health Info')
+
+  MiniWindowContents
+    margin-top: 2
+
+    HealthBar
+      id: healthBar
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin: 2
+      margin-top: 0
+      phantom: true
+
+    ManaBar
+      id: manaBar
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin: 2
+      margin-bottom: 0
+      phantom: true
+      
+    ExperienceBar
+    Panel
+      id: conditionPanel
+      layout:
+        type: horizontalBox
+      height: 22
+      margin-top: 4
+      padding: 2
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      border-width: 1
+      border-color: #00000077
+      background-color: #ffffff11
+    SoulLabel
+    CapLabel

@@ -1,0 +1,76 @@
+EmblemListItem < UIWidget
+  image-source: /images/ui/inner_content_panel
+  image-border: 6
+
+  $hover:
+    border: 1 gray
+
+  $checked:
+    border: 1 white
+
+  UIWidget
+    id: icon
+    image-source: /images/guild_hall/emblems
+    anchors.centerIn: parent
+    size: 80 80
+    phantom: true
+
+MainWindow
+  size: 480 470
+  !text: tr("Emblem")
+  background-color: #3e3a35
+  border: 1 #59524a
+
+  GuildActionButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.horizontalCenter
+    margin-right: 20
+    margin-bottom: 10
+    width: 130
+    !text: tr("Close")
+    @onClick: modules.game_guild_hall.toggleEmblemList()
+
+  GuildActionButton
+    anchors.bottom: parent.bottom
+    anchors.left: parent.horizontalCenter
+    margin-left: 20
+    margin-bottom: 10
+    width: 130
+    !text: tr("Save")
+    @onClick: modules.game_guild_hall.saveEmblemList()
+
+  UIWidget
+    id: listBase
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: prev.top
+    margin-bottom: 20
+    background-color: #4a443d
+    border: 1 #5a5248
+
+    UIScrollArea
+      id: list
+      anchors.fill: parent
+      margin-right: 20
+      background-color: #433d36
+      border: 1 #5a5248
+      vertical-scrollbar: listScrollBar
+      padding: 5
+      auto-focus: first
+      layout:
+        type: grid
+        cell-size: 100 100
+        cell-spacing: 5
+        flow: true
+
+    VerticalScrollBar
+      id: listScrollBar
+      anchors.top: parent.top
+      anchors.bottom: parent.bottom
+      anchors.right: parent.right
+      background-color: #3b3732
+      border: 1 #5a5248
+      step: 30
+      margin-right: 2
+      pixels-scroll: true

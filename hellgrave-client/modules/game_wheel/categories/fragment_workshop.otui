@@ -1,0 +1,487 @@
+FragmentWindow < UICheckBox
+  image-source: /images/ui/inner_content_panel
+  image-border: 10
+  border: 1 #5d564d
+  @onClick: modules.game_wheel.Fragment_Workshop.onSelectMod(self)
+
+  $checked:
+    border: 2 #dfdfdf
+
+  Label
+    id: count
+    !text: ('x 3')
+    color: #C0C0C0
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin: 10
+    visible: false
+
+  UIWidget
+    id: actived
+    anchors.top: parent.top
+    anchors.left: parent.left
+    image-source: /modules/game_wheel/images/icon-socketed
+    margin: 10
+    visible: false
+
+  UIWidget
+    id: base
+    size: 50 50
+    image-source: /modules/game_wheel/images/backdrop_modgrades
+    image-clip: 0 0 50 50
+    anchors.centerIn: parent
+    margin-top: 1
+    phantom: true
+
+    UIWidget
+      id: mod
+      size: 35 35
+      anchors.centerIn: parent
+      image-source: /modules/game_wheel/images/icons-skillwheel-suprememods
+      image-clip: 0 0 35 35
+      phantom: true
+
+Panel
+  anchors.fill: parent
+  anchors.centerIn: parent
+  margin-bottom: 48
+
+  Panel
+    id: grade
+    size: 352 525
+    !text: ('Enhance Mod Grade')
+    image-source: /images/ui/panel_content
+    color: #929292
+    text-offset: 0 3
+    text-align: top
+    image-border: 10
+    margin-top: 6
+    anchors.top: parent.top
+    anchors.left: parent.left
+
+    Label
+      id: selectedEmpty
+      color: #C0C0C0
+      !text: ('There is no mod that matches your filters.')
+      anchors.centerIn: parent
+
+    UIWidget
+      id: selected
+      anchors.fill: parent
+      visible: false
+
+      Label
+        id: name
+        color: #C0C0C0
+        text-auto-resize: true
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 45
+
+      UIWidget
+        id: backdrop4
+        image-source: /modules/game_wheel/images/backdrop_grades_circle_top
+        anchors.top: name.bottom
+        anchors.left: parent.left
+        margin-left: 25
+        margin-top: 20
+        
+        $checked:
+          image-source: /modules/game_wheel/images/backdrop_grades_circle_top_anim
+
+      UIWidget
+        id: tier4
+        size: 50 50
+        anchors.centerIn: backdrop4
+        image-source: /modules/game_wheel/images/backdrop_modgrades
+        image-clip: 150 0 50 50
+        enabled: false
+        image-shader: map_default
+
+        $disabled:
+          image-shader: grayscale
+
+        UIWidget
+          id: mod
+          size: 30 30
+          anchors.centerIn: parent
+          image-source: /modules/game_wheel/images/icons-skillwheel-basicmods
+          image-clip: 900 0 30 30
+          phantom: true
+          image-shader: map_default
+
+          $disabled:
+            image-shader: grayscale
+
+      Label
+        !text: ('Grade IV')
+        color: #C0C0C0
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: backdrop4.verticalCenter
+        margin-left: 40
+        margin-bottom: 5
+        enabled: false
+
+        $disabled:
+          color: #707070
+
+      Table
+        id: descriptions4
+        height: 50
+        anchors.top: prev.bottom
+        anchors.left: backdrop4.right
+        anchors.right: parent.right
+        fit-children: true
+
+      UIWidget
+        id: line3
+        image-source: /modules/game_wheel/images/backdrop_grades_line
+        anchors.top: backdrop4.bottom
+        anchors.horizontalCenter: backdrop4.horizontalCenter
+        
+        $checked:
+          image-source: /modules/game_wheel/images/backdrop_grades_line_anim
+      
+      UIWidget
+        id: backdrop3
+        image-source: /modules/game_wheel/images/backdrop_grades_circle_mid
+        anchors.top: line3.bottom
+        anchors.horizontalCenter: line3.horizontalCenter
+        
+        $checked:
+          image-source: /modules/game_wheel/images/backdrop_grades_circle_mid_anim
+
+      UIWidget
+        id: tier3
+        size: 50 50
+        anchors.centerIn: backdrop3
+        image-source: /modules/game_wheel/images/backdrop_modgrades
+        image-clip: 100 0 50 50
+        enabled: false
+        image-shader: map_default
+
+        $disabled:
+          image-shader: grayscale
+
+        UIWidget
+          id: mod
+          size: 30 30
+          anchors.centerIn: parent
+          image-source: /modules/game_wheel/images/icons-skillwheel-basicmods
+          image-clip: 900 0 30 30
+          phantom: true
+          image-shader: map_default
+
+          $disabled:
+            image-shader: grayscale
+
+      Label
+        !text: ('Grade III')
+        color: #C0C0C0
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: backdrop3.verticalCenter
+        margin-left: 40
+        margin-bottom: 5
+        enabled: false
+
+        $disabled:
+          color: #707070
+
+      Table
+        id: descriptions3
+        height: 50
+        anchors.top: prev.bottom
+        anchors.left: backdrop3.right
+        anchors.right: parent.right
+        fit-children: true
+
+      UIWidget
+        id: line2
+        image-source: /modules/game_wheel/images/backdrop_grades_line
+        anchors.top: backdrop3.bottom
+        anchors.horizontalCenter: backdrop3.horizontalCenter
+
+        $checked:
+          image-source: /modules/game_wheel/images/backdrop_grades_line_anim
+
+      UIWidget
+        id: backdrop2
+        image-source: /modules/game_wheel/images/backdrop_grades_circle_mid
+        anchors.top: line2.bottom
+        anchors.horizontalCenter: line2.horizontalCenter
+        
+        $checked:
+          image-source: /modules/game_wheel/images/backdrop_grades_circle_mid_anim
+
+      UIWidget
+        id: tier2
+        size: 50 50
+        anchors.centerIn: backdrop2
+        image-source: /modules/game_wheel/images/backdrop_modgrades
+        image-clip: 50 0 50 50
+        enabled: false
+        image-shader: map_default
+
+        $disabled:
+          image-shader: grayscale
+
+        UIWidget
+          id: mod
+          size: 30 30
+          anchors.centerIn: parent
+          image-source: /modules/game_wheel/images/icons-skillwheel-basicmods
+          image-clip: 900 0 30 30
+          phantom: true
+          image-shader: map_default
+
+          $disabled:
+            image-shader: grayscale
+
+      Label
+        !text: ('Grade II')
+        color: #C0C0C0
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: backdrop2.verticalCenter
+        margin-left: 40
+        margin-bottom: 5
+        enabled: false
+
+        $disabled:
+          color: #707070
+
+      Table
+        id: descriptions2
+        height: 50
+        anchors.top: prev.bottom
+        anchors.left: backdrop2.right
+        anchors.right: parent.right
+        
+      UIWidget
+        id: line1
+        image-source: /modules/game_wheel/images/backdrop_grades_line
+        anchors.top: backdrop2.bottom
+        anchors.horizontalCenter: backdrop2.horizontalCenter
+        
+        $checked:
+          image-source: /modules/game_wheel/images/backdrop_grades_line_anim
+      
+      UIWidget
+        id: backdrop1
+        image-source: /modules/game_wheel/images/backdrop_grades_circle_bottom
+        anchors.top: line1.bottom
+        anchors.horizontalCenter: line1.horizontalCenter
+
+        $checked:
+          image-source: /modules/game_wheel/images/backdrop_grades_circle_bottom_anim
+
+      UIWidget
+        id: tier1
+        size: 50 50
+        anchors.centerIn: backdrop1
+        image-source: /modules/game_wheel/images/backdrop_modgrades
+        image-clip: 0 0 50 50
+        image-shader: map_default
+
+        $disabled:
+          image-shader: grayscale
+
+        UIWidget
+          id: mod
+          size: 30 30
+          anchors.centerIn: parent
+          image-source: /modules/game_wheel/images/icons-skillwheel-basicmods
+          image-clip: 900 0 30 30
+          phantom: true
+          image-shader: map_default
+
+          $disabled:
+            image-shader: grayscale
+
+      Label
+        !text: ('Grade I')
+        color: #C0C0C0
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: backdrop1.verticalCenter
+        margin-left: 40
+        margin-bottom: 5
+        enabled: false
+
+        $disabled:
+          color: #707070
+
+      Table
+        id: descriptions1
+        height: 50
+        anchors.top: prev.bottom
+        anchors.left: backdrop1.right
+        anchors.right: parent.right
+
+    WheelMiniButton
+      id: enchance
+      size: 64 20
+      anchors.bottom: parent.bottom
+      anchors.left: parent.left
+      !text: tr('Enhance')
+      font: verdana-bold-8px-antialiased
+      text-offset: 0 -1
+      color: #C0C0C0
+      margin-left: 5
+      margin-bottom: 5
+      enabled: false
+      @onClick: modules.game_wheel.Fragment_Workshop.enchanceMod()
+
+    UIWidget
+      id: gold
+      anchors.left: enchance.right
+      anchors.top: enchance.top
+      size: 98 20
+      image-source: /images/ui/item
+      image-border: 10
+      margin-left: 18
+      
+      UIWidget
+        id: icon
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        image-source: /modules/game_wheel/images/icon_gold
+        margin-right: 5
+            
+      Label
+        id: value
+        color: #C0C0C0
+        anchors.right: icon.left
+        anchors.verticalCenter: parent.verticalCenter
+        margin-right: 5
+        text-auto-resize: true
+        text-align: right
+        text: 5,000 k
+        enabled: false
+
+        $disabled:
+          color: #D33C3C
+
+    UIWidget
+      id: fragment
+      anchors.left: gold.right
+      anchors.top: gold.top
+      size: 66 20
+      image-source: /images/ui/item
+      image-border: 10
+      margin-left: 3
+      
+      UIWidget
+        id: icon
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        image-source: /modules/game_wheel/images/icon-fragments-greater
+        margin-right: 5
+            
+      Label
+        id: value
+        color: #C0C0C0
+        anchors.right: icon.left
+        anchors.verticalCenter: parent.verticalCenter
+        margin-right: 5
+        text-auto-resize: true
+        text-align: right
+        text: 5
+        enabled: false
+
+        $disabled:
+          color: #D33C3C
+
+  TextEdit
+    id: search
+    size: 155 20
+    anchors.top: grade.top
+    anchors.left: grade.right
+    margin-left: 7
+    padding-top: 2
+    padding-right: 15
+    placeholder: Type to search
+    placeholder-color: #6E706F
+    @onTextChange: modules.game_wheel.Fragment_Workshop.onSearch(self:getText())
+
+  WheelMiniButton
+    id: searchClear
+    size: 18 18
+    anchors.right: search.right
+    anchors.top: search.top
+    margin-top: 1
+    margin-right: 1
+    text: X
+    @onClick: modules.game_wheel.Fragment_Workshop.clearSearch()
+
+  ComboBox
+    id: filter
+    size: 155 20
+    color: #C0C0C0
+    anchors.left: search.right
+    anchors.top: search.top
+    margin-left: 5
+    text-align: left
+    @onOptionChange: modules.game_wheel.Fragment_Workshop.onFilter(self:getCurrentOption().data)
+    @onSetup: |
+      self:addOption("All", 1, true)
+      self:addOption("Basic Mods", 2, true)
+      self:addOption("Supreme Mods", 3, true)
+      self:addOption("In-Vessel Mods", 4, true)
+      self:addOption("Grade I", 5, true)
+      self:addOption("Grade II", 6, true)
+      self:addOption("Grade III", 7, true)
+      self:addOption("Grade IV", 8, true)
+
+  WheelMiniButton
+    id: nextButton
+    size: 40 20
+    anchors.top: filter.top
+    anchors.right: parent.right
+    change-cursor-image: false
+    !text: '>'
+    @onMousePress: |
+      modules.game_wheel.Fragment_Workshop.onSelectPage(1)
+      return true
+
+  WheelMiniButton
+    id: prevButton
+    size: 40 20
+    anchors.left: filter.right
+    anchors.top: nextButton.top
+    margin-left: 20
+    change-cursor-image: false
+    !text: '<'
+    @onMousePress: |
+      modules.game_wheel.Fragment_Workshop.onSelectPage(2)
+      return true
+
+  Label
+    id: pageCount
+    color: #C0C0C0
+    !text: 'Page 1 / 1 (0 Mods)'
+    text-auto-resize: true
+    anchors.verticalCenter: prevButton.verticalCenter
+    anchors.left: prevButton.right
+    margin-left: 36
+
+  UIScrollArea
+    id: mods
+    image-source: /images/ui/panel_content
+    image-border: 10
+    anchors.top: search.bottom
+    anchors.bottom: grade.bottom
+    anchors.left: grade.right
+    anchors.right: parent.right
+    margin-bottom: 1
+    margin-top: 7
+    margin-left: 7
+    padding: 6
+    padding-right: 4
+    padding-bottom: 3
+    layout:
+      type: grid
+      cell-size: 96 77
+      cell-spacing: 5
+      flow: true
+
+    FragmentWindow
+    FragmentWindow

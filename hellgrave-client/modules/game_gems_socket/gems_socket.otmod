@@ -1,0 +1,10 @@
+Module
+  name: game_gems_socket
+  description: Gems Socket
+  autoload: true
+  autoload-priority: 1004
+  sandboxed: false
+  otuis: [ gems_socket ]
+  scripts: [ gems_socket ]
+  @onLoad: GemsSocket.init()
+  @onUnload: GemsSocket.terminate()
