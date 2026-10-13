@@ -64,3 +64,10 @@ cmake-build-debug/
 
 # vcpkg
 /vcpkg_installed/
+# Builds locais
+build-ninja/
+build-classic/
+vcpkg_installed/
+out/
+.vs/
+gitmetadata.h
