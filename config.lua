@@ -5,7 +5,7 @@ debugMode = false
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
 worldType = "pvp"
 hotkeyAimbotEnabled = true
-protectionLevel = 1
+protectionLevel = 150
 killsToRedSkull = 3
 killsToBlackSkull = 6
 pzLocked = 60000
@@ -144,33 +144,25 @@ serverSaveShutdown = true
 -- maxlevel is OPTIONAL, but is considered infinite by default
 -- to disable stages, create a stage with minlevel 1 and no maxlevel
 experienceStages = {
-    { minlevel = 1,    maxlevel = 20,   multiplier = 20 },
-    { minlevel = 21,   maxlevel = 50,   multiplier = 100 },
-    { minlevel = 51,   maxlevel = 100,  multiplier = 80 },
-    { minlevel = 101,  maxlevel = 200,  multiplier = 65 },
-    { minlevel = 201,  maxlevel = 300,  multiplier = 50 },
-    { minlevel = 301,  maxlevel = 500,  multiplier = 45 },
-    { minlevel = 501,  maxlevel = 700,  multiplier = 38 },
-    { minlevel = 701,  maxlevel = 900,  multiplier = 32 },
-    { minlevel = 901,  maxlevel = 1100, multiplier = 26 },
-    { minlevel = 1101, maxlevel = 1300, multiplier = 21 },
-    { minlevel = 1301, maxlevel = 1500, multiplier = 16 },
-    { minlevel = 1501, maxlevel = 1700, multiplier = 13 },
-    { minlevel = 1701, maxlevel = 1900, multiplier = 10 },
-    { minlevel = 1901, maxlevel = 2100, multiplier = 9 },
-    { minlevel = 2101, maxlevel = 2300, multiplier = 8 },
-    { minlevel = 2301, maxlevel = 2500, multiplier = 7 },
-    { minlevel = 2501, maxlevel = 2750, multiplier = 6 },
-    { minlevel = 2751, maxlevel = 3000, multiplier = 4 },
-    { minlevel = 3001, multiplier = 3 }
+    { minlevel = 1,    maxlevel = 50,   multiplier = 300 },
+    { minlevel = 51,   maxlevel = 100,  multiplier = 300 },
+    { minlevel = 101,  maxlevel = 300,  multiplier = 500 },
+    { minlevel = 301,  maxlevel = 500,  multiplier = 700 },
+    { minlevel = 501,  maxlevel = 700,  multiplier = 800 },
+    { minlevel = 701,  maxlevel = 1000, multiplier = 1000 },
+    { minlevel = 1001, maxlevel = 1500, multiplier = 1200 },
+    { minlevel = 1501, maxlevel = 2000, multiplier = 1500 },
+    { minlevel = 2001, maxlevel = 2500, multiplier = 2000 },
+    { minlevel = 2501, maxlevel = 3000, multiplier = 2500 },
+    { minlevel = 3001, multiplier = 3000 }
 }
 
 -- Rates
 -- NOTE: rateExp is not used if you have enabled stages above
-rateExp = 5
-rateSkill = 3
+rateExp = 300
+rateSkill = 5
 rateLoot = 1
-rateMagic = 2
+rateMagic = 4
 rateSpawn = 1
 
 -- Monster Despawn Config
