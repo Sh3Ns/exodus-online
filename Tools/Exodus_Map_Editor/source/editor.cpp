@@ -517,10 +517,6 @@ bool Editor::importMap(FileName filename, int import_x_offset, int import_y_offs
 
 			Position oldexit = imported_town->getTemplePosition();
 			Position newexit = oldexit + offset;
-			if (newexit.isValid()) {
-				imported_town->setTemplePosition(newexit);
-				map.getOrCreateTile(newexit)->getLocation()->increaseTownCount();
-			}
 
 			switch (house_import_type) {
 				case IMPORT_MERGE: {
@@ -565,6 +561,10 @@ bool Editor::importMap(FileName filename, int import_x_offset, int import_y_offs
 			}
 
 			map.towns.addTown(imported_town);
+			imported_town->setTemplePosition(newexit);
+			if (newexit.isValid()) {
+				map.getOrCreateTile(newexit)->getLocation()->increaseTownCount();
+			}
 
 #ifdef __VISUALC__ // C++0x compliance to some degree :)
 			tit = imported_map.towns.erase(tit);

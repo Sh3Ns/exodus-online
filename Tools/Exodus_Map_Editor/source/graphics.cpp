@@ -490,6 +490,7 @@ bool GraphicManager::loadSpriteMetadata(const FileName& datafile, wxString& erro
 
 	if (!otfi_found) {
 		is_extended = dat_format >= DAT_FORMAT_96;
+		has_transparency = dat_format >= DAT_FORMAT_96;
 		has_frame_durations = dat_format >= DAT_FORMAT_1050;
 		has_frame_groups = dat_format >= DAT_FORMAT_1057;
 	}

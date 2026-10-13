@@ -1294,7 +1294,8 @@ END_EVENT_TABLE()
 
 EditTownsDialog::EditTownsDialog(wxWindow* parent, Editor& editor) :
 	wxDialog(parent, wxID_ANY, "Towns", wxDefaultPosition, wxSize(280, 330)),
-	editor(editor) {
+	editor(editor),
+	max_town_id(0) {
 	Map& map = editor.map;
 
 	// Create topsizer
@@ -1413,11 +1414,7 @@ void EditTownsDialog::UpdateSelection(int new_selection) {
 			}
 
 			if (old_town) {
-				editor.map.getOrCreateTile(old_town->getTemplePosition())->getLocation()->decreaseTownCount();
-
 				Position templePos = temple_position->GetPosition();
-
-				editor.map.getOrCreateTile(templePos)->getLocation()->increaseTownCount();
 
 				// printf("Changed town %d:%s\n", old_town_id, old_town->getName().c_str());
 				// printf("New values %d:%s:%d:%d:%d\n", town_id, town_name.c_str(), templepos.x, templepos.y, templepos.z);
@@ -1478,8 +1475,6 @@ void EditTownsDialog::OnClickAdd(wxCommandEvent& WXUNUSED(event)) {
 	new_town->setTemplePosition(Position(0, 0, 0));
 	town_list.push_back(new_town);
 
-	editor.map.getOrCreateTile(Position(0, 0, 0))->getLocation()->increaseTownCount();
-
 	BuildListBox(false);
 	UpdateSelection(town_list.size() - 1);
 	town_listbox->SetSelection(town_list.size() - 1);
@@ -1516,9 +1511,6 @@ void EditTownsDialog::OnClickRemove(wxCommandEvent& WXUNUSED(event)) {
 			}
 		}
 
-		// remove town flag from tile
-		editor.map.getOrCreateTile(town->getTemplePosition())->getLocation()->decreaseTownCount();
-
 		// remove town object
 		delete town;
 		town_list.erase(town_iter);
@@ -1545,11 +1537,7 @@ void EditTownsDialog::OnClickOK(wxCommandEvent& WXUNUSED(event)) {
 			}
 
 			if (old_town) {
-				editor.map.getOrCreateTile(old_town->getTemplePosition())->getLocation()->decreaseTownCount();
-
 				Position templePos = temple_position->GetPosition();
-
-				editor.map.getOrCreateTile(templePos)->getLocation()->increaseTownCount();
 
 				// printf("Changed town %d:%s\n", old_town_id, old_town->getName().c_str());
 				// printf("New values %d:%s:%d:%d:%d\n", town_id, town_name.c_str(), templepos.x, templepos.y, templepos.z);
@@ -1583,12 +1571,25 @@ void EditTownsDialog::OnClickOK(wxCommandEvent& WXUNUSED(event)) {
 			}
 		}
 
+		// Remove town markers of the old towns (only if their tiles already exist)
+		for (TownMap::iterator town_iter = towns.begin(); town_iter != towns.end(); ++town_iter) {
+			Town* town = town_iter->second;
+			const Position& pos = town->getTemplePosition();
+			if (pos.isValid()) {
+				if (Tile* tile = editor.map.getTile(pos)) {
+					tile->getLocation()->decreaseTownCount();
+				}
+			}
+		}
+
 		// Clear old towns
 		towns.clear();
 
 		// Build the newd town map
 		for (std::vector<Town*>::iterator town_iter = town_list.begin(); town_iter != town_list.end(); ++town_iter) {
-			towns.addTown(*town_iter);
+			Town* town = *town_iter;
+			towns.addTown(town);
+			editor.map.getOrCreateTile(town->getTemplePosition())->getLocation()->increaseTownCount();
 		}
 		town_list.clear();
 		editor.map.doChange();

@@ -673,6 +673,11 @@ bool IOMapOTMM::loadMap(Map& map, NodeFileReadHandle& f, const FileName& identif
 							pos.y = y;
 							pos.z = z;
 							town->setTemplePosition(pos);
+							if (pos.isValid()) {
+								map.getOrCreateTile(pos)->getLocation()->increaseTownCount();
+							} else {
+								warning("Town %d has an invalid temple position (%d:%d:%d)", town_id, pos.x, pos.y, pos.z);
+							}
 						} while (townNode->advance());
 					}
 				} break;

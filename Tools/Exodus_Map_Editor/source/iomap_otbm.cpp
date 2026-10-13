@@ -1016,7 +1016,11 @@ bool IOMapOTBM::loadMap(Map& map, NodeFileReadHandle& f) {
 				pos.y = y;
 				pos.z = z;
 				town->setTemplePosition(pos);
-				map.getOrCreateTile(pos)->getLocation()->increaseTownCount();
+				if (pos.isValid()) {
+					map.getOrCreateTile(pos)->getLocation()->increaseTownCount();
+				} else {
+					warning("Town %d has an invalid temple position (%d:%d:%d)", town_id, pos.x, pos.y, pos.z);
+				}
 			}
 		} else if (node_type == OTBM_WAYPOINTS) {
 			for (BinaryNode* waypointNode = mapNode->getChild(); waypointNode != nullptr; waypointNode = waypointNode->advance()) {
