@@ -3,7 +3,7 @@
 
 
 :DEMON
-@"Hellgrave_Exodus-x64.exe"
+@"tfs.exe"
 
 @echo Restarting. . .
 goto DEMON
