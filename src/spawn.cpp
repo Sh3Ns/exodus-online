@@ -316,7 +316,7 @@ bool Spawn::spawnMonster(uint32_t spawnId, MonsterType* mType, const Position& p
 
 	if (startup) {
 		//No need to send out events to the surrounding since there is no one out there to listen!
-		if (!g_game.internalPlaceCreature(monster_ptr.get(), pos, true)) {
+		if (!g_game.internalPlaceCreature(monster_ptr.get(), pos, true, true)) {
 			std::cout << "[Warning - Spawns::startup] Couldn't spawn monster \"" << monster_ptr->getName() << "\" on position: " << pos << '.' << std::endl;
 			return false;
 		}
