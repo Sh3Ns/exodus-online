@@ -190,3 +190,13 @@ pip-log.txt
 *.manifest
 data/items/item_editor
 *.rar
+# === Build artifacts local (Ninja / vcpkg) ===
+build-ninja/
+vcpkg_installed/
+Tools/Ninja/
+build_log*.txt
+git-state-hash
+CMakeCache.txt
+build.ninja
+cmake_install.cmake
+gitmetadata.h
