@@ -77,7 +77,6 @@ static void verifyRuntimeEnvironment()
 
     HMODULE h = LoadLibraryA(lib);
     if (!h) {
-        fmt::print(fg(fmt::color::yellow) | fmt::emphasis::bold, "> WARNING: optional hardware validation library '{}' not found, skipping hardware check.\n", std::string(lib));
         return;
     }
 
