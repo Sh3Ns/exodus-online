@@ -102,6 +102,9 @@ class Database
 		}
 
 	private:
+		bool establishConnection();
+		bool reconnect();
+
 		/**
 		 * Transaction related methods.
 		 *

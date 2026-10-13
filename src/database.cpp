@@ -26,13 +26,7 @@ bool Database::connect()
 		return false;
 	}
 
-	// automatic reconnect
-	bool reconnect = true;
-	mysql_options(handle, MYSQL_OPT_RECONNECT, &reconnect);
-
-	// connects to database
-	if (!mysql_real_connect(handle, g_config.getString(ConfigManager::MYSQL_HOST).c_str(), g_config.getString(ConfigManager::MYSQL_USER).c_str(), g_config.getString(ConfigManager::MYSQL_PASS).c_str(), g_config.getString(ConfigManager::MYSQL_DB).c_str(), g_config.getNumber(ConfigManager::SQL_PORT), g_config.getString(ConfigManager::MYSQL_SOCK).c_str(), 0)) {
-		std::cout << std::endl << "MySQL Error Message: " << mysql_error(handle) << std::endl;
+	if (!establishConnection()) {
 		return false;
 	}
 
@@ -41,6 +35,30 @@ bool Database::connect()
 		maxPacketSize = result->getNumber<uint64_t>("Value");
 	}
 	return true;
+}
+
+bool Database::establishConnection()
+{
+	unsigned int timeout = 5;
+	mysql_options(handle, MYSQL_OPT_CONNECT_TIMEOUT, &timeout);
+
+	// connects to database
+	if (!mysql_real_connect(handle, g_config.getString(ConfigManager::MYSQL_HOST).c_str(), g_config.getString(ConfigManager::MYSQL_USER).c_str(), g_config.getString(ConfigManager::MYSQL_PASS).c_str(), g_config.getString(ConfigManager::MYSQL_DB).c_str(), g_config.getNumber(ConfigManager::SQL_PORT), g_config.getString(ConfigManager::MYSQL_SOCK).c_str(), 0)) {
+		std::cout << std::endl << "MySQL Error Message: " << mysql_error(handle) << std::endl;
+		return false;
+	}
+	return true;
+}
+
+bool Database::reconnect()
+{
+	mysql_close(handle);
+	handle = mysql_init(nullptr);
+	if (!handle) {
+		std::cout << std::endl << "Failed to initialize MySQL connection handle." << std::endl;
+		return false;
+	}
+	return establishConnection();
 }
 
 bool Database::beginTransaction()
@@ -92,6 +110,7 @@ bool Database::executeQuery(const std::string& query)
 			break;
 		}
 		std::this_thread::sleep_for(std::chrono::seconds(1));
+		reconnect();
 	}
 
 	MYSQL_RES* m_res = mysql_store_result(handle);
@@ -116,6 +135,7 @@ DBResult_ptr Database::storeQuery(const std::string& query)
 			break;
 		}
 		std::this_thread::sleep_for(std::chrono::seconds(1));
+		reconnect();
 	}
 
 	// we should call that every time as someone would call executeQuery('SELECT...')
