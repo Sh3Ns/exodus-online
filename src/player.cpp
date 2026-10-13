@@ -105,14 +105,18 @@ std::string Player::getDescription(int32_t lookDistance) const
 	if (lookDistance == -1) {
 		s << "yourself.";
 
-		if (vocation->getId() != VOCATION_NONE) {
+		if (group->access) {
+			s << " You are " << group->name << '.';
+		} else if (vocation->getId() != VOCATION_NONE) {
 			s << " You are " << vocation->getVocDescription() << '.';
 		} else {
 			s << " You have no vocation.";
 		}
 	} else {
 		s << name;
-		s << " (Level " << level << ')';
+		if (!group->access) {
+			s << " (Level " << level << ')';
+		}
 		s << '.';
 
 		if (sex == PLAYERSEX_FEMALE) {
@@ -121,7 +125,9 @@ std::string Player::getDescription(int32_t lookDistance) const
 			s << " He";
 		}
 
-		if (vocation->getId() != VOCATION_NONE) {
+		if (group->access) {
+			s << " is " << group->name << '.';
+		} else if (vocation->getId() != VOCATION_NONE) {
 			s << " is " << vocation->getVocDescription() << '.';
 		} else {
 			s << " has no vocation.";
