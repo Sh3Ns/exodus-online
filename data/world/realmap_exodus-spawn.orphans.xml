@@ -1,0 +1,3181 @@
+<?xml version="1.0"?>
+<spawns>
+	<spawn centerx="33929" centery="31663" centerz="2" radius="1">
+		<npc name="Esrik" x="0" y="0" z="2" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33915" centery="31680" centerz="2" radius="1">
+		<npc name="Rock In A Hard Place" x="0" y="0" z="2" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33929" centery="31662" centerz="3" radius="1">
+		<npc name="Rashid" x="0" y="0" z="3" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33924" centery="31671" centerz="3" radius="1">
+		<npc name="Asnarus" x="0" y="0" z="3" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33944" centery="31671" centerz="3" radius="1">
+		<npc name="Haroun" x="0" y="0" z="3" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33916" centery="31680" centerz="3" radius="1">
+		<npc name="Eremo" x="0" y="0" z="3" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33914" centery="31693" centerz="3" radius="1">
+		<npc name="Estherya" x="0" y="0" z="3" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33330" centery="32556" centerz="3" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="3" spawntime="120" />
+	</spawn>
+	<spawn centerx="33333" centery="32559" centerz="3" radius="1">
+		<monster name="Totem Warbeast" x="0" y="0" z="3" spawntime="120" />
+	</spawn>
+	<spawn centerx="33341" centery="32564" centerz="3" radius="1">
+		<monster name="Totem Warbeast" x="0" y="0" z="3" spawntime="120" />
+	</spawn>
+	<spawn centerx="33343" centery="32564" centerz="3" radius="1">
+		<monster name="Stonehide Ravager" x="0" y="0" z="3" spawntime="120" />
+	</spawn>
+	<spawn centerx="33332" centery="32571" centerz="3" radius="1">
+		<monster name="Spineback Devourer" x="0" y="0" z="3" spawntime="120" />
+	</spawn>
+	<spawn centerx="33330" centery="32573" centerz="3" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="3" spawntime="120" />
+	</spawn>
+	<spawn centerx="32290" centery="32990" centerz="3" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="3" spawntime="120" />
+	</spawn>
+	<spawn centerx="33926" centery="31664" centerz="4" radius="1">
+		<npc name="Khadin" x="0" y="0" z="4" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34023" centery="31669" centerz="4" radius="1">
+		<npc name="Asima" x="0" y="0" z="4" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33922" centery="31670" centerz="4" radius="1">
+		<npc name="Yasir" x="0" y="0" z="4" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34015" centery="31673" centerz="4" radius="1">
+		<npc name="Halif" x="0" y="0" z="4" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34026" centery="31674" centerz="4" radius="1">
+		<npc name="Ishina" x="0" y="0" z="4" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33914" centery="31693" centerz="4" radius="1">
+		<npc name="Tamoril" x="0" y="0" z="4" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33341" centery="32557" centerz="4" radius="1">
+		<monster name="Abyssal Nightreaver" x="0" y="0" z="4" spawntime="120" />
+	</spawn>
+	<spawn centerx="33350" centery="32557" centerz="4" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="4" spawntime="120" />
+	</spawn>
+	<spawn centerx="33351" centery="32560" centerz="4" radius="1">
+		<monster name="Totem Warbeast" x="0" y="0" z="4" spawntime="120" />
+	</spawn>
+	<spawn centerx="33341" centery="32563" centerz="4" radius="1">
+		<monster name="Abyssal Nightreaver" x="0" y="0" z="4" spawntime="120" />
+	</spawn>
+	<spawn centerx="33327" centery="32564" centerz="4" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="4" spawntime="120" />
+	</spawn>
+	<spawn centerx="33335" centery="32564" centerz="4" radius="1">
+		<monster name="Stonehide Ravager" x="0" y="0" z="4" spawntime="120" />
+	</spawn>
+	<spawn centerx="33347" centery="32565" centerz="4" radius="1">
+		<monster name="Spineback Devourer" x="0" y="-1" z="4" spawntime="120" />
+	</spawn>
+	<spawn centerx="33343" centery="32573" centerz="4" radius="1">
+		<monster name="Stonehide Ravager" x="0" y="0" z="4" spawntime="120" />
+	</spawn>
+	<spawn centerx="33341" centery="32576" centerz="4" radius="1">
+		<monster name="Totem Warbeast" x="0" y="0" z="4" spawntime="120" />
+	</spawn>
+	<spawn centerx="32289" centery="32990" centerz="4" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="4" spawntime="120" />
+	</spawn>
+	<spawn centerx="32771" centery="30914" centerz="5" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32769" centery="30917" centerz="5" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32793" centery="30920" centerz="5" radius="1">
+		<monster name="Cinderheart Abomination" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32797" centery="30922" centerz="5" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32792" centery="30924" centerz="5" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32796" centery="30928" centerz="5" radius="1">
+		<monster name="Cinderheart Abomination" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32765" centery="30933" centerz="5" radius="1">
+		<monster name="Cinderheart Abomination" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32759" centery="30940" centerz="5" radius="1">
+		<monster name="Emberflame Conjurer" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32775" centery="30941" centerz="5" radius="1">
+		<monster name="Cinderheart Abomination" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32771" centery="30945" centerz="5" radius="1">
+		<monster name="Arcaneseer Djinn" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32763" centery="30956" centerz="5" radius="1">
+		<monster name="Arcaneseer Djinn" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32754" centery="30960" centerz="5" radius="1">
+		<monster name="Cinderheart Abomination" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33919" centery="31578" centerz="5" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33930" centery="31581" centerz="5" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33911" centery="31583" centerz="5" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33937" centery="31583" centerz="5" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34000" centery="31650" centerz="5" radius="1">
+		<npc name="Yana" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33998" centery="31657" centerz="5" radius="1">
+		<npc name="Naji" x="-1" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34004" centery="31657" centerz="5" radius="1">
+		<npc name="Benjamin" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33913" centery="31661" centerz="5" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="5" spawntime="60" direction="2" />
+		<monster name="Devoted Radiant Zealot" x="0" y="1" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33916" centery="31665" centerz="5" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33919" centery="31666" centerz="5" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33945" centery="31670" centerz="5" radius="1">
+		<npc name="Alesar" x="0" y="-1" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33920" centery="31671" centerz="5" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33936" centery="31671" centerz="5" radius="1">
+		<npc name="Nah'bob" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33952" centery="31671" centerz="5" radius="1">
+		<npc name="Xodet" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33915" centery="31675" centerz="5" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33917" centery="31678" centerz="5" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33914" centery="31679" centerz="5" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33915" centery="31681" centerz="5" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33918" centery="31681" centerz="5" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33913" centery="31682" centerz="5" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33919" centery="31683" centerz="5" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="5" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="32369" centery="31887" centerz="5" radius="1">
+		<monster name="Spineback Devourer" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32362" centery="31889" centerz="5" radius="1">
+		<monster name="Spineback Devourer" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32351" centery="31892" centerz="5" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32371" centery="31896" centerz="5" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32449" centery="32541" centerz="5" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33372" centery="32547" centerz="5" radius="1">
+		<monster name="Abyssal Nightreaver" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33332" centery="32553" centerz="5" radius="1">
+		<monster name="Stonehide Ravager" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33349" centery="32563" centerz="5" radius="1">
+		<monster name="Totem Warbeast" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33336" centery="32565" centerz="5" radius="1">
+		<monster name="Spineback Devourer" x="0" y="1" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33345" centery="32566" centerz="5" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33355" centery="32566" centerz="5" radius="1">
+		<monster name="Spineback Devourer" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33318" centery="32569" centerz="5" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33324" centery="32571" centerz="5" radius="1">
+		<monster name="Totem Warbeast" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33361" centery="32575" centerz="5" radius="1">
+		<monster name="Stonehide Ravager" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32531" centery="32579" centerz="5" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33346" centery="32579" centerz="5" radius="1">
+		<monster name="Stonehide Ravager" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32532" centery="32582" centerz="5" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33363" centery="32583" centerz="5" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="33336" centery="32587" centerz="5" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32289" centery="32990" centerz="5" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32258" centery="33049" centerz="5" radius="1">
+		<monster name="Ancient Root Tyrant" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32251" centery="33054" centerz="5" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32260" centery="33060" centerz="5" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="5" spawntime="120" />
+	</spawn>
+	<spawn centerx="32769" centery="30916" centerz="6" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32762" centery="30928" centerz="6" radius="1">
+		<monster name="Arcaneseer Djinn" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32751" centery="30944" centerz="6" radius="1">
+		<monster name="Cinderheart Abomination" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32778" centery="30944" centerz="6" radius="1">
+		<monster name="Arcaneseer Djinn" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32752" centery="30952" centerz="6" radius="1">
+		<monster name="Arcaneseer Djinn" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32759" centery="30963" centerz="6" radius="1">
+		<monster name="Emberflame Conjurer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="31671" centery="31009" centerz="6" radius="1">
+		<monster name="Varg" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="31672" centery="31012" centerz="6" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="31671" centery="31021" centerz="6" radius="1">
+		<monster name="Varg" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="31672" centery="31026" centerz="6" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33902" centery="31588" centerz="6" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33980" centery="31630" centerz="6" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33977" centery="31636" centerz="6" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33980" centery="31641" centerz="6" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33988" centery="31646" centerz="6" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33994" centery="31646" centerz="6" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33999" centery="31654" centerz="6" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33998" centery="31656" centerz="6" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34004" centery="31658" centerz="6" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34008" centery="31659" centerz="6" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34012" centery="31660" centerz="6" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33982" centery="31661" centerz="6" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33985" centery="31663" centerz="6" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34016" centery="31665" centerz="6" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33985" centery="31666" centerz="6" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33988" centery="31666" centerz="6" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33993" centery="31668" centerz="6" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34008" centery="31670" centerz="6" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34012" centery="31672" centerz="6" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34022" centery="31672" centerz="6" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34025" centery="31672" centerz="6" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34029" centery="31673" centerz="6" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34019" centery="31675" centerz="6" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34029" centery="31676" centerz="6" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34032" centery="31678" centerz="6" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34028" centery="31679" centerz="6" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33959" centery="31685" centerz="6" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34010" centery="31686" centerz="6" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33876" centery="31687" centerz="6" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33942" centery="31689" centerz="6" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33874" centery="31690" centerz="6" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33956" centery="31690" centerz="6" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33871" centery="31691" centerz="6" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34009" centery="31691" centerz="6" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34050" centery="31691" centerz="6" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33936" centery="31692" centerz="6" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33949" centery="31692" centerz="6" radius="1">
+		<monster name="Devoted Radiant Templar" x="-1" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34048" centery="31692" centerz="6" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33875" centery="31693" centerz="6" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33932" centery="31693" centerz="6" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33939" centery="31693" centerz="6" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33872" centery="31694" centerz="6" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34049" centery="31694" centerz="6" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33931" centery="31696" centerz="6" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33934" centery="31696" centerz="6" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33937" centery="31697" centerz="6" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34074" centery="31709" centerz="6" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34082" centery="31711" centerz="6" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33869" centery="31714" centerz="6" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34085" centery="31715" centerz="6" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34072" centery="31716" centerz="6" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33866" centery="31718" centerz="6" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33869" centery="31718" centerz="6" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34067" centery="31718" centerz="6" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33864" centery="31720" centerz="6" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33866" centery="31720" centerz="6" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33868" centery="31720" centerz="6" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34079" centery="31720" centerz="6" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34060" centery="31722" centerz="6" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34065" centery="31723" centerz="6" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33981" centery="31738" centerz="6" radius="1">
+		<npc name="Asima" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33977" centery="31742" centerz="6" radius="1">
+		<npc name="Asnarus" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33982" centery="31745" centerz="6" radius="1">
+		<npc name="Yasir" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34005" centery="31755" centerz="6" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34001" centery="31757" centerz="6" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34007" centery="31759" centerz="6" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34004" centery="31761" centerz="6" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33931" centery="31769" centerz="6" radius="1">
+		<npc name="Captain Marapur" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="32375" centery="31882" centerz="6" radius="1">
+		<monster name="Abyssal Nightreaver" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32365" centery="31893" centerz="6" radius="1">
+		<monster name="Spineback Devourer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32366" centery="31896" centerz="6" radius="1">
+		<monster name="Abyssal Nightreaver" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32349" centery="31900" centerz="6" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32495" centery="32360" centerz="6" radius="1">
+		<monster name="Verdant Rootwalker" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32500" centery="32365" centerz="6" radius="1">
+		<monster name="Ancient Root Tyrant" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32490" centery="32371" centerz="6" radius="1">
+		<monster name="Verdant Rootwalker" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32471" centery="32372" centerz="6" radius="1">
+		<monster name="Verdant Rootwalker" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32486" centery="32374" centerz="6" radius="1">
+		<monster name="Ancient Root Tyrant" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32476" centery="32386" centerz="6" radius="1">
+		<monster name="Verdant Rootwalker" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33369" centery="32547" centerz="6" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32467" centery="32549" centerz="6" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32476" centery="32549" centerz="6" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33339" centery="32549" centerz="6" radius="1">
+		<monster name="Blacksteel Brute" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32463" centery="32552" centerz="6" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33368" centery="32552" centerz="6" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33359" centery="32555" centerz="6" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32495" centery="32558" centerz="6" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32500" centery="32560" centerz="6" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32490" centery="32562" centerz="6" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33355" centery="32562" centerz="6" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32501" centery="32563" centerz="6" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33334" centery="32563" centerz="6" radius="1">
+		<monster name="Blacksteel Brute" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33330" centery="32568" centerz="6" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33345" centery="32568" centerz="6" radius="1">
+		<monster name="Totem Warbeast" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33350" centery="32568" centerz="6" radius="1">
+		<monster name="Spineback Devourer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33355" centery="32569" centerz="6" radius="1">
+		<monster name="Blacksteel Brute" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33358" centery="32575" centerz="6" radius="1">
+		<monster name="Abyssal Nightreaver" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32462" centery="32576" centerz="6" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="33348" centery="32577" centerz="6" radius="1">
+		<monster name="Stonehide Ravager" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32530" centery="32578" centerz="6" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32469" centery="32579" centerz="6" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32492" centery="32579" centerz="6" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32502" centery="32580" centerz="6" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32527" centery="32580" centerz="6" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32531" centery="32581" centerz="6" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32527" centery="32582" centerz="6" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32489" centery="32584" centerz="6" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32492" centery="32585" centerz="6" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32459" centery="32586" centerz="6" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32471" centery="32593" centerz="6" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32530" centery="32594" centerz="6" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32528" centery="32597" centerz="6" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32454" centery="32598" centerz="6" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32476" centery="32600" centerz="6" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32504" centery="32600" centerz="6" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32534" centery="32602" centerz="6" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32494" centery="32605" centerz="6" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32482" centery="32606" centerz="6" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32500" centery="32606" centerz="6" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32474" centery="32612" centerz="6" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32500" centery="32614" centerz="6" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32496" centery="32617" centerz="6" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32500" centery="32620" centerz="6" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32530" centery="32623" centerz="6" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32533" centery="32623" centerz="6" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32253" centery="33048" centerz="6" radius="1">
+		<monster name="Ancient Root Tyrant" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32265" centery="33057" centerz="6" radius="1">
+		<monster name="Ancient Root Tyrant" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32256" centery="33061" centerz="6" radius="1">
+		<monster name="Ancient Root Tyrant" x="0" y="0" z="6" spawntime="120" />
+	</spawn>
+	<spawn centerx="32777" centery="30886" centerz="7" radius="1">
+		<monster name="Bloodthirsty Buccaneer" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32781" centery="30905" centerz="7" radius="1">
+		<monster name="Cinderheart Abomination" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32765" centery="30908" centerz="7" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32788" centery="30911" centerz="7" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32781" centery="30919" centerz="7" radius="1">
+		<monster name="Cinderheart Abomination" x="0" y="-1" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32758" centery="30922" centerz="7" radius="1">
+		<monster name="Arcaneseer Djinn" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32762" centery="30922" centerz="7" radius="1">
+		<monster name="Emberflame Conjurer" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31665" centery="30989" centerz="7" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31671" centery="30989" centerz="7" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31676" centery="30989" centerz="7" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31680" centery="30989" centerz="7" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31667" centery="30991" centerz="7" radius="1">
+		<monster name="Roaming Dread" x="1" y="-1" z="7" spawntime="120" />
+		<monster name="Gloom Maw" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31685" centery="30992" centerz="7" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31675" centery="30993" centerz="7" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31681" centery="30993" centerz="7" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31672" centery="30994" centerz="7" radius="1">
+		<monster name="Varg" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31668" centery="30995" centerz="7" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31664" centery="30997" centerz="7" radius="1">
+		<monster name="Varg" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31674" centery="30997" centerz="7" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31682" centery="31001" centerz="7" radius="1">
+		<monster name="Varg" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31672" centery="31002" centerz="7" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31682" centery="31004" centerz="7" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="33964" centery="31563" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33962" centery="31569" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33999" centery="31569" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33929" centery="31572" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33995" centery="31572" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33945" centery="31573" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33969" centery="31574" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33988" centery="31574" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33904" centery="31577" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34003" centery="31578" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34005" centery="31578" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33958" centery="31579" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33995" centery="31580" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33901" centery="31581" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33970" centery="31581" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33923" centery="31583" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33947" centery="31584" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33928" centery="31585" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34044" centery="31585" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33892" centery="31587" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34041" centery="31587" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34084" centery="31587" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33883" centery="31589" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34088" centery="31590" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34055" centery="31594" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34004" centery="31595" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34020" centery="31596" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33901" centery="31597" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33966" centery="31597" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="-1" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34051" centery="31597" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34061" centery="31597" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33926" centery="31599" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33934" centery="31599" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33872" centery="31600" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33868" centery="31601" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33917" centery="31601" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34026" centery="31601" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34062" centery="31601" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33930" centery="31602" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33991" centery="31602" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34016" centery="31602" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34022" centery="31602" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33913" centery="31603" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34019" centery="31603" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34029" centery="31603" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34024" centery="31604" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33925" centery="31605" centerz="7" radius="1">
+		<monster name="Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33922" centery="31606" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34012" centery="31606" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34020" centery="31606" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33864" centery="31607" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33893" centery="31607" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33877" centery="31608" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34081" centery="31610" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="-1" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34054" centery="31612" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33947" centery="31613" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33943" centery="31614" centerz="7" radius="1">
+		<monster name="Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34035" centery="31614" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33973" centery="31615" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33981" centery="31615" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33888" centery="31616" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33908" centery="31616" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33929" centery="31616" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33946" centery="31616" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34090" centery="31616" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33860" centery="31619" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33920" centery="31619" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33950" centery="31619" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34031" centery="31619" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34048" centery="31619" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33872" centery="31623" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33853" centery="31624" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34051" centery="31624" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33872" centery="31625" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33919" centery="31625" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34094" centery="31627" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33863" centery="31628" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33901" centery="31628" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33958" centery="31629" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34051" centery="31629" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34063" centery="31631" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33890" centery="31632" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33863" centery="31634" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33858" centery="31635" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34096" centery="31635" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33999" centery="31636" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34028" centery="31636" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34040" centery="31637" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33895" centery="31638" centerz="7" radius="1">
+		<monster name="Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33837" centery="31639" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33858" centery="31639" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33880" centery="31639" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34057" centery="31639" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33900" centery="31641" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33940" centery="31641" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33962" centery="31641" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33862" centery="31642" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="-1" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34051" centery="31643" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33906" centery="31644" centerz="7" radius="1">
+		<monster name="Thornback Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33877" centery="31646" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33904" centery="31646" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33909" centery="31646" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33826" centery="31647" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33833" centery="31647" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34073" centery="31647" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33845" centery="31649" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33930" centery="31650" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34046" centery="31650" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33971" centery="31651" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34063" centery="31651" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33918" centery="31652" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="-1" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34048" centery="31652" centerz="7" radius="1">
+		<monster name="Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34083" centery="31652" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34019" centery="31654" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33883" centery="31655" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33847" centery="31656" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33919" centery="31656" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33948" centery="31656" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34051" centery="31656" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33942" centery="31657" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34088" centery="31657" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34066" centery="31659" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33828" centery="31662" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33850" centery="31662" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="-1" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33904" centery="31662" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33838" centery="31663" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33957" centery="31663" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34108" centery="31663" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33854" centery="31664" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33910" centery="31664" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33924" centery="31664" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33951" centery="31664" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34081" centery="31666" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34116" centery="31666" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33871" centery="31668" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33907" centery="31668" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33911" centery="31668" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34035" centery="31668" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34071" centery="31668" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33858" centery="31669" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33918" centery="31669" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33888" centery="31670" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34109" centery="31670" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33845" centery="31672" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33989" centery="31672" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34078" centery="31672" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33961" centery="31673" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33965" centery="31673" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34116" centery="31673" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34110" centery="31676" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33901" centery="31678" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34001" centery="31679" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33950" centery="31680" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33876" centery="31681" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33899" centery="31681" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34111" centery="31682" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34081" centery="31683" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33883" centery="31684" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33893" centery="31685" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33994" centery="31687" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34048" centery="31687" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33875" centery="31688" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34099" centery="31688" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33889" centery="31689" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34051" centery="31690" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33959" centery="31691" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34049" centery="31691" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34079" centery="31691" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34101" centery="31691" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33843" centery="31692" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33899" centery="31692" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33935" centery="31692" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34025" centery="31693" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34045" centery="31693" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34048" centery="31693" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34052" centery="31693" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33863" centery="31694" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33931" centery="31694" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33934" centery="31695" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34048" centery="31695" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33864" centery="31696" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33868" centery="31697" centerz="7" radius="1">
+		<monster name="Thornback Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33951" centery="31698" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33839" centery="31699" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33848" centery="31703" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33893" centery="31703" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33964" centery="31703" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34002" centery="31703" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34033" centery="31703" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34085" centery="31703" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33933" centery="31704" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33845" centery="31706" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33851" centery="31707" centerz="7" radius="1">
+		<monster name="Thornback Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33873" centery="31707" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33942" centery="31707" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33977" centery="31708" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33856" centery="31709" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33896" centery="31710" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34060" centery="31710" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33854" centery="31711" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33874" centery="31711" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="-1" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34036" centery="31711" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34051" centery="31711" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33844" centery="31712" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33979" centery="31712" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34026" centery="31713" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34032" centery="31713" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33972" centery="31714" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33976" centery="31714" centerz="7" radius="1">
+		<monster name="Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33851" centery="31715" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33914" centery="31716" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33998" centery="31716" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34015" centery="31716" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34003" centery="31717" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33967" centery="31718" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33972" centery="31718" centerz="7" radius="1">
+		<monster name="Thornback Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33904" centery="31720" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33921" centery="31721" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33911" centery="31723" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34006" centery="31724" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34104" centery="31724" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33918" centery="31725" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34009" centery="31725" centerz="7" radius="1">
+		<monster name="Thornback Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34087" centery="31725" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33897" centery="31726" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="-1" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33908" centery="31726" centerz="7" radius="1">
+		<monster name="Thornback Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34102" centery="31726" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34020" centery="31727" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34082" centery="31728" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33904" centery="31729" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34079" centery="31730" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34062" centery="31732" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33977" centery="31733" centerz="7" radius="1">
+		<monster name="Lion" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34016" centery="31733" centerz="7" radius="1">
+		<monster name="Thornback Tortoise" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34025" centery="31733" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34051" centery="31734" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34074" centery="31734" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33905" centery="31735" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34012" centery="31735" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34098" centery="31735" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34108" centery="31735" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34009" centery="31736" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34102" centery="31736" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34015" centery="31737" centerz="7" radius="1">
+		<monster name="Lion" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34103" centery="31739" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34031" centery="31742" centerz="7" radius="1">
+		<monster name="Lion" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33952" centery="31743" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33956" centery="31744" centerz="7" radius="1">
+		<monster name="Lion" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33885" centery="31746" centerz="7" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34083" centery="31746" centerz="7" radius="1">
+		<monster name="Panda" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33899" centery="31747" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33892" centery="31748" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33932" centery="31750" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34088" centery="31750" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34012" centery="31751" centerz="7" radius="1">
+		<monster name="Lion" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34080" centery="31752" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33991" centery="31753" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33890" centery="31755" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34087" centery="31755" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33928" centery="31756" centerz="7" radius="1">
+		<monster name="Sheep" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33927" centery="31758" centerz="7" radius="1">
+		<monster name="Sheep" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33930" centery="31758" centerz="7" radius="1">
+		<monster name="Sheep" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33987" centery="31759" centerz="7" radius="1">
+		<monster name="Lion" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34049" centery="31759" centerz="7" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33888" centery="31760" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33954" centery="31760" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34055" centery="31761" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34087" centery="31761" centerz="7" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33933" centery="31763" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33942" centery="31763" centerz="7" radius="1">
+		<monster name="Lion" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34057" centery="31764" centerz="7" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33895" centery="31765" centerz="7" radius="1">
+		<monster name="Seagull" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34036" centery="31765" centerz="7" radius="1">
+		<monster name="Butterfly" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34065" centery="31765" centerz="7" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34080" centery="31765" centerz="7" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34049" centery="31766" centerz="7" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33919" centery="31767" centerz="7" radius="1">
+		<monster name="Lion" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33980" centery="31772" centerz="7" radius="1">
+		<monster name="Panda" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33987" centery="31776" centerz="7" radius="1">
+		<monster name="Scarab" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33976" centery="31782" centerz="7" radius="1">
+		<monster name="Lion" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33970" centery="31784" centerz="7" radius="1">
+		<monster name="Scarab" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33991" centery="31785" centerz="7" radius="1">
+		<monster name="Scarab" x="0" y="0" z="7" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="32282" centery="33043" centerz="7" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32188" centery="33049" centerz="7" radius="1">
+		<monster name="Bloodthirsty Buccaneer" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32290" centery="33056" centerz="7" radius="1">
+		<monster name="Verdant Rootwalker" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32299" centery="33056" centerz="7" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32312" centery="33059" centerz="7" radius="1">
+		<monster name="Hive Widow" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32308" centery="33066" centerz="7" radius="1">
+		<monster name="Hive Widow" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32270" centery="33068" centerz="7" radius="1">
+		<monster name="Verdant Rootwalker" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32254" centery="33072" centerz="7" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32284" centery="33072" centerz="7" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32345" centery="33083" centerz="7" radius="1">
+		<monster name="Bloodthirsty Buccaneer" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32223" centery="33085" centerz="7" radius="1">
+		<monster name="Coastal Catcher" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="32317" centery="33106" centerz="7" radius="1">
+		<monster name="Coastal Catcher" x="0" y="0" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="31686" centery="30966" centerz="8" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31680" centery="30969" centerz="8" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31683" centery="30969" centerz="8" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31682" centery="30971" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31684" centery="30977" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31639" centery="30978" centerz="8" radius="1">
+		<monster name="Varg" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31655" centery="30979" centerz="8" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31647" centery="30981" centerz="8" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31639" centery="30982" centerz="8" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31643" centery="30982" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31654" centery="30982" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31662" centery="30982" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31669" centery="30982" centerz="8" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31679" centery="30982" centerz="8" radius="1">
+		<monster name="Varg" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31657" centery="30986" centerz="8" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31660" centery="30986" centerz="8" radius="1">
+		<monster name="Creepy Crawler" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31672" centery="30986" centerz="8" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31640" centery="30987" centerz="8" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31653" centery="30987" centerz="8" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31661" centery="30990" centerz="8" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31672" centery="30990" centerz="8" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31682" centery="30991" centerz="8" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31692" centery="30994" centerz="8" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31693" centery="30996" centerz="8" radius="1">
+		<monster name="Creepy Crawler" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31696" centery="30996" centerz="8" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31648" centery="30997" centerz="8" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31677" centery="30997" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31680" centery="30997" centerz="8" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31639" centery="30998" centerz="8" radius="1">
+		<monster name="Varg" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31645" centery="30998" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31658" centery="30998" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31692" centery="30998" centerz="8" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31694" centery="31001" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31675" centery="31002" centerz="8" radius="1">
+		<monster name="Varg" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31648" centery="31003" centerz="8" radius="1">
+		<monster name="Cyclursus" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31641" centery="31005" centerz="8" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31632" centery="31006" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31635" centery="31006" centerz="8" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31644" centery="31006" centerz="8" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31650" centery="31006" centerz="8" radius="1">
+		<monster name="Cyclursus" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31668" centery="31008" centerz="8" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31634" centery="31010" centerz="8" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31638" centery="31010" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31664" centery="31011" centerz="8" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31660" centery="31012" centerz="8" radius="1">
+		<monster name="Varg" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31667" centery="31012" centerz="8" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31660" centery="31014" centerz="8" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31637" centery="31015" centerz="8" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31664" centery="31021" centerz="8" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31666" centery="31027" centerz="8" radius="1">
+		<monster name="Creepy Crawler" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33448" centery="31440" centerz="8" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33484" centery="31440" centerz="8" radius="1">
+		<monster name="Ashen Hellhound" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33461" centery="31456" centerz="8" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33480" centery="31458" centerz="8" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33470" centery="31466" centerz="8" radius="1">
+		<monster name="Ashen Hellhound" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33894" centery="31675" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33898" centery="31675" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33957" centery="31676" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33971" centery="31676" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33979" centery="31676" centerz="8" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33990" centery="31678" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33861" centery="31681" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33890" centery="31681" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33899" centery="31681" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33864" centery="31682" centerz="8" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33918" centery="31682" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33954" centery="31682" centerz="8" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33910" centery="31683" centerz="8" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33863" centery="31684" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33880" centery="31684" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33888" centery="31684" centerz="8" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33989" centery="31685" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34006" centery="31685" centerz="8" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33908" centery="31688" centerz="8" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33960" centery="31689" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33885" centery="31690" centerz="8" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33861" centery="31691" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33867" centery="31691" centerz="8" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33874" centery="31691" centerz="8" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33891" centery="31691" centerz="8" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33922" centery="31691" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33912" centery="31692" centerz="8" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34007" centery="31692" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33907" centery="31693" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33971" centery="31694" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33984" centery="31695" centerz="8" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33858" centery="31696" centerz="8" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33915" centery="31697" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33978" centery="31697" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34000" centery="31697" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33877" centery="31698" centerz="8" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33859" centery="31700" centerz="8" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33867" centery="31701" centerz="8" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33877" centery="31701" centerz="8" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33882" centery="31701" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33894" centery="31701" centerz="8" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33926" centery="31701" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33899" centery="31702" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33859" centery="31703" centerz="8" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33897" centery="31704" centerz="8" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33865" centery="31705" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33927" centery="31705" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34008" centery="31705" centerz="8" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33876" centery="31706" centerz="8" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33882" centery="31706" centerz="8" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33963" centery="31706" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33900" centery="31707" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34019" centery="31708" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33881" centery="31709" centerz="8" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33909" centery="31710" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33880" centery="31711" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33886" centery="31711" centerz="8" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33904" centery="31711" centerz="8" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33967" centery="31712" centerz="8" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33859" centery="31713" centerz="8" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33864" centery="31713" centerz="8" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33920" centery="31713" centerz="8" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33959" centery="31713" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34021" centery="31714" centerz="8" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33868" centery="31715" centerz="8" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33876" centery="31717" centerz="8" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33886" centery="31717" centerz="8" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33896" centery="31717" centerz="8" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34016" centery="31717" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33883" centery="31718" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33997" centery="31718" centerz="8" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34003" centery="31719" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33972" centery="31721" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33982" centery="31722" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34020" centery="31728" centerz="8" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34010" centery="31731" centerz="8" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33342" centery="32172" centerz="8" radius="1">
+		<monster name="Dunestalker Hunter" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33347" centery="32176" centerz="8" radius="1">
+		<monster name="Ironburrow Devourer" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33363" centery="32187" centerz="8" radius="1">
+		<monster name="Stormfang Ravager" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33336" centery="32189" centerz="8" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33329" centery="32193" centerz="8" radius="1">
+		<monster name="Ironburrow Devourer" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33418" centery="32194" centerz="8" radius="1">
+		<monster name="Ironburrow Devourer" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33352" centery="32196" centerz="8" radius="1">
+		<monster name="Dunestalker Hunter" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33462" centery="32199" centerz="8" radius="1">
+		<monster name="Ironburrow Devourer" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33363" centery="32200" centerz="8" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33425" centery="32200" centerz="8" radius="1">
+		<monster name="Dunestalker Hunter" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33406" centery="32201" centerz="8" radius="1">
+		<monster name="Stormfang Ravager" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33439" centery="32201" centerz="8" radius="1">
+		<monster name="Stormfang Ravager" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33451" centery="32202" centerz="8" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33463" centery="32206" centerz="8" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33344" centery="32210" centerz="8" radius="1">
+		<monster name="Voltstrike Hound" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33337" centery="32211" centerz="8" radius="1">
+		<monster name="Ironburrow Devourer" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33377" centery="32211" centerz="8" radius="1">
+		<monster name="Voltstrike Hound" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33405" centery="32212" centerz="8" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33413" centery="32214" centerz="8" radius="1">
+		<monster name="Voltstrike Hound" x="0" y="-1" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33359" centery="32215" centerz="8" radius="1">
+		<monster name="Stormfang Ravager" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33451" centery="32221" centerz="8" radius="1">
+		<monster name="Dunestalker Hunter" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33437" centery="32224" centerz="8" radius="1">
+		<monster name="Dunestalker Hunter" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33345" centery="32230" centerz="8" radius="1">
+		<monster name="Ironburrow Devourer" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33469" centery="32230" centerz="8" radius="1">
+		<monster name="Dunestalker Hunter" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33432" centery="32231" centerz="8" radius="1">
+		<monster name="Voltstrike Hound" x="0" y="-1" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33363" centery="32232" centerz="8" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33400" centery="32232" centerz="8" radius="1">
+		<monster name="Ironburrow Devourer" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33344" centery="32234" centerz="8" radius="1">
+		<monster name="Dunestalker Hunter" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33347" centery="32234" centerz="8" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33448" centery="32235" centerz="8" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="-1" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33442" centery="32237" centerz="8" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="-1" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33403" centery="32239" centerz="8" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33415" centery="32243" centerz="8" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33421" centery="32246" centerz="8" radius="1">
+		<monster name="Voltstrike Hound" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33446" centery="32250" centerz="8" radius="1">
+		<monster name="Stormfang Ravager" x="0" y="1" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33466" centery="32252" centerz="8" radius="1">
+		<monster name="Voltstrike Hound" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33462" centery="32256" centerz="8" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33430" centery="32258" centerz="8" radius="1">
+		<monster name="Ironburrow Devourer" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33424" centery="32260" centerz="8" radius="1">
+		<monster name="Ironburrow Devourer" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33399" centery="32263" centerz="8" radius="1">
+		<monster name="Dunestalker Hunter" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33447" centery="32265" centerz="8" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33404" centery="32268" centerz="8" radius="1">
+		<monster name="Stormfang Ravager" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="33423" centery="32271" centerz="8" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="32271" centery="33005" centerz="8" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="-1" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="32273" centery="33009" centerz="8" radius="1">
+		<monster name="Ancient Root Tyrant" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="32265" centery="33013" centerz="8" radius="1">
+		<monster name="Ancient Root Tyrant" x="0" y="0" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="31752" centery="30946" centerz="9" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31730" centery="30947" centerz="9" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31739" centery="30947" centerz="9" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31709" centery="30952" centerz="9" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31728" centery="30952" centerz="9" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31733" centery="30952" centerz="9" radius="1">
+		<monster name="Varg" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31746" centery="30952" centerz="9" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31751" centery="30952" centerz="9" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31703" centery="30954" centerz="9" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31710" centery="30954" centerz="9" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31706" centery="30955" centerz="9" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31713" centery="30955" centerz="9" radius="1">
+		<monster name="Cyclursus" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31739" centery="30955" centerz="9" radius="1">
+		<monster name="Creepy Crawler" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31753" centery="30958" centerz="9" radius="1">
+		<monster name="Creepy Crawler" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31706" centery="30959" centerz="9" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31730" centery="30959" centerz="9" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31726" centery="30960" centerz="9" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31734" centery="30964" centerz="9" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31698" centery="30966" centerz="9" radius="1">
+		<monster name="Varg" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31715" centery="30967" centerz="9" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31709" centery="30969" centerz="9" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31688" centery="30970" centerz="9" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31696" centery="30970" centerz="9" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31728" centery="30970" centerz="9" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31681" centery="30971" centerz="9" radius="1">
+		<monster name="Cyclursus" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31684" centery="30971" centerz="9" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31714" centery="30971" centerz="9" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31686" centery="30974" centerz="9" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31698" centery="30974" centerz="9" radius="1">
+		<monster name="Varg" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31713" centery="30974" centerz="9" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31700" centery="30975" centerz="9" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31722" centery="30975" centerz="9" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31720" centery="30983" centerz="9" radius="1">
+		<monster name="Creepy Crawler" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31723" centery="30984" centerz="9" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31717" centery="30985" centerz="9" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31722" centery="30986" centerz="9" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33442" centery="31413" centerz="9" radius="1">
+		<monster name="Ashen Hellhound" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33456" centery="31414" centerz="9" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33432" centery="31422" centerz="9" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33485" centery="31426" centerz="9" radius="1">
+		<monster name="Ashen Hellhound" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33487" centery="31432" centerz="9" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33481" centery="31433" centerz="9" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33445" centery="31434" centerz="9" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33471" centery="31438" centerz="9" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33421" centery="31446" centerz="9" radius="1">
+		<monster name="Ashen Hellhound" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33493" centery="31450" centerz="9" radius="1">
+		<monster name="Ashen Hellhound" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33427" centery="31452" centerz="9" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33454" centery="31456" centerz="9" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33479" centery="31465" centerz="9" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33455" centery="31468" centerz="9" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33502" centery="31474" centerz="9" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33450" centery="31481" centerz="9" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33468" centery="31481" centerz="9" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33489" centery="31482" centerz="9" radius="1">
+		<monster name="Ashen Hellhound" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33442" centery="31483" centerz="9" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33469" centery="31493" centerz="9" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33462" centery="31509" centerz="9" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33894" centery="31672" centerz="9" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33989" centery="31674" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33985" centery="31675" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33987" centery="31675" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33992" centery="31675" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33895" centery="31676" centerz="9" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33989" centery="31676" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33993" centery="31677" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33912" centery="31678" centerz="9" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33865" centery="31679" centerz="9" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34010" centery="31679" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33916" centery="31680" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33870" centery="31681" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33895" centery="31681" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34011" centery="31681" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33877" centery="31682" centerz="9" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33969" centery="31682" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34014" centery="31682" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33862" centery="31683" centerz="9" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33908" centery="31683" centerz="9" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33971" centery="31683" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33973" centery="31683" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34011" centery="31683" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34014" centery="31684" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33969" centery="31685" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33917" centery="31686" centerz="9" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33971" centery="31686" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34017" centery="31686" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33969" centery="31688" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33866" centery="31689" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33912" centery="31689" centerz="9" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33868" centery="31690" centerz="9" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33881" centery="31690" centerz="9" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33892" centery="31690" centerz="9" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33900" centery="31690" centerz="9" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33922" centery="31690" centerz="9" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33860" centery="31691" centerz="9" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33876" centery="31691" centerz="9" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33887" centery="31691" centerz="9" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33910" centery="31695" centerz="9" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33909" centery="31697" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33926" centery="31697" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34008" centery="31697" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34010" centery="31697" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34012" centery="31697" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33878" centery="31698" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33904" centery="31698" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33986" centery="31699" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33988" centery="31699" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34009" centery="31699" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34011" centery="31699" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33874" centery="31700" centerz="9" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33878" centery="31700" centerz="9" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33900" centery="31700" centerz="9" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33915" centery="31700" centerz="9" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33990" centery="31700" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33993" centery="31700" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33867" centery="31701" centerz="9" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33890" centery="31701" centerz="9" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33912" centery="31701" centerz="9" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33987" centery="31701" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34006" centery="31701" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33860" centery="31702" centerz="9" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33898" centery="31702" centerz="9" radius="1">
+		<monster name="Devoted Radiant Inquisitor" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33900" centery="31702" centerz="9" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33995" centery="31703" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33925" centery="31704" centerz="9" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33957" centery="31704" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+		<monster name="Moonspawn Juggernaut" x="1" y="1" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33903" centery="31705" centerz="9" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33909" centery="31705" centerz="9" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33914" centery="31705" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33960" centery="31705" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33866" centery="31706" centerz="9" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33959" centery="31707" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33880" centery="31708" centerz="9" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33892" centery="31708" centerz="9" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33961" centery="31708" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33923" centery="31709" centerz="9" radius="1">
+		<monster name="Devoted Radiant Templar" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33890" centery="31711" centerz="9" radius="1">
+		<monster name="Devoted Radiant Warden" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33907" centery="31711" centerz="9" radius="1">
+		<monster name="Devoted Radiant Paragon" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33862" centery="31712" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33918" centery="31712" centerz="9" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34012" centery="31714" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34014" centery="31714" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34017" centery="31714" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34019" centery="31714" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33867" centery="31716" centerz="9" radius="1">
+		<monster name="Devoted Radiant Custodian" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33878" centery="31716" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33982" centery="31716" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34012" centery="31716" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="34015" centery="31716" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33893" centery="31717" centerz="9" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33914" centery="31717" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33974" centery="31717" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33976" centery="31717" centerz="9" radius="1">
+		<monster name="Moonspawn Oozecrown" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33980" centery="31717" centerz="9" radius="1">
+		<monster name="Moonspawn Blightspitter" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33978" centery="31718" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33982" centery="31718" centerz="9" radius="1">
+		<monster name="Moonspawn Juggernaut" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33905" centery="31719" centerz="9" radius="1">
+		<monster name="Devoted Radiant Acolyte" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33912" centery="31721" centerz="9" radius="1">
+		<monster name="Devoted Radiant Zealot" x="0" y="0" z="9" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="33513" centery="32204" centerz="9" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33446" centery="32205" centerz="9" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33455" centery="32209" centerz="9" radius="1">
+		<monster name="Dunestalker Hunter" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33474" centery="32209" centerz="9" radius="1">
+		<monster name="Stormfang Ravager" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33504" centery="32209" centerz="9" radius="1">
+		<monster name="Dunestalker Hunter" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33496" centery="32210" centerz="9" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33462" centery="32212" centerz="9" radius="1">
+		<monster name="Voltstrike Hound" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33482" centery="32219" centerz="9" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33508" centery="32221" centerz="9" radius="1">
+		<monster name="Voltstrike Hound" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33449" centery="32225" centerz="9" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33465" centery="32226" centerz="9" radius="1">
+		<monster name="Stormfang Ravager" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33490" centery="32226" centerz="9" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33493" centery="32236" centerz="9" radius="1">
+		<monster name="Voltstrike Hound" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33478" centery="32237" centerz="9" radius="1">
+		<monster name="Voltstrike Hound" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33444" centery="32243" centerz="9" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33462" centery="32243" centerz="9" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33510" centery="32243" centerz="9" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33492" centery="32248" centerz="9" radius="1">
+		<monster name="Voltstrike Hound" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33499" centery="32256" centerz="9" radius="1">
+		<monster name="Dunestalker Hunter" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33450" centery="32257" centerz="9" radius="1">
+		<monster name="Magmafang Incinerator" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="33479" centery="32261" centerz="9" radius="1">
+		<monster name="Dreadhorn Ravager" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="32234" centery="33050" centerz="9" radius="1">
+		<monster name="Venomcoil Automaton" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="32251" centery="33053" centerz="9" radius="1">
+		<monster name="Hive Widow" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="32249" centery="33059" centerz="9" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="32223" centery="33062" centerz="9" radius="1">
+		<monster name="Hive Widow" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="32260" centery="33075" centerz="9" radius="1">
+		<monster name="Verdant Rootwalker" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="32238" centery="33076" centerz="9" radius="1">
+		<monster name="Venomcoil Automaton" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="32261" centery="33087" centerz="9" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="32233" centery="33095" centerz="9" radius="1">
+		<monster name="Verdant Rootwalker" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="32261" centery="33098" centerz="9" radius="1">
+		<monster name="Venomcoil Automaton" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="32253" centery="33102" centerz="9" radius="1">
+		<monster name="Hive Widow" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="32238" centery="33103" centerz="9" radius="1">
+		<monster name="Bladecoil Stalker" x="0" y="0" z="9" spawntime="120" />
+	</spawn>
+	<spawn centerx="31794" centery="30932" centerz="10" radius="1">
+		<monster name="Creepy Crawler" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31776" centery="30933" centerz="10" radius="1">
+		<monster name="Varg" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31792" centery="30933" centerz="10" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31793" centery="30935" centerz="10" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31790" centery="30937" centerz="10" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31776" centery="30938" centerz="10" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31784" centery="30938" centerz="10" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31794" centery="30939" centerz="10" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31772" centery="30940" centerz="10" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31784" centery="30940" centerz="10" radius="1">
+		<monster name="Varg" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31794" centery="30943" centerz="10" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31779" centery="30946" centerz="10" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31768" centery="30948" centerz="10" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31758" centery="30950" centerz="10" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31767" centery="30951" centerz="10" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31767" centery="30954" centerz="10" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31780" centery="30956" centerz="10" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31776" centery="30960" centerz="10" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31777" centery="30963" centerz="10" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31764" centery="30964" centerz="10" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31768" centery="30964" centerz="10" radius="1">
+		<monster name="Varg" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31768" centery="30969" centerz="10" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31766" centery="30971" centerz="10" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31770" centery="30972" centerz="10" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31763" centery="30974" centerz="10" radius="1">
+		<monster name="Walking Dread" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31773" centery="30975" centerz="10" radius="1">
+		<monster name="Creepy Crawler" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33451" centery="31383" centerz="10" radius="1">
+		<monster name="Ashen Hellhound" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33470" centery="31406" centerz="10" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33442" centery="31409" centerz="10" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33487" centery="31409" centerz="10" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33455" centery="31411" centerz="10" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33480" centery="31422" centerz="10" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33494" centery="31422" centerz="10" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33449" centery="31429" centerz="10" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33461" centery="31438" centerz="10" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33487" centery="31439" centerz="10" radius="1">
+		<monster name="Ashen Hellhound" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33470" centery="31447" centerz="10" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33436" centery="31449" centerz="10" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33462" centery="31461" centerz="10" radius="1">
+		<monster name="Ashen Hellhound" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33436" centery="31471" centerz="10" radius="1">
+		<monster name="Ashen Hellhound" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33450" centery="31475" centerz="10" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33471" centery="31478" centerz="10" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33428" centery="31484" centerz="10" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33462" centery="31493" centerz="10" radius="1">
+		<monster name="Brood Abomination" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33436" centery="31494" centerz="10" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33475" centery="31497" centerz="10" radius="1">
+		<monster name="Hellscythe Reaver" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="33464" centery="31506" centerz="10" radius="1">
+		<monster name="Cursed Voidcaller" x="0" y="0" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="31793" centery="30933" centerz="11" radius="1">
+		<monster name="Crypt Fiend" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31797" centery="30935" centerz="11" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31792" centery="30937" centerz="11" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31797" centery="30938" centerz="11" radius="1">
+		<monster name="Varg" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31826" centery="30941" centerz="11" radius="1">
+		<monster name="Crypt Mage" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31807" centery="30943" centerz="11" radius="1">
+		<monster name="Crypt Mage" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31820" centery="30943" centerz="11" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31822" centery="30945" centerz="11" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31795" centery="30946" centerz="11" radius="1">
+		<monster name="Crypt Mage" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31812" centery="30946" centerz="11" radius="1">
+		<monster name="Varg" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31819" centery="30947" centerz="11" radius="1">
+		<monster name="Crypt Fiend" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31799" centery="30948" centerz="11" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31818" centery="30949" centerz="11" radius="1">
+		<monster name="Cyclursus" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31809" centery="30950" centerz="11" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31825" centery="30950" centerz="11" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31782" centery="30953" centerz="11" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31794" centery="30954" centerz="11" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31802" centery="30954" centerz="11" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31786" centery="30955" centerz="11" radius="1">
+		<monster name="Cyclursus" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31782" centery="30956" centerz="11" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31781" centery="30960" centerz="11" radius="1">
+		<monster name="Crypt Fiend" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31783" centery="30961" centerz="11" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31786" centery="30962" centerz="11" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31803" centery="30964" centerz="11" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31794" centery="30966" centerz="11" radius="1">
+		<monster name="Crypt Fiend" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31770" centery="30970" centerz="11" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31771" centery="30972" centerz="11" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31788" centery="30972" centerz="11" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31764" centery="30973" centerz="11" radius="1">
+		<monster name="Cyclursus" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31786" centery="30973" centerz="11" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31755" centery="30974" centerz="11" radius="1">
+		<monster name="Crypt Mage" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31757" centery="30974" centerz="11" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31795" centery="30976" centerz="11" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31759" centery="30977" centerz="11" radius="1">
+		<monster name="Varg" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31800" centery="30977" centerz="11" radius="1">
+		<monster name="Crypt Mage" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31754" centery="30978" centerz="11" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31785" centery="30980" centerz="11" radius="1">
+		<monster name="Varg" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31797" centery="30980" centerz="11" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31750" centery="30981" centerz="11" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31753" centery="30982" centerz="11" radius="1">
+		<monster name="Crypt Mage" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31780" centery="30982" centerz="11" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31752" centery="30986" centerz="11" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31756" centery="30987" centerz="11" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31763" centery="30991" centerz="11" radius="1">
+		<monster name="Crypt Fiend" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31774" centery="30991" centerz="11" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31789" centery="30991" centerz="11" radius="1">
+		<monster name="Cyclursus" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31786" centery="30993" centerz="11" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31783" centery="30994" centerz="11" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31754" centery="30995" centerz="11" radius="1">
+		<monster name="Cyclursus" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31756" centery="30995" centerz="11" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31768" centery="30995" centerz="11" radius="1">
+		<monster name="Gloom Maw" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31766" centery="30998" centerz="11" radius="1">
+		<monster name="Orclops Bloodbreaker" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31770" centery="31007" centerz="11" radius="1">
+		<monster name="Crypt Fiend" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31784" centery="31007" centerz="11" radius="1">
+		<monster name="Night Harpy" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31776" centery="31008" centerz="11" radius="1">
+		<monster name="Varg" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31779" centery="31008" centerz="11" radius="1">
+		<monster name="Crypt Mage" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31781" centery="31008" centerz="11" radius="1">
+		<monster name="Roaming Dread" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31773" centery="31009" centerz="11" radius="1">
+		<monster name="Crypt Construct" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="31771" centery="31011" centerz="11" radius="1">
+		<monster name="Crypt Mage" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33324" centery="31355" centerz="11" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33344" centery="31355" centerz="11" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33334" centery="31361" centerz="11" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33336" centery="31370" centerz="11" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33334" centery="31381" centerz="11" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33317" centery="31395" centerz="11" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33348" centery="31395" centerz="11" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33309" centery="31406" centerz="11" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33360" centery="31406" centerz="11" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33300" centery="31409" centerz="11" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33366" centery="31409" centerz="11" radius="1">
+		<monster name="Totem Warbeast" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33320" centery="31423" centerz="11" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33353" centery="31424" centerz="11" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33350" centery="31425" centerz="11" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33316" centery="31427" centerz="11" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33351" centery="31429" centerz="11" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33315" centery="31430" centerz="11" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33334" centery="31436" centerz="11" radius="1">
+		<monster name="Totem Warbeast" x="0" y="-1" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33334" centery="31455" centerz="11" radius="1">
+		<monster name="Totem Warbeast" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33301" centery="31465" centerz="11" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33372" centery="31465" centerz="11" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33305" centery="31466" centerz="11" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33326" centery="31467" centerz="11" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="-1" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33334" centery="31467" centerz="11" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33365" centery="31467" centerz="11" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="-1" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33341" centery="31468" centerz="11" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33374" centery="31468" centerz="11" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33298" centery="31470" centerz="11" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="-1" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33333" centery="31474" centerz="11" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="33317" centery="31413" centerz="12" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33315" centery="31418" centerz="12" radius="1">
+		<monster name="Totem Warbeast" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33316" centery="31421" centerz="12" radius="1">
+		<monster name="Totem Warbeast" x="1" y="-1" z="12" spawntime="120" />
+		<monster name="Ancient Moss guardian" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33333" centery="31473" centerz="12" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33323" centery="31476" centerz="12" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33341" centery="31477" centerz="12" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33344" centery="31479" centerz="12" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33321" centery="31481" centerz="12" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33346" centery="31486" centerz="12" radius="1">
+		<monster name="Venom Ooze" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33320" centery="31488" centerz="12" radius="1">
+		<monster name="Venom Ooze" x="0" y="-1" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33319" centery="31495" centerz="12" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33343" centery="31495" centerz="12" radius="1">
+		<monster name="Void Ooze" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33312" centery="31496" centerz="12" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33348" centery="31496" centerz="12" radius="1">
+		<monster name="Eldritch Devourer" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33346" centery="31502" centerz="12" radius="1">
+		<monster name="Totem Warbeast" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33321" centery="31505" centerz="12" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33350" centery="31509" centerz="12" radius="1">
+		<monster name="Shardback Behemoth" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="33321" centery="31510" centerz="12" radius="1">
+		<monster name="Ancient Moss guardian" x="0" y="0" z="12" spawntime="120" />
+	</spawn>
+</spawns>

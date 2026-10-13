@@ -1,0 +1,1063 @@
+type	name	x	y	z	reason	other_floors_at_xy
+npc	Esrik	33929	31663	2	no tile in map	
+npc	Rock In A Hard Place	33915	31680	2	no tile in map	
+npc	Rashid	33929	31662	3	no tile in map	
+npc	Asnarus	33924	31671	3	no tile in map	
+npc	Haroun	33944	31671	3	no tile in map	
+npc	Eremo	33916	31680	3	no tile in map	
+npc	Estherya	33914	31693	3	no tile in map	
+monster	Bladecoil Stalker	33330	32556	3	no tile in map	7 8 9 11 12 13 
+monster	Totem Warbeast	33333	32559	3	no tile in map	7 8 9 11 12 13 
+monster	Totem Warbeast	33341	32564	3	no tile in map	7 8 9 10 11 12 13 
+monster	Stonehide Ravager	33343	32564	3	no tile in map	7 8 10 11 12 13 
+monster	Spineback Devourer	33332	32571	3	no tile in map	7 8 9 10 11 12 13 
+monster	Bladecoil Stalker	33330	32573	3	no tile in map	7 8 9 10 11 12 13 
+monster	Hellscythe Reaver	32290	32990	3	no tile in map	7 
+npc	Khadin	33926	31664	4	no tile in map	
+npc	Asima	34023	31669	4	no tile in map	
+npc	Yasir	33922	31670	4	no tile in map	
+npc	Halif	34015	31673	4	no tile in map	
+npc	Ishina	34026	31674	4	no tile in map	
+npc	Tamoril	33914	31693	4	no tile in map	
+monster	Abyssal Nightreaver	33341	32557	4	no tile in map	7 8 9 11 12 13 
+monster	Bladecoil Stalker	33350	32557	4	no tile in map	7 11 12 13 
+monster	Totem Warbeast	33351	32560	4	no tile in map	7 11 12 13 
+monster	Abyssal Nightreaver	33341	32563	4	no tile in map	7 8 9 10 11 12 13 
+monster	Bladecoil Stalker	33327	32564	4	no tile in map	7 8 9 10 11 12 13 
+monster	Stonehide Ravager	33335	32564	4	no tile in map	7 8 9 10 11 12 13 
+monster	Spineback Devourer	33347	32564	4	no tile in map	7 10 11 12 13 
+monster	Stonehide Ravager	33343	32573	4	no tile in map	7 8 9 10 11 12 13 
+monster	Totem Warbeast	33341	32576	4	no tile in map	7 8 9 10 11 12 13 
+monster	Hellscythe Reaver	32289	32990	4	no tile in map	7 
+monster	Cursed Voidcaller	32771	30914	5	no tile in map	
+monster	Cursed Voidcaller	32769	30917	5	no tile in map	
+monster	Cinderheart Abomination	32793	30920	5	no tile in map	
+monster	Cursed Voidcaller	32797	30922	5	no tile in map	
+monster	Cursed Voidcaller	32792	30924	5	no tile in map	
+monster	Cinderheart Abomination	32796	30928	5	no tile in map	
+monster	Cinderheart Abomination	32765	30933	5	no tile in map	
+monster	Emberflame Conjurer	32759	30940	5	no tile in map	7 
+monster	Cinderheart Abomination	32775	30941	5	no tile in map	7 
+monster	Arcaneseer Djinn	32771	30945	5	no tile in map	7 
+monster	Arcaneseer Djinn	32763	30956	5	no tile in map	7 
+monster	Cinderheart Abomination	32754	30960	5	no tile in map	7 
+monster	Devoted Radiant Custodian	33919	31578	5	no tile in map	
+monster	Devoted Radiant Paragon	33930	31581	5	no tile in map	
+monster	Devoted Radiant Inquisitor	33911	31583	5	no tile in map	
+monster	Devoted Radiant Acolyte	33937	31583	5	no tile in map	
+npc	Yana	34000	31650	5	no tile in map	
+npc	Naji	33997	31657	5	no tile in map	
+npc	Benjamin	34004	31657	5	no tile in map	
+monster	Devoted Radiant Warden	33913	31661	5	no tile in map	
+monster	Devoted Radiant Zealot	33913	31662	5	no tile in map	
+monster	Devoted Radiant Custodian	33916	31665	5	no tile in map	
+monster	Devoted Radiant Warden	33919	31666	5	no tile in map	
+npc	Alesar	33945	31669	5	no tile in map	
+monster	Devoted Radiant Paragon	33920	31671	5	no tile in map	
+npc	Nah'bob	33936	31671	5	no tile in map	
+npc	Xodet	33952	31671	5	no tile in map	
+monster	Devoted Radiant Paragon	33915	31675	5	no tile in map	
+monster	Moonspawn Juggernaut	33917	31678	5	no tile in map	
+monster	Devoted Radiant Templar	33914	31679	5	no tile in map	
+monster	Devoted Radiant Warden	33915	31681	5	no tile in map	
+monster	Devoted Radiant Zealot	33918	31681	5	no tile in map	
+monster	Moonspawn Blightspitter	33913	31682	5	no tile in map	
+monster	Moonspawn Oozecrown	33919	31683	5	no tile in map	
+monster	Spineback Devourer	32369	31887	5	no tile in map	7 9 10 11 12 
+monster	Spineback Devourer	32362	31889	5	no tile in map	7 9 10 11 12 
+monster	Ancient Moss guardian	32351	31892	5	no tile in map	7 11 12 
+monster	Ancient Moss guardian	32371	31896	5	no tile in map	7 10 11 12 
+monster	Eldritch Devourer	32449	32541	5	no tile in map	7 8 
+monster	Abyssal Nightreaver	33372	32547	5	no tile in map	7 11 12 13 
+monster	Stonehide Ravager	33332	32553	5	no tile in map	7 8 9 11 12 13 
+monster	Totem Warbeast	33349	32563	5	no tile in map	7 11 12 13 
+monster	Spineback Devourer	33336	32566	5	no tile in map	7 8 9 10 11 12 13 
+monster	Bladecoil Stalker	33345	32566	5	no tile in map	7 10 11 12 13 
+monster	Spineback Devourer	33355	32566	5	no tile in map	7 9 10 11 12 13 
+monster	Bladecoil Stalker	33318	32569	5	no tile in map	7 8 9 10 11 12 13 
+monster	Totem Warbeast	33324	32571	5	no tile in map	7 8 9 10 11 12 13 
+monster	Stonehide Ravager	33361	32575	5	no tile in map	7 9 10 11 12 13 
+monster	Eldritch Devourer	32531	32579	5	no tile in map	7 
+monster	Stonehide Ravager	33346	32579	5	no tile in map	7 9 10 11 12 
+monster	Eldritch Devourer	32532	32582	5	no tile in map	7 
+monster	Bladecoil Stalker	33363	32583	5	no tile in map	7 9 10 11 12 
+monster	Bladecoil Stalker	33336	32587	5	no tile in map	7 8 9 10 11 12 13 
+monster	Hellscythe Reaver	32289	32990	5	no tile in map	7 
+monster	Ancient Root Tyrant	32258	33049	5	no tile in map	
+monster	Bladecoil Stalker	32251	33054	5	no tile in map	
+monster	Bladecoil Stalker	32260	33060	5	no tile in map	
+monster	Cursed Voidcaller	32769	30916	6	no tile in map	
+monster	Arcaneseer Djinn	32762	30928	6	no tile in map	
+monster	Cinderheart Abomination	32751	30944	6	no tile in map	7 
+monster	Arcaneseer Djinn	32778	30944	6	no tile in map	7 
+monster	Arcaneseer Djinn	32752	30952	6	no tile in map	7 
+monster	Emberflame Conjurer	32759	30963	6	no tile in map	7 
+monster	Varg	31671	31009	6	no tile in map	
+monster	Gloom Maw	31672	31012	6	no tile in map	
+monster	Varg	31671	31021	6	no tile in map	
+monster	Gloom Maw	31672	31026	6	no tile in map	
+monster	Devoted Radiant Acolyte	33902	31588	6	no tile in map	
+monster	Devoted Radiant Warden	33980	31630	6	no tile in map	
+monster	Devoted Radiant Paragon	33977	31636	6	no tile in map	
+monster	Devoted Radiant Templar	33980	31641	6	no tile in map	
+monster	Devoted Radiant Custodian	33988	31646	6	no tile in map	
+monster	Devoted Radiant Templar	33994	31646	6	no tile in map	
+monster	Devoted Radiant Acolyte	33999	31654	6	no tile in map	
+monster	Devoted Radiant Zealot	33998	31656	6	no tile in map	
+monster	Devoted Radiant Acolyte	34004	31658	6	no tile in map	
+monster	Devoted Radiant Warden	34008	31659	6	no tile in map	
+monster	Devoted Radiant Inquisitor	34012	31660	6	no tile in map	
+monster	Devoted Radiant Paragon	33982	31661	6	no tile in map	
+monster	Devoted Radiant Acolyte	33985	31663	6	no tile in map	
+monster	Devoted Radiant Zealot	34016	31665	6	no tile in map	
+monster	Devoted Radiant Zealot	33985	31666	6	no tile in map	
+monster	Devoted Radiant Templar	33988	31666	6	no tile in map	
+monster	Devoted Radiant Warden	33993	31668	6	no tile in map	
+monster	Devoted Radiant Inquisitor	34008	31670	6	no tile in map	
+monster	Devoted Radiant Custodian	34012	31672	6	no tile in map	
+monster	Devoted Radiant Custodian	34022	31672	6	no tile in map	
+monster	Devoted Radiant Warden	34025	31672	6	no tile in map	
+monster	Devoted Radiant Templar	34029	31673	6	no tile in map	
+monster	Devoted Radiant Paragon	34019	31675	6	no tile in map	
+monster	Devoted Radiant Acolyte	34029	31676	6	no tile in map	
+monster	Devoted Radiant Warden	34032	31678	6	no tile in map	
+monster	Devoted Radiant Zealot	34028	31679	6	no tile in map	
+monster	Devoted Radiant Warden	33959	31685	6	no tile in map	
+monster	Devoted Radiant Acolyte	34010	31686	6	no tile in map	
+monster	Devoted Radiant Inquisitor	33876	31687	6	no tile in map	
+monster	Devoted Radiant Warden	33942	31689	6	no tile in map	
+monster	Devoted Radiant Acolyte	33874	31690	6	no tile in map	
+monster	Devoted Radiant Zealot	33956	31690	6	no tile in map	
+monster	Devoted Radiant Paragon	33871	31691	6	no tile in map	
+monster	Devoted Radiant Templar	34009	31691	6	no tile in map	
+monster	Devoted Radiant Zealot	34050	31691	6	no tile in map	
+monster	Devoted Radiant Acolyte	33936	31692	6	no tile in map	
+monster	Devoted Radiant Templar	33948	31692	6	no tile in map	
+monster	Devoted Radiant Inquisitor	34048	31692	6	no tile in map	
+monster	Devoted Radiant Templar	33875	31693	6	no tile in map	
+monster	Devoted Radiant Custodian	33932	31693	6	no tile in map	
+monster	Devoted Radiant Templar	33939	31693	6	no tile in map	
+monster	Devoted Radiant Zealot	33872	31694	6	no tile in map	
+monster	Devoted Radiant Templar	34049	31694	6	no tile in map	
+monster	Devoted Radiant Zealot	33931	31696	6	no tile in map	
+monster	Devoted Radiant Acolyte	33934	31696	6	no tile in map	
+monster	Devoted Radiant Paragon	33937	31697	6	no tile in map	
+monster	Devoted Radiant Zealot	34074	31709	6	no tile in map	
+monster	Devoted Radiant Custodian	34082	31711	6	no tile in map	
+monster	Moonspawn Blightspitter	33869	31714	6	no tile in map	
+monster	Devoted Radiant Zealot	34085	31715	6	no tile in map	
+monster	Devoted Radiant Acolyte	34072	31716	6	no tile in map	
+monster	Moonspawn Juggernaut	33866	31718	6	no tile in map	
+monster	Moonspawn Oozecrown	33869	31718	6	no tile in map	
+monster	Devoted Radiant Warden	34067	31718	6	no tile in map	
+monster	Moonspawn Blightspitter	33864	31720	6	no tile in map	
+monster	Moonspawn Oozecrown	33866	31720	6	no tile in map	
+monster	Moonspawn Juggernaut	33868	31720	6	no tile in map	
+monster	Devoted Radiant Inquisitor	34079	31720	6	no tile in map	
+monster	Devoted Radiant Acolyte	34060	31722	6	no tile in map	
+monster	Devoted Radiant Templar	34065	31723	6	no tile in map	
+npc	Asima	33981	31738	6	no tile in map	
+npc	Asnarus	33977	31742	6	no tile in map	
+npc	Yasir	33982	31745	6	no tile in map	
+monster	Moonspawn Blightspitter	34005	31755	6	no tile in map	
+monster	Moonspawn Oozecrown	34001	31757	6	no tile in map	
+monster	Moonspawn Oozecrown	34007	31759	6	no tile in map	
+monster	Moonspawn Juggernaut	34004	31761	6	no tile in map	
+npc	Captain Marapur	33931	31769	6	no tile in map	
+monster	Abyssal Nightreaver	32375	31882	6	no tile in map	7 9 10 11 12 
+monster	Spineback Devourer	32365	31893	6	no tile in map	7 10 11 12 
+monster	Abyssal Nightreaver	32366	31896	6	no tile in map	7 10 11 12 
+monster	Ancient Moss guardian	32349	31900	6	no tile in map	7 11 12 
+monster	Verdant Rootwalker	32495	32360	6	no tile in map	7 8 
+monster	Ancient Root Tyrant	32500	32365	6	no tile in map	7 
+monster	Verdant Rootwalker	32490	32371	6	no tile in map	7 8 
+monster	Verdant Rootwalker	32471	32372	6	no tile in map	7 8 9 10 11 
+monster	Ancient Root Tyrant	32486	32374	6	no tile in map	7 8 11 
+monster	Verdant Rootwalker	32476	32386	6	no tile in map	7 8 10 11 
+monster	Bladecoil Stalker	33369	32547	6	no tile in map	7 11 12 13 
+monster	Void Ooze	32467	32549	6	no tile in map	7 
+monster	Venom Ooze	32476	32549	6	no tile in map	7 
+monster	Blacksteel Brute	33339	32549	6	no tile in map	7 8 9 11 12 13 
+monster	Eldritch Devourer	32463	32552	6	no tile in map	7 
+monster	Bladecoil Stalker	33368	32552	6	no tile in map	7 11 12 13 
+monster	Bladecoil Stalker	33359	32555	6	no tile in map	7 11 12 13 
+monster	Void Ooze	32495	32558	6	no tile in map	7 
+monster	Eldritch Devourer	32500	32560	6	no tile in map	7 
+monster	Shardback Behemoth	32490	32562	6	no tile in map	7 
+monster	Bladecoil Stalker	33355	32562	6	no tile in map	7 11 12 13 
+monster	Venom Ooze	32501	32563	6	no tile in map	7 
+monster	Blacksteel Brute	33334	32563	6	no tile in map	7 8 9 10 11 12 13 
+monster	Bladecoil Stalker	33330	32568	6	no tile in map	7 8 9 10 11 12 13 
+monster	Totem Warbeast	33345	32568	6	no tile in map	7 10 11 12 13 
+monster	Spineback Devourer	33350	32568	6	no tile in map	7 9 10 11 12 13 
+monster	Blacksteel Brute	33355	32569	6	no tile in map	7 9 10 11 12 13 
+monster	Abyssal Nightreaver	33358	32575	6	no tile in map	7 9 10 11 12 13 
+monster	Void Ooze	32462	32576	6	no tile in map	7 
+monster	Stonehide Ravager	33348	32577	6	no tile in map	7 9 10 11 12 
+monster	Shardback Behemoth	32530	32578	6	no tile in map	7 
+monster	Brood Abomination	32469	32579	6	no tile in map	7 
+monster	Eldritch Devourer	32492	32579	6	no tile in map	7 
+monster	Brood Abomination	32502	32580	6	no tile in map	7 
+monster	Shardback Behemoth	32527	32580	6	no tile in map	7 
+monster	Eldritch Devourer	32531	32581	6	no tile in map	7 
+monster	Eldritch Devourer	32527	32582	6	no tile in map	7 
+monster	Shardback Behemoth	32489	32584	6	no tile in map	7 
+monster	Venom Ooze	32492	32585	6	no tile in map	7 
+monster	Venom Ooze	32459	32586	6	no tile in map	7 
+monster	Eldritch Devourer	32471	32593	6	no tile in map	7 
+monster	Venom Ooze	32530	32594	6	no tile in map	7 
+monster	Void Ooze	32528	32597	6	no tile in map	7 
+monster	Eldritch Devourer	32454	32598	6	no tile in map	7 
+monster	Brood Abomination	32476	32600	6	no tile in map	7 
+monster	Void Ooze	32504	32600	6	no tile in map	7 
+monster	Shardback Behemoth	32534	32602	6	no tile in map	7 
+monster	Shardback Behemoth	32494	32605	6	no tile in map	7 
+monster	Void Ooze	32482	32606	6	no tile in map	7 
+monster	Eldritch Devourer	32500	32606	6	no tile in map	7 
+monster	Venom Ooze	32474	32612	6	no tile in map	7 
+monster	Venom Ooze	32500	32614	6	no tile in map	7 
+monster	Eldritch Devourer	32496	32617	6	no tile in map	7 
+monster	Brood Abomination	32500	32620	6	no tile in map	7 
+monster	Shardback Behemoth	32530	32623	6	no tile in map	7 10 
+monster	Void Ooze	32533	32623	6	no tile in map	7 8 10 
+monster	Ancient Root Tyrant	32253	33048	6	no tile in map	
+monster	Ancient Root Tyrant	32265	33057	6	no tile in map	
+monster	Ancient Root Tyrant	32256	33061	6	no tile in map	
+monster	Bloodthirsty Buccaneer	32777	30886	7	no tile in map	
+monster	Cinderheart Abomination	32781	30905	7	no tile in map	
+monster	Cursed Voidcaller	32765	30908	7	no tile in map	
+monster	Cursed Voidcaller	32788	30911	7	no tile in map	
+monster	Cinderheart Abomination	32781	30918	7	no tile in map	
+monster	Arcaneseer Djinn	32758	30922	7	no tile in map	
+monster	Emberflame Conjurer	32762	30922	7	no tile in map	
+monster	Gloom Maw	31665	30989	7	no tile in map	
+monster	Orclops Bloodbreaker	31671	30989	7	no tile in map	
+monster	Roaming Dread	31676	30989	7	no tile in map	
+monster	Gloom Maw	31680	30989	7	no tile in map	
+monster	Roaming Dread	31668	30990	7	no tile in map	
+monster	Gloom Maw	31667	30991	7	no tile in map	
+monster	Orclops Bloodbreaker	31685	30992	7	no tile in map	
+monster	Orclops Bloodbreaker	31675	30993	7	no tile in map	
+monster	Walking Dread	31681	30993	7	no tile in map	
+monster	Varg	31672	30994	7	no tile in map	
+monster	Walking Dread	31668	30995	7	no tile in map	
+monster	Varg	31664	30997	7	no tile in map	
+monster	Night Harpy	31674	30997	7	no tile in map	
+monster	Varg	31682	31001	7	no tile in map	
+monster	Roaming Dread	31672	31002	7	no tile in map	
+monster	Night Harpy	31682	31004	7	no tile in map	
+monster	Devoted Radiant Templar	33964	31563	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33962	31569	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33999	31569	7	no tile in map	
+monster	Devoted Radiant Acolyte	33929	31572	7	no tile in map	
+monster	Devoted Radiant Templar	33995	31572	7	no tile in map	
+monster	Devoted Radiant Paragon	33945	31573	7	no tile in map	
+monster	Devoted Radiant Custodian	33969	31574	7	no tile in map	
+monster	Devoted Radiant Acolyte	33988	31574	7	no tile in map	
+monster	Devoted Radiant Acolyte	33904	31577	7	no tile in map	
+monster	Devoted Radiant Zealot	34003	31578	7	no tile in map	
+monster	Devoted Radiant Paragon	34005	31578	7	no tile in map	
+monster	Devoted Radiant Acolyte	33958	31579	7	no tile in map	
+monster	Devoted Radiant Custodian	33995	31580	7	no tile in map	
+monster	Devoted Radiant Warden	33901	31581	7	no tile in map	
+monster	Devoted Radiant Zealot	33970	31581	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33923	31583	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33947	31584	7	no tile in map	
+monster	Devoted Radiant Custodian	33928	31585	7	no tile in map	
+monster	Devoted Radiant Templar	34044	31585	7	no tile in map	
+monster	Devoted Radiant Custodian	33892	31587	7	no tile in map	
+monster	Devoted Radiant Custodian	34041	31587	7	no tile in map	
+monster	Devoted Radiant Custodian	34084	31587	7	no tile in map	
+monster	Devoted Radiant Zealot	33883	31589	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34088	31590	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34055	31594	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34004	31595	7	no tile in map	
+monster	Devoted Radiant Paragon	34020	31596	7	no tile in map	
+monster	Devoted Radiant Acolyte	33901	31597	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33966	31596	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34051	31597	7	no tile in map	
+monster	Devoted Radiant Acolyte	34061	31597	7	no tile in map	
+monster	Devoted Radiant Custodian	33926	31599	7	no tile in map	
+monster	Devoted Radiant Acolyte	33934	31599	7	no tile in map	
+monster	Devoted Radiant Custodian	33872	31600	7	no tile in map	
+monster	Devoted Radiant Zealot	33868	31601	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33917	31601	7	no tile in map	
+monster	Devoted Radiant Templar	34026	31601	7	no tile in map	
+monster	Devoted Radiant Custodian	34062	31601	7	no tile in map	
+monster	Seagull	33930	31602	7	no tile in map	
+monster	Devoted Radiant Acolyte	33991	31602	7	no tile in map	
+monster	Devoted Radiant Warden	34016	31602	7	no tile in map	
+monster	Devoted Radiant Zealot	34022	31602	7	no tile in map	
+monster	Devoted Radiant Paragon	33913	31603	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34019	31603	7	no tile in map	
+monster	Devoted Radiant Templar	34029	31603	7	no tile in map	
+monster	Devoted Radiant Acolyte	34024	31604	7	no tile in map	
+monster	Tortoise	33925	31605	7	no tile in map	
+monster	Seagull	33922	31606	7	no tile in map	
+monster	Devoted Radiant Custodian	34012	31606	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34020	31606	7	no tile in map	
+monster	Devoted Radiant Templar	33864	31607	7	no tile in map	
+monster	Devoted Radiant Templar	33893	31607	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33877	31608	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34081	31609	7	no tile in map	
+monster	Devoted Radiant Custodian	34054	31612	7	no tile in map	
+monster	Devoted Radiant Custodian	33947	31613	7	no tile in map	
+monster	Tortoise	33943	31614	7	no tile in map	
+monster	Devoted Radiant Acolyte	34035	31614	7	no tile in map	
+monster	Devoted Radiant Paragon	33973	31615	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33981	31615	7	no tile in map	
+monster	Devoted Radiant Paragon	33888	31616	7	no tile in map	
+monster	Devoted Radiant Templar	33908	31616	7	no tile in map	
+monster	Devoted Radiant Custodian	33929	31616	7	no tile in map	
+monster	Seagull	33946	31616	7	no tile in map	
+monster	Devoted Radiant Paragon	34090	31616	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33860	31619	7	no tile in map	
+monster	Devoted Radiant Paragon	33920	31619	7	no tile in map	
+monster	Seagull	33950	31619	7	no tile in map	
+monster	Devoted Radiant Templar	34031	31619	7	no tile in map	
+monster	Devoted Radiant Zealot	34048	31619	7	no tile in map	
+monster	Devoted Radiant Templar	33872	31623	7	no tile in map	
+monster	Devoted Radiant Acolyte	33853	31624	7	no tile in map	
+monster	Devoted Radiant Templar	34051	31624	7	no tile in map	
+monster	Devoted Radiant Warden	33872	31625	7	no tile in map	
+monster	Devoted Radiant Acolyte	33919	31625	7	no tile in map	
+monster	Devoted Radiant Acolyte	34094	31627	7	no tile in map	
+monster	Devoted Radiant Paragon	33863	31628	7	no tile in map	
+monster	Devoted Radiant Acolyte	33901	31628	7	no tile in map	
+monster	Devoted Radiant Templar	33958	31629	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34051	31629	7	no tile in map	
+monster	Devoted Radiant Acolyte	34063	31631	7	no tile in map	
+monster	Seagull	33890	31632	7	no tile in map	
+monster	Seagull	33863	31634	7	no tile in map	
+monster	Devoted Radiant Custodian	33858	31635	7	no tile in map	
+monster	Devoted Radiant Templar	34096	31635	7	no tile in map	
+monster	Devoted Radiant Paragon	33999	31636	7	no tile in map	
+monster	Devoted Radiant Acolyte	34028	31636	7	no tile in map	
+monster	Devoted Radiant Warden	34040	31637	7	no tile in map	
+monster	Tortoise	33895	31638	7	no tile in map	
+monster	Devoted Radiant Custodian	33837	31639	7	no tile in map	
+monster	Seagull	33858	31639	7	no tile in map	
+monster	Devoted Radiant Acolyte	33880	31639	7	no tile in map	
+monster	Devoted Radiant Paragon	34057	31639	7	no tile in map	
+monster	Seagull	33900	31641	7	no tile in map	
+monster	Devoted Radiant Acolyte	33940	31641	7	no tile in map	
+monster	Devoted Radiant Custodian	33962	31641	7	no tile in map	
+monster	Devoted Radiant Templar	33862	31641	7	no tile in map	
+monster	Devoted Radiant Acolyte	34051	31643	7	no tile in map	
+monster	Thornback Tortoise	33906	31644	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33877	31646	7	no tile in map	
+monster	Devoted Radiant Custodian	33904	31646	7	no tile in map	
+monster	Seagull	33909	31646	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33826	31647	7	no tile in map	14 15 
+monster	Devoted Radiant Acolyte	33833	31647	7	no tile in map	
+monster	Devoted Radiant Custodian	34073	31647	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33845	31649	7	no tile in map	
+monster	Devoted Radiant Templar	33930	31650	7	no tile in map	
+monster	Seagull	34046	31650	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33971	31651	7	no tile in map	
+monster	Devoted Radiant Warden	34063	31651	7	no tile in map	
+monster	Devoted Radiant Warden	33918	31651	7	no tile in map	
+monster	Tortoise	34048	31652	7	no tile in map	
+monster	Devoted Radiant Acolyte	34083	31652	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34019	31654	7	no tile in map	
+monster	Devoted Radiant Acolyte	33883	31655	7	no tile in map	
+monster	Devoted Radiant Zealot	33847	31656	7	no tile in map	
+monster	Devoted Radiant Zealot	33919	31656	7	no tile in map	
+monster	Seagull	33948	31656	7	no tile in map	
+monster	Seagull	34051	31656	7	no tile in map	
+monster	Devoted Radiant Custodian	33942	31657	7	no tile in map	
+monster	Devoted Radiant Zealot	34088	31657	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34066	31659	7	no tile in map	
+monster	Devoted Radiant Acolyte	33828	31662	7	no tile in map	15 
+monster	Devoted Radiant Acolyte	33850	31661	7	no tile in map	
+monster	Devoted Radiant Templar	33904	31662	7	no tile in map	
+monster	Devoted Radiant Paragon	33838	31663	7	no tile in map	
+monster	Seagull	33957	31663	7	no tile in map	
+monster	Devoted Radiant Custodian	34108	31663	7	no tile in map	
+monster	Devoted Radiant Custodian	33854	31664	7	no tile in map	
+monster	Devoted Radiant Paragon	33910	31664	7	no tile in map	
+monster	Devoted Radiant Warden	33924	31664	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33951	31664	7	no tile in map	
+monster	Devoted Radiant Paragon	34081	31666	7	no tile in map	
+monster	Devoted Radiant Templar	34116	31666	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33871	31668	7	no tile in map	
+monster	Devoted Radiant Warden	33907	31668	7	no tile in map	
+monster	Devoted Radiant Acolyte	33911	31668	7	no tile in map	
+monster	Devoted Radiant Templar	34035	31668	7	no tile in map	
+monster	Devoted Radiant Acolyte	34071	31668	7	no tile in map	
+monster	Devoted Radiant Templar	33858	31669	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33918	31669	7	no tile in map	
+monster	Devoted Radiant Acolyte	33888	31670	7	no tile in map	
+monster	Devoted Radiant Zealot	34109	31670	7	no tile in map	
+monster	Devoted Radiant Acolyte	33845	31672	7	no tile in map	
+monster	Devoted Radiant Acolyte	33989	31672	7	no tile in map	
+monster	Devoted Radiant Zealot	34078	31672	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33961	31673	7	no tile in map	
+monster	Seagull	33965	31673	7	no tile in map	
+monster	Devoted Radiant Warden	34116	31673	7	no tile in map	
+monster	Devoted Radiant Acolyte	34110	31676	7	no tile in map	
+monster	Devoted Radiant Zealot	33901	31678	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34001	31679	7	no tile in map	
+monster	Devoted Radiant Templar	33950	31680	7	no tile in map	
+monster	Devoted Radiant Acolyte	33876	31681	7	no tile in map	
+monster	Seagull	33899	31681	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34111	31682	7	no tile in map	
+monster	Devoted Radiant Acolyte	34081	31683	7	no tile in map	
+monster	Devoted Radiant Paragon	33883	31684	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33893	31685	7	no tile in map	
+monster	Devoted Radiant Acolyte	33994	31687	7	no tile in map	
+monster	Devoted Radiant Warden	34048	31687	7	no tile in map	
+monster	Devoted Radiant Zealot	33875	31688	7	no tile in map	
+monster	Devoted Radiant Templar	34099	31688	7	no tile in map	
+monster	Devoted Radiant Warden	33889	31689	7	no tile in map	
+monster	Devoted Radiant Templar	34051	31690	7	no tile in map	
+monster	Devoted Radiant Acolyte	33959	31691	7	no tile in map	
+monster	Devoted Radiant Acolyte	34049	31691	7	no tile in map	
+monster	Devoted Radiant Custodian	34079	31691	7	no tile in map	
+monster	Devoted Radiant Custodian	34101	31691	7	no tile in map	
+monster	Devoted Radiant Warden	33843	31692	7	no tile in map	
+monster	Devoted Radiant Acolyte	33899	31692	7	no tile in map	
+monster	Devoted Radiant Acolyte	33935	31692	7	no tile in map	
+monster	Devoted Radiant Templar	34025	31693	7	no tile in map	
+monster	Devoted Radiant Templar	34045	31693	7	no tile in map	
+monster	Devoted Radiant Paragon	34048	31693	7	no tile in map	
+monster	Devoted Radiant Zealot	34052	31693	7	no tile in map	
+monster	Devoted Radiant Zealot	33863	31694	7	no tile in map	
+monster	Devoted Radiant Warden	33931	31694	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33934	31695	7	no tile in map	
+monster	Devoted Radiant Warden	34048	31695	7	no tile in map	
+monster	Seagull	33864	31696	7	no tile in map	
+monster	Thornback Tortoise	33868	31697	7	no tile in map	
+monster	Devoted Radiant Templar	33951	31698	7	no tile in map	
+monster	Devoted Radiant Acolyte	33839	31699	7	no tile in map	
+monster	Seagull	33848	31703	7	no tile in map	
+monster	Seagull	33893	31703	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33964	31703	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34002	31703	7	no tile in map	
+monster	Devoted Radiant Paragon	34033	31703	7	no tile in map	
+monster	Devoted Radiant Paragon	34085	31703	7	no tile in map	
+monster	Devoted Radiant Acolyte	33933	31704	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33845	31706	7	no tile in map	
+monster	Thornback Tortoise	33851	31707	7	no tile in map	
+monster	Devoted Radiant Inquisitor	33873	31707	7	no tile in map	
+monster	Devoted Radiant Custodian	33942	31707	7	no tile in map	
+monster	Devoted Radiant Custodian	33977	31708	7	no tile in map	
+monster	Seagull	33856	31709	7	no tile in map	
+monster	Devoted Radiant Custodian	33896	31710	7	no tile in map	
+monster	Devoted Radiant Acolyte	34060	31710	7	no tile in map	
+monster	Devoted Radiant Warden	33854	31711	7	no tile in map	
+monster	Devoted Radiant Paragon	33873	31711	7	no tile in map	
+monster	Devoted Radiant Zealot	34036	31711	7	no tile in map	
+monster	Devoted Radiant Templar	34051	31711	7	no tile in map	
+monster	Devoted Radiant Custodian	33844	31712	7	no tile in map	
+monster	Seagull	33979	31712	7	no tile in map	
+monster	Devoted Radiant Acolyte	34026	31713	7	no tile in map	
+monster	Devoted Radiant Warden	34032	31713	7	no tile in map	
+monster	Devoted Radiant Warden	33972	31714	7	no tile in map	
+monster	Tortoise	33976	31714	7	no tile in map	
+monster	Devoted Radiant Acolyte	33851	31715	7	no tile in map	
+monster	Devoted Radiant Acolyte	33914	31716	7	no tile in map	
+monster	Seagull	33998	31716	7	no tile in map	
+monster	Devoted Radiant Custodian	34015	31716	7	no tile in map	
+monster	Devoted Radiant Acolyte	34003	31717	7	no tile in map	
+monster	Seagull	33967	31718	7	no tile in map	
+monster	Thornback Tortoise	33972	31718	7	no tile in map	
+monster	Devoted Radiant Paragon	33904	31720	7	no tile in map	
+monster	Devoted Radiant Custodian	33921	31721	7	no tile in map	
+monster	Seagull	33911	31723	7	no tile in map	
+monster	Seagull	34006	31724	7	no tile in map	
+monster	Butterfly	34104	31724	7	no tile in map	
+monster	Seagull	33918	31725	7	no tile in map	
+monster	Thornback Tortoise	34009	31725	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34087	31725	7	no tile in map	
+monster	Devoted Radiant Acolyte	33897	31725	7	no tile in map	
+monster	Thornback Tortoise	33908	31726	7	no tile in map	
+monster	Devoted Radiant Acolyte	34102	31726	7	no tile in map	
+monster	Seagull	34020	31727	7	no tile in map	
+monster	Butterfly	34082	31728	7	no tile in map	
+monster	Devoted Radiant Paragon	33904	31729	7	no tile in map	
+monster	Devoted Radiant Custodian	34079	31730	7	no tile in map	
+monster	Butterfly	34062	31732	7	no tile in map	
+monster	Lion	33977	31733	7	no tile in map	
+monster	Thornback Tortoise	34016	31733	7	no tile in map	
+monster	Butterfly	34025	31733	7	no tile in map	
+monster	Butterfly	34051	31734	7	no tile in map	
+monster	Devoted Radiant Templar	34074	31734	7	no tile in map	
+monster	Devoted Radiant Zealot	33905	31735	7	no tile in map	
+monster	Seagull	34012	31735	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34098	31735	7	no tile in map	
+monster	Seagull	34108	31735	7	no tile in map	
+monster	Seagull	34009	31736	7	no tile in map	
+monster	Devoted Radiant Zealot	34102	31736	7	no tile in map	
+monster	Lion	34015	31737	7	no tile in map	
+monster	Devoted Radiant Warden	34103	31739	7	no tile in map	
+monster	Lion	34031	31742	7	no tile in map	
+monster	Butterfly	33952	31743	7	no tile in map	
+monster	Lion	33956	31744	7	no tile in map	
+monster	Devoted Radiant Zealot	33885	31746	7	no tile in map	
+monster	Panda	34083	31746	7	no tile in map	
+monster	Devoted Radiant Paragon	33899	31747	7	no tile in map	
+monster	Devoted Radiant Templar	33892	31748	7	no tile in map	
+monster	Butterfly	33932	31750	7	no tile in map	
+monster	Butterfly	34088	31750	7	no tile in map	
+monster	Lion	34012	31751	7	no tile in map	
+monster	Devoted Radiant Paragon	34080	31752	7	no tile in map	
+monster	Butterfly	33991	31753	7	no tile in map	
+monster	Devoted Radiant Warden	33890	31755	7	no tile in map	
+monster	Devoted Radiant Acolyte	34087	31755	7	no tile in map	
+monster	Sheep	33928	31756	7	no tile in map	
+monster	Sheep	33927	31758	7	no tile in map	
+monster	Sheep	33930	31758	7	no tile in map	
+monster	Lion	33987	31759	7	no tile in map	
+monster	Devoted Radiant Templar	34049	31759	7	no tile in map	
+monster	Seagull	33888	31760	7	no tile in map	
+monster	Butterfly	33954	31760	7	no tile in map	
+monster	Butterfly	34055	31761	7	no tile in map	
+monster	Devoted Radiant Warden	34087	31761	7	no tile in map	
+monster	Butterfly	33933	31763	7	no tile in map	
+monster	Lion	33942	31763	7	no tile in map	
+monster	Devoted Radiant Inquisitor	34057	31764	7	no tile in map	
+monster	Seagull	33895	31765	7	no tile in map	
+monster	Butterfly	34036	31765	7	no tile in map	
+monster	Devoted Radiant Custodian	34065	31765	7	no tile in map	
+monster	Devoted Radiant Acolyte	34080	31765	7	no tile in map	
+monster	Devoted Radiant Paragon	34049	31766	7	no tile in map	
+monster	Lion	33919	31767	7	no tile in map	
+monster	Panda	33980	31772	7	no tile in map	
+monster	Scarab	33987	31776	7	no tile in map	
+monster	Lion	33976	31782	7	no tile in map	
+monster	Scarab	33970	31784	7	no tile in map	
+monster	Scarab	33991	31785	7	no tile in map	
+monster	Cursed Voidcaller	32282	33043	7	no tile in map	
+monster	Bloodthirsty Buccaneer	32188	33049	7	no tile in map	
+monster	Verdant Rootwalker	32290	33056	7	no tile in map	
+monster	Cursed Voidcaller	32299	33056	7	no tile in map	
+monster	Hive Widow	32312	33059	7	no tile in map	
+monster	Hive Widow	32308	33066	7	no tile in map	
+monster	Verdant Rootwalker	32270	33068	7	no tile in map	
+monster	Cursed Voidcaller	32254	33072	7	no tile in map	
+monster	Cursed Voidcaller	32284	33072	7	no tile in map	
+monster	Bloodthirsty Buccaneer	32345	33083	7	no tile in map	
+monster	Coastal Catcher	32223	33085	7	no tile in map	
+monster	Coastal Catcher	32317	33106	7	no tile in map	
+monster	Roaming Dread	31686	30966	8	no tile in map	
+monster	Orclops Bloodbreaker	31680	30969	8	no tile in map	
+monster	Gloom Maw	31683	30969	8	no tile in map	
+monster	Walking Dread	31682	30971	8	no tile in map	
+monster	Walking Dread	31684	30977	8	no tile in map	
+monster	Varg	31639	30978	8	no tile in map	
+monster	Orclops Bloodbreaker	31655	30979	8	no tile in map	
+monster	Roaming Dread	31647	30981	8	no tile in map	
+monster	Gloom Maw	31639	30982	8	no tile in map	
+monster	Walking Dread	31643	30982	8	no tile in map	
+monster	Walking Dread	31654	30982	8	no tile in map	
+monster	Walking Dread	31662	30982	8	no tile in map	
+monster	Night Harpy	31669	30982	8	no tile in map	
+monster	Varg	31679	30982	8	no tile in map	
+monster	Night Harpy	31657	30986	8	no tile in map	
+monster	Creepy Crawler	31660	30986	8	no tile in map	
+monster	Gloom Maw	31672	30986	8	no tile in map	
+monster	Roaming Dread	31640	30987	8	no tile in map	
+monster	Gloom Maw	31653	30987	8	no tile in map	
+monster	Roaming Dread	31661	30990	8	no tile in map	
+monster	Roaming Dread	31672	30990	8	no tile in map	
+monster	Orclops Bloodbreaker	31682	30991	8	no tile in map	
+monster	Orclops Bloodbreaker	31692	30994	8	no tile in map	
+monster	Creepy Crawler	31693	30996	8	no tile in map	
+monster	Roaming Dread	31696	30996	8	no tile in map	
+monster	Night Harpy	31648	30997	8	no tile in map	
+monster	Walking Dread	31677	30997	8	no tile in map	
+monster	Night Harpy	31680	30997	8	no tile in map	
+monster	Varg	31639	30998	8	no tile in map	
+monster	Walking Dread	31645	30998	8	no tile in map	
+monster	Walking Dread	31658	30998	8	no tile in map	
+monster	Gloom Maw	31692	30998	8	no tile in map	
+monster	Walking Dread	31694	31001	8	no tile in map	
+monster	Varg	31675	31002	8	no tile in map	
+monster	Cyclursus	31648	31003	8	no tile in map	
+monster	Gloom Maw	31641	31005	8	no tile in map	
+monster	Walking Dread	31632	31006	8	no tile in map	
+monster	Roaming Dread	31635	31006	8	no tile in map	
+monster	Orclops Bloodbreaker	31644	31006	8	no tile in map	
+monster	Cyclursus	31650	31006	8	no tile in map	
+monster	Roaming Dread	31668	31008	8	no tile in map	
+monster	Orclops Bloodbreaker	31634	31010	8	no tile in map	
+monster	Walking Dread	31638	31010	8	no tile in map	
+monster	Gloom Maw	31664	31011	8	no tile in map	
+monster	Varg	31660	31012	8	no tile in map	
+monster	Orclops Bloodbreaker	31667	31012	8	no tile in map	
+monster	Night Harpy	31660	31014	8	no tile in map	
+monster	Roaming Dread	31637	31015	8	no tile in map	
+monster	Walking Dread	31664	31021	8	no tile in map	
+monster	Creepy Crawler	31666	31027	8	no tile in map	
+monster	Hellscythe Reaver	33448	31440	8	no tile in map	7 
+monster	Ashen Hellhound	33484	31440	8	no tile in map	7 
+monster	Hellscythe Reaver	33461	31456	8	no tile in map	7 
+monster	Hellscythe Reaver	33480	31458	8	no tile in map	7 
+monster	Ashen Hellhound	33470	31466	8	no tile in map	7 
+monster	Moonspawn Oozecrown	33894	31675	8	no tile in map	
+monster	Devoted Radiant Zealot	33898	31675	8	no tile in map	
+monster	Moonspawn Blightspitter	33957	31676	8	no tile in map	
+monster	Moonspawn Oozecrown	33971	31676	8	no tile in map	
+monster	Moonspawn Juggernaut	33979	31676	8	no tile in map	
+monster	Moonspawn Blightspitter	33990	31678	8	no tile in map	
+monster	Devoted Radiant Zealot	33861	31681	8	no tile in map	
+monster	Moonspawn Blightspitter	33890	31681	8	no tile in map	
+monster	Devoted Radiant Zealot	33899	31681	8	no tile in map	
+monster	Devoted Radiant Acolyte	33864	31682	8	no tile in map	
+monster	Devoted Radiant Zealot	33918	31682	8	no tile in map	
+monster	Moonspawn Juggernaut	33954	31682	8	no tile in map	
+monster	Devoted Radiant Acolyte	33910	31683	8	no tile in map	
+monster	Devoted Radiant Zealot	33863	31684	8	no tile in map	
+monster	Devoted Radiant Zealot	33880	31684	8	no tile in map	
+monster	Moonspawn Juggernaut	33888	31684	8	no tile in map	
+monster	Moonspawn Oozecrown	33989	31685	8	no tile in map	
+monster	Moonspawn Juggernaut	34006	31685	8	no tile in map	
+monster	Devoted Radiant Paragon	33908	31688	8	no tile in map	
+monster	Moonspawn Oozecrown	33960	31689	8	no tile in map	
+monster	Devoted Radiant Warden	33885	31690	8	no tile in map	
+monster	Moonspawn Oozecrown	33861	31691	8	no tile in map	
+monster	Devoted Radiant Warden	33867	31691	8	no tile in map	
+monster	Devoted Radiant Inquisitor	33874	31691	8	no tile in map	
+monster	Devoted Radiant Acolyte	33891	31691	8	no tile in map	
+monster	Moonspawn Oozecrown	33922	31691	8	no tile in map	
+monster	Devoted Radiant Templar	33912	31692	8	no tile in map	
+monster	Moonspawn Oozecrown	34007	31692	8	no tile in map	
+monster	Devoted Radiant Zealot	33907	31693	8	no tile in map	
+monster	Moonspawn Blightspitter	33971	31694	8	no tile in map	
+monster	Moonspawn Juggernaut	33984	31695	8	no tile in map	
+monster	Devoted Radiant Inquisitor	33858	31696	8	no tile in map	
+monster	Moonspawn Blightspitter	33915	31697	8	no tile in map	
+monster	Moonspawn Oozecrown	33978	31697	8	no tile in map	
+monster	Moonspawn Blightspitter	34000	31697	8	no tile in map	
+monster	Devoted Radiant Warden	33877	31698	8	no tile in map	
+monster	Devoted Radiant Templar	33859	31700	8	no tile in map	
+monster	Devoted Radiant Acolyte	33867	31701	8	no tile in map	
+monster	Moonspawn Juggernaut	33877	31701	8	no tile in map	
+monster	Devoted Radiant Zealot	33882	31701	8	no tile in map	
+monster	Devoted Radiant Acolyte	33894	31701	8	no tile in map	
+monster	Devoted Radiant Zealot	33926	31701	8	no tile in map	
+monster	Moonspawn Oozecrown	33899	31702	8	no tile in map	
+monster	Devoted Radiant Warden	33859	31703	8	no tile in map	
+monster	Devoted Radiant Warden	33897	31704	8	no tile in map	
+monster	Devoted Radiant Zealot	33865	31705	8	no tile in map	
+monster	Moonspawn Blightspitter	33927	31705	8	no tile in map	
+monster	Moonspawn Juggernaut	34008	31705	8	no tile in map	
+monster	Devoted Radiant Paragon	33876	31706	8	no tile in map	
+monster	Devoted Radiant Templar	33882	31706	8	no tile in map	
+monster	Moonspawn Oozecrown	33963	31706	8	no tile in map	
+monster	Devoted Radiant Zealot	33900	31707	8	no tile in map	
+monster	Moonspawn Oozecrown	34019	31708	8	no tile in map	
+monster	Devoted Radiant Custodian	33881	31709	8	no tile in map	
+monster	Devoted Radiant Zealot	33909	31710	8	no tile in map	
+monster	Devoted Radiant Zealot	33880	31711	8	no tile in map	
+monster	Devoted Radiant Warden	33886	31711	8	no tile in map	
+monster	Devoted Radiant Acolyte	33904	31711	8	no tile in map	
+monster	Moonspawn Juggernaut	33967	31712	8	no tile in map	
+monster	Moonspawn Juggernaut	33859	31713	8	no tile in map	
+monster	Devoted Radiant Templar	33864	31713	8	no tile in map	
+monster	Devoted Radiant Zealot	33920	31713	8	no tile in map	
+monster	Moonspawn Blightspitter	33959	31713	8	no tile in map	
+monster	Moonspawn Juggernaut	34021	31714	8	no tile in map	
+monster	Devoted Radiant Acolyte	33868	31715	8	no tile in map	
+monster	Devoted Radiant Paragon	33876	31717	8	no tile in map	
+monster	Devoted Radiant Acolyte	33886	31717	8	no tile in map	
+monster	Devoted Radiant Custodian	33896	31717	8	no tile in map	
+monster	Moonspawn Blightspitter	34016	31717	8	no tile in map	
+monster	Moonspawn Blightspitter	33883	31718	8	no tile in map	
+monster	Moonspawn Juggernaut	33997	31718	8	no tile in map	
+monster	Moonspawn Oozecrown	34003	31719	8	no tile in map	
+monster	Moonspawn Oozecrown	33972	31721	8	no tile in map	
+monster	Moonspawn Blightspitter	33982	31722	8	no tile in map	
+monster	Moonspawn Oozecrown	34020	31728	8	no tile in map	
+monster	Moonspawn Blightspitter	34010	31731	8	no tile in map	
+monster	Dunestalker Hunter	33342	32172	8	no tile in map	7 13 
+monster	Ironburrow Devourer	33347	32176	8	no tile in map	7 13 
+monster	Stormfang Ravager	33363	32187	8	no tile in map	7 13 
+monster	Dreadhorn Ravager	33336	32189	8	no tile in map	7 13 
+monster	Ironburrow Devourer	33329	32193	8	no tile in map	7 13 
+monster	Ironburrow Devourer	33418	32194	8	no tile in map	7 
+monster	Dunestalker Hunter	33352	32196	8	no tile in map	7 13 
+monster	Ironburrow Devourer	33462	32199	8	no tile in map	7 
+monster	Magmafang Incinerator	33363	32200	8	no tile in map	7 13 
+monster	Dunestalker Hunter	33425	32200	8	no tile in map	7 
+monster	Stormfang Ravager	33406	32201	8	no tile in map	7 13 
+monster	Stormfang Ravager	33439	32201	8	no tile in map	7 
+monster	Magmafang Incinerator	33451	32202	8	no tile in map	7 
+monster	Dreadhorn Ravager	33463	32206	8	no tile in map	7 
+monster	Voltstrike Hound	33344	32210	8	no tile in map	7 13 
+monster	Ironburrow Devourer	33337	32211	8	no tile in map	7 13 
+monster	Voltstrike Hound	33377	32211	8	no tile in map	7 13 
+monster	Magmafang Incinerator	33405	32212	8	no tile in map	7 
+monster	Voltstrike Hound	33413	32213	8	no tile in map	7 
+monster	Stormfang Ravager	33359	32215	8	no tile in map	7 13 
+monster	Dunestalker Hunter	33451	32221	8	no tile in map	7 
+monster	Dunestalker Hunter	33437	32224	8	no tile in map	7 
+monster	Ironburrow Devourer	33345	32230	8	no tile in map	7 13 
+monster	Dunestalker Hunter	33469	32230	8	no tile in map	7 
+monster	Voltstrike Hound	33432	32230	8	no tile in map	7 
+monster	Dreadhorn Ravager	33363	32232	8	no tile in map	7 13 
+monster	Ironburrow Devourer	33400	32232	8	no tile in map	7 
+monster	Dunestalker Hunter	33344	32234	8	no tile in map	7 13 
+monster	Magmafang Incinerator	33347	32234	8	no tile in map	7 13 
+monster	Dreadhorn Ravager	33448	32234	8	no tile in map	7 
+monster	Magmafang Incinerator	33442	32236	8	no tile in map	7 
+monster	Dreadhorn Ravager	33403	32239	8	no tile in map	7 
+monster	Magmafang Incinerator	33415	32243	8	no tile in map	7 
+monster	Voltstrike Hound	33421	32246	8	no tile in map	7 
+monster	Stormfang Ravager	33446	32251	8	no tile in map	7 
+monster	Voltstrike Hound	33466	32252	8	no tile in map	7 
+monster	Magmafang Incinerator	33462	32256	8	no tile in map	7 
+monster	Ironburrow Devourer	33430	32258	8	no tile in map	7 
+monster	Ironburrow Devourer	33424	32260	8	no tile in map	7 
+monster	Dunestalker Hunter	33399	32263	8	no tile in map	7 
+monster	Dreadhorn Ravager	33447	32265	8	no tile in map	7 
+monster	Stormfang Ravager	33404	32268	8	no tile in map	7 
+monster	Magmafang Incinerator	33423	32271	8	no tile in map	7 
+monster	Cursed Voidcaller	32271	33004	8	no tile in map	7 
+monster	Ancient Root Tyrant	32273	33009	8	no tile in map	7 
+monster	Ancient Root Tyrant	32265	33013	8	no tile in map	7 
+monster	Orclops Bloodbreaker	31752	30946	9	no tile in map	
+monster	Orclops Bloodbreaker	31730	30947	9	no tile in map	
+monster	Roaming Dread	31739	30947	9	no tile in map	
+monster	Roaming Dread	31709	30952	9	no tile in map	
+monster	Walking Dread	31728	30952	9	no tile in map	
+monster	Varg	31733	30952	9	no tile in map	
+monster	Gloom Maw	31746	30952	9	no tile in map	
+monster	Walking Dread	31751	30952	9	no tile in map	
+monster	Night Harpy	31703	30954	9	no tile in map	
+monster	Gloom Maw	31710	30954	9	no tile in map	
+monster	Orclops Bloodbreaker	31706	30955	9	no tile in map	
+monster	Cyclursus	31713	30955	9	no tile in map	
+monster	Creepy Crawler	31739	30955	9	no tile in map	
+monster	Creepy Crawler	31753	30958	9	no tile in map	
+monster	Walking Dread	31706	30959	9	no tile in map	
+monster	Orclops Bloodbreaker	31730	30959	9	no tile in map	
+monster	Roaming Dread	31726	30960	9	no tile in map	
+monster	Walking Dread	31734	30964	9	no tile in map	
+monster	Varg	31698	30966	9	no tile in map	
+monster	Walking Dread	31715	30967	9	no tile in map	
+monster	Gloom Maw	31709	30969	9	no tile in map	
+monster	Night Harpy	31688	30970	9	no tile in map	
+monster	Orclops Bloodbreaker	31696	30970	9	no tile in map	
+monster	Night Harpy	31728	30970	9	no tile in map	
+monster	Cyclursus	31681	30971	9	no tile in map	
+monster	Gloom Maw	31684	30971	9	no tile in map	
+monster	Walking Dread	31714	30971	9	no tile in map	
+monster	Roaming Dread	31686	30974	9	no tile in map	
+monster	Varg	31698	30974	9	no tile in map	
+monster	Roaming Dread	31713	30974	9	no tile in map	
+monster	Roaming Dread	31700	30975	9	no tile in map	
+monster	Walking Dread	31722	30975	9	no tile in map	
+monster	Creepy Crawler	31720	30983	9	no tile in map	
+monster	Orclops Bloodbreaker	31723	30984	9	no tile in map	
+monster	Roaming Dread	31717	30985	9	no tile in map	
+monster	Night Harpy	31722	30986	9	no tile in map	
+monster	Ashen Hellhound	33442	31413	9	no tile in map	7 
+monster	Brood Abomination	33456	31414	9	no tile in map	7 
+monster	Hellscythe Reaver	33432	31422	9	no tile in map	7 
+monster	Ashen Hellhound	33485	31426	9	no tile in map	7 
+monster	Hellscythe Reaver	33487	31432	9	no tile in map	7 
+monster	Brood Abomination	33481	31433	9	no tile in map	7 
+monster	Cursed Voidcaller	33445	31434	9	no tile in map	7 
+monster	Cursed Voidcaller	33471	31438	9	no tile in map	7 
+monster	Ashen Hellhound	33421	31446	9	no tile in map	7 
+monster	Ashen Hellhound	33493	31450	9	no tile in map	7 
+monster	Hellscythe Reaver	33427	31452	9	no tile in map	7 
+monster	Brood Abomination	33454	31456	9	no tile in map	7 
+monster	Cursed Voidcaller	33479	31465	9	no tile in map	7 
+monster	Cursed Voidcaller	33455	31468	9	no tile in map	7 
+monster	Hellscythe Reaver	33502	31474	9	no tile in map	7 
+monster	Hellscythe Reaver	33450	31481	9	no tile in map	7 
+monster	Cursed Voidcaller	33468	31481	9	no tile in map	7 
+monster	Ashen Hellhound	33489	31482	9	no tile in map	7 
+monster	Brood Abomination	33442	31483	9	no tile in map	7 
+monster	Hellscythe Reaver	33469	31493	9	no tile in map	7 
+monster	Brood Abomination	33462	31509	9	no tile in map	7 
+monster	Devoted Radiant Templar	33894	31672	9	no tile in map	
+monster	Moonspawn Juggernaut	33989	31674	9	no tile in map	
+monster	Moonspawn Blightspitter	33985	31675	9	no tile in map	
+monster	Moonspawn Blightspitter	33987	31675	9	no tile in map	
+monster	Moonspawn Oozecrown	33992	31675	9	no tile in map	
+monster	Devoted Radiant Acolyte	33895	31676	9	no tile in map	
+monster	Moonspawn Juggernaut	33989	31676	9	no tile in map	
+monster	Moonspawn Blightspitter	33993	31677	9	no tile in map	
+monster	Devoted Radiant Custodian	33912	31678	9	no tile in map	
+monster	Devoted Radiant Zealot	33865	31679	9	no tile in map	
+monster	Moonspawn Blightspitter	34010	31679	9	no tile in map	
+monster	Moonspawn Blightspitter	33916	31680	9	no tile in map	
+monster	Moonspawn Oozecrown	33870	31681	9	no tile in map	
+monster	Moonspawn Oozecrown	33895	31681	9	no tile in map	
+monster	Moonspawn Juggernaut	34011	31681	9	no tile in map	
+monster	Devoted Radiant Templar	33877	31682	9	no tile in map	
+monster	Moonspawn Juggernaut	33969	31682	9	no tile in map	
+monster	Moonspawn Juggernaut	34014	31682	9	no tile in map	
+monster	Devoted Radiant Warden	33862	31683	9	no tile in map	
+monster	Devoted Radiant Warden	33908	31683	9	no tile in map	
+monster	Moonspawn Blightspitter	33971	31683	9	no tile in map	
+monster	Moonspawn Blightspitter	33973	31683	9	no tile in map	
+monster	Moonspawn Blightspitter	34011	31683	9	no tile in map	
+monster	Moonspawn Oozecrown	34014	31684	9	no tile in map	
+monster	Moonspawn Oozecrown	33969	31685	9	no tile in map	
+monster	Devoted Radiant Paragon	33917	31686	9	no tile in map	
+monster	Moonspawn Juggernaut	33971	31686	9	no tile in map	
+monster	Moonspawn Blightspitter	34017	31686	9	no tile in map	
+monster	Moonspawn Blightspitter	33969	31688	9	no tile in map	
+monster	Moonspawn Blightspitter	33866	31689	9	no tile in map	
+monster	Devoted Radiant Inquisitor	33912	31689	9	no tile in map	
+monster	Devoted Radiant Inquisitor	33868	31690	9	no tile in map	
+monster	Devoted Radiant Acolyte	33881	31690	9	no tile in map	
+monster	Devoted Radiant Templar	33892	31690	9	no tile in map	
+monster	Devoted Radiant Paragon	33900	31690	9	no tile in map	
+monster	Devoted Radiant Acolyte	33922	31690	9	no tile in map	
+monster	Devoted Radiant Inquisitor	33860	31691	9	no tile in map	
+monster	Devoted Radiant Zealot	33876	31691	9	no tile in map	
+monster	Devoted Radiant Acolyte	33887	31691	9	no tile in map	
+monster	Devoted Radiant Zealot	33910	31695	9	no tile in map	
+monster	Moonspawn Blightspitter	33909	31697	9	no tile in map	
+monster	Moonspawn Oozecrown	33926	31697	9	no tile in map	
+monster	Moonspawn Blightspitter	34008	31697	9	no tile in map	
+monster	Moonspawn Oozecrown	34010	31697	9	no tile in map	
+monster	Moonspawn Blightspitter	34012	31697	9	no tile in map	
+monster	Moonspawn Oozecrown	33878	31698	9	no tile in map	
+monster	Moonspawn Juggernaut	33904	31698	9	no tile in map	
+monster	Moonspawn Blightspitter	33986	31699	9	no tile in map	
+monster	Moonspawn Blightspitter	33988	31699	9	no tile in map	
+monster	Moonspawn Juggernaut	34009	31699	9	no tile in map	
+monster	Moonspawn Juggernaut	34011	31699	9	no tile in map	
+monster	Devoted Radiant Zealot	33874	31700	9	no tile in map	
+monster	Devoted Radiant Paragon	33878	31700	9	no tile in map	
+monster	Devoted Radiant Zealot	33900	31700	9	no tile in map	
+monster	Devoted Radiant Acolyte	33915	31700	9	no tile in map	
+monster	Moonspawn Oozecrown	33990	31700	9	no tile in map	
+monster	Moonspawn Juggernaut	33993	31700	9	no tile in map	
+monster	Devoted Radiant Acolyte	33867	31701	9	no tile in map	
+monster	Devoted Radiant Inquisitor	33890	31701	9	no tile in map	
+monster	Devoted Radiant Paragon	33912	31701	9	no tile in map	
+monster	Moonspawn Blightspitter	33987	31701	9	no tile in map	
+monster	Moonspawn Blightspitter	34006	31701	9	no tile in map	
+monster	Devoted Radiant Custodian	33860	31702	9	no tile in map	
+monster	Devoted Radiant Inquisitor	33898	31702	9	no tile in map	
+monster	Devoted Radiant Warden	33900	31702	9	no tile in map	
+monster	Moonspawn Juggernaut	33995	31703	9	no tile in map	
+monster	Devoted Radiant Custodian	33925	31704	9	no tile in map	
+monster	Moonspawn Oozecrown	33957	31704	9	no tile in map	
+monster	Moonspawn Juggernaut	33958	31705	9	no tile in map	
+monster	Devoted Radiant Custodian	33903	31705	9	no tile in map	
+monster	Devoted Radiant Acolyte	33909	31705	9	no tile in map	
+monster	Moonspawn Juggernaut	33914	31705	9	no tile in map	
+monster	Moonspawn Juggernaut	33960	31705	9	no tile in map	
+monster	Devoted Radiant Warden	33866	31706	9	no tile in map	
+monster	Moonspawn Blightspitter	33959	31707	9	no tile in map	
+monster	Devoted Radiant Custodian	33880	31708	9	no tile in map	
+monster	Devoted Radiant Templar	33892	31708	9	no tile in map	
+monster	Moonspawn Blightspitter	33961	31708	9	no tile in map	
+monster	Devoted Radiant Templar	33923	31709	9	no tile in map	
+monster	Devoted Radiant Warden	33890	31711	9	no tile in map	
+monster	Devoted Radiant Paragon	33907	31711	9	no tile in map	
+monster	Moonspawn Oozecrown	33862	31712	9	no tile in map	
+monster	Devoted Radiant Custodian	33918	31712	9	no tile in map	
+monster	Moonspawn Blightspitter	34012	31714	9	no tile in map	
+monster	Moonspawn Oozecrown	34014	31714	9	no tile in map	
+monster	Moonspawn Blightspitter	34017	31714	9	no tile in map	
+monster	Moonspawn Juggernaut	34019	31714	9	no tile in map	
+monster	Devoted Radiant Custodian	33867	31716	9	no tile in map	
+monster	Moonspawn Blightspitter	33878	31716	9	no tile in map	
+monster	Moonspawn Blightspitter	33982	31716	9	no tile in map	
+monster	Moonspawn Blightspitter	34012	31716	9	no tile in map	
+monster	Moonspawn Juggernaut	34015	31716	9	no tile in map	
+monster	Devoted Radiant Zealot	33893	31717	9	no tile in map	
+monster	Moonspawn Juggernaut	33914	31717	9	no tile in map	
+monster	Moonspawn Blightspitter	33974	31717	9	no tile in map	
+monster	Moonspawn Oozecrown	33976	31717	9	no tile in map	
+monster	Moonspawn Blightspitter	33980	31717	9	no tile in map	
+monster	Moonspawn Juggernaut	33978	31718	9	no tile in map	
+monster	Moonspawn Juggernaut	33982	31718	9	no tile in map	
+monster	Devoted Radiant Acolyte	33905	31719	9	no tile in map	
+monster	Devoted Radiant Zealot	33912	31721	9	no tile in map	
+monster	Magmafang Incinerator	33513	32204	9	no tile in map	7 
+monster	Dreadhorn Ravager	33446	32205	9	no tile in map	7 
+monster	Dunestalker Hunter	33455	32209	9	no tile in map	7 
+monster	Stormfang Ravager	33474	32209	9	no tile in map	7 
+monster	Dunestalker Hunter	33504	32209	9	no tile in map	7 
+monster	Dreadhorn Ravager	33496	32210	9	no tile in map	7 
+monster	Voltstrike Hound	33462	32212	9	no tile in map	7 
+monster	Dreadhorn Ravager	33482	32219	9	no tile in map	7 
+monster	Voltstrike Hound	33508	32221	9	no tile in map	7 
+monster	Dreadhorn Ravager	33449	32225	9	no tile in map	7 
+monster	Stormfang Ravager	33465	32226	9	no tile in map	7 
+monster	Magmafang Incinerator	33490	32226	9	no tile in map	7 
+monster	Voltstrike Hound	33493	32236	9	no tile in map	7 
+monster	Voltstrike Hound	33478	32237	9	no tile in map	7 
+monster	Magmafang Incinerator	33444	32243	9	no tile in map	7 
+monster	Magmafang Incinerator	33462	32243	9	no tile in map	7 
+monster	Dreadhorn Ravager	33510	32243	9	no tile in map	7 
+monster	Voltstrike Hound	33492	32248	9	no tile in map	7 
+monster	Dunestalker Hunter	33499	32256	9	no tile in map	7 
+monster	Magmafang Incinerator	33450	32257	9	no tile in map	7 
+monster	Dreadhorn Ravager	33479	32261	9	no tile in map	7 
+monster	Venomcoil Automaton	32234	33050	9	no tile in map	
+monster	Hive Widow	32251	33053	9	no tile in map	
+monster	Bladecoil Stalker	32249	33059	9	no tile in map	
+monster	Hive Widow	32223	33062	9	no tile in map	
+monster	Verdant Rootwalker	32260	33075	9	no tile in map	
+monster	Venomcoil Automaton	32238	33076	9	no tile in map	
+monster	Bladecoil Stalker	32261	33087	9	no tile in map	
+monster	Verdant Rootwalker	32233	33095	9	no tile in map	
+monster	Venomcoil Automaton	32261	33098	9	no tile in map	
+monster	Hive Widow	32253	33102	9	no tile in map	
+monster	Bladecoil Stalker	32238	33103	9	no tile in map	
+monster	Creepy Crawler	31794	30932	10	no tile in map	
+monster	Varg	31776	30933	10	no tile in map	
+monster	Crypt Construct	31792	30933	10	no tile in map	
+monster	Roaming Dread	31793	30935	10	no tile in map	
+monster	Gloom Maw	31790	30937	10	no tile in map	
+monster	Night Harpy	31776	30938	10	no tile in map	
+monster	Walking Dread	31784	30938	10	no tile in map	
+monster	Crypt Construct	31794	30939	10	no tile in map	
+monster	Orclops Bloodbreaker	31772	30940	10	no tile in map	
+monster	Varg	31784	30940	10	no tile in map	
+monster	Walking Dread	31794	30943	10	no tile in map	
+monster	Orclops Bloodbreaker	31779	30946	10	no tile in map	
+monster	Orclops Bloodbreaker	31768	30948	10	no tile in map	
+monster	Gloom Maw	31758	30950	10	no tile in map	
+monster	Crypt Construct	31767	30951	10	no tile in map	
+monster	Walking Dread	31767	30954	10	no tile in map	
+monster	Roaming Dread	31780	30956	10	no tile in map	
+monster	Gloom Maw	31776	30960	10	no tile in map	
+monster	Walking Dread	31777	30963	10	no tile in map	
+monster	Roaming Dread	31764	30964	10	no tile in map	
+monster	Varg	31768	30964	10	no tile in map	
+monster	Crypt Construct	31768	30969	10	no tile in map	
+monster	Night Harpy	31766	30971	10	no tile in map	
+monster	Orclops Bloodbreaker	31770	30972	10	no tile in map	
+monster	Walking Dread	31763	30974	10	no tile in map	
+monster	Creepy Crawler	31773	30975	10	no tile in map	
+monster	Ashen Hellhound	33451	31383	10	no tile in map	7 
+monster	Cursed Voidcaller	33470	31406	10	no tile in map	7 
+monster	Hellscythe Reaver	33442	31409	10	no tile in map	7 
+monster	Brood Abomination	33487	31409	10	no tile in map	7 
+monster	Brood Abomination	33455	31411	10	no tile in map	7 
+monster	Brood Abomination	33480	31422	10	no tile in map	7 
+monster	Hellscythe Reaver	33494	31422	10	no tile in map	7 
+monster	Cursed Voidcaller	33449	31429	10	no tile in map	7 
+monster	Brood Abomination	33461	31438	10	no tile in map	7 
+monster	Ashen Hellhound	33487	31439	10	no tile in map	7 
+monster	Cursed Voidcaller	33470	31447	10	no tile in map	7 
+monster	Hellscythe Reaver	33436	31449	10	no tile in map	7 
+monster	Ashen Hellhound	33462	31461	10	no tile in map	7 
+monster	Ashen Hellhound	33436	31471	10	no tile in map	7 
+monster	Cursed Voidcaller	33450	31475	10	no tile in map	7 
+monster	Brood Abomination	33471	31478	10	no tile in map	7 
+monster	Brood Abomination	33428	31484	10	no tile in map	7 
+monster	Brood Abomination	33462	31493	10	no tile in map	7 
+monster	Hellscythe Reaver	33436	31494	10	no tile in map	7 
+monster	Hellscythe Reaver	33475	31497	10	no tile in map	7 
+monster	Cursed Voidcaller	33464	31506	10	no tile in map	7 
+monster	Crypt Fiend	31793	30933	11	no tile in map	
+monster	Orclops Bloodbreaker	31797	30935	11	no tile in map	
+monster	Crypt Construct	31792	30937	11	no tile in map	
+monster	Varg	31797	30938	11	no tile in map	
+monster	Crypt Mage	31826	30941	11	no tile in map	
+monster	Crypt Mage	31807	30943	11	no tile in map	
+monster	Roaming Dread	31820	30943	11	no tile in map	
+monster	Gloom Maw	31822	30945	11	no tile in map	
+monster	Crypt Mage	31795	30946	11	no tile in map	
+monster	Varg	31812	30946	11	no tile in map	
+monster	Crypt Fiend	31819	30947	11	no tile in map	
+monster	Night Harpy	31799	30948	11	no tile in map	
+monster	Cyclursus	31818	30949	11	no tile in map	
+monster	Orclops Bloodbreaker	31809	30950	11	no tile in map	
+monster	Crypt Construct	31825	30950	11	no tile in map	
+monster	Crypt Construct	31782	30953	11	no tile in map	
+monster	Gloom Maw	31794	30954	11	no tile in map	
+monster	Roaming Dread	31802	30954	11	no tile in map	
+monster	Cyclursus	31786	30955	11	no tile in map	
+monster	Roaming Dread	31782	30956	11	no tile in map	
+monster	Crypt Fiend	31781	30960	11	no tile in map	
+monster	Night Harpy	31783	30961	11	no tile in map	
+monster	Crypt Construct	31786	30962	11	no tile in map	
+monster	Roaming Dread	31803	30964	11	no tile in map	
+monster	Crypt Fiend	31794	30966	11	no tile in map	
+monster	Night Harpy	31770	30970	11	no tile in map	
+monster	Gloom Maw	31771	30972	11	no tile in map	
+monster	Orclops Bloodbreaker	31788	30972	11	no tile in map	
+monster	Cyclursus	31764	30973	11	no tile in map	
+monster	Crypt Construct	31786	30973	11	no tile in map	
+monster	Crypt Mage	31755	30974	11	no tile in map	
+monster	Orclops Bloodbreaker	31757	30974	11	no tile in map	
+monster	Gloom Maw	31795	30976	11	no tile in map	
+monster	Varg	31759	30977	11	no tile in map	
+monster	Crypt Mage	31800	30977	11	no tile in map	
+monster	Crypt Construct	31754	30978	11	no tile in map	
+monster	Varg	31785	30980	11	no tile in map	
+monster	Crypt Construct	31797	30980	11	no tile in map	
+monster	Roaming Dread	31750	30981	11	no tile in map	
+monster	Crypt Mage	31753	30982	11	no tile in map	
+monster	Roaming Dread	31780	30982	11	no tile in map	
+monster	Gloom Maw	31752	30986	11	no tile in map	
+monster	Roaming Dread	31756	30987	11	no tile in map	
+monster	Crypt Fiend	31763	30991	11	no tile in map	
+monster	Roaming Dread	31774	30991	11	no tile in map	
+monster	Cyclursus	31789	30991	11	no tile in map	
+monster	Crypt Construct	31786	30993	11	no tile in map	
+monster	Night Harpy	31783	30994	11	no tile in map	
+monster	Cyclursus	31754	30995	11	no tile in map	
+monster	Night Harpy	31756	30995	11	no tile in map	
+monster	Gloom Maw	31768	30995	11	no tile in map	
+monster	Orclops Bloodbreaker	31766	30998	11	no tile in map	
+monster	Crypt Fiend	31770	31007	11	no tile in map	
+monster	Night Harpy	31784	31007	11	no tile in map	
+monster	Varg	31776	31008	11	no tile in map	
+monster	Crypt Mage	31779	31008	11	no tile in map	
+monster	Roaming Dread	31781	31008	11	no tile in map	
+monster	Crypt Construct	31773	31009	11	no tile in map	
+monster	Crypt Mage	31771	31011	11	no tile in map	
+monster	Ancient Moss guardian	33324	31355	11	no tile in map	7 8 9 
+monster	Void Ooze	33344	31355	11	no tile in map	7 8 9 
+monster	Venom Ooze	33334	31361	11	no tile in map	7 8 9 
+monster	Ancient Moss guardian	33336	31370	11	no tile in map	7 
+monster	Void Ooze	33334	31381	11	no tile in map	7 8 
+monster	Eldritch Devourer	33317	31395	11	no tile in map	7 8 
+monster	Eldritch Devourer	33348	31395	11	no tile in map	7 8 9 10 
+monster	Ancient Moss guardian	33309	31406	11	no tile in map	7 8 
+monster	Ancient Moss guardian	33360	31406	11	no tile in map	7 8 9 10 
+monster	Eldritch Devourer	33300	31409	11	no tile in map	7 8 
+monster	Totem Warbeast	33366	31409	11	no tile in map	7 8 9 10 
+monster	Eldritch Devourer	33320	31423	11	no tile in map	7 8 
+monster	Venom Ooze	33353	31424	11	no tile in map	7 8 9 10 
+monster	Eldritch Devourer	33350	31425	11	no tile in map	7 8 9 10 
+monster	Venom Ooze	33316	31427	11	no tile in map	7 8 
+monster	Shardback Behemoth	33351	31429	11	no tile in map	7 8 9 10 
+monster	Shardback Behemoth	33315	31430	11	no tile in map	7 8 
+monster	Totem Warbeast	33334	31435	11	no tile in map	7 8 
+monster	Totem Warbeast	33334	31455	11	no tile in map	7 
+monster	Void Ooze	33301	31465	11	no tile in map	7 
+monster	Eldritch Devourer	33372	31465	11	no tile in map	7 
+monster	Ancient Moss guardian	33305	31466	11	no tile in map	7 
+monster	Shardback Behemoth	33326	31466	11	no tile in map	7 
+monster	Venom Ooze	33334	31467	11	no tile in map	7 
+monster	Ancient Moss guardian	33365	31466	11	no tile in map	7 
+monster	Shardback Behemoth	33341	31468	11	no tile in map	7 
+monster	Void Ooze	33374	31468	11	no tile in map	7 8 
+monster	Eldritch Devourer	33298	31469	11	no tile in map	7 
+monster	Shardback Behemoth	33333	31474	11	no tile in map	7 
+monster	Void Ooze	33317	31413	12	no tile in map	7 8 
+monster	Totem Warbeast	33315	31418	12	no tile in map	7 8 
+monster	Totem Warbeast	33317	31420	12	no tile in map	7 8 
+monster	Ancient Moss guardian	33316	31421	12	no tile in map	7 8 
+monster	Void Ooze	33333	31473	12	no tile in map	7 
+monster	Eldritch Devourer	33323	31476	12	no tile in map	7 
+monster	Eldritch Devourer	33341	31477	12	no tile in map	7 
+monster	Ancient Moss guardian	33344	31479	12	no tile in map	7 
+monster	Ancient Moss guardian	33321	31481	12	no tile in map	6 7 
+monster	Venom Ooze	33346	31486	12	no tile in map	7 8 
+monster	Venom Ooze	33320	31487	12	no tile in map	7 
+monster	Void Ooze	33319	31495	12	no tile in map	7 
+monster	Void Ooze	33343	31495	12	no tile in map	7 
+monster	Eldritch Devourer	33312	31496	12	no tile in map	4 5 6 7 
+monster	Eldritch Devourer	33348	31496	12	no tile in map	7 
+monster	Totem Warbeast	33346	31502	12	no tile in map	7 
+monster	Shardback Behemoth	33321	31505	12	no tile in map	5 6 7 
+monster	Shardback Behemoth	33350	31509	12	no tile in map	7 
+monster	Ancient Moss guardian	33321	31510	12	no tile in map	6 7 9 
