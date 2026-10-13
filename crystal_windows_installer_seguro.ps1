@@ -1,158 +1,125 @@
-﻿<#
-.SYNOPSIS
-    Instalador/compilador CrystalServer (Canary) - versao endurecida (PT-BR).
-.DESCRIPTION
-    Execute como ADMINISTRADOR, de preferencia em VM ou maquina de testes.
-    Mudancas de seguranca: ExecutionPolicy so no processo, pasta dedicada,
-    so HTTPS, repositorios em lista permitida, revisao do codigo antes de compilar,
-    vcpkg/crystalserver fixaveis por commit, log completo.
-#>
-param(
-    [string]$Branch = "main",
-    [string]$CrystalCommit = "",
-    [string]$VcpkgCommit = "",
-    [switch]$WithMySQL
-)
+﻿# === Compilador Ninja para projeto local ===
 $ErrorActionPreference = "Stop"
-Set-StrictMode -Version Latest
 
-$DevRoot     = "C:\Exodus-Online-main"
-$VcpkgRoot   = Join-Path $DevRoot "vcpkg"
-$ProjectRoot = Join-Path $DevRoot "crystalserver"
-$Toolchain   = Join-Path $VcpkgRoot "scripts\buildsystems\vcpkg.cmake"
-$VcpkgUrl    = "https://github.com/microsoft/vcpkg.git"
-$CrystalUrl  = "https://github.com/zimbadev/crystalserver.git"
-$AllowedUrls = @($VcpkgUrl, $CrystalUrl)
+$BaseDir  = "C:\Exodus-Online-main"
+$VcpkgDir = "C:\dev\vcpkg"
+$BuildDir = Join-Path $BaseDir "build"
 
-New-Item -Path $DevRoot -ItemType Directory -Force | Out-Null
-Start-Transcript -Path (Join-Path $DevRoot "installer.log") -Append | Out-Null
+# Ninja local, caso tenha sido extraido aqui
+$env:Path += ";C:\Exodus-Online-main\Tools\Ninja"
 
-function Confirm-Step($msg) {
-    $r = Read-Host "$msg [s/N]"
-    if ($r -notmatch '^(s|S|y|Y)$') { Write-Host "Cancelado."; Stop-Transcript | Out-Null; exit 1 }
-}
-function Get-VsGenerator {
-    $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
-    if (-not (Test-Path $vswhere)) { return $null }
-    $ver = & $vswhere -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationVersion 2>$null
-    if (-not $ver) { return $null }
-    $major = 0
-    if (-not [int]::TryParse(($ver -split '\.')[0], [ref]$major)) { return $null }
-    switch ($major) {
-        18 { return "Visual Studio 18 2026" }
-        17 { return "Visual Studio 17 2022" }
-        16 { return "Visual Studio 16 2019" }
-        default { return $null }
-    }
-}
-function Safe-Clone($url, $dest, $branch, $commit) {
-    if ($AllowedUrls -notcontains $url -or $url -notmatch '^https://') { throw "URL nao permitida: $url" }
-    git clone $url $dest
-    if ($LASTEXITCODE -ne 0) { throw "git clone falhou: $url" }
-    Push-Location $dest
-    try {
-        if ($branch) { git checkout $branch 2>$null | Out-Null }
-        if ($commit) { git checkout $commit; if ($LASTEXITCODE -ne 0) { throw "commit invalido: $commit" } }
-        Write-Host "Commit em uso:" -ForegroundColor Yellow
-        git log -1 --format="%H | %an | %ad | %s"
-    } finally { Pop-Location }
+Write-Host "=== Compilador Ninja para projeto local ==="
+Write-Host "Projeto: $BaseDir"
+Write-Host "vcpkg:   $VcpkgDir"
+Write-Host "Build:   $BuildDir"
+
+$Confirm = Read-Host "Continuar? [s/N]"
+if ($Confirm -ne "s" -and $Confirm -ne "S") {
+    Write-Host "Cancelado."
+    exit 1
 }
 
-Clear-Host
-Write-Host "=== CrystalServer Windows Installer (seguro) ===" -ForegroundColor Cyan
-
-if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Write-Warning "Execute como Administrador."; Read-Host "Enter para sair"; exit 1
+if (-not (Get-Command cmake -ErrorAction SilentlyContinue)) {
+    Write-Error "CMake nao encontrado. Instale o CMake e abra um novo PowerShell."
 }
 
-# Politica apenas para ESTE processo (nao persiste)
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
+if (-not (Get-Command ninja -ErrorAction SilentlyContinue)) {
+    Write-Error "Ninja nao encontrado. Instale o Ninja ou adicione-o ao PATH."
+}
 
-Write-Host "`nEste script vai:" -ForegroundColor Yellow
-Write-Host " - clonar $VcpkgUrl em $VcpkgRoot"
-Write-Host " - clonar $CrystalUrl ($Branch) em $ProjectRoot"
-Write-Host " - instalar openssl/boost via vcpkg e compilar"
-Confirm-Step "Recomendado rodar em VM/maquina de testes. Continuar?"
+if (-not (Test-Path (Join-Path $BaseDir "CMakeLists.txt"))) {
+    Write-Error "CMakeLists.txt nao encontrado em $BaseDir"
+}
 
-# Pre-requisitos (instalacao manual a partir dos sites oficiais)
-$pre = @(
-    @{ Name="git";   Url="https://git-scm.com/download/win" },
-    @{ Name="cmake"; Url="https://cmake.org/download/" }
+$VcpkgExe = Join-Path $VcpkgDir "vcpkg.exe"
+if (-not (Test-Path $VcpkgExe)) {
+    Write-Error "vcpkg.exe nao encontrado em $VcpkgExe"
+}
+
+$Toolchain = Join-Path $VcpkgDir "scripts\buildsystems\vcpkg.cmake"
+if (-not (Test-Path $Toolchain)) {
+    Write-Error "Toolchain do vcpkg nao encontrado em $Toolchain"
+}
+
+# Detecta Visual Studio
+$VsWhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+if (-not (Test-Path $VsWhere)) {
+    Write-Error "Visual Studio nao encontrado. Instale o Visual Studio com 'Desenvolvimento para desktop com C++'."
+}
+
+$VsPath = & $VsWhere -latest -products * `
+    -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 `
+    -property installationPath
+
+if (-not $VsPath) {
+    Write-Error "Visual Studio C++ workload nao encontrado."
+}
+
+Write-Host "Visual Studio detectado em: $VsPath"
+
+$VcVars = Join-Path $VsPath "VC\Auxiliary\Build\vcvars64.bat"
+if (-not (Test-Path $VcVars)) {
+    Write-Error "vcvars64.bat nao encontrado em: $VcVars"
+}
+
+# Prepara pasta build
+if (-not (Test-Path $BuildDir)) {
+    New-Item -ItemType Directory -Path $BuildDir | Out-Null
+}
+
+Write-Host "Instalando dependencias via vcpkg..."
+
+$Dependencies = @(
+    "cryptopp:x64-windows",
+    "fmt:x64-windows",
+    "libmysql:x64-windows",
+    "pugixml:x64-windows",
+    "lua:x64-windows",
+    "luajit:x64-windows"
 )
-foreach ($p in $pre) {
-    if (-not (Get-Command $p.Name -ErrorAction SilentlyContinue)) {
-        Write-Host "$($p.Name) nao encontrado. Instale pelo site oficial: $($p.Url)" -ForegroundColor Yellow
-        Start-Process $p.Url
-        Read-Host "Pressione Enter apos instalar $($p.Name)"
+
+foreach ($Dep in $Dependencies) {
+    Write-Host "Instalando $Dep..."
+    & $VcpkgExe install $Dep
+
+    if ($LASTEXITCODE -ne 0) {
+        Write-Error "Falha ao instalar $Dep"
     }
 }
-$vsInst = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vs_installer.exe"
-$VsGenerator = Get-VsGenerator
-if (-not $VsGenerator) {
-    Write-Host "Visual Studio com a carga 'Desktop development with C++' nao encontrado. Instale o VS 2022/2026 Community." -ForegroundColor Yellow
-    Start-Process "https://visualstudio.microsoft.com/vs/community/"
-    Read-Host "Pressione Enter apos instalar"
-    $VsGenerator = Get-VsGenerator
-    if (-not $VsGenerator) { throw "Nenhuma instalacao do Visual Studio com ferramentas C++ encontrada." }
-} else {
-    Write-Host "Visual Studio detectado. Gerador CMake: $VsGenerator" -ForegroundColor Green
+
+& $VcpkgExe install fmt:x64-windows
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Falha ao instalar fmt:x64-windows"
 }
 
-$env:Path = [Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [Environment]::GetEnvironmentVariable("Path","User")
-foreach ($c in "git","cmake") {
-    if (-not (Get-Command $c -ErrorAction SilentlyContinue)) { throw "$c nao encontrado. Reinicie o script." }
+# Script batch: carrega MSVC e compila com Ninja
+$BuildScript = Join-Path $env:TEMP "exodus_build_ninja.bat"
+
+@"
+@echo off
+call "$VcVars"
+cd /d "$BuildDir"
+
+cmake .. ^
+  -G Ninja ^
+  -DCMAKE_BUILD_TYPE=Release ^
+  -DCMAKE_TOOLCHAIN_FILE="$Toolchain" ^
+  -DVCPKG_TARGET_TRIPLET=x64-windows
+
+if errorlevel 1 exit /b 1
+
+cmake --build . --parallel
+if errorlevel 1 exit /b 1
+"@ | Set-Content -Path $BuildScript -Encoding ASCII
+
+Write-Host "Configurando e compilando com Ninja..."
+& cmd.exe /c $BuildScript
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Falha na configuracao ou compilacao com Ninja."
 }
 
-try {
-    Set-Location $DevRoot
-
-    # vcpkg
-    if (-not (Test-Path $VcpkgRoot)) {
-        Safe-Clone $VcpkgUrl $VcpkgRoot "" $VcpkgCommit
-        Set-Location $VcpkgRoot
-        .\bootstrap-vcpkg.bat -disableMetrics
-        if ($LASTEXITCODE -ne 0) { throw "bootstrap do vcpkg falhou" }
-    }
-    Set-Location $VcpkgRoot
-    $env:VCPKG_DISABLE_METRICS = "1"
-    .\vcpkg install openssl:x64-windows boost:x64-windows
-    if ($LASTEXITCODE -ne 0) { throw "vcpkg install falhou" }
-
-    # CrystalServer
-    Set-Location $DevRoot
-    if (-not (Test-Path $ProjectRoot)) { Safe-Clone $CrystalUrl $ProjectRoot $Branch $CrystalCommit }
-
-    Write-Host "`nREVISE o codigo antes de compilar (CMakeLists.txt, scripts, cmake/)." -ForegroundColor Yellow
-    Write-Host "Pasta: $ProjectRoot"
-    Write-Host "Procure por: Invoke-WebRequest, curl, wget, powershell, certutil, base64, URLs desconhecidas."
-    Select-String -Path "$ProjectRoot\CMakeLists.txt","$ProjectRoot\cmake\*" -Pattern "http|execute_process|file\(DOWNLOAD" -ErrorAction SilentlyContinue | Select-Object -First 40
-    Confirm-Step "Revisou e deseja compilar?"
-
-    # CMake
-    $mysql = if ($WithMySQL) { "ON" } else { "OFF" }
-    $BuildDir = Join-Path $ProjectRoot "build"
-    New-Item -Path $BuildDir -ItemType Directory -Force | Out-Null
-    # Remove cache de gerador anterior (ex.: VS 2022 -> VS 2026)
-    $cacheFile = Join-Path $BuildDir "CMakeCache.txt"
-    if (Test-Path $cacheFile) {
-        $cachedGen = (Select-String -Path $cacheFile -Pattern '^CMAKE_GENERATOR:INTERNAL=' | Select-Object -First 1)
-        if ($cachedGen -and $cachedGen.Line -notmatch [regex]::Escape($VsGenerator)) {
-            Write-Host "Cache do CMake usa outro gerador ($($cachedGen.Line.Split('=')[1])). Limpando..." -ForegroundColor Yellow
-            Remove-Item -Path $cacheFile, (Join-Path $BuildDir "CMakeFiles") -Recurse -Force -ErrorAction SilentlyContinue
-        }
-    }
-    Set-Location $BuildDir
-    cmake .. -G "$VsGenerator" -A x64 "-DCMAKE_TOOLCHAIN_FILE=$Toolchain" "-DWITH_MYSQL=$mysql"
-    if ($LASTEXITCODE -ne 0) { throw "configuracao do CMake falhou" }
-    cmake --build . --config Release
-    if ($LASTEXITCODE -ne 0) { throw "compilacao falhou" }
-
-    Write-Host "`nCONCLUIDO. Binarios em: $BuildDir\bin\Release" -ForegroundColor Green
-    Write-Host "Nao exponha portas (7171/7172/MySQL) sem firewall configurado." -ForegroundColor Yellow
-} catch {
-    Write-Error "FALHA: $($_.Exception.Message)"
-    Stop-Transcript | Out-Null
-    Read-Host "Enter para sair"; exit 1
-}
-Stop-Transcript | Out-Null
-Read-Host "Enter para fechar"
+Write-Host ""
+Write-Host "Compilacao Ninja concluida."
+Write-Host "Verifique os executaveis gerados em:"
+Write-Host $BuildDir

@@ -26,7 +26,11 @@ endif ()
 # Find packages.
 find_package(CryptoPP QUIET)
 if (CryptoPP_FOUND)  # vcpkg-provided cmake package called CryptoPP
-    set(Crypto++_LIBRARIES "cryptopp-static")
+    if (TARGET cryptopp::cryptopp)
+        set(Crypto++_LIBRARIES cryptopp::cryptopp)
+    else()
+        find_library(Crypto++_LIBRARIES NAMES cryptopp-static cryptopp_static cryptopp REQUIRED)
+    endif()
 else()
     find_package(Crypto++ REQUIRED)
 endif ()

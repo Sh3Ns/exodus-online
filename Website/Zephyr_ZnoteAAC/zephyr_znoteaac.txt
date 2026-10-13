@@ -1,9 +1,0 @@
-Zephyr ZnoteAAC is a website that has been done with an online version it means, without any player on it it has not been tested.
-
-
-After upload everything and database, execute:
-
-ALTER TABLE `accounts` ADD COLUMN `avatar` VARCHAR(255) DEFAULT 'layout/hellgrave/imgs/avatar/default_avatar.png';
-
-
-In order when you enter on your account you will see everything, otherwise it will be empty, like website non working.
