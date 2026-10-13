@@ -37,9 +37,11 @@ function highscoreEvent.onExtendedOpcode(player, opcode, buffer)
   if #vocs == 0 then vocs = { vocation } end
   local vocFilter = table.concat(vocs, ",")
 
+  local STAFF_GROUPS = "4,5,6" -- gamemaster, community manager, god (access=1)
+
   local countQ = db.storeQuery(
-    ("SELECT COUNT(*) AS total FROM `players` WHERE `vocation` IN (%s)")
-    :format(vocFilter)
+    ("SELECT COUNT(*) AS total FROM `players` WHERE `vocation` IN (%s) AND `group_id` NOT IN (%s)")
+    :format(vocFilter, STAFF_GROUPS)
   )
   local totalRows = 0
   if countQ then
@@ -67,10 +69,10 @@ function highscoreEvent.onExtendedOpcode(player, opcode, buffer)
       %s AS `experience`,
       p.`looktype`, p.`lookhead`, p.`lookbody`, p.`looklegs`, p.`lookfeet`, p.`lookaddons`, p.`wings_id`, p.`aura_id`, p.`shader_id`
     FROM `players` p
-    WHERE p.`vocation` IN (%s)
+    WHERE p.`vocation` IN (%s) AND p.`group_id` NOT IN (%s)
     ORDER BY %s DESC
     LIMIT %d,%d
-  ]]):format(col, vocFilter, col, offset, perPage)
+  ]]):format(col, vocFilter, STAFF_GROUPS, col, offset, perPage)
 
   local q = db.storeQuery(sql)
   local rows = {}
