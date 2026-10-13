@@ -13,6 +13,12 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 set_target_properties(tfs PROPERTIES CXX_STANDARD 17)
 set_target_properties(tfs PROPERTIES CXX_STANDARD_REQUIRED ON)
 
+if (WIN32)
+    file(TO_CMAKE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/vc17/hellgrave_exodus.ico" TFS_ICON_PATH)
+    file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/tfs.rc" "MAINICON ICON \"${TFS_ICON_PATH}\"\n")
+    target_sources(tfs PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/tfs.rc")
+endif ()
+
 if (NOT WIN32)
     add_compile_options(-Wall -Wextra -Wnon-virtual-dtor -pedantic -Werror -pipe -fvisibility=hidden)
 endif ()

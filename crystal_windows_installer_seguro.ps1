@@ -92,6 +92,18 @@ if ($LASTEXITCODE -ne 0) {
     Write-Error "Falha ao instalar fmt:x64-windows"
 }
 
+# Cache stale de build in-source (na raiz) quebra a configuracao fora da fonte em build/
+$StaleCache = Join-Path $BaseDir "CMakeCache.txt"
+if (Test-Path $StaleCache) {
+    Write-Host "Removendo artefatos de build in-source na raiz do projeto..."
+    foreach ($Stale in @("CMakeCache.txt", "build.ninja", "cmake_install.cmake")) {
+        $StalePath = Join-Path $BaseDir $Stale
+        if (Test-Path $StalePath) {
+            Remove-Item -LiteralPath $StalePath -Force
+        }
+    }
+}
+
 # Script batch: carrega MSVC e compila com Ninja
 $BuildScript = Join-Path $env:TEMP "exodus_build_ninja.bat"
 
